@@ -1,4 +1,4 @@
-let F=100 ft=10 D=68 L=80 mast=48.3 depth=62 pcd=40 og=66 ow=2.6 od=1.5
+let F=100 ft=10 D=68 L=80 mast=48.3 depth=62 pcd=40 og=40 ow=2.6 od=1.5
 plane XY offset=-ft
 circle F
 flange: extrude ft
