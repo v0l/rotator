@@ -1,0 +1,148 @@
+let zb=110 hw=68 half=35 wall=6 floor=12 rt=25 el=270
+let top=el+47
+let iw=hw-wall itop=top-wall ir=rt-wall depth=half-wall rc=3 lr=6
+let by=58 bz1=131 bz2=el-48 bz3=el+10 ty=20 tz=el+37
+let ls=sqrt(lr*lr-(iw-by)*(iw-by)) lt=sqrt(lr*lr-(itop-tz)*(itop-tz))
+let bd=50 bh=15 brg=35 bb=18 pass=20 gw=3 gd=1.9
+let fx=17 fy=45 wy=-38
+body left
+plane YZ
+pen -hw,zb
+line hw,zb
+line hw,top-rt
+arc hw-rt,top center=hw-rt,top-rt turn=ccw
+line -hw+rt,top
+arc -hw,top-rt center=-hw+rt,top-rt turn=ccw
+close
+shell: extrude -half
+fillet 4 shell.end&shell.side
+plane YZ
+pen -iw+rc,zb+floor
+line iw-rc,zb+floor
+arc iw,zb+floor+rc center=iw-rc,zb+floor+rc turn=ccw
+line iw,bz1-ls
+arc iw,bz1+ls via=by-lr,bz1
+line iw,bz2-ls
+arc iw,bz2+ls via=by-lr,bz2
+line iw,bz3-ls
+arc iw,bz3+ls via=by-lr,bz3
+line iw,itop-ir
+arc iw-ir,itop center=iw-ir,itop-ir turn=ccw
+line ty+lt,itop
+arc ty-lt,itop via=ty,tz-lr
+line -ty+lt,itop
+arc -ty-lt,itop via=-ty,tz-lr
+line -iw+ir,itop
+arc -iw,itop-ir center=-iw+ir,itop-ir turn=ccw
+line -iw,bz3+ls
+arc -iw,bz3-ls via=-by+lr,bz3
+line -iw,bz2+ls
+arc -iw,bz2-ls via=-by+lr,bz2
+line -iw,bz1+ls
+arc -iw,bz1-ls via=-by+lr,bz1
+line -iw,zb+floor+rc
+arc -iw+rc,zb+floor center=-iw+rc,zb+floor+rc turn=ccw
+close
+cav: cut depth
+plane YZ
+pen -hw+(wall-gw)/2,zb+(wall-gw)/2
+line hw-(wall-gw)/2,zb+(wall-gw)/2
+line hw-(wall-gw)/2,top-rt
+arc hw-rt,top-(wall-gw)/2 center=hw-rt,top-rt turn=ccw
+line -hw+rt,top-(wall-gw)/2
+arc -hw+(wall-gw)/2,top-rt center=-hw+rt,top-rt turn=ccw
+close
+pen -hw+(wall+gw)/2,zb+(wall+gw)/2
+line hw-(wall+gw)/2,zb+(wall+gw)/2
+line hw-(wall+gw)/2,top-rt
+arc hw-rt,top-(wall+gw)/2 center=hw-rt,top-rt turn=ccw
+line -hw+rt,top-(wall+gw)/2
+arc -hw+(wall+gw)/2,top-rt center=-hw+rt,top-rt turn=ccw
+close
+seal: cut gd
+plane YZ offset=-half
+circle bd at=0,el
+hub: extrude -bh
+plane hub.end
+seat: hole brg 0,el depth=bb
+pass: hole pass 0,el
+plane shell.end
+join: hole 4.5 -by,bz1 -by,bz2 -by,bz3 by,bz1 by,bz2 by,bz3 -ty,tz ty,tz cbore=10,5
+block: hole 4.5 -wy-7,el-45 -wy+7,el-45 -wy-7,el+5 -wy+7,el+5
+vent: hole 10.5 0,135
+gland: hole 16.2 -30,150
+plane <Z
+mount: hole 4.2 -fx,fy -fx,-fy depth=10 thread=M5
+color #a9b1ba
+material aluminium
+body right
+plane YZ
+pen -hw,zb
+line hw,zb
+line hw,top-rt
+arc hw-rt,top center=hw-rt,top-rt turn=ccw
+line -hw+rt,top
+arc -hw,top-rt center=-hw+rt,top-rt turn=ccw
+close
+shell: extrude half
+fillet 4 shell.end&shell.side
+plane YZ ry=180
+
+pen -iw+rc,zb+floor
+line iw-rc,zb+floor
+arc iw,zb+floor+rc center=iw-rc,zb+floor+rc turn=ccw
+line iw,bz1-ls
+arc iw,bz1+ls via=by-lr,bz1
+line iw,bz2-ls
+arc iw,bz2+ls via=by-lr,bz2
+line iw,bz3-ls
+arc iw,bz3+ls via=by-lr,bz3
+line iw,itop-ir
+arc iw-ir,itop center=iw-ir,itop-ir turn=ccw
+line ty+lt,itop
+arc ty-lt,itop via=ty,tz-lr
+line -ty+lt,itop
+arc -ty-lt,itop via=-ty,tz-lr
+line -iw+ir,itop
+arc -iw,itop-ir center=-iw+ir,itop-ir turn=ccw
+line -iw,bz3+ls
+arc -iw,bz3-ls via=-by+lr,bz3
+line -iw,bz2+ls
+arc -iw,bz2-ls via=-by+lr,bz2
+line -iw,bz1+ls
+arc -iw,bz1-ls via=-by+lr,bz1
+line -iw,zb+floor+rc
+arc -iw+rc,zb+floor center=-iw+rc,zb+floor+rc turn=ccw
+close
+cav: cut depth
+plane YZ offset=half
+circle bd at=0,el
+hub: extrude bh
+plane hub.end
+seat: hole brg 0,el depth=bb
+pass: hole pass 0,el
+plane YZ ry=180
+join: hole 3.3 -by,bz1 -by,bz2 -by,bz3 by,bz1 by,bz2 by,bz3 -ty,tz ty,tz depth=14 thread=M4
+plane <Z
+mount: hole 4.2 fx,fy fx,-fy depth=10 thread=M5
+color #a9b1ba
+material aluminium
+body cord
+plane YZ
+pen -hw+(wall-gw)/2,zb+(wall-gw)/2
+line hw-(wall-gw)/2,zb+(wall-gw)/2
+line hw-(wall-gw)/2,top-rt
+arc hw-rt,top-(wall-gw)/2 center=hw-rt,top-rt turn=ccw
+line -hw+rt,top-(wall-gw)/2
+arc -hw+(wall-gw)/2,top-rt center=-hw+rt,top-rt turn=ccw
+close
+pen -hw+(wall+gw)/2,zb+(wall+gw)/2
+line hw-(wall+gw)/2,zb+(wall+gw)/2
+line hw-(wall+gw)/2,top-rt
+arc hw-rt,top-(wall+gw)/2 center=hw-rt,top-rt turn=ccw
+line -hw+rt,top-(wall+gw)/2
+arc -hw+(wall+gw)/2,top-rt center=-hw+rt,top-rt turn=ccw
+close
+cord: extrude -gd
+color #111111
+material density=1.2

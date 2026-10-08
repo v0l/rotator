@@ -1,0 +1,37 @@
+let p=pi/cos(3.583) ha=1 hf=1.25 r=8 face=20 hub=12 hd=14 bore=8
+let ta=p/4-ha*tan(20) tf=p/4+hf*tan(20) ro=r+ha ri=r-hf
+plane XZ
+pen bore/2+0.02,-face/2
+line ri,-face/2
+line ri,(-5*p/2)-tf
+line ro,(-5*p/2)-ta
+line ro,(-5*p/2)+ta
+line ri,(-5*p/2)+tf
+line ri,(-3*p/2)-tf
+line ro,(-3*p/2)-ta
+line ro,(-3*p/2)+ta
+line ri,(-3*p/2)+tf
+line ri,(-1*p/2)-tf
+line ro,(-1*p/2)-ta
+line ro,(-1*p/2)+ta
+line ri,(-1*p/2)+tf
+line ri,(1*p/2)-tf
+line ro,(1*p/2)-ta
+line ro,(1*p/2)+ta
+line ri,(1*p/2)+tf
+line ri,(3*p/2)-tf
+line ro,(3*p/2)-ta
+line ro,(3*p/2)+ta
+line ri,(3*p/2)+tf
+line ri,(5*p/2)-tf
+line ro,(5*p/2)-ta
+line ro,(5*p/2)+ta
+line ri,(5*p/2)+tf
+line ri,face/2
+line hd/2,face/2
+line hd/2,face/2+hub
+line bore/2+0.02,face/2+hub
+close
+worm: revolve 360 axis=y
+color #4a4d52
+material steel

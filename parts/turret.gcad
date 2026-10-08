@@ -1,0 +1,27 @@
+let d1=15 z1=7 zw=36 d2=25 z2=56 d3=30 z3=90 z4=98 D=140 t=12 skirt=126 zs=92 key=5 kd=3
+let fx=17 fy=45
+circle d1-0.02
+low: extrude z2-z1
+move 0,0,z1
+plane XY offset=z2
+rect key kd+1 at=0,d1/2-kd/2+0.5
+keyway: cut z2-zw
+plane XY offset=z2
+circle d2
+mid: extrude z3-z2
+plane mid.end
+circle d3
+shoulder: extrude z4-z3
+plane shoulder.end
+circle D
+disc: extrude t
+plane XY offset=z4
+circle D
+circle skirt
+apron: extrude zs-z4
+plane disc.start
+mount: hole 5.5 fx,fy -fx,fy fx,-fy -fx,-fy cbore=9.5,5.5
+plane disc.end
+chamfer 1 disc.end&disc.side
+color #a9b1ba
+material aluminium

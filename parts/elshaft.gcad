@@ -1,0 +1,10 @@
+let d=15 L=166 kz=78 kl=20 key=5 kd=3
+circle d-0.02
+rod: extrude L
+plane XY offset=kz+kl
+rect key kd+1 at=0,d/2-kd/2+0.5
+keyway: cut kl
+chamfer 0.5 rod.end&rod.side
+chamfer 0.5 rod.start&rod.side
+color #b8bec6
+material stainless

@@ -1,0 +1,12 @@
+let d=4 L=12 k=d s=d*1.5+0.5 hex=d*0.75
+circle d*0.82
+shank: extrude -L
+plane XY
+circle s
+head: extrude k
+chamfer d*0.08 head.end&head.side
+plane head.end
+ngon hex/cos(30) 6
+socket: cut d*0.6
+color #1e1f22
+material stainless

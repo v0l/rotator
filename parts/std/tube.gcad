@@ -1,0 +1,6 @@
+let D=25 t=2 L=500
+circle D
+circle D-2*t
+tube: extrude L
+color #d4d7db
+material aluminium

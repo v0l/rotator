@@ -1,0 +1,16 @@
+let thread=16 stub=8 hex=22 hh=6 dome=19 dh=14 cable=6
+circle thread-0.2
+stub: extrude -stub
+plane XY
+ngon hex/cos(30) 6
+nut: extrude hh
+plane nut.end
+circle dome
+cap: extrude dh-4
+plane cap.end
+circle dome-6
+tip: extrude 4
+plane tip.end
+cablehole: hole cable 0,0
+color #222326
+material nylon

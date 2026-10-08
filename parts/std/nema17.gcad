@@ -1,0 +1,20 @@
+let L=40 rear=7 shaft=24 sd=5 boss=22 bh=2 pitch=31 cap=8
+plane XY offset=-L
+poly -21.15,-21.15 21.15,-21.15 21.15,21.15 -21.15,21.15 c=4.5
+can: extrude L-cap
+if rear plane can.start
+if rear circle sd
+if rear tail: extrude rear
+plane can.end
+poly -21.15,-21.15 21.15,-21.15 21.15,21.15 -21.15,21.15 c=4.5
+front: extrude cap
+plane front.end
+circle boss
+pilot: extrude bh
+plane pilot.end
+circle sd
+shaft: extrude shaft-bh
+plane front.end
+mounts: hole 3 pitch/2,pitch/2 -pitch/2,pitch/2 -pitch/2,-pitch/2 pitch/2,-pitch/2 depth=4.5 thread=M3
+color #2b2d31
+material steel

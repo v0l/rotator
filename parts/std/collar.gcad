@@ -1,0 +1,8 @@
+let d=8 D=16 W=8
+circle D
+circle d+0.04
+ring: extrude W
+chamfer 0.3 ring.end&ring.side
+chamfer 0.3 ring.start&ring.side
+color #3a3d42
+material steel

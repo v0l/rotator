@@ -1,0 +1,12 @@
+let thread=12 stub=8 hex=15 hh=4 cap=16 ch=7
+circle thread-1.6
+stub: extrude -stub
+plane XY
+ngon hex/cos(30) 6
+nut: extrude hh
+plane nut.end
+circle cap
+dome: extrude ch
+fillet 2 dome.end&dome.side
+color #3b3e43
+material nylon

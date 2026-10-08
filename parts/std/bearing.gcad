@@ -1,0 +1,12 @@
+let d=8 D=22 B=7 c=0.4
+circle D
+circle d+0.04
+ring: extrude B
+chamfer c ring.end&ring.side
+chamfer c ring.start&ring.side
+plane ring.end
+circle D-(D-d)*0.22
+circle d+(D-d)*0.22
+seal: cut 0.3
+color #9aa3ad
+material steel

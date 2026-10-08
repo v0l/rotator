@@ -1,0 +1,14 @@
+let n=60 m=1/cos(3.583) face=10 hub=30 hubl=10 throat=62 bore=15 key=5 kd=2.3
+gear n m pressure=20 backlash=0.12
+teeth: extrude face
+circle throat
+trim: extrude face mode=intersect
+plane teeth.end
+circle hub
+boss: extrude hubl
+plane boss.end
+bored: hole bore+0.04 0,0
+rect key kd*2 at=0,bore/2
+keyway: cut face+hubl
+color #b08a4a
+material brass

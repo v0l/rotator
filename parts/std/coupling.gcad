@@ -1,0 +1,9 @@
+let D=20 L=25 a=5 b=8
+circle D
+hub: extrude L
+plane hub.end
+bore: hole b+0.04 0,0 depth=L/2
+plane hub.start
+bore2: hole a+0.04 0,0 depth=L/2
+color #c8ccd2
+material aluminium

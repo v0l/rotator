@@ -1,0 +1,12 @@
+let D=45 L=64 a=15 b=25 slit=1
+circle D
+hub: extrude L
+plane hub.start
+small: hole a+0.04 0,0 depth=L/2
+plane hub.end
+large: hole b+0.04 0,0 depth=L/2
+plane hub.end
+rect D/2-a/2+2 slit at=(D/2+a/2)/2,0
+gap: cut thru
+color #c8ccd2
+material aluminium

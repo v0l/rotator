@@ -1,0 +1,26 @@
+let F=100 ft=10 D=68 L=80 mast=48.3 depth=62 pcd=40 og=66 ow=2.6 od=1.5
+plane XY offset=-ft
+circle F
+flange: extrude ft
+plane XY offset=-ft
+circle D
+socket: extrude -(L-ft)
+plane socket.end
+bore: hole mast+0.4 0,0 depth=depth
+plane flange.start
+mounts: hole 6.6 pcd*cos(45),pcd*sin(45) -pcd*cos(45),pcd*sin(45) -pcd*cos(45),-pcd*sin(45) pcd*cos(45),-pcd*sin(45) cbore=11,6.5
+plane flange.end
+circle og+2*ow
+circle og
+oring: cut od
+grub: hole 6.8 0,40 120,40 240,40 on=socket.side thread=M8
+chamfer 1 socket.end&socket.side
+color #a9b1ba
+material aluminium
+body oring
+plane XY offset=-od
+circle og+2*ow-0.2
+circle og+0.2
+ring: extrude od
+color #111111
+material density=1.2

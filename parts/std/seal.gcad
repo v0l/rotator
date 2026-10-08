@@ -1,0 +1,10 @@
+let d=15 D=35 B=7
+circle D
+circle d+0.04
+ring: extrude B
+plane ring.end
+circle D-3
+circle d+3
+lip: cut 1.5
+color #18191b
+material density=1.2

@@ -1,0 +1,5 @@
+let b=5 h=5 L=20
+rect b-0.03 h-0.03 r=0.4
+k: extrude L
+color #5a5e64
+material steel

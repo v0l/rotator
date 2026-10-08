@@ -1,0 +1,44 @@
+let depth=18 wall=2 pitch=31 sd=5 hz=-4 hl=6 md=6 mh=2.5 bz=-13.6 bt=1.6 bw=30
+body cap
+poly -21.15,-21.15 21.15,-21.15 21.15,21.15 -21.15,21.15 c=4.5
+can: extrude -depth
+shell wall open=can.start
+plane XY offset=-depth+wall
+circle 5 at=11,11
+circle 5 at=-11,11
+circle 5 at=-11,-11
+circle 5 at=11,-11
+posts: extrude bz-(-depth+wall)
+plane can.end
+screws: hole 3.4 pitch/2,pitch/2 -pitch/2,pitch/2 -pitch/2,-pitch/2 pitch/2,-pitch/2
+plane <Y
+cable: hole 6 0,-depth/2 depth=wall
+color #2b2d31
+material aluminium
+body pcb
+plane XY offset=bz
+rect bw bw r=2
+board: extrude bt
+plane board.end
+rect 4 4
+chip: extrude 0.8
+plane board.start
+fix: hole 2.7 11,11 -11,11 -11,-11 11,-11
+color #1d5c2e
+material density=1.9
+body magnet
+plane XY offset=hz
+circle 10
+holder: extrude -hl
+plane holder.start
+bore: hole sd+0.04 0,0 depth=3
+plane holder.end
+pocket: hole md 0,0 depth=mh
+color #c8ccd2
+material aluminium
+body disc
+plane XY offset=hz-hl
+circle md
+mag: extrude mh
+color #8a8f96
+material density=7.5

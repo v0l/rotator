@@ -1,0 +1,7 @@
+let d=8 L=100 c=0.5
+circle d
+rod: extrude L
+chamfer c rod.end&rod.side
+chamfer c rod.start&rod.side
+color #b8bec6
+material steel
