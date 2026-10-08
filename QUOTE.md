@@ -11,7 +11,7 @@ Tapped holes are modelled at tap drill size.
 | part | qty | stock | features |
 |---|---|---|---|
 | `base_box` | 1 | 140 x 212 x 80 block | pocket 68 deep, inner corners R12; Ø35 H7 x 11 bearing seat on floor boss, Ø28 through; 4x M6 x 10 underside; 10x M4 x 10 in wall tops; 2x M3 x 6 floor; 4x Ø4.5 thru, cbore Ø10 x 5 from underside; M12x1.5 thru floor (vent); 2x Ø16.2 thru +Y wall (glands) |
-| `base_lid` | 1 | 140 x 212 x 30 plate | spigot with O-ring groove 3.2 wide x 2 deep on its side; underside relief pocket; Ø47 H7 x 19 bore (6005 + 25x47x7 seal), Ø32 thru; lip ring Ø120/Ø112 x 6; 10x Ø4.5 thru, cbore Ø8 x 4.5 |
+| `base_lid` | 1 | 140 x 212 x 30 plate | 6 mm spigot rim with O-ring groove 3.2 wide x 2 deep on its outside; Ø47 H7 x 19 bore (6005 + 25x47x7 seal), Ø32 thru; lip ring Ø120/Ø112 x 6; 10x Ø4.5 thru, cbore Ø8 x 4.5 |
 | `turret` | 1 | Ø140 x 105 bar, turned | Ø15 h6 and Ø25 k6 journals; keyseat 5 P9 x 3 x 20 on Ø15; skirt Ø140/Ø126; 4x Ø5.5 thru, cbore Ø9.5 x 5.5 from underside |
 | `column_left` | 1 | 50 x 136 x 207 block | pocket 29 deep from split face with screw lobes; O-ring face groove 3 wide x 1.9 deep on split face; boss Ø50 with Ø35 H7 x 18 bore (6202 + 15x35x7 seal), Ø20 thru; 8x Ø4.5 thru, cbore Ø10 x 5; 4x Ø4.5 thru (drive block); Ø16.2 thru (gland); M12x1.5 thru (vent); 2x M5 x 10 underside |
 | `column_right` | 1 | 50 x 136 x 207 block | mirror pocket; boss Ø50 with Ø35 H7 x 18 bore, Ø20 thru; 8x M4 x 14 from split face; 2x M5 x 10 underside |

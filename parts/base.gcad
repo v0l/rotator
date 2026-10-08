@@ -2,7 +2,7 @@ let x0=-70 x1=70 y0=-70 y1=142 H=80 wall=8 floor=12 lid=10 r=20
 let cx=(x0+x1)/2 cy=(y0+y1)/2 w=x1-x0 l=y1-y0 wc=x1-wall/2
 let brg=35 bb=11 boss=45 bossh=30 col=28 pcd=40
 let ubrg=47 ubb=19 uboss=57 udrop=14 lip=120 lipt=4 liph=6
-let spig=6 gw=3.2 gd=2 iwid=w-2*wall-0.1 ilen=l-2*wall-0.1 ir=r-wall-0.05
+let spig=6 gw=3.2 gd=2 rim=6 iwid=w-2*wall-0.1 ilen=l-2*wall-0.1 ir=r-wall-0.05
 rect w l at=cx,cy r=r
 box: extrude H
 plane box.end
@@ -32,16 +32,16 @@ rect w l at=cx,cy r=r
 plate: extrude lid
 plane XY offset=H
 rect iwid ilen at=cx,cy r=ir
+rect iwid-2*rim ilen-2*rim at=cx,cy r=ir-rim
 spigot: extrude -(spig-1-gw)
 plane XY offset=H-spig+1+gw
 rect iwid-2*gd ilen-2*gd at=cx,cy r=ir-gd
+rect iwid-2*rim ilen-2*rim at=cx,cy r=ir-rim
 groove: extrude -gw
 plane XY offset=H-spig+1
 rect iwid ilen at=cx,cy r=ir
+rect iwid-2*rim ilen-2*rim at=cx,cy r=ir-rim
 land: extrude -1
-plane land.end
-rect iwid-12 ilen-12 at=cx,cy r=ir-6
-relief: cut spig-1
 plane XY offset=H
 circle uboss
 drop: extrude -udrop
