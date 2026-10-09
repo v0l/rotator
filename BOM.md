@@ -68,14 +68,23 @@ the UK adds Irish import VAT and a carrier handling fee.
 | 1 | EPDM sheet 1 mm, for the gaskets under the el bearing units | Amazon, Delta Rubber |
 | | A4 screws: M3x10 (8), M4x10 (8), M5x12 (4), M5x30 (2), M6x10 (2), M6x12 (2), M6x12 countersunk (3), M6x16 (8), M6x20 (4); nuts M6 (8), M5 nyloc (2); bonded seal washers M6 (8) | [Accu](https://www.accu.co.uk) |
 
-## Totals so far, ex VAT
+## Totals in EUR with 23% VAT
 
-- EUR: €95.97 + €34.06 + €109.76 = **€239.79**
-- GBP: £92.56 + £19.58 = **£112.14**, plus shipping and import VAT
+GBP converted at 1.1805 (mid-market, 9 Oct 2026). Shipping not included.
 
-The two boxes, bearings, gears, motors and encoders are all in these totals; what is
-missing is fasteners, the turret collar, standoffs, tube and gasket sheet, likely
-under €50 together.
+| supplier | ex VAT | with VAT |
+|---|---|---|
+| Farnell Ireland | €95.97 | €118.04 |
+| DigiKey Ireland | €34.06 | €41.89 |
+| Simply Bearings Ireland | €109.76 | €135.00 |
+| R.A. Rodriguez (£92.56) | €109.27 | €134.40 |
+| StepperOnline (£19.58) | €23.11 | €28.43 |
+| Goodwins, 25 mm tube x 1 m | €8.90 | €10.95 |
+| **priced parts** | **€381.07** | **€468.71** |
+
+The unpriced rows (turret collar, standoffs, screws, gasket sheet) are an estimate of
+about €70 with VAT, which brings the bought parts to roughly **€540**. The made parts in
+`QUOTE.md` (plates, shafts, mast clamp, drive blocks, gear reboring) still need quotes.
 
 ## Other Irish suppliers
 
