@@ -9,6 +9,8 @@ mast: hole 6.6 40,0 -40,0 bolt,-bolt -bolt,-bolt
 kfl: hole 5 -kfl,0 kfl,0 thread=M6
 posts: hole 5 s1x,s1y s2x,s2y s3x,s3y thread=M6
 drive: hole 3.3 -15,30 -15,46 -48,26 -48,50 thread=M4
+ctl: hole 2.5 -130,10 -50,10 -130,-41.5 -50,-40 thread=M3
+cell: hole 2.5 -12.7,-50 12.7,-50 thread=M3
 color #c4cad1
 material aluminium
 body top

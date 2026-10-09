@@ -1,0 +1,73 @@
+let zb=21 t=1.6
+plane XY offset=zb
+rect 88 80 at=-90,-26 r=1
+board: extrude t
+plane board.end
+mount: hole 3.2 -130,10 -50,10 -130,-41.5 -50,-40
+color #1f6b3a
+material fr4 density=1.85
+body j1
+plane XY offset=zb+t
+rect 20.70 18.68 at=-120.26,-23.80
+j1: extrude 17.04
+combine main j1
+body u1
+plane XY offset=zb+t
+rect 57.28 17.11 at=-98.47,-56.03
+u1: extrude 13.99
+combine main u1
+body j9
+plane XY offset=zb+t
+rect 5.75 12.40 at=-48.88,-29.15
+j9: extrude 7.00
+combine main j9
+body j5
+plane XY offset=zb+t
+rect 14.90 5.75 at=-77.90,9.62
+j5: extrude 7.00
+combine main j5
+body j4
+plane XY offset=zb+t
+rect 14.90 5.75 at=-61.60,9.62
+j4: extrude 7.00
+combine main j4
+body j8
+plane XY offset=zb+t
+rect 5.75 12.40 at=-48.88,-15.35
+j8: extrude 7.00
+combine main j8
+body j7
+plane XY offset=zb+t
+rect 8.94 7.92 at=-96.00,11.11
+j7: extrude 3.26
+combine main j7
+body j10
+plane XY offset=zb+t
+rect 4.55 5.90 at=-50.22,1.50
+j10: extrude 6.00
+combine main j10
+body c2
+plane XY offset=zb+t
+circle 10 at=-61.80,-55.43
+c2: extrude 10.50
+combine main c2
+body d1
+plane XY offset=zb+t
+rect 4.70 7.00 at=-122.35,-9.30
+d1: extrude 2.71
+combine main d1
+body d2
+plane XY offset=zb+t
+rect 4.70 7.00 at=-113.00,-41.10
+d2: extrude 2.71
+combine main d2
+body c83
+plane XY offset=zb+t
+circle 8 at=-68.40,-5.80
+c83: extrude 7.70
+combine main c83
+body c76
+plane XY offset=zb+t
+circle 8 at=-68.40,-38.00
+c76: extrude 7.70
+combine main c76

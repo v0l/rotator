@@ -1,0 +1,20 @@
+let L=43.9 W=20.5 H=16.5 d=17 cl=34.5 floor=1.9 pitch=25.4
+let zc=floor+d/2
+rect L W r=1
+frame: extrude H
+plane XY offset=H
+rect cl+0.4 W+1
+cradle: cut H-zc
+plane XY offset=zc
+rect cl+0.4 W-2
+well: cut zc-floor
+plane XY offset=floor
+fix: hole M3 -pitch/2,0 pitch/2,0 csink=M3
+color #222222
+material abs
+body cell
+plane YZ offset=-cl/2
+circle d at=0,zc
+can: extrude cl
+color #c0c4c8
+material cr123a density=2.17

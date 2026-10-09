@@ -31,11 +31,21 @@ gcad export rotator.gasm rotator.step
 - Each axis: KHK CG1-60R1 wheel on a keyed shaft, KHK SW1-R1 worm on an 8 mm shaft in two
   608s in `driveblock.gcad`, jaw-coupled to a StepperOnline 17HS15-1504-ME1K closed-loop
   NEMA17 with a built-in 1000 PPR magnetic encoder. Turn counting and its battery backup
-  live on the driver board.
+  live on the control board.
 - The boxes are `parts/std/hammond_1550z220_box.gcad` and `_lid.gcad`. Without
   Hammond's STEP they are drawn from its measurements. Download the STEP from
   https://www.hammfg.com/part/1550Z220, save it as `parts/vendor/1550Z220.stp`, and run
   with `--set hammond=1` to drill the real boxes; `./export.sh` uses it when present.
+
+## Control board
+
+`board/` is the controller in the az box: one PoE cable in, both motors and encoders out. An
+STM32H563 with a LAN8720A PHY, two TMC2209 drivers on UART, a Silvertel Ag5424 PoE module, and
+a CR123A cell that keeps the encoder counters alive through a power cut. It sits on four
+aluminium M3 standoffs on the chassis plate, which also carry its heat away. See
+`board/DESIGN.md`.
+
+![Control board](docs/board.png)
 
 ## Sealing
 

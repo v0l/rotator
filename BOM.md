@@ -57,7 +57,11 @@ the UK adds Irish import VAT and a carrier handling fee.
 | 3 | Standoff M6 x 65, male-female, 10 mm hex | [Vital Parts HMF-M6-65](https://www.vital-parts.co.uk/threaded-hex-standoffs-male-female/11836-hmf-m6-65-s10-a1) |
 | 2 | Aluminium tube 25 x 2, 500 mm (crossboom) | [Aluminium Online](https://www.aluminium-online.co.uk/product/25mm-x-2mm-aluminium-round-tube-2/) |
 | 1 | EPDM sheet 1 mm, for the gaskets under the el bearing units | Amazon, Delta Rubber |
-| | A4 screws: M3x10 (8), M4x10 (8), M5x12 (4), M5x30 (2), M6x10 (2), M6x12 (2), M6x12 countersunk (3), M6x16 (8), M6x20 (4); nuts M6 (8), M5 nyloc (2); bonded seal washers M6 (8) | [Accu](https://www.accu.co.uk) |
+| 4 | Hex standoff M3 x 12, male-female, 5.5 mm, aluminium (control board) | [Accu](https://www.accu.co.uk) |
+| 1 | Takachi CR123A-R battery holder with 140 mm leads, plus a JST PHR-2 housing and 2 SPH crimps | Conrad, item 1882324 |
+| 1 | CR123A lithium cell | any |
+| 1 | RJ45 plug for the PoE cable, crimped inside the box after the cable is through the gland | any |
+| | A4 screws: M3x6 (4), M3x6 countersunk (2), M3x10 (8), M4x10 (8), M5x12 (4), M5x30 (2), M6x10 (2), M6x12 (2), M6x12 countersunk (3), M6x16 (8), M6x20 (4); nuts M6 (8), M5 nyloc (2); bonded seal washers M6 (8) | [Accu](https://www.accu.co.uk) |
 
 ## Totals in EUR with 23% VAT
 
@@ -70,10 +74,13 @@ GBP converted at 1.1805 (mid-market, 9 Oct 2026). Shipping not included.
 | R.A. Rodriguez (£92.56) | €109.27 | €134.40 |
 | StepperOnline (£33.88) | €40.00 | €49.20 |
 | Goodwins, 25 mm tube x 1 m | €8.90 | €10.95 |
-| **priced parts** | **€363.90** | **€447.59** |
+| Control board parts, Mouser (`board/tools/bom.md`) | €65.97 | €81.14 |
+| **priced parts** | **€429.87** | **€528.73** |
 
-The unpriced rows (turret collar, standoffs, screws, gasket sheet) are an estimate of
-about €70 with VAT, which brings the bought parts to roughly **€520**. The made parts in
+The unpriced rows (turret collar, standoffs, screws, gasket sheet, battery holder) are an
+estimate of about €85 with VAT, which brings the bought parts to roughly **€615**. The control
+board PCB itself (4 layers, ENIG, JLCPCB) and its assembly are not priced yet, and its
+STM32H563RIT6 is on backorder (Mouser expects stock on 11 Dec 2026). The made parts in
 `QUOTE.md` (plates, shafts, mast clamp, drive blocks, gear reboring) still need quotes.
 
 ## Other Irish suppliers
