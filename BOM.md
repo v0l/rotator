@@ -63,7 +63,6 @@ the UK adds Irish import VAT and a carrier handling fee.
 | qty | part | where |
 |---|---|---|
 | 1 | Flanged shaft collar 15 mm, Ø50 flange, 4x Ø5.5 on 38 PCD (turret) | Misumi flanged collars; not found at Ruland or Simply Bearings |
-| 2 | Shim 15x21x1, DIN 988, A2 | [Accu HSHN-15-21-1-A2](https://www.accu.co.uk/shim-washers/399110-HSHN-15-21-1-A2) |
 | 3 | Standoff M6 x 65, male-female, 10 mm hex | [Vital Parts HMF-M6-65](https://www.vital-parts.co.uk/threaded-hex-standoffs-male-female/11836-hmf-m6-65-s10-a1) |
 | 2 | Aluminium tube 25 x 2, 500 mm (crossboom) | [Aluminium Online](https://www.aluminium-online.co.uk/product/25mm-x-2mm-aluminium-round-tube-2/) |
 | 1 | EPDM sheet 1 mm, for the gaskets under the el bearing units | Amazon, Delta Rubber |

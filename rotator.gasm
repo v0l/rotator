@@ -326,9 +326,6 @@ move wheel_el 9.25,0,eh
 part vring_f parts/std/vring.gcad
 rotate vring_f 90 axis=y
 move vring_f 59.85,0,eh
-part shim_f parts/std/collar.gcad d=15 D=21 W=1
-rotate shim_f 90 axis=y
-move shim_f 64.35,0,eh
 part bush_f parts/std/bush.gcad xh=1 xz=14.65
 rotate bush_f 90 axis=y
 move bush_f 65.35,0,eh
@@ -342,9 +339,6 @@ move boom_nut_f 80,0,eh-16.5
 part vring_l parts/std/vring.gcad
 rotate vring_l -90 axis=y
 move vring_l -59.85,0,eh
-part shim_l parts/std/collar.gcad d=15 D=21 W=1
-rotate shim_l -90 axis=y
-move shim_l -64.35,0,eh
 part bush_l parts/std/bush.gcad xh=1 xz=14.65
 rotate bush_l -90 axis=y
 move bush_l -65.35,0,eh
@@ -426,13 +420,11 @@ concentric bush_f:cross.side elshaft:cross.side near=80,0,eh
 concentric boom_f:cross.side elshaft:cross.side near=80,0,eh
 concentric boom_bolt_f:shank.side elshaft:cross.side near=80,0,eh
 concentric boom_nut_f:n.side elshaft:cross.side near=80,0,eh
-flush shim_f:ring.end bush_f:bush.start
 flush vring_f:ring.start kfl_f:inner.end
 concentric bush_l:cross.side elshaft:cross.side near=-80,0,eh
 concentric boom_l:cross.side elshaft:cross.side near=-80,0,eh
 concentric boom_bolt_l:shank.side elshaft:cross.side near=-80,0,eh
 concentric boom_nut_l:n.side elshaft:cross.side near=-80,0,eh
-flush shim_l:ring.end bush_l:bush.start
 flush vring_l:ring.start kfl_l:inner.end
 flush gland_el:nut.start elbox:<Y
 flush vent_el:nut.start elbox:<Y
