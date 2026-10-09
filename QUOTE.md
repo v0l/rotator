@@ -37,26 +37,26 @@ Two Hammond 1550Z220 die-cast boxes (IP66, gasket and lid screws included). The
 
 ## Bought
 
-| part | qty | note |
-|---|---|---|
-| Hammond 1550Z220 | 2 | |
-| KFL002 flange bearing unit, 15 mm | 4 | 1 mm EPDM gasket under the two on the el box |
-| KHK BG1-60R1 bronze worm wheel | 2 | J-series: bore 15 H7, keyway 5 JS9 |
-| KHK SW1-R1 steel worm | 2 | rebore 8 H7 |
-| NEMA17 17HS4401, dual shaft | 2 | rear shaft 5 x 7 for the encoder magnet |
-| Magnetic absolute encoder board + 6x2.5 diametric magnet | 2 | MT6835 or AS5047P class |
-| ER14250 1/2AA 3.6 V cell + holder | 1 | keeps the turn counters alive |
-| 5 to 8 mm jaw coupling D20 L25 | 2 | |
-| Rigid clamp coupling 15 / 25 mm, Ø45 x 64 | 2 | crossboom |
-| Flange shaft collar 15 mm, Ø50 flange, 4x Ø5.5 on 38 PCD | 1 | turret |
-| Ground shaft 8 h6 x 85 | 2 | worm shafts |
-| 608-2RS | 4 | |
-| Shaft collar 8 mm | 2 | |
-| V-ring VA-15 | 3 | |
-| Key 5x5x20 (DIN 6885 A) | 2 | |
-| Shim 15x21x1 (DIN 988) | 2 | |
-| Hex standoff M6 x 65, male-female | 3 | |
-| O-ring 86x2.5 | 1 | mast clamp |
-| M16 IP68 cable gland, M12x1.5 breather vent | 3, 2 | |
-| A4 screws: M3x6 (2), M3x10 (8), M4x10 (8), M5x12 (4), M6x10 (2), M6x12 (2), M6x12 countersunk (3), M6x16 (8), M6x20 (4), M6 nuts (8) | | sealing washers under the screws that pass through box walls |
-| Aluminium tube 25 x 2 x 500 | 2 | crossboom |
+| part | qty | note | where |
+|---|---|---|---|
+| Hammond 1550Z220 | 2 | | Farnell 1823112, RS 228-7742, Mouser, TME |
+| KFL002 flange bearing unit, 15 mm | 4 | 1 mm EPDM gasket under the two on the el box | bearing shops (Simply Bearings, Ashley Bearings), RS |
+| KHK BG1-60R1 bronze worm wheel | 2 | J-series: bore 15 H7, keyway 5 JS9 | R.A. Rodriguez (rargears.com), KHK's UK and EU distributor |
+| KHK SW1-R1 steel worm | 2 | rebore 8 H7 | R.A. Rodriguez |
+| NEMA17 17HS4401, dual shaft | 2 | rear shaft 5 x 7 for the encoder magnet | StepperOnline (dual-shaft 17HS4401 variant) |
+| Magnetic absolute encoder board + 6x2.5 diametric magnet | 2 | MT6835 or AS5047P class | Mouser or DigiKey (MT6835 or AS5047P eval boards), or own PCB |
+| ER14250 1/2AA 3.6 V cell + holder | 1 | keeps the turn counters alive | Farnell, RS |
+| 5 to 8 mm jaw coupling D20 L25 | 2 | | RS, Amazon, AliExpress |
+| Rigid clamp coupling 15 / 25 mm, Ø45 x 64 | 2 | crossboom | Ruland via RS or Misumi, check the 25 x 15 bore pair |
+| Flange shaft collar 15 mm, Ø50 flange, 4x Ø5.5 on 38 PCD | 1 | turret | Misumi, Ruland, Stafford |
+| Ground shaft 8 h6 x 85 | 2 | worm shafts | Misumi (cut to length), linear-motion shops |
+| 608-2RS | 4 | | any bearing shop |
+| Shaft collar 8 mm | 2 | | RS, Accu, Misumi |
+| V-ring VA-15 | 3 | | bearing and seal shops (SKF / Simrit VA-15) |
+| Key 5x5x20 (DIN 6885 A) | 2 | | Accu, RS |
+| Shim 15x21x1 (DIN 988) | 2 | | Accu, RS |
+| Hex standoff M6 x 65, male-female | 3 | | RS, Accu |
+| O-ring 86x2.5 | 1 | mast clamp | RS, any O-ring shop |
+| M16 IP68 cable gland, M12x1.5 breather vent | 3, 2 | | Farnell, RS (Lapp Skintop, Amphenol LTW vents) |
+| A4 screws: M3x6 (2), M3x10 (8), M4x10 (8), M5x12 (4), M6x10 (2), M6x12 (2), M6x12 countersunk (3), M6x16 (8), M6x20 (4), M6 nuts (8) | | sealing washers under the screws that pass through box walls | Accu |
+| Aluminium tube 25 x 2 x 500 | 2 | crossboom | metal stockist |
