@@ -1,5 +1,5 @@
 let a=38 ph=0
-part wheel ../parts/khk_bg1_60r1.gcad
+part wheel ../parts/khk_cg1_60r1.gcad
 part worm ../parts/khk_sw1_r1.gcad
 rotate worm 90 axis=x
 move worm 0,ph,0
