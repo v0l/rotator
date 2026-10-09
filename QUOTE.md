@@ -22,8 +22,8 @@ tap drill size; the thread is in the table.
 |---|---|---|
 | `drive_block` | 2 | 6082-T6, 43 x 52 x 104 block; 2x Ø22 H7 x 7 (608), Ø14 thru, Ø22.4 motor pilot, 4x Ø3.4 on 31 square, 4x Ø4.5 in spine |
 | `mast_clamp` | 1 | 6082-T6, turned from Ø100 bar; Ø48.7 x 62 bore; O-ring face groove Ø86-91.2 x 1.5; 4x M6 x 9; 3x M8 radial |
-| `az_spindle` | 1 | Ø15 h6 ground stainless rod, 98 long; keyseat 5 P9 x 3 x 20 at 23 from the bottom end |
-| `el_shaft` | 1 | Ø15 h6 ground stainless rod, 194.7 long; keyseat 5 P9 x 3 x 20 at 86.6 from one end |
+| `az_spindle` | 1 | Ø15 silver steel, 98 long; keyseat 5 P9 x 3 x 20 at 23 from the bottom end |
+| `el_shaft` | 1 | Ø15 silver steel, 194.7 long; keyseat 5 P9 x 3 x 20 at 86.6 from one end; Ø5.2 cross holes at 17.35 and 177.35 |
 
 ## Drilled enclosures
 
