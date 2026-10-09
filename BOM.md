@@ -76,3 +76,18 @@ the UK adds Irish import VAT and a carrier handling fee.
 The two boxes, bearings, gears, motors and encoders are all in these totals; what is
 missing is fasteners, the turret collar, standoffs, tube and gasket sheet, likely
 under €50 together.
+
+## Other Irish suppliers
+
+Found by search, stock and prices not checked unless noted.
+
+| need | supplier |
+|---|---|
+| Bearings, KFL units, taper-lock bushes and hubs, couplings | [Central Bearing Supplies](https://www.cbsbearings.com/), [Dickson Bearings](https://dicksonbearings.ie/), [Bearings Online](https://www.bearingsonline.ie/), [MecTec](http://www.mectec.ie/store/bearings) |
+| Worm wheels | [RS Ireland](https://ie.rs-online.com/web/c/mechanical-power-transmission/gears-racks/worm-pinion-gears/) (RS PRO bronze wheels), [C.H.L. Engineering](http://www.chlengineering.ie/product-types/gears) (cut to order) |
+| A4 stainless screws, nuts, washers | [Inox.ie](https://www.inox.ie/acatalog/Cap_Screws.html), [Bolts and Nuts](https://www.boltsandnuts.ie/), [Würth Ireland](https://eshop.wurth.ie/) (trade accounts) |
+| NEMA17 motors, maker parts | [Gleanntronics](https://gleanntronics.ie/), [3DJake Ireland](https://www.3djake.ie/), [Mouser Ireland](https://www.mouser.ie/) |
+| 25 mm aluminium tube | [Goodwins](https://www.goodwins.ie/products/id-30577.html) (25 mm x 1 m, €8.90 ex VAT, 15 in stock), [Lenehans](https://www.lenehans.ie/round-profile-anodised-aluminium-25mm-x-1m.html), [Impact Aluminium](https://www.impactaluminium.ie/product-category/profile/tube/) |
+| Cable glands | [Electrical Wholesaler Ireland](https://www.electricalwholesaler.ie/en/products/m16-cable-gland-locknut-grey-5-10mm-cable-entry-ip68-q-crimp) (M16 IP68, pack of 10) |
+| Laser-cut plates | [ATC Group](https://atcgroup.ie/laser-cutting-quote/), [Laserprofiling.ie](https://laserprofiling.ie/), [lasercutting.ie](http://www.lasercutting.ie/), [CS Fabrication](https://www.csfabrication.ie/laser-cutting/) |
+| Turned and milled parts | [ProNum CNC](https://pronum.ie/), [Profab Services](https://www.profabservices.ie/services/precision-engineering), [cnc.ie quote form](https://www.cnc.ie/get-a-quote.html) (routes to several Irish shops) |
