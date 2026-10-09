@@ -1,8 +1,7 @@
 # Bill of materials (bought parts)
 
 Prices checked on 9 Oct 2026, unit prices ex VAT. Made parts (plates, shafts, mast
-clamp, drive blocks) and drilling the boxes are in `QUOTE.md`. The encoder battery
-backup lives on the driver board and is not listed here.
+clamp, drive blocks) and drilling the boxes are in `QUOTE.md`.
 
 ## Farnell Ireland (EUR, free delivery over €75)
 
@@ -12,14 +11,6 @@ backup lives on the driver board and is not listed here.
 | 3 | TE 1478769-2 cable gland M16, IP68, with locknut | [1174602](https://ie.farnell.com/te-connectivity/1478769-2/cable-gland-pa-10mm-m16-black/dp/1174602) | €4.07 | €12.21 |
 | 2 | TE 2490541-2 breather vent M12x1.5 | [4753219](https://ie.farnell.com/amp-te-connectivity/2490541-2/ventilation-cable-gland-70l-h/dp/4753219) | €4.40 | €8.80 |
 | | | | | **€95.97** |
-
-## DigiKey Ireland (EUR)
-
-| qty | part | link | unit | total |
-|---|---|---|---|---|
-| 2 | ams AS5047P-TS_EK_AB encoder adapter board, magnet included | [AS5047P-TS_EK_AB](https://www.digikey.ie/en/products/detail/ams-osram-ag/AS5047P-ADAPTERBOARD/5452344) | €17.03 | €34.06 |
-
-Farnell lists this board as no longer manufactured; DigiKey had 323 in stock.
 
 ## Simply Bearings Ireland (EUR)
 
@@ -54,9 +45,9 @@ the UK adds Irish import VAT and a carrier handling fee.
 
 | qty | part | link | unit | total |
 |---|---|---|---|---|
-| 2 | 17HS16-2004D dual-shaft NEMA17, 45 Ncm, 40 mm, rear shaft 13 mm | [17HS16-2004D](https://www.omc-stepperonline.com/dual-shaft-nema-17-bipolar-45ncm-63-74oz-in-2a-42x42x40mm-4-wires-17hs16-2004d) | £7.21 | £14.42 |
+| 2 | 17HS15-1504-ME1K closed-loop NEMA17, 45 Ncm, magnetic encoder 1000 PPR built in, 43.5 mm long | [17HS15-1504-ME1K](https://www.omc-stepperonline.com/nema-17-closed-loop-stepper-motor-45ncm-64oz-in-with-magnetic-encoder-1000ppr-4000cpr-17hs15-1504-me1k) | £14.36 | £28.72 |
 | 2 | MH2025-5-8 jaw coupling 5 to 8 mm, 20x25 | [MH2025-5-8](https://www.omc-stepperonline.com/5mm-8mm-flexible-jaw-coupling-20x25mm-cnc-stepper-motor-shaft-coupler-mh2025-5-8) | £2.58 | £5.16 |
-| | | | | **£19.58** |
+| | | | | **£33.88** |
 
 ## Not price-checked yet
 
@@ -75,15 +66,14 @@ GBP converted at 1.1805 (mid-market, 9 Oct 2026). Shipping not included.
 | supplier | ex VAT | with VAT |
 |---|---|---|
 | Farnell Ireland | €95.97 | €118.04 |
-| DigiKey Ireland | €34.06 | €41.89 |
 | Simply Bearings Ireland | €109.76 | €135.00 |
 | R.A. Rodriguez (£92.56) | €109.27 | €134.40 |
-| StepperOnline (£19.58) | €23.11 | €28.43 |
+| StepperOnline (£33.88) | €40.00 | €49.20 |
 | Goodwins, 25 mm tube x 1 m | €8.90 | €10.95 |
-| **priced parts** | **€381.07** | **€468.71** |
+| **priced parts** | **€363.90** | **€447.59** |
 
 The unpriced rows (turret collar, standoffs, screws, gasket sheet) are an estimate of
-about €70 with VAT, which brings the bought parts to roughly **€540**. The made parts in
+about €70 with VAT, which brings the bought parts to roughly **€520**. The made parts in
 `QUOTE.md` (plates, shafts, mast clamp, drive blocks, gear reboring) still need quotes.
 
 ## Other Irish suppliers

@@ -108,28 +108,11 @@ move coupling_az 0,0,-57
 rotate coupling_az 90 axis=y
 rotate coupling_az -90 axis=x
 move coupling_az 0,38,38
-part motor_az parts/std/nema17.gcad
+part motor_az parts/std/nema17.gcad L=43.5 rear=0
 move motor_az 0,0,-69.5
 rotate motor_az 90 axis=y
 rotate motor_az -90 axis=x
 move motor_az 0,38,38
-part enc_az parts/std/encoder.gcad
-move enc_az.cap 0,0,-109.5
-rotate enc_az.cap 90 axis=y
-rotate enc_az.cap -90 axis=x
-move enc_az.cap 0,38,38
-move enc_az.pcb 0,0,-109.5
-rotate enc_az.pcb 90 axis=y
-rotate enc_az.pcb -90 axis=x
-move enc_az.pcb 0,38,38
-move enc_az.magnet 0,0,-109.5
-rotate enc_az.magnet 90 axis=y
-rotate enc_az.magnet -90 axis=x
-move enc_az.magnet 0,38,38
-move enc_az.disc 0,0,-109.5
-rotate enc_az.disc 90 axis=y
-rotate enc_az.disc -90 axis=x
-move enc_az.disc 0,38,38
 part blk_screw_az_1 parts/std/screw.gcad d=4 L=10
 rotate blk_screw_az_1 90 axis=x
 move blk_screw_az_1 8,23,-15
@@ -257,23 +240,10 @@ part coupling_el parts/std/coupling.gcad
 move coupling_el 0,0,-57
 rotate coupling_el -90 axis=z
 move coupling_el 4.25,38,eh
-part motor_el parts/std/nema17.gcad
+part motor_el parts/std/nema17.gcad L=43.5 rear=0
 move motor_el 0,0,-69.5
 rotate motor_el -90 axis=z
 move motor_el 4.25,38,eh
-part enc_el parts/std/encoder.gcad
-move enc_el.cap 0,0,-109.5
-rotate enc_el.cap -90 axis=z
-move enc_el.cap 4.25,38,eh
-move enc_el.pcb 0,0,-109.5
-rotate enc_el.pcb -90 axis=z
-move enc_el.pcb 4.25,38,eh
-move enc_el.magnet 0,0,-109.5
-rotate enc_el.magnet -90 axis=z
-move enc_el.magnet 4.25,38,eh
-move enc_el.disc 0,0,-109.5
-rotate enc_el.disc -90 axis=z
-move enc_el.disc 4.25,38,eh
 part blk_screw_el_1 parts/std/screw.gcad d=4 L=10
 rotate blk_screw_el_1 90 axis=x
 move blk_screw_el_1 8,23,-15
@@ -397,10 +367,6 @@ flush wcollar_el:ring.start brg_b_el:ring.end
 flush coupling_el:hub.end brg_a_el:ring.start
 flush motor_el:front.end block_el:motor.start
 concentric rod_el:rod.side coupling_el:bore.side
-flush enc_el.cap:>Z motor_el:can.start
-flush enc_el.pcb:board.start enc_el.cap:posts.end
-flush enc_el.magnet:bore.bottom motor_el:tail.end
-flush enc_el.disc:mag.end enc_el.magnet:pocket.bottom
 flush blk_screw_el_1:head.start block_el:spine.start
 flush blk_screw_el_2:head.start block_el:spine.start
 flush blk_screw_el_3:head.start block_el:spine.start

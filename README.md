@@ -29,9 +29,9 @@ gcad export rotator.gasm rotator.step
 - El: 15 mm shaft in KFL002 units bolted outside the el box floor and lid, with backing
   plates inside. Crossboom tubes slide over the shaft ends on bronze bushes and are cross-bolted.
 - Each axis: KHK CG1-60R1 wheel on a keyed shaft, KHK SW1-R1 worm on an 8 mm shaft in two
-  608s in `driveblock.gcad`, jaw-coupled to a dual-shaft NEMA17.
-- Absolute magnetic encoder (AS5047P) on each motor's rear shaft; turn counting and
-  its battery backup live on the driver board.
+  608s in `driveblock.gcad`, jaw-coupled to a StepperOnline 17HS15-1504-ME1K closed-loop
+  NEMA17 with a built-in 1000 PPR magnetic encoder. Turn counting and its battery backup
+  live on the driver board.
 - The boxes are `parts/std/hammond_1550z220_box.gcad` and `_lid.gcad`. Without
   Hammond's STEP they are drawn from its measurements. Download the STEP from
   https://www.hammfg.com/part/1550Z220, save it as `parts/vendor/1550Z220.stp`, and run
@@ -45,5 +45,5 @@ The mast clamp seals the floor holes with a face O-ring.
 
 ## Ratings
 
-60:1, 0.42 Nm motor, worm efficiency about 0.4: roughly 5 Nm usable at the output,
+60:1, 0.45 Nm motor, worm efficiency about 0.4: roughly 5 Nm usable at the output,
 8-10 Nm at pull-out. KHK lists CG1-60R1 (cast iron) at 7.4 Nm at 100 rpm worm speed.

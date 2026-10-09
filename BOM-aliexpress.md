@@ -10,14 +10,11 @@ more. Delivery is usually free over €10 per seller.
 |---|---|---|---|
 | 4 | KFL002 flange bearing, 15 mm (pack of 4) | [1005013055457662](https://www.aliexpress.com/item/1005013055457662.html) | €10.47 |
 | 2 | Worm set, module 1, 60:1, brass wheel and steel worm | [1005007437546292](https://www.aliexpress.com/item/1005007437546292.html) | €11.02 each |
-| 2 | STEPPERONLINE dual-shaft NEMA17, 40 mm, 45 Ncm | [32958088635](https://www.aliexpress.com/item/32958088635.html) | €12.63 each |
 | 2 | Jaw coupling D20L25, 5 to 8 mm | [1005002758426926](https://www.aliexpress.com/item/1005002758426926.html) | €1.46 each |
 | 4 | 608-2RS (pack of 10) | [1005013212915743](https://www.aliexpress.com/item/1005013212915743.html) | €6.04 |
 | 2 | Shaft collar 8 mm | [1005004286453800](https://www.aliexpress.com/item/1005004286453800.html) | €1.49 |
 | 1 | 303 stainless rod 15 mm, 300 mm (spindle and el shaft) | [4000186787300](https://www.aliexpress.com/item/4000186787300.html) | €6.02 |
 | 1 | Stainless rod 8 mm, 200 mm (worm shafts) | [1005010787659558](https://www.aliexpress.com/item/1005010787659558.html) | €4.65 |
-| 2 | AS5047P encoder adapter board | [1005005961434268](https://www.aliexpress.com/item/1005005961434268.html) | €9.32 each |
-| 2 | Diametric magnet 6 x 2.5 for AS5047P | [1005012000796092](https://www.aliexpress.com/item/1005012000796092.html) | €12.60 |
 | 3 | Cable gland M16, IP68 | [1005007639692634](https://www.aliexpress.com/item/1005007639692634.html) | €2.61 |
 | 2 | Breather vent M12x1.5 | [1005005598068425](https://www.aliexpress.com/item/1005005598068425.html) | €9.23 |
 | 3 | V-ring VA14 | [1005008984747262](https://www.aliexpress.com/item/1005008984747262.html) | €4.83 |
@@ -29,7 +26,7 @@ more. Delivery is usually free over €10 per seller.
 | 3 | A4 countersunk screw M6x12, DIN 7991 | [1005011829285007](https://www.aliexpress.com/item/1005011829285007.html) | €7.23 |
 | 1 | EPDM sheet 1 mm | [1005011772353226](https://www.aliexpress.com/item/1005011772353226.html) | €5.19 |
 
-AliExpress subtotal from the listed prices: about **€196**.
+AliExpress subtotal from the listed prices: about **€140**.
 
 ## Still bought in Ireland
 
@@ -38,6 +35,7 @@ AliExpress subtotal from the listed prices: about **€196**.
 | 2 | Hammond 1550Z220 box | [Farnell 1823112](https://ie.farnell.com/hammond/1550z220/box-diecast-82x146x222mm/dp/1823112) | €92.20 |
 | 1 | 25 mm aluminium tube, 1 m | [Goodwins](https://www.goodwins.ie/products/id-30577.html) | €10.95 |
 | 1 | O-ring 86 x 2.5 EPDM | [Simply Bearings](https://www.simplybearings.ie/products/2-5x86-epdm) | €1.23 |
+| 2 | StepperOnline 17HS15-1504-ME1K closed-loop NEMA17 with built-in encoder (£14.36 each, ships from StepperOnline) | [17HS15-1504-ME1K](https://www.omc-stepperonline.com/nema-17-closed-loop-stepper-motor-45ncm-64oz-in-with-magnetic-encoder-1000ppr-4000cpr-17hs15-1504-me1k) | €41.70 |
 
 AliExpress has no die-cast box at 222 x 146 x 82, and the whole model is drawn around
 the Hammond one. The IP67 cast boxes it does sell
@@ -47,7 +45,7 @@ model and drilling would have to be redone for it.
 
 ## Total
 
-About **€300 with VAT**, against about €540 for the Irish, UK and EU suppliers in
+About **€290 with VAT**, against about €520 for the Irish, UK and EU suppliers in
 `BOM.md`. Made parts are the same in both and still need quotes.
 
 ## Before ordering
