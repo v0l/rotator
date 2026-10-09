@@ -3,3 +3,10 @@ out/
 *.svg
 parts/vendor/
 !docs/*.png
+board/ref/
+checks/tmp/
+board/models/Ag5400_*.step
+board/models/V8BR-1AX1-GH.*
+board/*.result.json
+board/tools/.mouser_cache.json
+board/fab/

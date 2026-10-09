@@ -1,0 +1,88 @@
+# imported from KiCad Power_Management:TPS2116DRL
+name = "TPS2116DRL"
+reference = "U"
+description = "2 Channnels Power Mux with Manual and Priority Switchover, 1.6-5.5V Input Voltage, 2.5A Output Current, Ron 40 mOhm, SOT-583-8"
+datasheet = "https://www.ti.com/lit/ds/symlink/tps2116.pdf"
+keywords = ["Texas-Instruments", "power-mux", "switchover"]
+footprint = "SOT-583-8"
+footprint_filters = ["SOT?5?3*"]
+
+[[graphics]]
+kind = "rect"
+start = [-7.62, -7.62]
+end = [7.62, 7.62]
+width = 0.254
+fill = "background"
+
+[[pins]]
+number = "7"
+name = "VOUT"
+type = "passive"
+at = [10.16, -5.08]
+side = "right"
+length = 2.54
+unit = 1
+hidden = true
+
+[[pins]]
+number = "3"
+name = "VIN1"
+type = "power_in"
+at = [-10.16, -5.08]
+side = "left"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "4"
+name = "PR1"
+type = "input"
+at = [-10.16, -2.54]
+side = "left"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "5"
+name = "MODE"
+type = "input"
+at = [-10.16, 2.54]
+side = "left"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "6"
+name = "VIN2"
+type = "power_in"
+at = [-10.16, 5.08]
+side = "left"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "1"
+name = "GND"
+type = "power_in"
+at = [0.0, 10.16]
+side = "bottom"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "2"
+name = "VOUT"
+type = "power_out"
+at = [10.16, -5.08]
+side = "right"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "8"
+name = "ST"
+type = "open_collector"
+at = [10.16, 5.08]
+side = "right"
+length = 2.54
+unit = 1

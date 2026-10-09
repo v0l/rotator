@@ -1,0 +1,38 @@
+add U1 Ag5424 Ag5424 --field mpn=Ag5424 --field mfr=Silvertel
+add U2 LTV-357T LTV-357T --field mpn=LTV-357T --field mfr=Liteon
+add U3 AP63203WU AP63203WU --field mpn=AP63203WU-7 --field mfr=Diodes
+add H1 MountingHole_Pad M3
+add H2 MountingHole_Pad M3
+add H3 MountingHole_Pad M3
+add H4 MountingHole_Pad M3
+
+add D1 CDBHM2100L-G CDBHM2100L-G --field mpn=CDBHM2100L-G --field mfr=Comchip
+add D2 CDBHM2100L-G CDBHM2100L-G --field mpn=CDBHM2100L-G --field mfr=Comchip
+add C1 C 100n/100V --footprint C_0805_2012Metric --field mpn=GRM21BR72A104KAC4L --field mfr=Murata
+add C2 C_Polarized 220u/35V --footprint CP_Elec_10x10.5 --field mpn=EEH-ZA1V221P --field mfr=Panasonic
+add R1 R 24k --footprint R_1206_3216Metric --field mpn=ERJ-8ENF2402V --field mfr=Panasonic
+add R2 R 10k --field mpn=RC0402FR-0710KL --field mfr=Yageo
+add D4 D_Schottky B5819W --field mpn=1N5819HW-7-F --field mfr=Diodes
+add D5 D_Schottky B5819W --field mpn=1N5819HW-7-F --field mfr=Diodes
+add C3 C 10u/50V --footprint C_1206_3216Metric --field mpn=C3216X5R1H106K160AB --field mfr=TDK
+add C4 C 100n/50V --field mpn=GRM155R71H104KE14D --field mfr=Murata
+add L1 L 4.7u --footprint L_Bourns-SRN4018 --field mpn=SRN4018-4R7M --field mfr=Bourns
+add C5 C 22u/10V --footprint C_0805_2012Metric --field mpn=CL21A226MPCLRNC --field mfr=Samsung
+add C6 C 22u/10V --footprint C_0805_2012Metric --field mpn=CL21A226MPCLRNC --field mfr=Samsung
+net POE_VC12 D1.3 --class PoE
+net POE_VC36 D1.2 --class PoE
+net POE_VC45 D2.2 --class PoE
+net POE_VC78 D2.3 --class PoE
+net POE_P D1.1 D2.1 C1.1 U1.1 R1.1 --class PoE
+net POE_N D1.4 D2.4 C1.2 U1.2 --class PoE
+net POE_LED R1.2 U2.1 --class PoE
+net POE_ATDET U2.2 U1.3 --class PoE
+net AT_DET U2.4 R2.2 --class Signal
+net GND H1.1 H2.1 H3.1 H4.1 U2.3 U1.7 U1.10 C2.2 U3.4 C3.2 C5.2 C6.2  --class Ground
+net V24 U1.8 C2.1 D4.2 --class Power24
+net VBUCK D4.1 D5.1 U3.3 U3.2 C3.1 --class Power24
+net VBUS D5.2 --class Vbus
+net SW_3V3 U3.5 L1.1 C4.2 --class Switch
+net BST_3V3 U3.6 C4.1 --class Switch
+net 3V3 L1.2 U3.1 C5.1 C6.1 R2.1 --class Power3V3
+nc U1.4 U1.5 U1.6 U1.9

@@ -1,0 +1,134 @@
+# imported from KiCad Package_TO_SOT_SMD:SOT-583-8
+name = "SOT-583-8"
+description = "https://www.ti.com/lit/ds/symlink/tps62933.pdf"
+tags = ["SOT-583-8"]
+mount = "smd"
+model = "${KICAD9_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-583-8.step"
+
+[[pads]]
+number = "1"
+kind = "smd"
+shape = "roundrect"
+at = [-0.74, -0.75]
+size = [0.67, 0.3]
+roundrect_ratio = 0.1666666667
+layers = ["F.Cu", "F.Mask", "F.Paste"]
+count = 4
+pitch = [0.0, 0.5]
+
+[[pads]]
+number = "5"
+kind = "smd"
+shape = "roundrect"
+at = [0.74, 0.75]
+size = [0.67, 0.3]
+roundrect_ratio = 0.1666666667
+layers = ["F.Cu", "F.Mask", "F.Paste"]
+count = 4
+pitch = [0.0, -0.5]
+
+[[graphics]]
+kind = "text"
+layer = "F.SilkS"
+at = [0.0, -2.2]
+text = "${REFERENCE}"
+size = 1.0
+
+[[graphics]]
+kind = "text"
+layer = "F.Fab"
+at = [0.0, 2.8]
+text = "${VALUE}"
+size = 1.0
+
+[[graphics]]
+kind = "line"
+layer = "F.SilkS"
+start = [0.65, -1.16]
+end = [-0.4, -1.16]
+width = 0.15
+
+[[graphics]]
+kind = "line"
+layer = "F.SilkS"
+start = [0.65, 1.16]
+end = [-0.65, 1.16]
+width = 0.15
+
+[[graphics]]
+kind = "polygon"
+layer = "F.SilkS"
+points = [[-0.76, -1.16], [-1.04, -1.16], [-0.76, -1.44], [-0.76, -1.16]]
+width = 0.15
+fill = "solid"
+
+[[graphics]]
+kind = "line"
+layer = "F.CrtYd"
+start = [-1.32, -1.3]
+end = [1.32, -1.3]
+width = 0.05
+
+[[graphics]]
+kind = "line"
+layer = "F.CrtYd"
+start = [-1.32, 1.3]
+end = [-1.32, -1.3]
+width = 0.05
+
+[[graphics]]
+kind = "line"
+layer = "F.CrtYd"
+start = [1.32, -1.3]
+end = [1.32, 1.3]
+width = 0.05
+
+[[graphics]]
+kind = "line"
+layer = "F.CrtYd"
+start = [1.32, 1.3]
+end = [-1.32, 1.3]
+width = 0.05
+
+[[graphics]]
+kind = "line"
+layer = "F.Fab"
+start = [-0.6, -0.75]
+end = [-0.6, 1.05]
+width = 0.1
+
+[[graphics]]
+kind = "line"
+layer = "F.Fab"
+start = [-0.6, 1.05]
+end = [0.6, 1.05]
+width = 0.1
+
+[[graphics]]
+kind = "line"
+layer = "F.Fab"
+start = [-0.3, -1.05]
+end = [-0.6, -0.75]
+width = 0.1
+
+[[graphics]]
+kind = "line"
+layer = "F.Fab"
+start = [0.6, -1.05]
+end = [-0.3, -1.05]
+width = 0.1
+
+[[graphics]]
+kind = "line"
+layer = "F.Fab"
+start = [0.6, -1.05]
+end = [0.6, 1.05]
+width = 0.1
+
+[[graphics]]
+kind = "text"
+layer = "F.Fab"
+at = [0.0, 0.0]
+text = "${REFERENCE}"
+size = 0.5
+rotation = 90.0

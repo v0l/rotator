@@ -1,0 +1,25 @@
+name = "Ag5424"
+reference = "U"
+value = "Ag5424"
+description = "Silvertel Ag5400 PoE+ PD module, IEEE 802.3at class 4, 24 V 1.25 A isolated output, SIL"
+datasheet = "https://silvertel.com/images/datasheets/Ag5400-datasheet-high%20Efficiency-30W-Power-Over-Ethernet-Plus-Module-PoE+PD.pdf"
+footprint = "Silvertel_Ag5400_SIL"
+
+[[bodies]]
+width = 20.32
+left = [
+  { number = "1", name = "VIN+", type = "power_in" },
+  { number = "2", name = "VIN-", type = "power_in" },
+  { number = "3", name = "AT-DET", type = "open_collector" },
+  { gap = 1 },
+  { number = "4", name = "IC", type = "no_connect" },
+  { number = "5", name = "IC", type = "no_connect" },
+  { number = "6", name = "IC", type = "no_connect" },
+]
+right = [
+  { number = "8", name = "+VDC", type = "power_out" },
+  { number = "9", name = "ADJ", type = "passive" },
+  { gap = 1 },
+  { number = "7", name = "-VDC", type = "power_out" },
+  { number = "10", name = "-VDC", type = "passive" },
+]

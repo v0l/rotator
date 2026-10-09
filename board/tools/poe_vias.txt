@@ -1,0 +1,11 @@
+via POE_P 14.5,20
+via POE_P 15.5,21.8
+via POE_N 7.5,21.5
+via POE_N 9,22.3
+via POE_VC12 8,26.5
+via POE_VC36 14.3,24.9
+via POE_P 18,57.5
+via POE_N 24,57
+via POE_N 23.6,56.1
+via POE_VC45 18,52.2
+via POE_VC78 24,52.6

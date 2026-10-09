@@ -1,0 +1,32 @@
+track MOT_AZ_B2 F.Cu 68.5,26.9 68.5,26.0 --width 0.25mm
+track MOT_AZ_B2 F.Cu 68.5,26.0 68.5,25.6 84.6,25.6 --width 0.5mm
+track V24 F.Cu 69.45,27.85 70.2,27.85 70.9,27.15 70.9,27.0 --width 0.25mm
+via V24 70.9,27.0
+track SNS_AZ_B F.Cu 69.45,28.35 70.6,28.35 71.1,27.85 71.7,27.85 --width 0.25mm
+via SNS_AZ_B 71.7,27.85
+track MOT_AZ_B1 F.Cu 69.45,28.85 71.0,28.85 --width 0.25mm
+track MOT_AZ_B1 F.Cu 71.0,28.85 72.6,28.85 73.35,28.1 84.6,28.1 --width 0.5mm
+track MOT_AZ_A1 F.Cu 69.45,29.85 71.0,29.85 --width 0.25mm
+track MOT_AZ_A1 F.Cu 71.0,29.85 72.6,29.85 73.35,30.6 84.6,30.6 --width 0.5mm
+track SNS_AZ_A F.Cu 69.45,30.35 70.6,30.35 71.1,30.85 71.7,30.85 --width 0.25mm
+via SNS_AZ_A 71.7,30.85
+track V24 F.Cu 69.45,30.85 70.2,30.85 70.9,31.55 70.9,31.7 --width 0.25mm
+via V24 70.9,31.7
+track MOT_AZ_A2 F.Cu 68.5,31.8 68.5,32.7 --width 0.25mm
+track MOT_AZ_A2 F.Cu 68.5,32.7 68.5,33.1 84.6,33.1 --width 0.5mm
+track MOT_EL_B2 F.Cu 68.5,40.7 68.5,39.8 --width 0.25mm
+track MOT_EL_B2 F.Cu 68.5,39.8 68.5,39.4 84.6,39.4 --width 0.5mm
+track V24 F.Cu 69.45,41.65 70.2,41.65 70.9,40.95 70.9,40.8 --width 0.25mm
+via V24 70.9,40.8
+track SNS_EL_B F.Cu 69.45,42.15 70.6,42.15 71.1,41.65 71.7,41.65 --width 0.25mm
+via SNS_EL_B 71.7,41.65
+track MOT_EL_B1 F.Cu 69.45,42.65 71.0,42.65 --width 0.25mm
+track MOT_EL_B1 F.Cu 71.0,42.65 72.6,42.65 73.35,41.9 84.6,41.9 --width 0.5mm
+track MOT_EL_A1 F.Cu 69.45,43.65 71.0,43.65 --width 0.25mm
+track MOT_EL_A1 F.Cu 71.0,43.65 72.6,43.65 73.35,44.4 84.6,44.4 --width 0.5mm
+track SNS_EL_A F.Cu 69.45,44.15 70.6,44.15 71.1,44.65 71.7,44.65 --width 0.25mm
+via SNS_EL_A 71.7,44.65
+track V24 F.Cu 69.45,44.65 70.2,44.65 70.9,45.35 70.9,45.5 --width 0.25mm
+via V24 70.9,45.5
+track MOT_EL_A2 F.Cu 68.5,45.6 68.5,46.5 --width 0.25mm
+track MOT_EL_A2 F.Cu 68.5,46.5 68.5,46.9 84.6,46.9 --width 0.5mm

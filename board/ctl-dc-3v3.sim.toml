@@ -1,0 +1,63 @@
+name = "ctl-dc-3v3"
+kind = "dc"
+layout = "ctl"
+cell = 0.1
+
+[[supplies]]
+pad = "L1.2"
+voltage = "3.3V"
+
+[[supplies]]
+pad = "U3.4"
+voltage = "0V"
+
+[[links]]
+ref = "U6"
+resistance = "60mohm"
+a = "5"
+b = "7"
+
+[[loads]]
+pad = "U10.19"
+current = "40mA"
+return = "U10.18"
+
+[[loads]]
+pad = "U10.48"
+current = "40mA"
+return = "U10.47"
+
+[[loads]]
+pad = "U10.64"
+current = "40mA"
+return = "U10.63"
+
+[[loads]]
+pad = "U14.9"
+current = "20mA"
+return = "U14.25"
+
+[[loads]]
+pad = "U14.19"
+current = "40mA"
+return = "U14.25"
+
+[[loads]]
+pad = "J4.1"
+current = "25mA"
+return = "J4.2"
+
+[[loads]]
+pad = "J5.1"
+current = "25mA"
+return = "J5.2"
+
+[[loads]]
+pad = "U12.15"
+current = "5mA"
+return = "U12.18"
+
+[[loads]]
+pad = "U13.15"
+current = "5mA"
+return = "U13.18"

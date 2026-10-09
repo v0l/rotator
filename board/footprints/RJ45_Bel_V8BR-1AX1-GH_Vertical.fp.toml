@@ -1,0 +1,228 @@
+name = "RJ45_Bel_V8BR-1AX1-GH_Vertical"
+description = "Bel V8BR-1AX1-GH vertical MagJack, through hole; origin on the board lock line, pins toward +y (drawing V8BR-1AX1-GH rev PC, page 4)"
+tags = ["RJ45", "MagJack", "PoE", "vertical"]
+mount = "tht"
+height = "17mm"
+clearance = "0.1mm"
+model = "models/V8BR-1AX1-GH.stp"
+model_offset = ["0mm", "-4.953mm", "16.79mm"]
+
+[[pads]]
+number = "1"
+kind = "tht"
+shape = "circle"
+at = [5.080, 7.493]
+size = [1.35, 1.35]
+drill = 0.95
+
+[[pads]]
+number = "3"
+kind = "tht"
+shape = "circle"
+at = [3.048, 7.493]
+size = [1.35, 1.35]
+drill = 0.95
+
+[[pads]]
+number = "5"
+kind = "tht"
+shape = "circle"
+at = [1.016, 7.493]
+size = [1.35, 1.35]
+drill = 0.95
+
+[[pads]]
+number = "7"
+kind = "tht"
+shape = "circle"
+at = [-1.016, 7.493]
+size = [1.35, 1.35]
+drill = 0.95
+
+[[pads]]
+number = "9"
+kind = "tht"
+shape = "circle"
+at = [-3.048, 7.493]
+size = [1.35, 1.35]
+drill = 0.95
+
+[[pads]]
+number = "11"
+kind = "tht"
+shape = "circle"
+at = [-5.080, 7.493]
+size = [1.35, 1.35]
+drill = 0.95
+
+[[pads]]
+number = "2"
+kind = "tht"
+shape = "circle"
+at = [4.064, 8.992]
+size = [1.35, 1.35]
+drill = 0.95
+
+[[pads]]
+number = "4"
+kind = "tht"
+shape = "circle"
+at = [2.032, 8.992]
+size = [1.35, 1.35]
+drill = 0.95
+
+[[pads]]
+number = "6"
+kind = "tht"
+shape = "circle"
+at = [0.000, 8.992]
+size = [1.35, 1.35]
+drill = 0.95
+
+[[pads]]
+number = "8"
+kind = "tht"
+shape = "circle"
+at = [-2.032, 8.992]
+size = [1.35, 1.35]
+drill = 0.95
+
+[[pads]]
+number = "10"
+kind = "tht"
+shape = "circle"
+at = [-4.064, 8.992]
+size = [1.35, 1.35]
+drill = 0.95
+
+[[pads]]
+number = "12"
+kind = "tht"
+shape = "circle"
+at = [-6.096, 8.992]
+size = [1.35, 1.35]
+drill = 0.95
+
+[[pads]]
+number = "13"
+kind = "tht"
+shape = "circle"
+at = [7.315, 1.981]
+size = [1.35, 1.35]
+drill = 0.95
+
+[[pads]]
+number = "14"
+kind = "tht"
+shape = "circle"
+at = [7.315, 4.013]
+size = [1.35, 1.35]
+drill = 0.95
+
+[[pads]]
+number = "15"
+kind = "tht"
+shape = "circle"
+at = [-7.315, 1.981]
+size = [1.35, 1.35]
+drill = 0.95
+
+[[pads]]
+number = "16"
+kind = "tht"
+shape = "circle"
+at = [-7.315, 4.013]
+size = [1.35, 1.35]
+drill = 0.95
+
+[[pads]]
+number = "17"
+kind = "tht"
+shape = "circle"
+at = [6.528, -3.505]
+size = [1.60, 1.60]
+drill = 1.10
+
+[[pads]]
+number = "18"
+kind = "tht"
+shape = "circle"
+at = [3.988, -3.505]
+size = [1.60, 1.60]
+drill = 1.10
+
+[[pads]]
+number = "19"
+kind = "tht"
+shape = "circle"
+at = [-3.988, -3.505]
+size = [1.60, 1.60]
+drill = 1.10
+
+[[pads]]
+number = "20"
+kind = "tht"
+shape = "circle"
+at = [-6.528, -3.505]
+size = [1.60, 1.60]
+drill = 1.10
+
+[[pads]]
+number = "SH"
+kind = "tht"
+shape = "circle"
+at = [-8.992, 8.992]
+size = [2.40, 2.40]
+drill = 1.60
+
+[[pads]]
+number = "SH"
+kind = "tht"
+shape = "circle"
+at = [8.992, 8.992]
+size = [2.40, 2.40]
+drill = 1.60
+
+[[pads]]
+number = ""
+kind = "npth"
+shape = "circle"
+at = [-5.004, 0]
+size = [3.25, 3.25]
+drill = 3.25
+
+[[pads]]
+number = ""
+kind = "npth"
+shape = "circle"
+at = [5.004, 0]
+size = [3.25, 3.25]
+drill = 3.25
+
+[[graphics]]
+kind = "rect"
+layer = "F.Fab"
+start = [-9.30, -5.23]
+end = [9.30, 15.42]
+width = 0.1
+
+[[graphics]]
+kind = "rect"
+layer = "F.SilkS"
+start = [-10.30, -5.23]
+end = [10.30, 15.42]
+width = 0.15
+
+[[graphics]]
+kind = "rect"
+layer = "F.CrtYd"
+start = [-10.70, -5.63]
+end = [10.70, 15.82]
+width = 0.05
+
+[[graphics]]
+kind = "text"
+layer = "F.SilkS"
+text = "${REFERENCE}"
+at = [0, 17.02]
+size = 1.0

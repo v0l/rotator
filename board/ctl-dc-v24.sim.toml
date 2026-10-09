@@ -1,0 +1,41 @@
+name = "ctl-dc-v24"
+kind = "dc"
+layout = "ctl"
+cell = 0.1
+
+[[supplies]]
+pad = "U1.8"
+voltage = "24V"
+
+[[supplies]]
+pad = "U1.7"
+voltage = "0V"
+
+[[links]]
+ref = "D4"
+resistance = "0.3ohm"
+
+[[loads]]
+pad = "U12.22"
+current = "225mA"
+return = "U12.18"
+
+[[loads]]
+pad = "U12.28"
+current = "225mA"
+return = "U12.3"
+
+[[loads]]
+pad = "U13.22"
+current = "225mA"
+return = "U13.18"
+
+[[loads]]
+pad = "U13.28"
+current = "225mA"
+return = "U13.3"
+
+[[loads]]
+pad = "U3.3"
+current = "60mA"
+return = "U3.4"

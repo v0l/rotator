@@ -1,0 +1,354 @@
+name = "motor"
+description = "Two TMC2209 drivers on one UART, 0.11 ohm sense, JST XH motor connectors"
+board = "ctl"
+no_connect = ["U12.12", "U12.25", "U13.12", "U13.25"]
+
+[[parts]]
+ref = "U12"
+symbol = "TMC2209-LA"
+at = [25.4, 50.8]
+value = "TMC2209-LA"
+fields = { mpn = "TMC2209-LA-T", mfr = "ADI" }
+
+[[parts]]
+ref = "U13"
+symbol = "TMC2209-LA"
+at = [101.6, 50.8]
+value = "TMC2209-LA"
+fields = { mpn = "TMC2209-LA-T", mfr = "ADI" }
+
+[[parts]]
+ref = "J8"
+symbol = "Conn_01x04"
+at = [177.8, 50.8]
+value = "AZ_MOTOR"
+fields = { mpn = "B4B-XH-A(LF)(SN)", mfr = "JST" }
+
+[[parts]]
+ref = "J9"
+symbol = "Conn_01x04"
+at = [254.0, 50.8]
+value = "EL_MOTOR"
+fields = { mpn = "B4B-XH-A(LF)(SN)", mfr = "JST" }
+
+[[parts]]
+ref = "R46"
+symbol = "R"
+at = [25.4, 165.1]
+value = "1k"
+fields = { mpn = "RC0402FR-071KL", mfr = "Yageo" }
+
+[[parts]]
+ref = "C70"
+symbol = "C"
+at = [40.64, 165.1]
+value = "100n/50V"
+footprint = "C_0603_1608Metric"
+fields = { mpn = "GCM188R71H104KA57D", mfr = "Murata" }
+
+[[parts]]
+ref = "C71"
+symbol = "C"
+at = [55.88, 165.1]
+value = "100n/50V"
+footprint = "C_0603_1608Metric"
+fields = { mpn = "GCM188R71H104KA57D", mfr = "Murata" }
+
+[[parts]]
+ref = "C72"
+symbol = "C"
+at = [71.12, 165.1]
+value = "22n/50V"
+fields = { mpn = "GRM155R71H223KA12D", mfr = "Murata" }
+
+[[parts]]
+ref = "C73"
+symbol = "C"
+at = [86.36, 165.1]
+value = "100n/50V"
+footprint = "C_0603_1608Metric"
+fields = { mpn = "GCM188R71H104KA57D", mfr = "Murata" }
+
+[[parts]]
+ref = "C74"
+symbol = "C"
+at = [101.6, 165.1]
+value = "4.7u/10V"
+footprint = "C_0603_1608Metric"
+fields = { mpn = "C0603C475K8PAC", mfr = "KEMET" }
+
+[[parts]]
+ref = "C75"
+symbol = "C"
+at = [116.84, 165.1]
+value = "100n/10V"
+fields = { mpn = "GRM155R71A104KA01D", mfr = "Murata" }
+
+[[parts]]
+ref = "C76"
+symbol = "C_Polarized"
+at = [132.08, 165.1]
+value = "100u/35V"
+footprint = "CP_Elec_6.3x7.7"
+fields = { mpn = "EEE-FK1V101XP", mfr = "Panasonic" }
+
+[[parts]]
+ref = "R40"
+symbol = "R"
+at = [147.32, 165.1]
+value = "0.11"
+footprint = "R_1206_3216Metric"
+fields = { power = "0.5W", mpn = "RL1632R-R110-F", mfr = "Susumu" }
+
+[[parts]]
+ref = "R41"
+symbol = "R"
+at = [162.56, 165.1]
+value = "0.11"
+footprint = "R_1206_3216Metric"
+fields = { power = "0.5W", mpn = "RL1632R-R110-F", mfr = "Susumu" }
+
+[[parts]]
+ref = "R42"
+symbol = "R"
+at = [177.8, 165.1]
+value = "10k"
+fields = { mpn = "RC0402FR-0710KL", mfr = "Yageo" }
+
+[[parts]]
+ref = "C77"
+symbol = "C"
+at = [193.04, 165.1]
+value = "100n/50V"
+footprint = "C_0603_1608Metric"
+fields = { mpn = "GCM188R71H104KA57D", mfr = "Murata" }
+
+[[parts]]
+ref = "C78"
+symbol = "C"
+at = [208.28, 165.1]
+value = "100n/50V"
+footprint = "C_0603_1608Metric"
+fields = { mpn = "GCM188R71H104KA57D", mfr = "Murata" }
+
+[[parts]]
+ref = "C79"
+symbol = "C"
+at = [223.52, 165.1]
+value = "22n/50V"
+fields = { mpn = "GRM155R71H223KA12D", mfr = "Murata" }
+
+[[parts]]
+ref = "C80"
+symbol = "C"
+at = [238.76, 165.1]
+value = "100n/50V"
+footprint = "C_0603_1608Metric"
+fields = { mpn = "GCM188R71H104KA57D", mfr = "Murata" }
+
+[[parts]]
+ref = "C81"
+symbol = "C"
+at = [254.0, 165.1]
+value = "4.7u/10V"
+footprint = "C_0603_1608Metric"
+fields = { mpn = "C0603C475K8PAC", mfr = "KEMET" }
+
+[[parts]]
+ref = "C82"
+symbol = "C"
+at = [25.4, 185.42000000000002]
+value = "100n/10V"
+fields = { mpn = "GRM155R71A104KA01D", mfr = "Murata" }
+
+[[parts]]
+ref = "C83"
+symbol = "C_Polarized"
+at = [40.64, 185.42000000000002]
+value = "100u/35V"
+footprint = "CP_Elec_6.3x7.7"
+fields = { mpn = "EEE-FK1V101XP", mfr = "Panasonic" }
+
+[[parts]]
+ref = "R43"
+symbol = "R"
+at = [55.88, 185.42000000000002]
+value = "0.11"
+footprint = "R_1206_3216Metric"
+fields = { power = "0.5W", mpn = "RL1632R-R110-F", mfr = "Susumu" }
+
+[[parts]]
+ref = "R44"
+symbol = "R"
+at = [71.12, 185.42000000000002]
+value = "0.11"
+footprint = "R_1206_3216Metric"
+fields = { power = "0.5W", mpn = "RL1632R-R110-F", mfr = "Susumu" }
+
+[[nets]]
+name = "V24"
+class = "Power24"
+style = "power"
+pins = ["U12.22", "U12.28", "C70.1", "C71.1", "C73.2", "C76.1", "U13.22", "U13.28", "C77.1", "C78.1", "C80.2", "C83.1"]
+
+[[nets]]
+name = "GND"
+class = "Ground"
+style = "power"
+pins = ["U12.3", "U12.16", "U12.19", "U13.16", "U13.19", "U12.18", "U12.29", "U12.7", "U12.13", "U12.17", "U12.20", "U12.10", "C70.2", "C71.2", "C74.2", "C75.2", "C76.2", "R40.2", "R41.2", "U12.9", "U13.3", "U13.18", "U13.29", "U13.7", "U13.13", "U13.17", "U13.20", "U13.10", "C77.2", "C78.2", "C81.2", "C82.2", "C83.2", "R43.2", "R44.2"]
+
+[[nets]]
+name = "3V3"
+class = "Power3V3"
+style = "power"
+pins = ["U12.15", "C75.1", "R42.1", "U13.15", "C82.1", "U13.9"]
+
+[[nets]]
+name = "5VOUT_AZ"
+class = "Rail"
+style = "label"
+pins = ["U12.8", "C74.1"]
+
+[[nets]]
+name = "CPO_AZ"
+class = "Signal"
+style = "label"
+pins = ["U12.4", "C72.1"]
+
+[[nets]]
+name = "CPI_AZ"
+class = "Signal"
+style = "label"
+pins = ["U12.5", "C72.2"]
+
+[[nets]]
+name = "VCP_AZ"
+class = "Signal"
+style = "label"
+pins = ["U12.6", "C73.1"]
+
+[[nets]]
+name = "MOT_EN"
+class = "Signal"
+style = "label"
+pins = ["U12.2", "U13.2", "R42.2"]
+
+[[nets]]
+name = "DIAG_AZ"
+class = "Signal"
+style = "label"
+pins = ["U12.11"]
+
+[[nets]]
+name = "TMC_UART"
+class = "Signal"
+style = "label"
+pins = ["U12.14", "U13.14", "R46.2"]
+
+[[nets]]
+name = "SNS_AZ_A"
+class = "Motor"
+style = "label"
+pins = ["U12.23", "R40.1"]
+
+[[nets]]
+name = "SNS_AZ_B"
+class = "Motor"
+style = "label"
+pins = ["U12.27", "R41.1"]
+
+[[nets]]
+name = "MOT_AZ_A1"
+class = "Motor"
+style = "label"
+pins = ["U12.24", "J8.2"]
+
+[[nets]]
+name = "MOT_AZ_A2"
+class = "Motor"
+style = "label"
+pins = ["U12.21", "J8.1"]
+
+[[nets]]
+name = "MOT_AZ_B1"
+class = "Motor"
+style = "label"
+pins = ["U12.26", "J8.3"]
+
+[[nets]]
+name = "MOT_AZ_B2"
+class = "Motor"
+style = "label"
+pins = ["U12.1", "J8.4"]
+
+[[nets]]
+name = "5VOUT_EL"
+class = "Rail"
+style = "label"
+pins = ["U13.8", "C81.1"]
+
+[[nets]]
+name = "CPO_EL"
+class = "Signal"
+style = "label"
+pins = ["U13.4", "C79.1"]
+
+[[nets]]
+name = "CPI_EL"
+class = "Signal"
+style = "label"
+pins = ["U13.5", "C79.2"]
+
+[[nets]]
+name = "VCP_EL"
+class = "Signal"
+style = "label"
+pins = ["U13.6", "C80.1"]
+
+[[nets]]
+name = "DIAG_EL"
+class = "Signal"
+style = "label"
+pins = ["U13.11"]
+
+[[nets]]
+name = "SNS_EL_A"
+class = "Motor"
+style = "label"
+pins = ["U13.23", "R43.1"]
+
+[[nets]]
+name = "SNS_EL_B"
+class = "Motor"
+style = "label"
+pins = ["U13.27", "R44.1"]
+
+[[nets]]
+name = "MOT_EL_A1"
+class = "Motor"
+style = "label"
+pins = ["U13.24", "J9.2"]
+
+[[nets]]
+name = "MOT_EL_A2"
+class = "Motor"
+style = "label"
+pins = ["U13.21", "J9.1"]
+
+[[nets]]
+name = "MOT_EL_B1"
+class = "Motor"
+style = "label"
+pins = ["U13.26", "J9.3"]
+
+[[nets]]
+name = "MOT_EL_B2"
+class = "Motor"
+style = "label"
+pins = ["U13.1", "J9.4"]
+
+[[nets]]
+name = "TMC_TX"
+class = "Signal"
+style = "label"
+pins = ["R46.1"]

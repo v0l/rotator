@@ -1,0 +1,251 @@
+# imported from KiCad Interface_Ethernet:LAN8720A
+name = "LAN8720A"
+reference = "U"
+description = "LAN8720 Ethernet PHY with RMII interface, QFN-24"
+datasheet = "http://ww1.microchip.com/downloads/en/DeviceDoc/8720a.pdf"
+keywords = ["ETH", "PHY", "RMII"]
+footprint = "VQFN-24-1EP_4x4mm_P0.5mm_EP2.5x2.5mm_ThermalVias"
+footprint_filters = ["VQFN*1EP*4x4mm*P0.5mm*"]
+
+[[graphics]]
+kind = "text"
+at = [-5.08, 3.81]
+text = "RMII"
+size = 1.27
+anchor = "center"
+
+[[graphics]]
+kind = "rect"
+start = [-17.78, -27.94]
+end = [15.24, 25.4]
+width = 0.254
+fill = "background"
+
+[[graphics]]
+kind = "polyline"
+points = [[-17.78, 6.35], [-1.27, 6.35], [-1.27, -16.51], [-17.78, -16.51]]
+
+[[pins]]
+number = "17"
+name = "TXD0"
+type = "input"
+at = [-20.32, -15.24]
+side = "left"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "18"
+name = "TXD1"
+type = "input"
+at = [-20.32, -12.7]
+side = "left"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "16"
+name = "TXEN"
+type = "input"
+at = [-20.32, -10.16]
+side = "left"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "8"
+name = "RXD0/MODE0"
+type = "bidirectional"
+at = [-20.32, -7.62]
+side = "left"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "7"
+name = "RXD1/MODE1"
+type = "bidirectional"
+at = [-20.32, -5.08]
+side = "left"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "10"
+name = "RXER/PHYAD0"
+type = "output"
+at = [-20.32, -2.54]
+side = "left"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "11"
+name = "CRS_DV/MODE2"
+type = "bidirectional"
+at = [-20.32, 0.0]
+side = "left"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "12"
+name = "MDIO"
+type = "bidirectional"
+at = [-20.32, 2.54]
+side = "left"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "13"
+name = "MDC"
+type = "input"
+at = [-20.32, 5.08]
+side = "left"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "15"
+name = "~{RST}"
+type = "input"
+at = [-20.32, 10.16]
+side = "left"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "14"
+name = "~{INT}/REFCLKO"
+type = "output"
+at = [-20.32, 12.7]
+side = "left"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "5"
+name = "XTAL1/CLKIN"
+type = "input"
+at = [-20.32, 17.78]
+side = "left"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "4"
+name = "XTAL2"
+type = "output"
+at = [-20.32, 20.32]
+side = "left"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "9"
+name = "VDDIO"
+type = "power_in"
+at = [-5.08, -30.48]
+side = "top"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "6"
+name = "VDDCR"
+type = "power_in"
+at = [-2.54, -30.48]
+side = "top"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "19"
+name = "VDD1A"
+type = "power_in"
+at = [0.0, -30.48]
+side = "top"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "25"
+name = "VSS"
+type = "power_in"
+at = [0.0, 27.94]
+side = "bottom"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "1"
+name = "VDD2A"
+type = "power_in"
+at = [2.54, -30.48]
+side = "top"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "21"
+name = "TXP"
+type = "bidirectional"
+at = [17.78, -12.7]
+side = "right"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "20"
+name = "TXN"
+type = "bidirectional"
+at = [17.78, -10.16]
+side = "right"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "23"
+name = "RXP"
+type = "bidirectional"
+at = [17.78, -7.62]
+side = "right"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "22"
+name = "RXN"
+type = "bidirectional"
+at = [17.78, -5.08]
+side = "right"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "24"
+name = "RBIAS"
+type = "passive"
+at = [17.78, 2.54]
+side = "right"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "3"
+name = "LED1/REGOFF"
+type = "bidirectional"
+at = [17.78, 7.62]
+side = "right"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "2"
+name = "LED2/~{INTSEL}"
+type = "bidirectional"
+at = [17.78, 10.16]
+side = "right"
+length = 2.54
+unit = 1

@@ -1,0 +1,116 @@
+name = "Silvertel_Ag5400_SIL"
+description = "Silvertel Ag5400 PoE module, single in line, 10 pins at 2.54 mm in two groups 30.48 mm apart, 1.1 mm holes, component keep-out from datasheet V1.3 figure 14: 62 mm long, 6 mm from the card on the -y side (pins 9 mm in), 5, 13.5 and 7 mm on the +y side over 23.9, 18 and 15.4 mm with the transformer in the middle section"
+tags = ["PoE", "Silvertel"]
+mount = "tht"
+height = "14mm"
+model = "models/Ag5400_simplified.step"
+model_rotate = [-90, 0, 0]
+model_offset = ["0mm", "2.87mm", "1.27mm"]
+
+[[pads]]
+number = "1"
+kind = "tht"
+shape = "rect"
+at = [0.00, 0]
+size = [1.8, 1.8]
+drill = 1.1
+
+[[pads]]
+number = "2"
+kind = "tht"
+shape = "circle"
+at = [2.54, 0]
+size = [1.8, 1.8]
+drill = 1.1
+
+[[pads]]
+number = "3"
+kind = "tht"
+shape = "circle"
+at = [5.08, 0]
+size = [1.8, 1.8]
+drill = 1.1
+
+[[pads]]
+number = "4"
+kind = "tht"
+shape = "circle"
+at = [7.62, 0]
+size = [1.8, 1.8]
+drill = 1.1
+
+[[pads]]
+number = "5"
+kind = "tht"
+shape = "circle"
+at = [10.16, 0]
+size = [1.8, 1.8]
+drill = 1.1
+
+[[pads]]
+number = "6"
+kind = "tht"
+shape = "circle"
+at = [12.70, 0]
+size = [1.8, 1.8]
+drill = 1.1
+
+[[pads]]
+number = "7"
+kind = "tht"
+shape = "circle"
+at = [43.18, 0]
+size = [1.8, 1.8]
+drill = 1.1
+zone_connect = "solid"
+
+[[pads]]
+number = "8"
+kind = "tht"
+shape = "circle"
+at = [45.72, 0]
+size = [1.8, 1.8]
+drill = 1.1
+zone_connect = "solid"
+
+[[pads]]
+number = "9"
+kind = "tht"
+shape = "circle"
+at = [48.26, 0]
+size = [1.8, 1.8]
+drill = 1.1
+
+[[pads]]
+number = "10"
+kind = "tht"
+shape = "circle"
+at = [50.80, 0]
+size = [1.8, 1.8]
+drill = 1.1
+zone_connect = "solid"
+
+[[graphics]]
+kind = "polygon"
+layer = "F.Fab"
+points = [[-5.11, -9.00], [52.19, -9.00], [52.19, 5.60], [36.79, 5.60], [36.79, 12.10], [18.79, 12.10], [18.79, 3.60], [-5.11, 3.60]]
+width = 0.1
+
+[[graphics]]
+kind = "polygon"
+layer = "F.SilkS"
+points = [[-5.11, -9.00], [52.19, -9.00], [52.19, 5.60], [36.79, 5.60], [36.79, 12.10], [18.79, 12.10], [18.79, 3.60], [-5.11, 3.60]]
+width = 0.15
+
+[[graphics]]
+kind = "polygon"
+layer = "F.CrtYd"
+points = [[-7.46, -9.00], [54.54, -9.00], [54.54, 5.60], [36.79, 5.60], [36.79, 12.10], [18.79, 12.10], [18.79, 3.60], [-7.46, 3.60]]
+width = 0.05
+
+[[graphics]]
+kind = "text"
+layer = "F.SilkS"
+text = "${REFERENCE}"
+at = [25, 6]
+size = 1.0

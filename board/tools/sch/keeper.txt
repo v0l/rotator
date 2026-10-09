@@ -1,0 +1,53 @@
+add J10 Conn_01x02 BATTERY --field mpn=B2B-PH-K-S(LF)(SN) --field buy_with=CR123A_holder_with_PH_lead --field mfr=JST
+add U5 TPS61099DRV TPS61099DRV --field mpn=TPS61099DRVR --field mfr=TI
+add U6 TPS2116DRL TPS2116DRL --field mpn=TPS2116DRLR --field mfr=TI
+add J4 Conn_01x05 AZ_ENCODER --field mpn=B5B-XH-A(LF)(SN) --field mfr=JST
+add J5 Conn_01x05 EL_ENCODER --field mpn=B5B-XH-A(LF)(SN) --field mfr=JST
+add U16 USBLC6-4SC6 USBLC6-4SC6 --field mpn=USBLC6-4SC6 --field mfr=ST
+add U17 USBLC6-4SC6 USBLC6-4SC6 --field mpn=USBLC6-4SC6 --field mfr=ST
+add D10 D_Schottky B5819W --field mpn=1N5819HW-7-F --field mfr=Diodes
+add L3 L 2.2u --field mpn=DFE201610E-2R2M=P2 --field mfr=Murata
+add C90 C 10u/10V --footprint C_0603_1608Metric --field mpn=GRM188R61A106ME69D --field mfr=Murata
+add C91 C 10u/10V --footprint C_0603_1608Metric --field mpn=GRM188R61A106ME69D --field mfr=Murata
+add C92 C 1u/10V --field mpn=GRM155R61E105MA12D --field mfr=Murata
+add C93 C 22u/10V --footprint C_0805_2012Metric --field mpn=CL21A226MPCLRNC --field mfr=Samsung
+add C98 C 100n/10V --field mpn=GRM155R71A104KA01D --field mfr=Murata
+add C99 C 1u/10V --field mpn=GRM155R61E105MA12D --field mfr=Murata
+add C89 C 1u/10V --field mpn=GRM155R61E105MA12D --field mfr=Murata
+add R50 R 1M --field mpn=RC0402FR-071ML --field mfr=Yageo
+add R52 R 180k --field mpn=RC0402FR-07180KL --field mfr=Yageo
+add R53 R 100k --field mpn=RC0402FR-07100KL --field mfr=Yageo
+add R57 R 1M --field mpn=RC0402FR-071ML --field mfr=Yageo
+add R58 R 453k --field tolerance=1% --field mpn=RC0402FR-07453KL --field mfr=Yageo
+add R59 R 200k --field tolerance=1% --field mpn=RC0402FR-07200KL --field mfr=Yageo
+add R54 R 100k --field mpn=RC0402FR-07100KL --field mfr=Yageo
+add R63 R 220 --field mpn=RC0402FR-07220RL --field mfr=Yageo
+add R64 R 220 --field mpn=RC0402FR-07220RL --field mfr=Yageo
+add R65 R 220 --field mpn=RC0402FR-07220RL --field mfr=Yageo
+add R66 R 220 --field mpn=RC0402FR-07220RL --field mfr=Yageo
+add R67 R 220 --field mpn=RC0402FR-07220RL --field mfr=Yageo
+add R68 R 220 --field mpn=RC0402FR-07220RL --field mfr=Yageo
+net CELL_P J10.1 D10.2 --class Rail
+net VCELL D10.1 U5.6 U5.4 L3.1 C90.1 R50.1 --class Rail
+net SW_BOOST U5.5 L3.2 --class Switch
+net VBOOST U5.2 C91.1 U6.6 R58.1 --class Rail
+net FB_BOOST U5.3 R58.2 R59.1 --class Analog
+net GND J10.2 U5.1 U5.7 R59.2 C90.2 C91.2 U6.1 R53.2 C92.2 C93.2 R57.2 C98.2 J4.2 J5.2 U16.2 U17.2 C99.2 C89.2 --class Ground
+net 3V3 U6.3 U6.5 R52.1 C92.1 --class Power3V3
+net PR1 U6.4 R52.2 R53.1 --class Analog
+net VKEEP U6.2 U6.7 C93.1 R54.1 J4.1 J5.1 U16.5 U17.5 C99.1 C89.1 --class Rail
+net ENC_AZ_A R63.2 --class Signal
+net ENC_AZ_B R64.2 --class Signal
+net ENC_AZ_Z R65.2 --class Signal
+net ENC_EL_A R66.2 --class Signal
+net ENC_EL_B R67.2 --class Signal
+net ENC_EL_Z R68.2 --class Signal
+net EAZ_A J4.3 R63.1 U16.1 --class Signal
+net EAZ_B J4.4 R64.1 U16.3 --class Signal
+net EAZ_Z J4.5 R65.1 U16.4 --class Signal
+net EEL_A J5.3 R66.1 U17.1 --class Signal
+net EEL_B J5.4 R67.1 U17.3 --class Signal
+net EEL_Z J5.5 R68.1 U17.4 --class Signal
+net VBAT_SENSE R50.2 R57.1 C98.1 --class Analog
+net MAIN_OK U6.8 R54.2 --class Signal
+nc U16.6 U17.6

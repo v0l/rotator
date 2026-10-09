@@ -1,0 +1,348 @@
+name = "keeper"
+description = "TPS2116 mux from 3V3 to a CR123A boost when main power drops, feeding the MCU and both encoders so the timers keep counting"
+board = "ctl"
+no_connect = ["U16.6", "U17.6"]
+
+[[parts]]
+ref = "J10"
+symbol = "Conn_01x02"
+at = [25.4, 50.8]
+value = "BATTERY"
+fields = { mpn = "B2B-PH-K-S(LF)(SN)", buy_with = "CR123A_holder_with_PH_lead", mfr = "JST" }
+
+[[parts]]
+ref = "U5"
+symbol = "TPS61099DRV"
+at = [101.6, 50.8]
+value = "TPS61099DRV"
+fields = { mpn = "TPS61099DRVR", mfr = "TI" }
+
+[[parts]]
+ref = "U6"
+symbol = "TPS2116DRL"
+at = [177.8, 50.8]
+value = "TPS2116DRL"
+fields = { mpn = "TPS2116DRLR", mfr = "TI" }
+
+[[parts]]
+ref = "J4"
+symbol = "Conn_01x05"
+at = [254.0, 50.8]
+value = "AZ_ENCODER"
+fields = { mpn = "B5B-XH-A(LF)(SN)", mfr = "JST" }
+
+[[parts]]
+ref = "J5"
+symbol = "Conn_01x05"
+at = [330.2, 50.8]
+value = "EL_ENCODER"
+fields = { mpn = "B5B-XH-A(LF)(SN)", mfr = "JST" }
+
+[[parts]]
+ref = "U16"
+symbol = "USBLC6-4SC6"
+at = [406.4, 50.8]
+value = "USBLC6-4SC6"
+fields = { mpn = "USBLC6-4SC6", mfr = "ST" }
+
+[[parts]]
+ref = "U17"
+symbol = "USBLC6-4SC6"
+at = [482.6, 50.8]
+value = "USBLC6-4SC6"
+fields = { mpn = "USBLC6-4SC6", mfr = "ST" }
+
+[[parts]]
+ref = "D10"
+symbol = "D_Schottky"
+at = [25.4, 165.1]
+value = "B5819W"
+fields = { mpn = "1N5819HW-7-F", mfr = "Diodes" }
+
+[[parts]]
+ref = "L3"
+symbol = "L"
+at = [40.64, 165.1]
+value = "2.2u"
+fields = { mpn = "DFE201610E-2R2M=P2", mfr = "Murata" }
+
+[[parts]]
+ref = "C90"
+symbol = "C"
+at = [55.88, 165.1]
+value = "10u/10V"
+footprint = "C_0603_1608Metric"
+fields = { mpn = "GRM188R61A106ME69D", mfr = "Murata" }
+
+[[parts]]
+ref = "C91"
+symbol = "C"
+at = [71.12, 165.1]
+value = "10u/10V"
+footprint = "C_0603_1608Metric"
+fields = { mpn = "GRM188R61A106ME69D", mfr = "Murata" }
+
+[[parts]]
+ref = "C92"
+symbol = "C"
+at = [86.36, 165.1]
+value = "1u/10V"
+fields = { mpn = "GRM155R61E105MA12D", mfr = "Murata" }
+
+[[parts]]
+ref = "C93"
+symbol = "C"
+at = [101.6, 165.1]
+value = "22u/10V"
+footprint = "C_0805_2012Metric"
+fields = { mpn = "CL21A226MPCLRNC", mfr = "Samsung" }
+
+[[parts]]
+ref = "C98"
+symbol = "C"
+at = [116.84, 165.1]
+value = "100n/10V"
+fields = { mpn = "GRM155R71A104KA01D", mfr = "Murata" }
+
+[[parts]]
+ref = "C99"
+symbol = "C"
+at = [132.08, 165.1]
+value = "1u/10V"
+fields = { mpn = "GRM155R61E105MA12D", mfr = "Murata" }
+
+[[parts]]
+ref = "C89"
+symbol = "C"
+at = [147.32, 165.1]
+value = "1u/10V"
+fields = { mpn = "GRM155R61E105MA12D", mfr = "Murata" }
+
+[[parts]]
+ref = "R50"
+symbol = "R"
+at = [162.56, 165.1]
+value = "1M"
+fields = { mpn = "RC0402FR-071ML", mfr = "Yageo" }
+
+[[parts]]
+ref = "R52"
+symbol = "R"
+at = [177.8, 165.1]
+value = "180k"
+fields = { mpn = "RC0402FR-07180KL", mfr = "Yageo" }
+
+[[parts]]
+ref = "R53"
+symbol = "R"
+at = [193.04, 165.1]
+value = "100k"
+fields = { mpn = "RC0402FR-07100KL", mfr = "Yageo" }
+
+[[parts]]
+ref = "R57"
+symbol = "R"
+at = [208.28, 165.1]
+value = "1M"
+fields = { mpn = "RC0402FR-071ML", mfr = "Yageo" }
+
+[[parts]]
+ref = "R58"
+symbol = "R"
+at = [223.52, 165.1]
+value = "453k"
+fields = { tolerance = "1%", mpn = "RC0402FR-07453KL", mfr = "Yageo" }
+
+[[parts]]
+ref = "R59"
+symbol = "R"
+at = [238.76, 165.1]
+value = "200k"
+fields = { tolerance = "1%", mpn = "RC0402FR-07200KL", mfr = "Yageo" }
+
+[[parts]]
+ref = "R54"
+symbol = "R"
+at = [254.0, 165.1]
+value = "100k"
+fields = { mpn = "RC0402FR-07100KL", mfr = "Yageo" }
+
+[[parts]]
+ref = "R63"
+symbol = "R"
+at = [25.4, 185.42000000000002]
+value = "220"
+fields = { mpn = "RC0402FR-07220RL", mfr = "Yageo" }
+
+[[parts]]
+ref = "R64"
+symbol = "R"
+at = [40.64, 185.42000000000002]
+value = "220"
+fields = { mpn = "RC0402FR-07220RL", mfr = "Yageo" }
+
+[[parts]]
+ref = "R65"
+symbol = "R"
+at = [55.88, 185.42000000000002]
+value = "220"
+fields = { mpn = "RC0402FR-07220RL", mfr = "Yageo" }
+
+[[parts]]
+ref = "R66"
+symbol = "R"
+at = [71.12, 185.42000000000002]
+value = "220"
+fields = { mpn = "RC0402FR-07220RL", mfr = "Yageo" }
+
+[[parts]]
+ref = "R67"
+symbol = "R"
+at = [86.36, 185.42000000000002]
+value = "220"
+fields = { mpn = "RC0402FR-07220RL", mfr = "Yageo" }
+
+[[parts]]
+ref = "R68"
+symbol = "R"
+at = [101.6, 185.42000000000002]
+value = "220"
+fields = { mpn = "RC0402FR-07220RL", mfr = "Yageo" }
+
+[[nets]]
+name = "CELL_P"
+class = "Rail"
+style = "label"
+pins = ["J10.1", "D10.2"]
+
+[[nets]]
+name = "VCELL"
+class = "Rail"
+style = "power"
+pins = ["D10.1", "U5.6", "U5.4", "L3.1", "C90.1", "R50.1"]
+
+[[nets]]
+name = "SW_BOOST"
+class = "Switch"
+style = "label"
+pins = ["U5.5", "L3.2"]
+
+[[nets]]
+name = "VBOOST"
+class = "Rail"
+style = "power"
+pins = ["U5.2", "C91.1", "U6.6", "R58.1"]
+
+[[nets]]
+name = "FB_BOOST"
+class = "Analog"
+style = "label"
+pins = ["U5.3", "R58.2", "R59.1"]
+
+[[nets]]
+name = "GND"
+class = "Ground"
+style = "power"
+pins = ["J10.2", "U5.1", "U5.7", "R59.2", "C90.2", "C91.2", "U6.1", "R53.2", "C92.2", "C93.2", "R57.2", "C98.2", "J4.2", "J5.2", "U16.2", "U17.2", "C99.2", "C89.2"]
+
+[[nets]]
+name = "3V3"
+class = "Power3V3"
+style = "power"
+pins = ["U6.3", "U6.5", "R52.1", "C92.1"]
+
+[[nets]]
+name = "PR1"
+class = "Analog"
+style = "label"
+pins = ["U6.4", "R52.2", "R53.1"]
+
+[[nets]]
+name = "VKEEP"
+class = "Rail"
+style = "power"
+pins = ["U6.2", "U6.7", "C93.1", "R54.1", "J4.1", "J5.1", "U16.5", "U17.5", "C99.1", "C89.1"]
+
+[[nets]]
+name = "ENC_AZ_A"
+class = "Signal"
+style = "label"
+pins = ["R63.2"]
+
+[[nets]]
+name = "ENC_AZ_B"
+class = "Signal"
+style = "label"
+pins = ["R64.2"]
+
+[[nets]]
+name = "ENC_AZ_Z"
+class = "Signal"
+style = "label"
+pins = ["R65.2"]
+
+[[nets]]
+name = "ENC_EL_A"
+class = "Signal"
+style = "label"
+pins = ["R66.2"]
+
+[[nets]]
+name = "ENC_EL_B"
+class = "Signal"
+style = "label"
+pins = ["R67.2"]
+
+[[nets]]
+name = "ENC_EL_Z"
+class = "Signal"
+style = "label"
+pins = ["R68.2"]
+
+[[nets]]
+name = "EAZ_A"
+class = "Signal"
+style = "label"
+pins = ["J4.3", "R63.1", "U16.1"]
+
+[[nets]]
+name = "EAZ_B"
+class = "Signal"
+style = "label"
+pins = ["J4.4", "R64.1", "U16.3"]
+
+[[nets]]
+name = "EAZ_Z"
+class = "Signal"
+style = "label"
+pins = ["J4.5", "R65.1", "U16.4"]
+
+[[nets]]
+name = "EEL_A"
+class = "Signal"
+style = "label"
+pins = ["J5.3", "R66.1", "U17.1"]
+
+[[nets]]
+name = "EEL_B"
+class = "Signal"
+style = "label"
+pins = ["J5.4", "R67.1", "U17.3"]
+
+[[nets]]
+name = "EEL_Z"
+class = "Signal"
+style = "label"
+pins = ["J5.5", "R68.1", "U17.4"]
+
+[[nets]]
+name = "VBAT_SENSE"
+class = "Analog"
+style = "label"
+pins = ["R50.2", "R57.1", "C98.1"]
+
+[[nets]]
+name = "MAIN_OK"
+class = "Signal"
+style = "label"
+pins = ["U6.8", "R54.2"]

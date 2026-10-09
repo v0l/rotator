@@ -1,0 +1,78 @@
+name = "CDBHM2100L-G"
+reference = "D"
+description = "Comchip CDBHM2100L-G low VF Schottky bridge rectifier, 100 V, 2 A, VF 0.85 V max at 2 A, MBS-2 case"
+datasheet = "https://www.comchiptech.com/admin/files/product/CDBHM220L-G%20Thru.%20CDBHM2100L-G%20RevB.pdf"
+keywords = ["rectifier", "acdc"]
+footprint = "Diode_Bridge_MBS-2"
+footprint_filters = ["Diode*Bridge*MBS*"]
+pin_names = "outside"
+
+[[graphics]]
+kind = "polygon"
+points = [[-5.08, 0.0], [0.0, 5.08], [5.08, 0.0], [0.0, -5.08]]
+
+[[graphics]]
+kind = "polygon"
+points = [[-3.81, -2.54], [-2.54, -1.27], [-1.905, -3.175]]
+
+[[graphics]]
+kind = "polyline"
+points = [[-2.54, -3.81], [-1.27, -2.54]]
+
+[[graphics]]
+kind = "polygon"
+points = [[-2.54, 1.27], [-3.81, 2.54], [-1.905, 3.175]]
+
+[[graphics]]
+kind = "polyline"
+points = [[-1.27, 2.54], [-2.54, 3.81]]
+
+[[graphics]]
+kind = "polygon"
+points = [[1.27, -2.54], [2.54, -3.81], [3.175, -1.905]]
+
+[[graphics]]
+kind = "polyline"
+points = [[2.54, -1.27], [3.81, -2.54]]
+
+[[graphics]]
+kind = "polyline"
+points = [[2.54, 1.27], [3.81, 2.54]]
+
+[[graphics]]
+kind = "polygon"
+points = [[3.175, 1.905], [1.27, 2.54], [2.54, 3.81]]
+
+[[pins]]
+number = "4"
+name = "-"
+type = "passive"
+at = [-7.62, 0.0]
+side = "left"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "2"
+type = "passive"
+at = [0.0, -7.62]
+side = "top"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "3"
+type = "passive"
+at = [0.0, 7.62]
+side = "bottom"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "1"
+name = "+"
+type = "passive"
+at = [7.62, 0.0]
+side = "right"
+length = 2.54
+unit = 1

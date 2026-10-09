@@ -1,0 +1,36 @@
+place C89 76.4,9.3 --rotation 180 --bottom --locked
+track VKEEP F.Cu 75.26,11.25 76.74,11.25 --width 0.2mm
+track 3V3 F.Cu 75.26,11.75 75.8,11.75 76.2,12.25 76.74,12.25 --width 0.2mm
+track 3V3 B.Cu 74.77,12 73.52,11.48 --width 0.4mm
+track 3V3 F.Cu 76.74,12.25 76.74,12.8 --width 0.3mm
+track VKEEP F.Cu 75.26,11.25 74.5,11.25 74.5,9.2 75.05,9.2 --width 0.4mm
+track VKEEP F.Cu 74.5,9.6 73.9,9.6 --width 0.4mm
+via VKEEP 73.9,9.6
+track VKEEP B.Cu 73.9,9.6 72.6,9.6 70.925,11.275 70.925,12.325 --width 0.4mm
+track VKEEP B.Cu 73.9,9.6 75,9.6 75.48,10.08 75.48,10.66 --width 0.4mm
+track VKEEP B.Cu 75,9.6 75.3,9.3 75.92,9.3 --width 0.4mm
+track MAIN_OK F.Cu 76.74,10.75 77.7,10.75 78,10.45 --width 0.15mm
+via MAIN_OK 78,10.45
+track MAIN_OK B.Cu 78,10.45 78,13 77.38,13.62 --width 0.15mm
+track CELL_P F.Cu 79.7,10.35 80.85,11.5 84.3,11.5 --width 0.4mm
+track PR1 F.Cu 75.26,12.25 73.81,12.25 --width 0.15mm
+track PR1 F.Cu 73.81,12.25 72.79,13.3 --width 0.15mm
+track VCELL F.Cu 79.7,13.65 79.7,15.6 --width 0.4mm
+track VCELL F.Cu 79.7,15.6 78.888,16.4 78.888,17.35 --width 0.4mm
+track VCELL F.Cu 79.7,15.6 83,15.6 83,18.725 81.7,18.725 --width 0.4mm
+track VCELL F.Cu 81.7,18.725 80,18.725 79.5,18.65 78.888,18.65 --width 0.4mm
+track VCELL F.Cu 83,18.725 83,19.4 --width 0.4mm
+via VCELL 83,19.4
+track VCELL B.Cu 83,19.4 82.21,19.4 --width 0.4mm
+track VCELL B.Cu 83,19.4 82.2,18.6 81.6,18 81.075,17.4 --width 0.4mm
+track SW_BOOST F.Cu 78.888,18 79.5,18 --width 0.3mm
+track SW_BOOST F.Cu 79.5,18 80.2,17.3 81.7,17.275 --width 0.6mm
+track VBOOST F.Cu 76.74,11.75 77.6,11.75 77.6,13 76.4,14.2 76.4,18 77.112,18 --width 0.4mm
+track VBOOST F.Cu 76.4,18 75.19,19.21 75.19,19.65 --width 0.4mm
+via VBOOST 76.4,16.2
+track VBOOST B.Cu 76.4,16.2 77.275,17 77.275,17.45 --width 0.4mm
+track FB_BOOST F.Cu 77.112,18.65 76.21,19.55 76.21,20.75 --width 0.15mm
+via 3V3 76.74,12.8
+via 3V3 73.52,11.48
+track 3V3 F.Cu 72.79,12.25 72.14,12.25 --width 0.5mm
+via 3V3 72.14,12.25

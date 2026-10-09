@@ -1,0 +1,71 @@
+name = "ctl-thermal-1a"
+kind = "thermal"
+layout = "ctl"
+cell = 0.2
+ambient = 50.0
+h_top = 10.0
+h_bottom = 10.0
+
+[[sources]]
+ref = "U12"
+power = "0.5W"
+theta_jc = 6.0
+
+[[sources]]
+ref = "U13"
+power = "0.5W"
+theta_jc = 6.0
+
+[[sources]]
+ref = "R40"
+power = "0.11W"
+
+[[sources]]
+ref = "R41"
+power = "0.11W"
+
+[[sources]]
+ref = "R43"
+power = "0.11W"
+
+[[sources]]
+ref = "R44"
+power = "0.11W"
+
+[[sources]]
+ref = "U3"
+power = "0.2W"
+theta_jc = 39.0
+
+[[sources]]
+ref = "U10"
+power = "0.25W"
+
+[[sources]]
+ref = "U14"
+power = "0.2W"
+
+[[sources]]
+ref = "D1"
+power = "0.3W"
+
+[[sources]]
+ref = "U1"
+power = "1.6W"
+pads = ["7", "8", "10"]
+
+[[mounts]]
+ref = "H1"
+theta = 5.0
+
+[[mounts]]
+ref = "H2"
+theta = 5.0
+
+[[mounts]]
+ref = "H3"
+theta = 5.0
+
+[[mounts]]
+ref = "H4"
+theta = 5.0

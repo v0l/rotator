@@ -1,0 +1,7 @@
+via GND 44.0,58.5
+via GND 55.0,57.5
+via GND 61.0,57.5
+via GND 61.5,49.5
+via GND 55.18,66.3
+via GND 64.7,68.5
+via GND 64.7,70.2

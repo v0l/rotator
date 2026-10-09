@@ -1,0 +1,5 @@
+name = "ctl"
+description = "Rotator controller: PoE+ in, STM32H563 and LAN8720A, two TMC2209 drivers on UART, MCU and encoders held up by a CR123A when main power drops"
+board = "ctl"
+sheets = ["power", "mcu", "eth", "motor", "keeper"]
+rails = { GND = 0, "3V3" = [3.2, 3.4], VKEEP = [2.9, 3.4] }

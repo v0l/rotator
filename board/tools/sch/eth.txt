@@ -1,0 +1,52 @@
+add J1 V8BR-1AX1-GH V8BR-1AX1-GH --field mpn=V8BR-1AX1-GH --field mfr=Bel
+add U14 LAN8720A LAN8720A --field mpn=LAN8720AI-CP-TR --field mfr=Microchip
+add Y2 Crystal_GND24 25MHz --field mpn=ECS-250-12-33B-CWY-TR3 --field mfr=ECS
+add C60 C 18p/50V --field mpn=GRM1555C1H180JA01D --field mfr=Murata
+add C61 C 18p/50V --field mpn=GRM1555C1H180JA01D --field mfr=Murata
+add FB1 FerriteBead_Small 600R --field mpn=BLM18KG601SN1D --field mfr=Murata
+add C62 C 1u/10V --field mpn=GRM155R61E105MA12D --field mfr=Murata
+add C63 C 100n/10V --field mpn=GRM155R71A104KA01D --field mfr=Murata
+add C64 C 100n/10V --field mpn=GRM155R71A104KA01D --field mfr=Murata
+add C65 C 1u/10V --field mpn=GRM155R61E105MA12D --field mfr=Murata
+add C66 C 100n/10V --field mpn=GRM155R71A104KA01D --field mfr=Murata
+add C67 C 1u/10V --field mpn=GRM155R61E105MA12D --field mfr=Murata
+add C68 C 470p/50V --field mpn=GRM1555C1H471JA01D --field mfr=Murata
+add C69 C 22n/50V --field mpn=GRM155R71H223KA12D --field mfr=Murata
+add C59 C 22n/50V --field mpn=GRM155R71H223KA12D --field mfr=Murata
+add R30 R 12.1k --field tolerance=1% --field mpn=RC0402FR-0712K1L --field mfr=Yageo
+add R31 R 49.9 --field tolerance=1% --field mpn=RC0402FR-0749R9L --field mfr=Yageo
+add R32 R 49.9 --field tolerance=1% --field mpn=RC0402FR-0749R9L --field mfr=Yageo
+add R33 R 49.9 --field tolerance=1% --field mpn=RC0402FR-0749R9L --field mfr=Yageo
+add R34 R 49.9 --field tolerance=1% --field mpn=RC0402FR-0749R9L --field mfr=Yageo
+add R35 R 33 --field mpn=RC0402FR-0733RL --field mfr=Yageo
+add R36 R 10k --field mpn=RC0402FR-0710KL --field mfr=Yageo
+add R37 R 1.5k --field mpn=RC0402FR-071K5L --field mfr=Yageo
+add R29 R 10k --field mpn=RC0402FR-0710KL --field mfr=Yageo
+net POE_VC12 J1.13 --class PoE
+net POE_VC36 J1.14 --class PoE
+net POE_VC45 J1.15 --class PoE
+net POE_VC78 J1.16 --class PoE
+net ETH_TX_P J1.5 U14.TXP R33.1 --class Eth --sheet eth
+net ETH_TX_N J1.4 U14.TXN R34.1 --class Eth --sheet eth
+net ETH_RX_P J1.11 U14.RXP R31.1 --class Eth --sheet eth
+net ETH_RX_N J1.10 U14.RXN R32.1 --class Eth --sheet eth
+net VDDA FB1.2 U14.VDD1A U14.VDD2A J1.12 J1.6 R31.2 R32.2 R33.2 R34.2 C62.1 C63.1 C64.1 C69.1 C59.1 --class Rail --sheet eth
+net 3V3 FB1.1 U14.VDDIO C65.1 C66.1 R36.1 R37.1 --class Power3V3 --sheet eth
+net VDDCR U14.VDDCR C67.1 C68.1 --class Rail --sheet eth
+net GND U14.VSS J1.SH Y2.2 Y2.4 C60.2 C61.2 C62.2 C63.2 C64.2 C65.2 C66.2 C67.2 C68.2 C69.2 C59.2 R30.2 R29.2 --class Ground --sheet eth
+net PHY_XI U14.XTAL1/CLKIN Y2.1 C60.1 --class Clock --sheet eth
+net PHY_XO U14.XTAL2 Y2.3 C61.1 --class Clock --sheet eth
+net RBIAS U14.RBIAS R30.1 --class Analog --sheet eth
+net PHY_REFCLK U14.~{INT}/REFCLKO R35.1 --class Clock --sheet eth
+net RMII_CLK R35.2 --class Clock --sheet eth
+net PHY_RST U14.~{RST} R36.2 --class Signal --sheet eth
+net RMII_TXEN U14.TXEN --class Data --sheet eth
+net RMII_TXD0 U14.TXD0 --class Data --sheet eth
+net RMII_TXD1 U14.TXD1 --class Data --sheet eth
+net RMII_RXD0 U14.RXD0/MODE0 --class Data --sheet eth
+net RMII_RXD1 U14.RXD1/MODE1 --class Data --sheet eth
+net RMII_CRSDV U14.CRS_DV/MODE2 --class Data --sheet eth
+net MDIO U14.MDIO R37.2 --class Data --sheet eth
+net MDC U14.MDC --class Data --sheet eth
+net PHY_LED2 U14.LED2/~{INTSEL} R29.1 --class Signal --sheet eth
+nc U14.LED1/REGOFF U14.RXER/PHYAD0 J1.17 J1.18 J1.19 J1.20 J1.1 J1.2 J1.3 J1.7 J1.8 J1.9

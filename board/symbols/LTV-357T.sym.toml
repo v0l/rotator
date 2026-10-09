@@ -1,0 +1,101 @@
+# imported from KiCad Isolator:LTV-357T
+name = "LTV-357T"
+reference = "U"
+description = "DC Optocoupler, Vce 35V, CTR 50%, SO-4"
+datasheet = "https://www.buerklin.com/medias/sys_master/download/download/h91/ha0/8892020588574.pdf"
+keywords = ["NPN", "DC", "Optocoupler"]
+footprint = "SO-4_4.4x3.6mm_P2.54mm"
+footprint_filters = ["SO*4.4x3.6mm*P2.54mm*"]
+pin_name_offset = 1.016
+
+[[graphics]]
+kind = "rect"
+start = [-5.08, -3.81]
+end = [5.08, 3.81]
+width = 0.254
+fill = "background"
+
+[[graphics]]
+kind = "polyline"
+points = [[-5.08, -2.54], [-2.54, -2.54], [-2.54, 0.762]]
+
+[[graphics]]
+kind = "polyline"
+points = [[-3.175, 0.635], [-1.905, 0.635]]
+width = 0.254
+
+[[graphics]]
+kind = "polyline"
+points = [[-2.54, 0.635], [-2.54, 2.54], [-5.08, 2.54]]
+
+[[graphics]]
+kind = "polygon"
+points = [[-2.54, 0.635], [-3.175, -0.635], [-1.905, -0.635]]
+width = 0.254
+
+[[graphics]]
+kind = "polyline"
+points = [[-0.508, -0.508], [0.762, -0.508], [0.381, -0.381], [0.381, -0.635], [0.762, -0.508]]
+
+[[graphics]]
+kind = "polyline"
+points = [[-0.508, 0.508], [0.762, 0.508], [0.381, 0.635], [0.381, 0.381], [0.762, 0.508]]
+
+[[graphics]]
+kind = "polyline"
+points = [[2.54, -1.905], [2.54, 1.905], [2.54, 1.905]]
+width = 0.508
+
+[[graphics]]
+kind = "polyline"
+points = [[2.54, -0.635], [4.445, -2.54]]
+
+[[graphics]]
+kind = "polygon"
+points = [[3.048, 1.651], [3.556, 1.143], [4.064, 2.159], [3.048, 1.651]]
+fill = "solid"
+
+[[graphics]]
+kind = "polyline"
+points = [[4.445, -2.54], [5.08, -2.54]]
+
+[[graphics]]
+kind = "polyline"
+points = [[4.445, 2.54], [2.54, 0.635]]
+fill = "solid"
+
+[[graphics]]
+kind = "polyline"
+points = [[4.445, 2.54], [5.08, 2.54]]
+
+[[pins]]
+number = "1"
+type = "passive"
+at = [-7.62, -2.54]
+side = "left"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "2"
+type = "passive"
+at = [-7.62, 2.54]
+side = "left"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "4"
+type = "passive"
+at = [7.62, -2.54]
+side = "right"
+length = 2.54
+unit = 1
+
+[[pins]]
+number = "3"
+type = "passive"
+at = [7.62, 2.54]
+side = "right"
+length = 2.54
+unit = 1

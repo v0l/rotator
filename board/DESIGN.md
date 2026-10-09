@@ -1,0 +1,107 @@
+# Control board
+
+One 88 x 80 mm, 4-layer board in the az box runs both axes from a single PoE cable. It is an
+[agentee](https://github.com/v0l/agentee) project: `ctl.board.toml` (stackup, net classes,
+isolation), five schematic sheets, `ctl.pcb.toml` (placed and routed), and the sims.
+
+![Board](../docs/board.png)
+
+## Blocks
+
+| block | parts | notes |
+|---|---|---|
+| PoE in | J1 Bel V8BR-1AX1-GH vertical magjack, D1 D2 Comchip CDBHM2100L-G Schottky bridges, U1 Silvertel Ag5424 | 802.3at class 4, 24 V out. Data and spare pairs both rectified. |
+| AT detect | U2 LTV-357T | Ag5424 AT-DET across the barrier to PC13. |
+| 3V3 | U3 AP63203WU buck from VBUCK | VBUCK is V24 through D4, or USB VBUS through D5, so the logic runs from USB on the bench. |
+| Keep-alive | J10 CR123A lead, D10, U5 TPS61099 boost (453k/200k sets 3.27 V), U6 TPS2116 mux | VKEEP is 3V3 when it is up, otherwise the cell. MAIN_OK (U6 status) tells the MCU which. The whole group sits in the top right corner beside the encoder headers, so VKEEP reaches J4, J5 and the MCU without crossing the board. |
+| MCU | U10 STM32H563RIT6 on VKEEP | No HSE: HSI, HSI48 with CRS for USB, LSE 32.768 kHz for the RTC. |
+| Ethernet | U14 LAN8720A RMII, Y2 25 MHz | The PHY makes the 50 MHz REF_CLK (nINTSEL strapped low by R29) and feeds PA1. |
+| Drivers | U12 U13 TMC2209 | UART only. STEP and DIR are tied low; the MCU moves the motors with VACTUAL. Shared MOT_EN, DIAG to PB1/PB2, 0.11 ohm sense. |
+| Encoders | J4 J5 JST XH 5 pin, U16 U17 USBLC6-4SC6, 220 ohm series | Powered from VKEEP, so TIM2 (az) and TIM3 (el) keep counting through an outage. |
+| USB | J7 USB-C, U15 USBLC6-2SC6 | DFU via BOOT0 (SW2). SWD on J6, a TC2030 pad with no part to fit. |
+
+## MCU pins
+
+| pin | function | pin | function |
+|---|---|---|---|
+| 1 | VBAT to VKEEP | 33 PB12 | RMII TXD0 |
+| 2 PC13 | AT_DET | 36 PB15 | RMII TXD1 |
+| 3, 4 | LSE | 37, 38, 39 PC6-8 | ENC_EL A, B, Z (TIM3) |
+| 7 | NRST (SW1, J6) | 41 PA8 | ENC_AZ Z |
+| 8 PC0 | VBAT_SENSE (cell / 2) | 44, 45 PA11, PA12 | USB DN, DP |
+| 9 PC1 | MDC | 46, 49 | SWDIO, SWCLK |
+| 10 PC2 | MAIN_OK | 50 PA15 | ENC_AZ A (TIM2 CH1) |
+| 11 PC3 | PHY_RST | 51 PC10 | TMC_TX (through R46 1k) |
+| 14 PA0 | status LED | 52 PC11 | TMC_UART |
+| 15 PA1 | RMII REF_CLK | 55 PB3 | ENC_AZ B (TIM2 CH2) |
+| 16 PA2 | MDIO | 60 | BOOT0 (R22 down, SW2 up) |
+| 21 PA5 | RMII TX_EN | 30, 62 | VCAP, 2.2 uF each |
+| 23 PA7 | RMII CRS_DV | 26 PB0 | MOT_EN |
+| 24, 25 PC4, PC5 | RMII RXD0, RXD1 | 27, 28 PB1, PB2 | DIAG_AZ, DIAG_EL |
+
+## Firmware notes
+
+- Both TMC2209s share one half-duplex UART: U12 (az) is address 0, U13 (el) is address 1 (MS1
+  low and high, MS2 low). In GCONF set `pdn_disable`, `mstep_reg_select` and clear
+  `I_scale_analog`: VREF is tied to GND, so with the power-on default the run current is zero.
+- Coil A of both motors is reversed at J8 and J9 to simplify routing. Set `shaft` in GCONF.
+- Both motors at 1.4 A RMS take about 23 W from 24 V, which with the Ag5424 losses and the
+  bridges is over the 25.5 W a class 4 device may draw. Drop IHOLD at standstill and do not
+  run both axes at full current together.
+- When MAIN_OK falls, put the RMII, MDIO, MDC and TMC UART pins in analog mode so VKEEP does
+  not feed the unpowered PHY and drivers, drop the core clock, and keep TIM2 and TIM3 running.
+  Write the positions to flash on stop. The outage current is not measured yet.
+- VBAT_SENSE is the cell through a 1M / 1M divider.
+
+## Layout
+
+- Stackup JLC041611-7628, ENIG. In1 is GND, In2 is 3V3, both outer layers poured GND.
+- Primary (PoE) and secondary nets are separate domains with a 2 mm clearance, 2.5 mm
+  creepage barrier. Under the Ag5424 the datasheet (V1.3, figure 12) wants no copper between
+  15.3 and 42.1 mm from pin 1; a cutout on all four layers clears x 0 to 54.1, y 59.5 to 80.
+- The U1 courtyard is the stepped keep-out of figure 14.
+- The Ag5424 sheds heat through its output pins (datasheet section 4): pins 7, 8 and 10 join
+  solid to a V24 pour and the GND pours on both outer layers, stitched with vias.
+- Everything that must stay put is in `tools/place_fixed.txt`; the hand routes are in
+  `tools/*_routes.txt`, the keep-alive group in `tools/keeper_place.txt` and the pours and
+  the module cutout in `tools/zones.txt`. `tools/place.sh` rebuilds the
+  placement from those files and wipes the routing.
+
+## Sims
+
+`agentee sim NAME` runs each one and writes `NAME.result.json`.
+
+| sim | result |
+|---|---|
+| `ctl-dc-v24` | 0.96 A to the drivers and buck, 26 mV drop |
+| `ctl-dc-motor` | 1.4 A per coil, 23 mV drop per side |
+| `ctl-dc-3v3` | 240 mA, worst 3.27 V at the MCU, 3.28 V at the encoders |
+| `ctl-thermal` | 50 C inside the box, both motors at 1.4 A RMS: TMC2209 junctions 100 and 105 C, U1 output pins 127 C |
+| `ctl-thermal-1a` | same at 1.0 A RMS: drivers 80 and 83 C, U1 pins 103 C |
+
+The thermal sims send heat out through the four mounting holes at 5 C/W each, so the board
+must sit on the aluminium M3 standoffs on the chassis plate. They also put all of the Ag5424
+loss (2.3 W full load, 1.6 W typical, from its efficiency curve) into its output pins, which
+makes the U1 pin temperature an upper bound.
+
+## Parts and fab
+
+- `tools/bom.md` is the priced BOM, made by `python3 tools/bom.py` from Mouser (keys in
+  `~/.config/agentee/distributors.toml`). Parts for one board come to about EUR 66 ex VAT.
+- The STM32H563RIT6 is out of stock at Mouser, Farnell, LCSC and ST; Mouser expects 1941 on
+  2026-12-11. Backorder it.
+- J7 (HRO TYPE-C-31-M-12) comes from LCSC, J1 from Farnell (3588276).
+- `agentee fab ctl -o fab` writes Gerbers, drill, placement and the JLCPCB BOM into `fab/`.
+- The CR123A holder is a Takachi CR123A-R with 140 mm leads; crimp a JST PHR-2 housing on.
+
+## Vendor files
+
+Not in the repo; download them to see the 3D models:
+
+| file | from |
+|---|---|
+| `models/Ag5400_simplified.step` | Silvertel Ag5400 product page, CAD zip |
+| `models/V8BR-1AX1-GH.stp` | Bel, V8BR-1AX1-GH product page (PARTserver) |
+
+`tools/board_gcad.py` exports the board STEP with `agentee export`, takes the bounding box of
+every part taller than 2.5 mm, and writes `../parts/ctl_board.gcad` for the assembly.

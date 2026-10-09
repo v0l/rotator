@@ -1,0 +1,177 @@
+name = "ctl"
+description = "Rotator controller: 802.3at PoE in, STM32H563 with LAN8720A Ethernet, two TMC2209 stepper drivers on UART, MCU and encoders on a CR123A backup rail"
+fab = "jlcpcb"
+
+[outline]
+size = [88, 80]
+corner_radius = 1
+
+[stackup]
+preset = "JLC041611-7628"
+finish = "ENIG"
+mask_color = "green"
+silk_color = "white"
+
+[[vias]]
+name = "std"
+drill = "0.3mm"
+diameter = "0.6mm"
+
+[[vias]]
+name = "small"
+drill = "0.2mm"
+diameter = "0.4mm"
+
+[[netclasses]]
+name = "Default"
+voltage = "3.3VDC"
+description = "Fallback only, every net names a class. Layers: F signal, In1 ground, In2 power (3V3, 24V), B signal"
+track_width = "0.15mm"
+clearance = "0.15mm"
+via = ["small", "std"]
+
+[[netclasses]]
+name = "Signal"
+voltage = "3.3VDC"
+description = "Logic: step, dir, enables, UARTs, SWD, straps, LEDs, encoder inputs"
+track_width = "0.15mm"
+clearance = "0.15mm"
+via = ["small", "std"]
+
+[[netclasses]]
+name = "Data"
+voltage = "3.3VDC"
+description = "RMII, MDIO and the quad SPI flash"
+track_width = "0.15mm"
+clearance = "0.15mm"
+via = ["small", "std"]
+
+[[netclasses]]
+name = "Clock"
+voltage = "3.3VDC"
+description = "Crystals and the 50 MHz RMII reference clock, kept apart from neighbours"
+track_width = "0.15mm"
+clearance = "0.15mm"
+via = ["small", "std"]
+
+[[netclasses]]
+name = "Analog"
+voltage = "3.3VDC"
+description = "Regulator feedback, PHY bias, battery sense"
+track_width = "0.15mm"
+clearance = "0.15mm"
+via = ["small", "std"]
+
+[[netclasses]]
+name = "Ground"
+voltage = "0VDC"
+description = "GND, the In1 plane and the outer pours"
+track_width = "0.3mm"
+clearance = "0.15mm"
+via = ["std", "small"]
+neckdown = "1.5mm"
+
+[[netclasses]]
+name = "Power3V3"
+voltage = "3.3VDC"
+description = "3V3 from the AP63203 and the rails it feeds"
+track_width = "0.5mm"
+clearance = "0.15mm"
+current = "0.8A"
+via = ["std", "small"]
+layers = ["F.Cu", "B.Cu"]
+neckdown = "2mm"
+
+[[netclasses]]
+name = "Rail"
+voltage = "3.3VDC"
+description = "Small rails: VDD_HP core, PSRAM and flash LDO outputs, VKEEP, the cell, driver 5VOUT"
+track_width = "0.4mm"
+clearance = "0.15mm"
+current = "0.5A"
+via = ["std", "small"]
+neckdown = "1.5mm"
+
+[[netclasses]]
+name = "Power24"
+voltage = "24VDC"
+description = "24 V from the Ag5424 to the drivers and the 3V3 buck"
+track_width = "0.8mm"
+clearance = "0.15mm"
+current = "2A"
+via = "std"
+layers = ["F.Cu", "B.Cu"]
+neckdown = "2.5mm"
+
+[[netclasses]]
+name = "Switch"
+voltage = "24VDC"
+description = "Buck and boost switch nodes, short and wide"
+track_width = "0.6mm"
+clearance = "0.15mm"
+current = "1.5A"
+via = "std"
+layers = ["F.Cu", "B.Cu"]
+neckdown = "1.5mm"
+
+[[netclasses]]
+name = "Motor"
+voltage = "24VDC"
+description = "Coil outputs and sense resistor nodes, 1.5 A rms"
+track_width = "0.5mm"
+clearance = "0.15mm"
+current = "1.4A"
+via = "std"
+layers = ["F.Cu", "B.Cu"]
+neckdown = "2.5mm"
+
+[[netclasses]]
+name = "PoE"
+voltage = "57VDC"
+description = "PoE primary: magjack centre taps, bridges, the Ag5424 input. Isolated from everything else"
+track_width = "0.25mm"
+clearance = "0.6mm"
+current = "0.8A"
+via = "std"
+layers = ["F.Cu", "B.Cu"]
+
+[[netclasses]]
+name = "Eth"
+voltage = "3.3VDC"
+description = "100BASE-TX pairs between the LAN8720A and the magjack"
+impedance = "100ohm"
+diff_gap = "0.2mm"
+layers = ["F.Cu", "B.Cu"]
+via = "std"
+
+[[netclasses]]
+name = "USB"
+voltage = "5VDC"
+description = "USB serial/JTAG pair"
+impedance = "90ohm"
+diff_gap = "0.15mm"
+layers = ["F.Cu"]
+via = "std"
+
+[[netclasses]]
+name = "Vbus"
+voltage = "5VDC"
+description = "USB VBUS for bench flashing"
+track_width = "0.4mm"
+clearance = "0.15mm"
+current = "0.5A"
+via = "std"
+neckdown = "1.5mm"
+
+[[domains]]
+name = "primary"
+classes = ["PoE"]
+
+[[domains]]
+name = "secondary"
+classes = ["Default", "Signal", "Data", "Clock", "Analog", "Ground", "Power3V3", "Rail", "Power24", "Switch", "Motor", "Eth", "USB", "Vbus"]
+
+[[barriers]]
+between = ["primary", "secondary"]
+clearance = "2mm"
+creepage = "2.5mm"

@@ -1,0 +1,53 @@
+add U12 TMC2209-LA TMC2209-LA --field mpn=TMC2209-LA-T --field mfr=ADI
+add U13 TMC2209-LA TMC2209-LA --field mpn=TMC2209-LA-T --field mfr=ADI
+add J8 Conn_01x04 AZ_MOTOR --field mpn=B4B-XH-A(LF)(SN) --field mfr=JST
+add J9 Conn_01x04 EL_MOTOR --field mpn=B4B-XH-A(LF)(SN) --field mfr=JST
+add R46 R 1k --field mpn=RC0402FR-071KL --field mfr=Yageo
+add C70 C 100n/50V --footprint C_0603_1608Metric --field mpn=GCM188R71H104KA57D --field mfr=Murata
+add C71 C 100n/50V --footprint C_0603_1608Metric --field mpn=GCM188R71H104KA57D --field mfr=Murata
+add C72 C 22n/50V --field mpn=GRM155R71H223KA12D --field mfr=Murata
+add C73 C 100n/50V --footprint C_0603_1608Metric --field mpn=GCM188R71H104KA57D --field mfr=Murata
+add C74 C 4.7u/10V --footprint C_0603_1608Metric --field mpn=C0603C475K8PAC --field mfr=KEMET
+add C75 C 100n/10V --field mpn=GRM155R71A104KA01D --field mfr=Murata
+add C76 C_Polarized 100u/35V --footprint CP_Elec_6.3x7.7 --field mpn=EEE-FK1V101XP --field mfr=Panasonic
+add R40 R 0.11 --footprint R_1206_3216Metric --field power=0.5W --field mpn=RL1632R-R110-F --field mfr=Susumu
+add R41 R 0.11 --footprint R_1206_3216Metric --field power=0.5W --field mpn=RL1632R-R110-F --field mfr=Susumu
+add R42 R 10k --field mpn=RC0402FR-0710KL --field mfr=Yageo
+add C77 C 100n/50V --footprint C_0603_1608Metric --field mpn=GCM188R71H104KA57D --field mfr=Murata
+add C78 C 100n/50V --footprint C_0603_1608Metric --field mpn=GCM188R71H104KA57D --field mfr=Murata
+add C79 C 22n/50V --field mpn=GRM155R71H223KA12D --field mfr=Murata
+add C80 C 100n/50V --footprint C_0603_1608Metric --field mpn=GCM188R71H104KA57D --field mfr=Murata
+add C81 C 4.7u/10V --footprint C_0603_1608Metric --field mpn=C0603C475K8PAC --field mfr=KEMET
+add C82 C 100n/10V --field mpn=GRM155R71A104KA01D --field mfr=Murata
+add C83 C_Polarized 100u/35V --footprint CP_Elec_6.3x7.7 --field mpn=EEE-FK1V101XP --field mfr=Panasonic
+add R43 R 0.11 --footprint R_1206_3216Metric --field power=0.5W --field mpn=RL1632R-R110-F --field mfr=Susumu
+add R44 R 0.11 --footprint R_1206_3216Metric --field power=0.5W --field mpn=RL1632R-R110-F --field mfr=Susumu
+net V24 U12.22 U12.28 C70.1 C71.1 C73.2 C76.1 U13.22 U13.28 C77.1 C78.1 C80.2 C83.1 --class Power24
+net GND U12.3 U12.16 U12.19 U13.16 U13.19 U12.18 U12.29 U12.7 U12.13 U12.17 U12.20 U12.10 C70.2 C71.2 C74.2 C75.2 C76.2 R40.2 R41.2 U12.9 U13.3 U13.18 U13.29 U13.7 U13.13 U13.17 U13.20 U13.10 C77.2 C78.2 C81.2 C82.2 C83.2 R43.2 R44.2 --class Ground
+net 3V3 U12.15 C75.1 R42.1 U13.15 C82.1 U13.9 --class Power3V3
+net 5VOUT_AZ U12.8 C74.1 --class Rail
+net CPO_AZ U12.4 C72.1 --class Signal
+net CPI_AZ U12.5 C72.2 --class Signal
+net VCP_AZ U12.6 C73.1 --class Signal
+net MOT_EN U12.2 U13.2 R42.2 --class Signal
+net DIAG_AZ U12.11 --class Signal
+net TMC_UART U12.14 U13.14 R46.2 --class Signal
+net SNS_AZ_A U12.23 R40.1 --class Motor
+net SNS_AZ_B U12.27 R41.1 --class Motor
+net MOT_AZ_A1 U12.24 J8.2 --class Motor
+net MOT_AZ_A2 U12.21 J8.1 --class Motor
+net MOT_AZ_B1 U12.26 J8.3 --class Motor
+net MOT_AZ_B2 U12.1 J8.4 --class Motor
+net 5VOUT_EL U13.8 C81.1 --class Rail
+net CPO_EL U13.4 C79.1 --class Signal
+net CPI_EL U13.5 C79.2 --class Signal
+net VCP_EL U13.6 C80.1 --class Signal
+net DIAG_EL U13.11 --class Signal
+net SNS_EL_A U13.23 R43.1 --class Motor
+net SNS_EL_B U13.27 R44.1 --class Motor
+net MOT_EL_A1 U13.24 J9.2 --class Motor
+net MOT_EL_A2 U13.21 J9.1 --class Motor
+net MOT_EL_B1 U13.26 J9.3 --class Motor
+net MOT_EL_B2 U13.1 J9.4 --class Motor
+net TMC_TX R46.1 --class Signal
+nc U12.12 U12.25 U13.12 U13.25

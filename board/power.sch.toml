@@ -1,0 +1,243 @@
+name = "power"
+description = "PoE+ through two bridges into a Silvertel Ag5424 (24 V, isolated), AT detect through an opto, AP63203 3V3 buck fed from 24 V or USB VBUS, TLV62569 VDD_HP core buck under ESP32-P4 control"
+board = "ctl"
+no_connect = ["U1.4", "U1.5", "U1.6", "U1.9"]
+
+[[parts]]
+ref = "U1"
+symbol = "Ag5424"
+at = [25.4, 50.8]
+value = "Ag5424"
+fields = { mpn = "Ag5424", mfr = "Silvertel" }
+
+[[parts]]
+ref = "U2"
+symbol = "LTV-357T"
+at = [101.6, 50.8]
+value = "LTV-357T"
+fields = { mpn = "LTV-357T", mfr = "Liteon" }
+
+[[parts]]
+ref = "U3"
+symbol = "AP63203WU"
+at = [177.8, 50.8]
+value = "AP63203WU"
+fields = { mpn = "AP63203WU-7", mfr = "Diodes" }
+
+[[parts]]
+ref = "H1"
+symbol = "MountingHole_Pad"
+at = [25.4, 165.1]
+value = "M3"
+
+[[parts]]
+ref = "H2"
+symbol = "MountingHole_Pad"
+at = [40.64, 165.1]
+value = "M3"
+
+[[parts]]
+ref = "H3"
+symbol = "MountingHole_Pad"
+at = [55.88, 165.1]
+value = "M3"
+
+[[parts]]
+ref = "H4"
+symbol = "MountingHole_Pad"
+at = [71.12, 165.1]
+value = "M3"
+
+[[parts]]
+ref = "D1"
+symbol = "CDBHM2100L-G"
+at = [86.36, 165.1]
+value = "CDBHM2100L-G"
+fields = { mpn = "CDBHM2100L-G", mfr = "Comchip" }
+
+[[parts]]
+ref = "D2"
+symbol = "CDBHM2100L-G"
+at = [101.6, 165.1]
+value = "CDBHM2100L-G"
+fields = { mpn = "CDBHM2100L-G", mfr = "Comchip" }
+
+[[parts]]
+ref = "C1"
+symbol = "C"
+at = [116.84, 165.1]
+value = "100n/100V"
+footprint = "C_0805_2012Metric"
+fields = { mpn = "GRM21BR72A104KAC4L", mfr = "Murata" }
+
+[[parts]]
+ref = "C2"
+symbol = "C_Polarized"
+at = [132.08, 165.1]
+value = "220u/35V"
+footprint = "CP_Elec_10x10.5"
+fields = { mpn = "EEH-ZA1V221P", mfr = "Panasonic" }
+
+[[parts]]
+ref = "R1"
+symbol = "R"
+at = [147.32, 165.1]
+value = "24k"
+footprint = "R_1206_3216Metric"
+fields = { mpn = "ERJ-8ENF2402V", mfr = "Panasonic" }
+
+[[parts]]
+ref = "R2"
+symbol = "R"
+at = [162.56, 165.1]
+value = "10k"
+fields = { mpn = "RC0402FR-0710KL", mfr = "Yageo" }
+
+[[parts]]
+ref = "D4"
+symbol = "D_Schottky"
+at = [177.8, 165.1]
+value = "B5819W"
+fields = { mpn = "1N5819HW-7-F", mfr = "Diodes" }
+
+[[parts]]
+ref = "D5"
+symbol = "D_Schottky"
+at = [193.04, 165.1]
+value = "B5819W"
+fields = { mpn = "1N5819HW-7-F", mfr = "Diodes" }
+
+[[parts]]
+ref = "C3"
+symbol = "C"
+at = [208.28, 165.1]
+value = "10u/50V"
+footprint = "C_1206_3216Metric"
+fields = { mpn = "C3216X5R1H106K160AB", mfr = "TDK" }
+
+[[parts]]
+ref = "C4"
+symbol = "C"
+at = [223.52, 165.1]
+value = "100n/50V"
+fields = { mpn = "GRM155R71H104KE14D", mfr = "Murata" }
+
+[[parts]]
+ref = "L1"
+symbol = "L"
+at = [238.76, 165.1]
+value = "4.7u"
+footprint = "L_Bourns-SRN4018"
+fields = { mpn = "SRN4018-4R7M", mfr = "Bourns" }
+
+[[parts]]
+ref = "C5"
+symbol = "C"
+at = [254.0, 165.1]
+value = "22u/10V"
+footprint = "C_0805_2012Metric"
+fields = { mpn = "CL21A226MPCLRNC", mfr = "Samsung" }
+
+[[parts]]
+ref = "C6"
+symbol = "C"
+at = [25.4, 185.42000000000002]
+value = "22u/10V"
+footprint = "C_0805_2012Metric"
+fields = { mpn = "CL21A226MPCLRNC", mfr = "Samsung" }
+
+[[nets]]
+name = "POE_VC12"
+class = "PoE"
+style = "label"
+pins = ["D1.3"]
+
+[[nets]]
+name = "POE_VC36"
+class = "PoE"
+style = "label"
+pins = ["D1.2"]
+
+[[nets]]
+name = "POE_VC45"
+class = "PoE"
+style = "label"
+pins = ["D2.2"]
+
+[[nets]]
+name = "POE_VC78"
+class = "PoE"
+style = "label"
+pins = ["D2.3"]
+
+[[nets]]
+name = "POE_P"
+class = "PoE"
+style = "label"
+pins = ["D1.1", "D2.1", "C1.1", "U1.1", "R1.1"]
+
+[[nets]]
+name = "POE_N"
+class = "PoE"
+style = "label"
+pins = ["D1.4", "D2.4", "C1.2", "U1.2"]
+
+[[nets]]
+name = "POE_LED"
+class = "PoE"
+style = "label"
+pins = ["R1.2", "U2.1"]
+
+[[nets]]
+name = "POE_ATDET"
+class = "PoE"
+style = "label"
+pins = ["U2.2", "U1.3"]
+
+[[nets]]
+name = "AT_DET"
+class = "Signal"
+style = "label"
+pins = ["U2.4", "R2.2"]
+
+[[nets]]
+name = "GND"
+class = "Ground"
+style = "power"
+pins = ["H1.1", "H2.1", "H3.1", "H4.1", "U2.3", "U1.7", "U1.10", "C2.2", "U3.4", "C3.2", "C5.2", "C6.2"]
+
+[[nets]]
+name = "V24"
+class = "Power24"
+style = "power"
+pins = ["U1.8", "C2.1", "D4.2"]
+
+[[nets]]
+name = "VBUCK"
+class = "Power24"
+style = "power"
+pins = ["D4.1", "D5.1", "U3.3", "U3.2", "C3.1"]
+
+[[nets]]
+name = "VBUS"
+class = "Vbus"
+style = "power"
+pins = ["D5.2"]
+
+[[nets]]
+name = "SW_3V3"
+class = "Switch"
+style = "label"
+pins = ["U3.5", "L1.1", "C4.2"]
+
+[[nets]]
+name = "BST_3V3"
+class = "Switch"
+style = "label"
+pins = ["U3.6", "C4.1"]
+
+[[nets]]
+name = "3V3"
+class = "Power3V3"
+style = "power"
+pins = ["L1.2", "U3.1", "C5.1", "C6.1", "R2.1"]

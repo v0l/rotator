@@ -1,0 +1,36 @@
+name = "V8BR-1AX1-GH"
+reference = "J"
+value = "V8BR-1AX1-GH"
+description = "Bel gigabit MagJack, vertical (top entry), 4PPoE 600 mA per pair, -40 to 85 C, centre taps of all four pairs out, two LEDs; drawing V8BR-1AX1-GH rev PC"
+datasheet = "https://www.belfuse.com/media/drawings/products/magjack%20ICMs/dr-mag-v8br-1ax1-gh.pdf"
+footprint = "RJ45_Bel_V8BR-1AX1-GH_Vertical"
+
+[[bodies]]
+width = 25.4
+left = [
+  { number = "11", name = "TRD1+", type = "passive" },
+  { number = "12", name = "TRCT1", type = "passive" },
+  { number = "10", name = "TRD1-", type = "passive" },
+  { number = "4", name = "TRD2+", type = "passive" },
+  { number = "6", name = "TRCT2", type = "passive" },
+  { number = "5", name = "TRD2-", type = "passive" },
+  { number = "3", name = "TRD3+", type = "passive" },
+  { number = "1", name = "TRCT3", type = "passive" },
+  { number = "2", name = "TRD3-", type = "passive" },
+  { number = "8", name = "TRD4+", type = "passive" },
+  { number = "7", name = "TRCT4", type = "passive" },
+  { number = "9", name = "TRD4-", type = "passive" },
+  { gap = 1 },
+  { number = "18", name = "LEDY_A", type = "passive" },
+  { number = "17", name = "LEDY_K", type = "passive" },
+  { number = "20", name = "LEDG_A", type = "passive" },
+  { number = "19", name = "LEDG_K", type = "passive" },
+]
+right = [
+  { number = "13", name = "VC12", type = "passive" },
+  { number = "14", name = "VC36", type = "passive" },
+  { number = "15", name = "VC45", type = "passive" },
+  { number = "16", name = "VC78", type = "passive" },
+  { gap = 6 },
+  { number = "SH", name = "SHIELD", type = "passive" },
+]

@@ -1,0 +1,334 @@
+name = "eth"
+description = "LAN8720A in REFCLKO mode feeding the P4 RMII clock, Bel PoE+ magjack"
+board = "ctl"
+no_connect = ["U14.3", "U14.10", "J1.17", "J1.18", "J1.19", "J1.20", "J1.1", "J1.2", "J1.3", "J1.7", "J1.8", "J1.9"]
+
+[[parts]]
+ref = "J1"
+symbol = "V8BR-1AX1-GH"
+at = [25.4, 50.8]
+value = "V8BR-1AX1-GH"
+fields = { mpn = "V8BR-1AX1-GH", mfr = "Bel" }
+
+[[parts]]
+ref = "U14"
+symbol = "LAN8720A"
+at = [101.6, 50.8]
+value = "LAN8720A"
+fields = { mpn = "LAN8720AI-CP-TR", mfr = "Microchip" }
+
+[[parts]]
+ref = "Y2"
+symbol = "Crystal_GND24"
+at = [25.4, 165.1]
+value = "25MHz"
+fields = { mpn = "ECS-250-12-33B-CWY-TR3", mfr = "ECS" }
+
+[[parts]]
+ref = "C60"
+symbol = "C"
+at = [40.64, 165.1]
+value = "18p/50V"
+fields = { mpn = "GRM1555C1H180JA01D", mfr = "Murata" }
+
+[[parts]]
+ref = "C61"
+symbol = "C"
+at = [55.88, 165.1]
+value = "18p/50V"
+fields = { mpn = "GRM1555C1H180JA01D", mfr = "Murata" }
+
+[[parts]]
+ref = "FB1"
+symbol = "FerriteBead_Small"
+at = [71.12, 165.1]
+value = "600R"
+fields = { mpn = "BLM18KG601SN1D", mfr = "Murata" }
+
+[[parts]]
+ref = "C62"
+symbol = "C"
+at = [86.36, 165.1]
+value = "1u/10V"
+fields = { mpn = "GRM155R61E105MA12D", mfr = "Murata" }
+
+[[parts]]
+ref = "C63"
+symbol = "C"
+at = [101.6, 165.1]
+value = "100n/10V"
+fields = { mpn = "GRM155R71A104KA01D", mfr = "Murata" }
+
+[[parts]]
+ref = "C64"
+symbol = "C"
+at = [116.84, 165.1]
+value = "100n/10V"
+fields = { mpn = "GRM155R71A104KA01D", mfr = "Murata" }
+
+[[parts]]
+ref = "C65"
+symbol = "C"
+at = [132.08, 165.1]
+value = "1u/10V"
+fields = { mpn = "GRM155R61E105MA12D", mfr = "Murata" }
+
+[[parts]]
+ref = "C66"
+symbol = "C"
+at = [147.32, 165.1]
+value = "100n/10V"
+fields = { mpn = "GRM155R71A104KA01D", mfr = "Murata" }
+
+[[parts]]
+ref = "C67"
+symbol = "C"
+at = [162.56, 165.1]
+value = "1u/10V"
+fields = { mpn = "GRM155R61E105MA12D", mfr = "Murata" }
+
+[[parts]]
+ref = "C68"
+symbol = "C"
+at = [177.8, 165.1]
+value = "470p/50V"
+fields = { mpn = "GRM1555C1H471JA01D", mfr = "Murata" }
+
+[[parts]]
+ref = "C69"
+symbol = "C"
+at = [193.04, 165.1]
+value = "22n/50V"
+fields = { mpn = "GRM155R71H223KA12D", mfr = "Murata" }
+
+[[parts]]
+ref = "C59"
+symbol = "C"
+at = [208.28, 165.1]
+value = "22n/50V"
+fields = { mpn = "GRM155R71H223KA12D", mfr = "Murata" }
+
+[[parts]]
+ref = "R30"
+symbol = "R"
+at = [223.52, 165.1]
+value = "12.1k"
+fields = { tolerance = "1%", mpn = "RC0402FR-0712K1L", mfr = "Yageo" }
+
+[[parts]]
+ref = "R31"
+symbol = "R"
+at = [238.76, 165.1]
+value = "49.9"
+fields = { tolerance = "1%", mpn = "RC0402FR-0749R9L", mfr = "Yageo" }
+
+[[parts]]
+ref = "R32"
+symbol = "R"
+at = [254.0, 165.1]
+value = "49.9"
+fields = { tolerance = "1%", mpn = "RC0402FR-0749R9L", mfr = "Yageo" }
+
+[[parts]]
+ref = "R33"
+symbol = "R"
+at = [25.4, 185.42000000000002]
+value = "49.9"
+fields = { tolerance = "1%", mpn = "RC0402FR-0749R9L", mfr = "Yageo" }
+
+[[parts]]
+ref = "R34"
+symbol = "R"
+at = [40.64, 185.42000000000002]
+value = "49.9"
+fields = { tolerance = "1%", mpn = "RC0402FR-0749R9L", mfr = "Yageo" }
+
+[[parts]]
+ref = "R35"
+symbol = "R"
+at = [55.88, 185.42000000000002]
+value = "33"
+fields = { mpn = "RC0402FR-0733RL", mfr = "Yageo" }
+
+[[parts]]
+ref = "R36"
+symbol = "R"
+at = [71.12, 185.42000000000002]
+value = "10k"
+fields = { mpn = "RC0402FR-0710KL", mfr = "Yageo" }
+
+[[parts]]
+ref = "R37"
+symbol = "R"
+at = [86.36, 185.42000000000002]
+value = "1.5k"
+fields = { mpn = "RC0402FR-071K5L", mfr = "Yageo" }
+
+[[parts]]
+ref = "R29"
+symbol = "R"
+at = [101.6, 185.42000000000002]
+value = "10k"
+fields = { mpn = "RC0402FR-0710KL", mfr = "Yageo" }
+
+[[nets]]
+name = "POE_VC12"
+class = "PoE"
+style = "label"
+pins = ["J1.13"]
+
+[[nets]]
+name = "POE_VC36"
+class = "PoE"
+style = "label"
+pins = ["J1.14"]
+
+[[nets]]
+name = "POE_VC45"
+class = "PoE"
+style = "label"
+pins = ["J1.15"]
+
+[[nets]]
+name = "POE_VC78"
+class = "PoE"
+style = "label"
+pins = ["J1.16"]
+
+[[nets]]
+name = "ETH_TX_P"
+class = "Eth"
+style = "label"
+pins = ["J1.5", "U14.21", "R33.1"]
+
+[[nets]]
+name = "ETH_TX_N"
+class = "Eth"
+style = "label"
+pins = ["J1.4", "U14.20", "R34.1"]
+
+[[nets]]
+name = "ETH_RX_P"
+class = "Eth"
+style = "label"
+pins = ["J1.11", "U14.23", "R31.1"]
+
+[[nets]]
+name = "ETH_RX_N"
+class = "Eth"
+style = "label"
+pins = ["J1.10", "U14.22", "R32.1"]
+
+[[nets]]
+name = "VDDA"
+class = "Rail"
+style = "power"
+pins = ["FB1.2", "U14.19", "U14.1", "J1.12", "J1.6", "R31.2", "R32.2", "R33.2", "R34.2", "C62.1", "C63.1", "C64.1", "C69.1", "C59.1"]
+
+[[nets]]
+name = "3V3"
+class = "Power3V3"
+style = "power"
+pins = ["FB1.1", "U14.9", "C65.1", "C66.1", "R36.1", "R37.1"]
+
+[[nets]]
+name = "VDDCR"
+class = "Rail"
+style = "label"
+pins = ["U14.6", "C67.1", "C68.1"]
+
+[[nets]]
+name = "GND"
+class = "Ground"
+style = "power"
+pins = ["U14.25", "J1.SH", "Y2.2", "Y2.4", "C60.2", "C61.2", "C62.2", "C63.2", "C64.2", "C65.2", "C66.2", "C67.2", "C68.2", "C69.2", "C59.2", "R30.2", "R29.2"]
+
+[[nets]]
+name = "PHY_XI"
+class = "Clock"
+style = "label"
+pins = ["U14.5", "Y2.1", "C60.1"]
+
+[[nets]]
+name = "PHY_XO"
+class = "Clock"
+style = "label"
+pins = ["U14.4", "Y2.3", "C61.1"]
+
+[[nets]]
+name = "RBIAS"
+class = "Analog"
+style = "label"
+pins = ["U14.24", "R30.1"]
+
+[[nets]]
+name = "PHY_REFCLK"
+class = "Clock"
+style = "label"
+pins = ["U14.14", "R35.1"]
+
+[[nets]]
+name = "RMII_CLK"
+class = "Clock"
+style = "label"
+pins = ["R35.2"]
+
+[[nets]]
+name = "PHY_RST"
+class = "Signal"
+style = "label"
+pins = ["U14.15", "R36.2"]
+
+[[nets]]
+name = "RMII_TXEN"
+class = "Data"
+style = "label"
+pins = ["U14.16"]
+
+[[nets]]
+name = "RMII_TXD0"
+class = "Data"
+style = "label"
+pins = ["U14.17"]
+
+[[nets]]
+name = "RMII_TXD1"
+class = "Data"
+style = "label"
+pins = ["U14.18"]
+
+[[nets]]
+name = "RMII_RXD0"
+class = "Data"
+style = "label"
+pins = ["U14.8"]
+
+[[nets]]
+name = "RMII_RXD1"
+class = "Data"
+style = "label"
+pins = ["U14.7"]
+
+[[nets]]
+name = "RMII_CRSDV"
+class = "Data"
+style = "label"
+pins = ["U14.11"]
+
+[[nets]]
+name = "MDIO"
+class = "Data"
+style = "label"
+pins = ["U14.12", "R37.2"]
+
+[[nets]]
+name = "MDC"
+class = "Data"
+style = "label"
+pins = ["U14.13"]
+
+[[nets]]
+name = "PHY_LED2"
+class = "Signal"
+style = "label"
+pins = ["U14.2", "R29.1"]
