@@ -4,6 +4,12 @@ Weatherproof az/el rotator for small satellite yagis on a 25 mm crossboom, model
 [gcad](https://github.com/v0l/gcad). Housings are Hammond die-cast boxes; the made parts
 are cut plates and a few turned and milled pieces, see `QUOTE.md`.
 
+![Rotator](docs/rotator.png)
+
+![Inside, box lids hidden](docs/inside.png)
+
+![Turned to az 60°](docs/posed.png)
+
 ```sh
 gcad rotator.gasm                         # viewer, joints `az` and `el`
 gcad check rotator.gasm                   # build, interference and joint sweeps
@@ -26,8 +32,10 @@ gcad export rotator.gasm rotator.step
   608s in `driveblock.gcad`, jaw-coupled to a dual-shaft NEMA17.
 - Absolute magnetic encoder (AS5047P) on each motor's rear shaft; turn counting and
   its battery backup live on the driver board.
-- `parts/std/hammond_1550z220.gcad` is drawn from measurements of Hammond's STEP, which
-  gcad cannot import yet (v0l/gcad#6).
+- The boxes are `parts/std/hammond_1550z220_box.gcad` and `_lid.gcad`. Without
+  Hammond's STEP they are drawn from its measurements. Download the STEP from
+  https://www.hammfg.com/part/1550Z220, save it as `parts/vendor/1550Z220.stp`, and run
+  with `--set hammond=1` to drill the real boxes; `./export.sh` uses it when present.
 
 ## Sealing
 

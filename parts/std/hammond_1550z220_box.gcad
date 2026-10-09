@@ -1,0 +1,42 @@
+let L=222.5 W=146.5 r=6 body=50 lid=32.5 wall=3 floor=3 top=2.5 lwall=4.8
+let bx=105 by=67 boss=13 ir=3
+let az=0 el=0 xs=40 xe=29.75 vendor=0
+if vendor==0 rect L W r=r
+if vendor==0 shell: extrude body
+if vendor==0 plane shell.end
+if vendor==0 pen 108.250,-61.371
+if vendor==0 line 108.250,61.371
+if vendor==0 arc 99.371,70.250 via=100.404,62.404
+if vendor==0 line 5.629,70.250
+if vendor==0 arc -5.629,70.250 via=0,60.500
+if vendor==0 line -99.371,70.250
+if vendor==0 arc -108.250,61.371 via=-100.404,62.404
+if vendor==0 line -108.250,-61.371
+if vendor==0 arc -99.371,-70.250 via=-100.404,-62.404
+if vendor==0 line -5.629,-70.250
+if vendor==0 arc 5.629,-70.250 via=0,-60.500
+if vendor==0 line 99.371,-70.250
+if vendor==0 arc 108.250,-61.371 via=100.404,-62.404
+if vendor==0 close
+if vendor==0 pocket: cut body-floor
+if vendor==0 plane shell.end
+if vendor==0 lidscrew: hole 3.3 bx,by -bx,by 0,by bx,-by -bx,-by 0,-by depth=14 thread=M4
+if vendor import ../vendor/1550Z220.stp solid=1
+if vendor rotate 90 axis=x
+if vendor move 0,0,body
+if az plane XY rx=180
+if az mast: hole 6.5 xs+40,0 xs-40,0 xs-28,28 xs+28,28 depth=floor+1
+if az vent: hole 10.5 -102,0 depth=floor+1 thread=M12
+if az plane YZ offset=-L/2 ry=180
+if az gland: hole 16.2 25,30 -25,30 depth=wall+2
+if el plane XY rx=180
+if el bearing: hole 20 xe,0 depth=floor+1
+if el kfl: hole 6.5 xe-26.5,0 xe+26.5,0 depth=floor+1
+if el plane YZ offset=-L/2 ry=180
+if el mount1: hole 6.5 45,11.25 depth=wall+2
+if el mount: hole 6.5 -45,11.25 45,36.25 -45,36.25 depth=wall+2
+if el plane XZ offset=W/2
+if el gland: hole 16.2 -85.25,20 depth=wall+2
+if el vent: hole 10.5 -70.25,41.25 depth=wall+2 thread=M12
+color #b9c0c8
+material aluminium

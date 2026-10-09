@@ -1,7 +1,7 @@
-let az=0 el=0 eh=261 boom=500 cover=1
-part box parts/std/hammond_1550z220.gcad az=1 body=box
+let az=0 el=0 eh=272 boom=500 cover=1 hammond=0
+part box parts/std/hammond_1550z220_box.gcad az=1 vendor=hammond
 move box -40,0,0
-if cover part lid parts/std/hammond_1550z220.gcad az=1 body=lid
+if cover part lid parts/std/hammond_1550z220_lid.gcad az=1 vendor=hammond
 if cover move lid -40,0,0
 part chassis parts/chassis.gcad body=chassis
 part top parts/chassis.gcad body=top
@@ -174,10 +174,10 @@ move mot_screw_az_4 15.5,-15.5,-63.5
 rotate mot_screw_az_4 90 axis=y
 rotate mot_screw_az_4 -90 axis=x
 move mot_screw_az_4 0,38,38
-part elbox parts/std/hammond_1550z220.gcad el=1 xe=eh-225.25 body=box
+part elbox parts/std/hammond_1550z220_box.gcad el=1 xe=eh-225.25 vendor=hammond
 rotate elbox -90 axis=y
 move elbox 41.25,0,225.25
-if cover part ellid parts/std/hammond_1550z220.gcad el=1 xe=eh-225.25 body=lid
+if cover part ellid parts/std/hammond_1550z220_lid.gcad el=1 xe=eh-225.25 vendor=hammond
 if cover rotate ellid -90 axis=y
 if cover move ellid 41.25,0,225.25
 part plates parts/el_plates.gcad el=eh
@@ -185,22 +185,22 @@ part box_bolt_1 parts/std/screw.gcad d=6 L=16
 rotate box_bolt_1 180 axis=x
 move box_bolt_1 30,-45,108
 part box_nut_1 parts/std/nut.gcad
-move box_nut_1 30,-45,117
+move box_nut_1 30,-45,119
 part box_bolt_2 parts/std/screw.gcad d=6 L=16
 rotate box_bolt_2 180 axis=x
 move box_bolt_2 30,45,108
 part box_nut_2 parts/std/nut.gcad
-move box_nut_2 30,45,117
+move box_nut_2 30,45,119
 part box_bolt_3 parts/std/screw.gcad d=6 L=16
 rotate box_bolt_3 180 axis=x
 move box_bolt_3 5,45,108
 part box_nut_3 parts/std/nut.gcad
-move box_nut_3 5,45,117
+move box_nut_3 5,45,119
 part box_bolt_4 parts/std/screw.gcad d=6 L=16
 rotate box_bolt_4 180 axis=x
 move box_bolt_4 5,-45,108
 part box_nut_4 parts/std/nut.gcad
-move box_nut_4 5,-45,117
+move box_nut_4 5,-45,119
 part kfl_f parts/std/kfl002.gcad
 rotate kfl_f 90 axis=y
 move kfl_f 41.25,0,eh
@@ -351,15 +351,15 @@ part boom_nut_l parts/std/nut.gcad d=5 af=8 m=4
 move boom_nut_l -80,0,eh-16.5
 part gland_el parts/std/gland.gcad
 rotate gland_el 90 axis=x
-move gland_el 30,-73.25,140
+move gland_el 21.25,-73.25,140
 part vent_el parts/std/vent.gcad
 rotate vent_el 90 axis=x
-move vent_el 5,-73.25,135
+move vent_el 0,-73.25,155
 axis za 0,0,0 0,0,1
 axis wa 0,38,38 1,38,38
 axis ea 0,0,eh 1,0,eh
 axis wea 4.25,38,0 4.25,38,1
-joint az spindle box turn about=za min=-270 max=270 at=az
+joint az spindle box turn about=za min=-270 max=270
 concentric wheel_az:bored.side spindle:rod.side
 flush key_az:k.start spindle:keyway.end
 concentric collar:bore.side spindle:rod.side
@@ -412,7 +412,7 @@ flush mot_screw_el_4:head.start block_el:motor.end
 joint spin_az worm_az block_az turn about=wa
 couple spin_az az ratio=60
 joint spin_el worm_el block_el turn about=wea
-joint el elshaft elbox turn about=ea min=-6 max=186 at=el
+joint el elshaft elbox turn about=ea min=-6 max=186
 couple spin_el el ratio=60
 concentric wheel_el:bored.side elshaft:rod.side
 flush key_el:k.start elshaft:keyway.end
@@ -426,8 +426,10 @@ concentric boom_l:cross.side elshaft:cross.side near=-80,0,eh
 concentric boom_bolt_l:shank.side elshaft:cross.side near=-80,0,eh
 concentric boom_nut_l:n.side elshaft:cross.side near=-80,0,eh
 flush vring_l:ring.start kfl_l:inner.end
-flush gland_el:nut.start elbox:<Y
-flush vent_el:nut.start elbox:<Y
+concentric gland_el:stub.side elbox:gland.side
+concentric vent_el:stub.side elbox:vent.side
+pose az az
+pose el el
 interference none
 interference joint=az steps=18
 interference joint=el steps=16

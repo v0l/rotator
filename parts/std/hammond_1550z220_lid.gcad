@@ -1,0 +1,21 @@
+let L=222.5 W=146.5 r=6 body=50 lid=32.5 wall=3 floor=3 top=2.5 lwall=4.8
+let bx=105 by=67 boss=13 ir=3
+let az=0 el=0 xs=40 xe=29.75 vendor=0
+if vendor==0 plane XY offset=body
+if vendor==0 rect L W r=r
+if vendor==0 cover: extrude lid
+if vendor==0 plane XY offset=body rx=180
+if vendor==0 rect L-2*lwall W-2*lwall r=ir
+if vendor==0 inside: cut lid-top
+if vendor==0 plane cover.end
+if vendor==0 lidhole: hole 4.5 bx,by -bx,by 0,by bx,-by -bx,-by 0,-by csink=8.4,90
+if vendor import ../vendor/1550Z220.stp solid=2
+if vendor rotate 90 axis=x
+if vendor move 0,0,body
+if az plane XY offset=body+lid
+if az spindle: hole 20 xs,0 depth=top+1
+if el plane XY offset=body+lid
+if el bearing: hole 20 xe,0 depth=top+1
+if el kfl: hole 6.5 xe-26.5,0 xe+26.5,0 depth=top+1
+color #b9c0c8
+material aluminium

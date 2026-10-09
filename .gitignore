@@ -2,3 +2,4 @@
 out/
 *.svg
 parts/vendor/
+!docs/*.png
