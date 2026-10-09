@@ -1,4 +1,4 @@
-let L=40 rear=7 shaft=24 sd=5 boss=22 bh=2 pitch=31 cap=8
+let L=40 rear=13 shaft=24 sd=5 boss=22 bh=2 pitch=31 cap=8
 plane XY offset=-L
 poly -21.15,-21.15 21.15,-21.15 21.15,21.15 -21.15,21.15 c=4.5
 can: extrude L-cap

@@ -1,4 +1,4 @@
-let az=0 el=0 eh=255 boom=500 cover=1
+let az=0 el=0 eh=261 boom=500 cover=1
 part box parts/std/hammond_1550z220.gcad az=1 body=box
 move box -40,0,0
 if cover part lid parts/std/hammond_1550z220.gcad az=1 body=lid
@@ -34,7 +34,7 @@ rotate kfl_up_screw_2 180 axis=x
 move kfl_up_screw_2 26.5,0,67.5
 part spindle parts/shaft.gcad L=98 kz=23 kl=20
 move spindle 0,0,10
-part wheel_az parts/khk_bg1_60r1.gcad
+part wheel_az parts/khk_cg1_60r1.gcad
 move wheel_az 0,0,33
 part key_az parts/std/key.gcad
 move key_az 0,7,33
@@ -75,13 +75,6 @@ move gland_base_1 -151.25,25,30
 part gland_base_2 parts/std/gland.gcad
 rotate gland_base_2 -90 axis=y
 move gland_base_2 -151.25,-25,30
-part cell parts/std/cellholder.gcad
-move cell.holder -100,-30,9
-move cell.cell -100,-30,9
-part cell_screw_1 parts/std/screw.gcad d=3 L=6
-move cell_screw_1 -118.25,-30,11
-part cell_screw_2 parts/std/screw.gcad d=3 L=6
-move cell_screw_2 -81.75,-30,11
 part block_az parts/driveblock.gcad
 rotate block_az 90 axis=y
 rotate block_az -90 axis=x
@@ -317,7 +310,7 @@ part mot_screw_el_4 parts/std/screw.gcad d=3 L=10
 move mot_screw_el_4 15.5,-15.5,-63.5
 rotate mot_screw_el_4 -90 axis=z
 move mot_screw_el_4 4.25,38,eh
-part elshaft parts/shaft.gcad L=194.7 kz=86.6 kl=20
+part elshaft parts/shaft.gcad L=194.7 kz=86.6 kl=20 xh=1 x1=17.35 x2=177.35
 rotate elshaft 90 axis=y
 rotate elshaft -90 axis=x
 move elshaft -97.35,0,eh
@@ -326,7 +319,7 @@ move key_el 0,7,86.6
 rotate key_el 90 axis=y
 rotate key_el -90 axis=x
 move key_el -97.35,0,eh
-part wheel_el parts/khk_bg1_60r1.gcad
+part wheel_el parts/khk_cg1_60r1.gcad
 rotate wheel_el -90 axis=y
 rotate wheel_el -90 axis=x
 move wheel_el 9.25,0,eh
@@ -336,24 +329,32 @@ move vring_f 59.85,0,eh
 part shim_f parts/std/collar.gcad d=15 D=21 W=1
 rotate shim_f 90 axis=y
 move shim_f 64.35,0,eh
-part boomclamp_f parts/std/clampcoupling.gcad
-rotate boomclamp_f 90 axis=y
-move boomclamp_f 65.35,0,eh
-part boom_f parts/std/tube.gcad L=boom
+part bush_f parts/std/bush.gcad xh=1 xz=14.65
+rotate bush_f 90 axis=y
+move bush_f 65.35,0,eh
+part boom_f parts/std/tube.gcad L=boom xh=1 xz=14.65
 rotate boom_f 90 axis=y
-move boom_f 97.35,0,eh
+move boom_f 65.35,0,eh
+part boom_bolt_f parts/std/screw.gcad d=5 L=30
+move boom_bolt_f 80,0,eh+12.5
+part boom_nut_f parts/std/nut.gcad d=5 af=8 m=4
+move boom_nut_f 80,0,eh-16.5
 part vring_l parts/std/vring.gcad
 rotate vring_l -90 axis=y
 move vring_l -59.85,0,eh
 part shim_l parts/std/collar.gcad d=15 D=21 W=1
 rotate shim_l -90 axis=y
 move shim_l -64.35,0,eh
-part boomclamp_l parts/std/clampcoupling.gcad
-rotate boomclamp_l -90 axis=y
-move boomclamp_l -65.35,0,eh
-part boom_l parts/std/tube.gcad L=boom
+part bush_l parts/std/bush.gcad xh=1 xz=14.65
+rotate bush_l -90 axis=y
+move bush_l -65.35,0,eh
+part boom_l parts/std/tube.gcad L=boom xh=1 xz=14.65
 rotate boom_l -90 axis=y
-move boom_l -97.35,0,eh
+move boom_l -65.35,0,eh
+part boom_bolt_l parts/std/screw.gcad d=5 L=30
+move boom_bolt_l -80,0,eh+12.5
+part boom_nut_l parts/std/nut.gcad d=5 af=8 m=4
+move boom_nut_l -80,0,eh-16.5
 part gland_el parts/std/gland.gcad
 rotate gland_el 90 axis=x
 move gland_el 30,-73.25,140
@@ -421,13 +422,17 @@ joint el elshaft elbox turn about=ea min=-6 max=186 at=el
 couple spin_el el ratio=60
 concentric wheel_el:bored.side elshaft:rod.side
 flush key_el:k.start elshaft:keyway.end
-concentric boomclamp_f:small.side elshaft:rod.side
-flush shim_f:ring.end boomclamp_f:hub.start
-flush boom_f:tube.start boomclamp_f:large.bottom
+concentric bush_f:cross.side elshaft:cross.side near=80,0,eh
+concentric boom_f:cross.side elshaft:cross.side near=80,0,eh
+concentric boom_bolt_f:shank.side elshaft:cross.side near=80,0,eh
+concentric boom_nut_f:n.side elshaft:cross.side near=80,0,eh
+flush shim_f:ring.end bush_f:bush.start
 flush vring_f:ring.start kfl_f:inner.end
-concentric boomclamp_l:small.side elshaft:rod.side
-flush shim_l:ring.end boomclamp_l:hub.start
-flush boom_l:tube.start boomclamp_l:large.bottom
+concentric bush_l:cross.side elshaft:cross.side near=-80,0,eh
+concentric boom_l:cross.side elshaft:cross.side near=-80,0,eh
+concentric boom_bolt_l:shank.side elshaft:cross.side near=-80,0,eh
+concentric boom_nut_l:n.side elshaft:cross.side near=-80,0,eh
+flush shim_l:ring.end bush_l:bush.start
 flush vring_l:ring.start kfl_l:inner.end
 flush gland_el:nut.start elbox:<Y
 flush vent_el:nut.start elbox:<Y

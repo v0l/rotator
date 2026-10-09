@@ -1,6 +1,8 @@
-let D=25 t=2 L=500
+let D=25 t=2 L=500 xh=0 xz=15
 circle D
 circle D-2*t
 tube: extrude L
+if xh plane YZ offset=15
+if xh cross: hole 5.2 0,xz
 color #d4d7db
 material aluminium

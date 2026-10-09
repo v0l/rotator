@@ -1,0 +1,8 @@
+let d=15 D=21 L=20 xh=0 xz=10
+circle D-0.1
+circle d+0.04
+bush: extrude L
+if xh plane YZ offset=15
+if xh cross: hole 5.2 0,xz
+color #b08a4a
+material brass

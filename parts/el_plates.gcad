@@ -1,7 +1,7 @@
-let el=255 t=5 fx=38.25 lx=-38.75 kfl=26.5 wy=38
+let el=261 t=5 fx=38.25 lx=-38.75 kfl=26.5 wy=38
 body floor
 plane YZ offset=fx
-rect 88 107 at=14,238.5 r=5
+rect 88 107 at=14,el-16.5 r=5
 plate: extrude -t
 plane plate.start
 kfl: hole 6.5 0,el-kfl 0,el+kfl

@@ -1,4 +1,4 @@
-let depth=18 wall=2 pitch=31 sd=5 hz=-4 hl=6 md=6 mh=2.5 bz=-13.6 bt=1.6 bw=30
+let depth=24 wall=2 pitch=31 sd=5 hz=-10 hl=6 md=6 mh=2.5 bz=-19.6 bt=1.6 bw=30
 body cap
 poly -21.15,-21.15 21.15,-21.15 21.15,21.15 -21.15,21.15 c=4.5
 can: extrude -depth

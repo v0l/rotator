@@ -21,11 +21,11 @@ gcad export rotator.gasm rotator.step
   bearing plate on three standoffs. A flange collar on top carries the turret plate. The
   spindle leaves the lid through a V-ring.
 - El: 15 mm shaft in KFL002 units bolted outside the el box floor and lid, with backing
-  plates inside. Crossboom halves clamp in 15/25 rigid couplings.
-- Each axis: KHK BG1-60R1 wheel on a keyed shaft, KHK SW1-R1 worm on an 8 mm shaft in two
+  plates inside. Crossboom tubes slide over the shaft ends on bronze bushes and are cross-bolted.
+- Each axis: KHK CG1-60R1 wheel on a keyed shaft, KHK SW1-R1 worm on an 8 mm shaft in two
   608s in `driveblock.gcad`, jaw-coupled to a dual-shaft NEMA17.
-- Absolute magnetic encoder on each motor's rear shaft; turns are counted on a 1/2AA
-  ER14250 cell in the base so position survives power loss.
+- Absolute magnetic encoder (AS5047P) on each motor's rear shaft; turn counting and
+  its battery backup live on the driver board.
 - `parts/std/hammond_1550z220.gcad` is drawn from measurements of Hammond's STEP, which
   gcad cannot import yet (v0l/gcad#6).
 

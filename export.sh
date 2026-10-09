@@ -21,9 +21,9 @@ part el_lid_plate parts/el_plates.gcad body=lid
 part drive_block parts/driveblock.gcad
 part mast_clamp parts/mastclamp.gcad body=main
 part az_spindle parts/shaft.gcad "L=98 kz=23 kl=20"
-part el_shaft parts/shaft.gcad "L=194.7 kz=86.6 kl=20"
+part el_shaft parts/shaft.gcad "L=194.7 kz=86.6 kl=20 xh=1"
 part az_box_1550Z220 parts/std/hammond_1550z220.gcad "az=1 body=box"
 part az_lid_1550Z220 parts/std/hammond_1550z220.gcad "az=1 body=lid"
-part el_box_1550Z220 parts/std/hammond_1550z220.gcad "el=1 xe=29.75 body=box"
-part el_lid_1550Z220 parts/std/hammond_1550z220.gcad "el=1 xe=29.75 body=lid"
+part el_box_1550Z220 parts/std/hammond_1550z220.gcad "el=1 xe=35.75 body=box"
+part el_lid_1550Z220 parts/std/hammond_1550z220.gcad "el=1 xe=35.75 body=lid"
 "$gcad" export rotator.gasm out/rotator.step

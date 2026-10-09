@@ -10,5 +10,5 @@ plane boss.end
 bored: hole bore+0.04 0,0
 rect key kd*2 at=0,bore/2
 keyway: cut face+hubl
-color #b08a4a
-material brass
+color #5b5f66
+material density=7.2
