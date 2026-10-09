@@ -1,0 +1,20 @@
+let el=255 t=5 fx=38.25 lx=-38.75 kfl=26.5 wy=38
+body floor
+plane YZ offset=fx
+rect 88 107 at=14,238.5 r=5
+plate: extrude -t
+plane plate.start
+kfl: hole 6.5 0,el-kfl 0,el+kfl
+pass: hole 20 0,el
+drive: hole 3.3 wy-8,el-15 wy+8,el-15 wy-12,el-48 wy+12,el-48 thread=M4
+color #c4cad1
+material aluminium
+body lid
+plane YZ offset=lx
+rect 60 80 at=0,el r=5
+plate: extrude t
+plane plate.end
+kfl: hole 6.5 0,el-kfl 0,el+kfl
+pass: hole 20 0,el
+color #c4cad1
+material aluminium

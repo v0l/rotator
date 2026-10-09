@@ -1,0 +1,9 @@
+let w=100 l=170 t=6 z0=108 pcd=38 bx1=30 bx2=5 by=45
+plane XY offset=z0
+rect w l r=10
+plate: extrude t
+plane plate.end
+collar: hole 4.2 pcd/2*cos(45),pcd/2*sin(45) -pcd/2*cos(45),pcd/2*sin(45) -pcd/2*cos(45),-pcd/2*sin(45) pcd/2*cos(45),-pcd/2*sin(45) depth=t thread=M5
+box: hole 6.5 bx1,by bx1,-by bx2,by bx2,-by
+color #c4cad1
+material aluminium

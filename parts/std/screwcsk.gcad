@@ -1,0 +1,11 @@
+let d=6 L=12 D=d*2 s=d*0.8
+plane XZ
+pen 0,0
+line D/2,0
+line s/2,-(D-s)/2
+line s/2,-L
+line 0,-L
+close
+screw: revolve 360 axis=y
+color #1e1f22
+material stainless

@@ -1,0 +1,10 @@
+let L=65 af=10 stud=8 d=6
+ngon af/cos(30) 6
+hexbody: extrude L
+plane hexbody.end
+female: hole d*0.82 0,0 depth=10
+plane XY
+circle d*0.82
+stud: extrude -stud
+color #c8ccd2
+material brass

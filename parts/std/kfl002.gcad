@@ -1,0 +1,15 @@
+let a=67 b=42 e=53 g=6.5 x=13 Z=18.6 Bi=16.5 s=7 d=15 hub=34 ring=22
+slot a b
+flange: extrude g
+plane flange.end
+circle hub
+housing: extrude x-g
+plane XY offset=Z-Bi
+circle ring
+inner: extrude Bi
+plane flange.start
+bolts: hole s -e/2,0 e/2,0
+plane inner.end
+bore: hole d+0.04 0,0
+color #8d8f93
+material density=6.6

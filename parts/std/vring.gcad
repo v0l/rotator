@@ -1,0 +1,7 @@
+let d=15 D=24 A=4.5
+circle D
+circle d+0.04
+ring: extrude A
+chamfer 1.2 ring.end&ring.side
+color #18191b
+material density=1.2

@@ -1,0 +1,24 @@
+let x0=-135 x1=55 hw=55 t=6 z0=3 tz=74 tt=5 kfl=26.5 bolt=28
+let s1x=-38 s1y=-36 s2x=38 s2y=-36 s3x=40 s3y=14 cx=-100 cy=-30
+body chassis
+plane XY offset=z0
+rect x1-x0 2*hw at=(x0+x1)/2,0 r=5
+plate: extrude t
+plane plate.end
+mast: hole 6.6 40,0 -40,0 bolt,-bolt -bolt,-bolt
+kfl: hole 5 -kfl,0 kfl,0 thread=M6
+posts: hole 5 s1x,s1y s2x,s2y s3x,s3y thread=M6
+drive: hole 3.3 -15,30 -15,46 -48,26 -48,50 thread=M4
+cell: hole 2.5 cx-18.25,cy cx+18.25,cy thread=M3
+color #c4cad1
+material aluminium
+body top
+plane XY offset=tz
+rect 98 68 at=1,-10 r=6
+cap: extrude tt
+plane cap.end
+posts: hole 6.5 s1x,s1y s2x,s2y s3x,s3y csink=12.4,90
+kfl: hole 5 -kfl,0 kfl,0 thread=M6
+pass: hole 20 0,0
+color #c4cad1
+material aluminium

@@ -1,4 +1,4 @@
-let F=100 ft=10 D=68 L=80 mast=48.3 depth=62 pcd=40 og=40 ow=2.6 od=1.5
+let F=100 ft=10 D=68 L=80 mast=48.3 depth=62 bolt=28 og=86 ow=2.6 od=1.5
 plane XY offset=-ft
 circle F
 flange: extrude ft
@@ -7,9 +7,8 @@ circle D
 socket: extrude -(L-ft)
 plane socket.end
 bore: hole mast+0.4 0,0 depth=depth
-plane flange.start
-mounts: hole 6.6 pcd*cos(45),pcd*sin(45) -pcd*cos(45),pcd*sin(45) -pcd*cos(45),-pcd*sin(45) pcd*cos(45),-pcd*sin(45) cbore=11,6.5
 plane flange.end
+mounts: hole 5 40,0 -40,0 bolt,-bolt -bolt,-bolt depth=9 thread=M6
 circle og+2*ow
 circle og
 oring: cut od

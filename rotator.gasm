@@ -1,317 +1,436 @@
-let az=0 el=0 a=38 zw=41 eh=270 wy=-38 boom=500 cover=1
-if cover part box parts/base.gcad body=main
-if cover part lid parts/base.gcad body=lid
-if cover part gasket parts/base.gcad body=gasket
-part bearing_az_low parts/std/bearing.gcad d=15 D=35 B=11
-move bearing_az_low 0,0,19
-part collar_az parts/std/collar.gcad d=15 D=25 W=12
-move collar_az 0,0,7
-part spacer_az parts/std/collar.gcad d=15 D=20 W=6
-move spacer_az 0,0,30
-part bearing_az_up parts/std/bearing.gcad d=25 D=47 B=12
-move bearing_az_up 0,0,71
-part seal_az parts/std/seal.gcad d=25 D=47 B=7
-move seal_az 0,0,83
-part turret parts/turret.gcad
+let az=0 el=0 eh=255 boom=500 cover=1
+part box parts/std/hammond_1550z220.gcad az=1 body=box
+move box -40,0,0
+if cover part lid parts/std/hammond_1550z220.gcad az=1 body=lid
+if cover move lid -40,0,0
+part chassis parts/chassis.gcad body=chassis
+part top parts/chassis.gcad body=top
+part post_1 parts/std/standoff.gcad L=65 stud=5.5
+move post_1 -38,-36,9
+part post_screw_1 parts/std/screwcsk.gcad d=6 L=12
+move post_screw_1 -38,-36,79
+part post_2 parts/std/standoff.gcad L=65 stud=5.5
+move post_2 38,-36,9
+part post_screw_2 parts/std/screwcsk.gcad d=6 L=12
+move post_screw_2 38,-36,79
+part post_3 parts/std/standoff.gcad L=65 stud=5.5
+move post_3 40,14,9
+part post_screw_3 parts/std/screwcsk.gcad d=6 L=12
+move post_screw_3 40,14,79
+part kfl_low parts/std/kfl002.gcad
+move kfl_low 0,0,9
+part kfl_up parts/std/kfl002.gcad
+rotate kfl_up 180 axis=x
+move kfl_up 0,0,74
+part kfl_low_screw_1 parts/std/screw.gcad d=6 L=12
+move kfl_low_screw_1 -26.5,0,15.5
+part kfl_up_screw_1 parts/std/screw.gcad d=6 L=10
+rotate kfl_up_screw_1 180 axis=x
+move kfl_up_screw_1 -26.5,0,67.5
+part kfl_low_screw_2 parts/std/screw.gcad d=6 L=12
+move kfl_low_screw_2 26.5,0,15.5
+part kfl_up_screw_2 parts/std/screw.gcad d=6 L=10
+rotate kfl_up_screw_2 180 axis=x
+move kfl_up_screw_2 26.5,0,67.5
+part spindle parts/shaft.gcad L=98 kz=23 kl=20
+move spindle 0,0,10
 part wheel_az parts/khk_bg1_60r1.gcad
-move wheel_az 0,0,36
+move wheel_az 0,0,33
 part key_az parts/std/key.gcad
-move key_az 0,7,36
+move key_az 0,7,33
+part vring_az parts/std/vring.gcad
+move vring_az 0,0,82.5
+part collar parts/std/flangecollar.gcad
+move collar 0,0,88
+part collar_screw_1 parts/std/screw.gcad d=5 L=12
+rotate collar_screw_1 180 axis=x
+move collar_screw_1 13.435,13.435,100
+part collar_screw_2 parts/std/screw.gcad d=5 L=12
+rotate collar_screw_2 180 axis=x
+move collar_screw_2 -13.435,13.435,100
+part collar_screw_3 parts/std/screw.gcad d=5 L=12
+rotate collar_screw_3 180 axis=x
+move collar_screw_3 -13.435,-13.435,100
+part collar_screw_4 parts/std/screw.gcad d=5 L=12
+rotate collar_screw_4 180 axis=x
+move collar_screw_4 13.435,-13.435,100
+part turret parts/turret_plate.gcad
 part mastclamp parts/mastclamp.gcad
 part mast parts/std/tube.gcad D=48.3 t=3.2 L=300
 move mast 0,0,-318
-if cover part vent_base parts/std/vent.gcad
-if cover rotate vent_base 180 axis=x
-if cover move vent_base -45,120,0
-if cover part gland_base_1 parts/std/gland.gcad
-if cover rotate gland_base_1 -90 axis=x
-if cover move gland_base_1 -40,142,45
-if cover part gland_base_2 parts/std/gland.gcad
-if cover rotate gland_base_2 -90 axis=x
-if cover move gland_base_2 -12,142,45
+part mast_screw_1 parts/std/screw.gcad d=6 L=16
+move mast_screw_1 40,0,9
+part mast_screw_2 parts/std/screw.gcad d=6 L=16
+move mast_screw_2 -40,0,9
+part mast_screw_3 parts/std/screw.gcad d=6 L=16
+move mast_screw_3 -28,-28,9
+part mast_screw_4 parts/std/screw.gcad d=6 L=16
+move mast_screw_4 28,-28,9
+part vent_base parts/std/vent.gcad
+rotate vent_base 180 axis=x
+move vent_base -142,0,0
+part gland_base_1 parts/std/gland.gcad
+rotate gland_base_1 -90 axis=y
+move gland_base_1 -151.25,25,30
+part gland_base_2 parts/std/gland.gcad
+rotate gland_base_2 -90 axis=y
+move gland_base_2 -151.25,-25,30
+part cell parts/std/cellholder.gcad
+move cell.holder -100,-30,9
+move cell.cell -100,-30,9
+part cell_screw_1 parts/std/screw.gcad d=3 L=6
+move cell_screw_1 -118.25,-30,11
+part cell_screw_2 parts/std/screw.gcad d=3 L=6
+move cell_screw_2 -81.75,-30,11
 part block_az parts/driveblock.gcad
-rotate block_az 180 axis=z
-rotate block_az 90 axis=x
-move block_az a,0,zw
+rotate block_az 90 axis=y
+rotate block_az -90 axis=x
+move block_az 0,38,38
 part worm_az parts/khk_sw1_r1.gcad
-rotate worm_az 180 axis=z
-rotate worm_az 90 axis=x
-move worm_az a,0,zw
+rotate worm_az 90 axis=y
+rotate worm_az -90 axis=x
+move worm_az 0,38,38
 part brg_a_az parts/std/bearing.gcad
 move brg_a_az 0,0,-32
-rotate brg_a_az 180 axis=z
-rotate brg_a_az 90 axis=x
-move brg_a_az a,0,zw
+rotate brg_a_az 90 axis=y
+rotate brg_a_az -90 axis=x
+move brg_a_az 0,38,38
 part brg_b_az parts/std/bearing.gcad
 move brg_b_az 0,0,25
-rotate brg_b_az 180 axis=z
-rotate brg_b_az 90 axis=x
-move brg_b_az a,0,zw
+rotate brg_b_az 90 axis=y
+rotate brg_b_az -90 axis=x
+move brg_b_az 0,38,38
 part rod_az parts/std/rod.gcad L=85
 move rod_az 0,0,-44.5
-rotate rod_az 180 axis=z
-rotate rod_az 90 axis=x
-move rod_az a,0,zw
+rotate rod_az 90 axis=y
+rotate rod_az -90 axis=x
+move rod_az 0,38,38
 part wcollar_az parts/std/collar.gcad
 move wcollar_az 0,0,32
-rotate wcollar_az 180 axis=z
-rotate wcollar_az 90 axis=x
-move wcollar_az a,0,zw
+rotate wcollar_az 90 axis=y
+rotate wcollar_az -90 axis=x
+move wcollar_az 0,38,38
 part coupling_az parts/std/coupling.gcad
 move coupling_az 0,0,-57
-rotate coupling_az 180 axis=z
-rotate coupling_az 90 axis=x
-move coupling_az a,0,zw
+rotate coupling_az 90 axis=y
+rotate coupling_az -90 axis=x
+move coupling_az 0,38,38
 part motor_az parts/std/nema17.gcad
 move motor_az 0,0,-69.5
-rotate motor_az 180 axis=z
-rotate motor_az 90 axis=x
-move motor_az a,0,zw
-part col parts/column.gcad el=eh
-part block_el parts/driveblock.gcad
-rotate block_el 90 axis=z
-move block_el 0,wy,eh
-part worm_el parts/khk_sw1_r1.gcad
-rotate worm_el 90 axis=z
-move worm_el 0,wy,eh
-part brg_a_el parts/std/bearing.gcad
-move brg_a_el 0,0,-32
-rotate brg_a_el 90 axis=z
-move brg_a_el 0,wy,eh
-part brg_b_el parts/std/bearing.gcad
-move brg_b_el 0,0,25
-rotate brg_b_el 90 axis=z
-move brg_b_el 0,wy,eh
-part rod_el parts/std/rod.gcad L=85
-move rod_el 0,0,-44.5
-rotate rod_el 90 axis=z
-move rod_el 0,wy,eh
-part wcollar_el parts/std/collar.gcad
-move wcollar_el 0,0,32
-rotate wcollar_el 90 axis=z
-move wcollar_el 0,wy,eh
-part coupling_el parts/std/coupling.gcad
-move coupling_el 0,0,-57
-rotate coupling_el 90 axis=z
-move coupling_el 0,wy,eh
-part motor_el parts/std/nema17.gcad
-move motor_el 0,0,-69.5
-rotate motor_el 90 axis=z
-move motor_el 0,wy,eh
+rotate motor_az 90 axis=y
+rotate motor_az -90 axis=x
+move motor_az 0,38,38
 part enc_az parts/std/encoder.gcad
 move enc_az.cap 0,0,-109.5
+rotate enc_az.cap 90 axis=y
+rotate enc_az.cap -90 axis=x
+move enc_az.cap 0,38,38
 move enc_az.pcb 0,0,-109.5
+rotate enc_az.pcb 90 axis=y
+rotate enc_az.pcb -90 axis=x
+move enc_az.pcb 0,38,38
 move enc_az.magnet 0,0,-109.5
+rotate enc_az.magnet 90 axis=y
+rotate enc_az.magnet -90 axis=x
+move enc_az.magnet 0,38,38
 move enc_az.disc 0,0,-109.5
-rotate enc_az.cap 180 axis=z
-rotate enc_az.pcb 180 axis=z
-rotate enc_az.magnet 180 axis=z
-rotate enc_az.disc 180 axis=z
-rotate enc_az.cap 90 axis=x
-rotate enc_az.pcb 90 axis=x
-rotate enc_az.magnet 90 axis=x
-rotate enc_az.disc 90 axis=x
-move enc_az.cap a,0,zw
-move enc_az.pcb a,0,zw
-move enc_az.magnet a,0,zw
-move enc_az.disc a,0,zw
+rotate enc_az.disc 90 axis=y
+rotate enc_az.disc -90 axis=x
+move enc_az.disc 0,38,38
+part blk_screw_az_1 parts/std/screw.gcad d=4 L=10
+rotate blk_screw_az_1 90 axis=x
+move blk_screw_az_1 8,23,-15
+rotate blk_screw_az_1 90 axis=y
+rotate blk_screw_az_1 -90 axis=x
+move blk_screw_az_1 0,38,38
+part blk_screw_az_2 parts/std/screw.gcad d=4 L=10
+rotate blk_screw_az_2 90 axis=x
+move blk_screw_az_2 -8,23,-15
+rotate blk_screw_az_2 90 axis=y
+rotate blk_screw_az_2 -90 axis=x
+move blk_screw_az_2 0,38,38
+part blk_screw_az_3 parts/std/screw.gcad d=4 L=10
+rotate blk_screw_az_3 90 axis=x
+move blk_screw_az_3 12,23,-48
+rotate blk_screw_az_3 90 axis=y
+rotate blk_screw_az_3 -90 axis=x
+move blk_screw_az_3 0,38,38
+part blk_screw_az_4 parts/std/screw.gcad d=4 L=10
+rotate blk_screw_az_4 90 axis=x
+move blk_screw_az_4 -12,23,-48
+rotate blk_screw_az_4 90 axis=y
+rotate blk_screw_az_4 -90 axis=x
+move blk_screw_az_4 0,38,38
+part mot_screw_az_1 parts/std/screw.gcad d=3 L=10
+move mot_screw_az_1 15.5,15.5,-63.5
+rotate mot_screw_az_1 90 axis=y
+rotate mot_screw_az_1 -90 axis=x
+move mot_screw_az_1 0,38,38
+part mot_screw_az_2 parts/std/screw.gcad d=3 L=10
+move mot_screw_az_2 -15.5,15.5,-63.5
+rotate mot_screw_az_2 90 axis=y
+rotate mot_screw_az_2 -90 axis=x
+move mot_screw_az_2 0,38,38
+part mot_screw_az_3 parts/std/screw.gcad d=3 L=10
+move mot_screw_az_3 -15.5,-15.5,-63.5
+rotate mot_screw_az_3 90 axis=y
+rotate mot_screw_az_3 -90 axis=x
+move mot_screw_az_3 0,38,38
+part mot_screw_az_4 parts/std/screw.gcad d=3 L=10
+move mot_screw_az_4 15.5,-15.5,-63.5
+rotate mot_screw_az_4 90 axis=y
+rotate mot_screw_az_4 -90 axis=x
+move mot_screw_az_4 0,38,38
+part elbox parts/std/hammond_1550z220.gcad el=1 xe=eh-225.25 body=box
+rotate elbox -90 axis=y
+move elbox 41.25,0,225.25
+if cover part ellid parts/std/hammond_1550z220.gcad el=1 xe=eh-225.25 body=lid
+if cover rotate ellid -90 axis=y
+if cover move ellid 41.25,0,225.25
+part plates parts/el_plates.gcad el=eh
+part box_bolt_1 parts/std/screw.gcad d=6 L=16
+rotate box_bolt_1 180 axis=x
+move box_bolt_1 30,-45,108
+part box_nut_1 parts/std/nut.gcad
+move box_nut_1 30,-45,117
+part box_bolt_2 parts/std/screw.gcad d=6 L=16
+rotate box_bolt_2 180 axis=x
+move box_bolt_2 30,45,108
+part box_nut_2 parts/std/nut.gcad
+move box_nut_2 30,45,117
+part box_bolt_3 parts/std/screw.gcad d=6 L=16
+rotate box_bolt_3 180 axis=x
+move box_bolt_3 5,45,108
+part box_nut_3 parts/std/nut.gcad
+move box_nut_3 5,45,117
+part box_bolt_4 parts/std/screw.gcad d=6 L=16
+rotate box_bolt_4 180 axis=x
+move box_bolt_4 5,-45,108
+part box_nut_4 parts/std/nut.gcad
+move box_nut_4 5,-45,117
+part kfl_f parts/std/kfl002.gcad
+rotate kfl_f 90 axis=y
+move kfl_f 41.25,0,eh
+part kfl_l parts/std/kfl002.gcad
+rotate kfl_l -90 axis=y
+move kfl_l -41.25,0,eh
+part kfl_f_bolt_1 parts/std/screw.gcad d=6 L=20
+rotate kfl_f_bolt_1 90 axis=y
+move kfl_f_bolt_1 47.75,0,eh-26.5
+part kfl_f_nut_1 parts/std/nut.gcad
+rotate kfl_f_nut_1 90 axis=y
+move kfl_f_nut_1 28.25,0,eh-26.5
+part kfl_l_bolt_1 parts/std/screw.gcad d=6 L=20
+rotate kfl_l_bolt_1 -90 axis=y
+move kfl_l_bolt_1 -47.75,0,eh-26.5
+part kfl_l_nut_1 parts/std/nut.gcad
+rotate kfl_l_nut_1 -90 axis=y
+move kfl_l_nut_1 -28.25,0,eh-26.5
+part kfl_f_bolt_2 parts/std/screw.gcad d=6 L=20
+rotate kfl_f_bolt_2 90 axis=y
+move kfl_f_bolt_2 47.75,0,eh+26.5
+part kfl_f_nut_2 parts/std/nut.gcad
+rotate kfl_f_nut_2 90 axis=y
+move kfl_f_nut_2 28.25,0,eh+26.5
+part kfl_l_bolt_2 parts/std/screw.gcad d=6 L=20
+rotate kfl_l_bolt_2 -90 axis=y
+move kfl_l_bolt_2 -47.75,0,eh+26.5
+part kfl_l_nut_2 parts/std/nut.gcad
+rotate kfl_l_nut_2 -90 axis=y
+move kfl_l_nut_2 -28.25,0,eh+26.5
+part block_el parts/driveblock.gcad
+rotate block_el -90 axis=z
+move block_el 4.25,38,eh
+part worm_el parts/khk_sw1_r1.gcad
+rotate worm_el -90 axis=z
+move worm_el 4.25,38,eh
+part brg_a_el parts/std/bearing.gcad
+move brg_a_el 0,0,-32
+rotate brg_a_el -90 axis=z
+move brg_a_el 4.25,38,eh
+part brg_b_el parts/std/bearing.gcad
+move brg_b_el 0,0,25
+rotate brg_b_el -90 axis=z
+move brg_b_el 4.25,38,eh
+part rod_el parts/std/rod.gcad L=85
+move rod_el 0,0,-44.5
+rotate rod_el -90 axis=z
+move rod_el 4.25,38,eh
+part wcollar_el parts/std/collar.gcad
+move wcollar_el 0,0,32
+rotate wcollar_el -90 axis=z
+move wcollar_el 4.25,38,eh
+part coupling_el parts/std/coupling.gcad
+move coupling_el 0,0,-57
+rotate coupling_el -90 axis=z
+move coupling_el 4.25,38,eh
+part motor_el parts/std/nema17.gcad
+move motor_el 0,0,-69.5
+rotate motor_el -90 axis=z
+move motor_el 4.25,38,eh
 part enc_el parts/std/encoder.gcad
 move enc_el.cap 0,0,-109.5
+rotate enc_el.cap -90 axis=z
+move enc_el.cap 4.25,38,eh
 move enc_el.pcb 0,0,-109.5
+rotate enc_el.pcb -90 axis=z
+move enc_el.pcb 4.25,38,eh
 move enc_el.magnet 0,0,-109.5
+rotate enc_el.magnet -90 axis=z
+move enc_el.magnet 4.25,38,eh
 move enc_el.disc 0,0,-109.5
-rotate enc_el.cap 90 axis=z
-rotate enc_el.pcb 90 axis=z
-rotate enc_el.magnet 90 axis=z
-rotate enc_el.disc 90 axis=z
-move enc_el.cap 0,wy,eh
-move enc_el.pcb 0,wy,eh
-move enc_el.magnet 0,wy,eh
-move enc_el.disc 0,wy,eh
-if cover part cell parts/std/cellholder.gcad
-if cover move cell.holder -30,66.5,12
-if cover move cell.cell -30,66.5,12
-if cover part screw_cell parts/std/screw.gcad d=3 L=6
-if cover move screw_cell -48.25,66.5,14
-if cover concentric screw_cell:shank.side cell.holder:fix.side near=-48.25,66.5,14
-if cover part screw_cell_2 parts/std/screw.gcad d=3 L=6
-if cover move screw_cell_2 -11.75,66.5,14
-if cover concentric screw_cell_2:shank.side cell.holder:fix.side near=-11.75,66.5,14
-part elshaft parts/elshaft.gcad
+rotate enc_el.disc -90 axis=z
+move enc_el.disc 4.25,38,eh
+part blk_screw_el_1 parts/std/screw.gcad d=4 L=10
+rotate blk_screw_el_1 90 axis=x
+move blk_screw_el_1 8,23,-15
+rotate blk_screw_el_1 -90 axis=z
+move blk_screw_el_1 4.25,38,eh
+part blk_screw_el_2 parts/std/screw.gcad d=4 L=10
+rotate blk_screw_el_2 90 axis=x
+move blk_screw_el_2 -8,23,-15
+rotate blk_screw_el_2 -90 axis=z
+move blk_screw_el_2 4.25,38,eh
+part blk_screw_el_3 parts/std/screw.gcad d=4 L=10
+rotate blk_screw_el_3 90 axis=x
+move blk_screw_el_3 12,23,-48
+rotate blk_screw_el_3 -90 axis=z
+move blk_screw_el_3 4.25,38,eh
+part blk_screw_el_4 parts/std/screw.gcad d=4 L=10
+rotate blk_screw_el_4 90 axis=x
+move blk_screw_el_4 -12,23,-48
+rotate blk_screw_el_4 -90 axis=z
+move blk_screw_el_4 4.25,38,eh
+part mot_screw_el_1 parts/std/screw.gcad d=3 L=10
+move mot_screw_el_1 15.5,15.5,-63.5
+rotate mot_screw_el_1 -90 axis=z
+move mot_screw_el_1 4.25,38,eh
+part mot_screw_el_2 parts/std/screw.gcad d=3 L=10
+move mot_screw_el_2 -15.5,15.5,-63.5
+rotate mot_screw_el_2 -90 axis=z
+move mot_screw_el_2 4.25,38,eh
+part mot_screw_el_3 parts/std/screw.gcad d=3 L=10
+move mot_screw_el_3 -15.5,-15.5,-63.5
+rotate mot_screw_el_3 -90 axis=z
+move mot_screw_el_3 4.25,38,eh
+part mot_screw_el_4 parts/std/screw.gcad d=3 L=10
+move mot_screw_el_4 15.5,-15.5,-63.5
+rotate mot_screw_el_4 -90 axis=z
+move mot_screw_el_4 4.25,38,eh
+part elshaft parts/shaft.gcad L=194.7 kz=86.6 kl=20
 rotate elshaft 90 axis=y
 rotate elshaft -90 axis=x
-move elshaft -83,0,eh
+move elshaft -97.35,0,eh
 part key_el parts/std/key.gcad
-move key_el 0,7,78
+move key_el 0,7,86.6
 rotate key_el 90 axis=y
 rotate key_el -90 axis=x
-move key_el -83,0,eh
+move key_el -97.35,0,eh
 part wheel_el parts/khk_bg1_60r1.gcad
-rotate wheel_el 90 axis=y
+rotate wheel_el -90 axis=y
 rotate wheel_el -90 axis=x
-move wheel_el -5,0,eh
-part brg_l parts/std/bearing.gcad d=15 D=35 B=11
-rotate brg_l -90 axis=y
-move brg_l -32,0,eh
-part seal_l parts/std/seal.gcad d=15 D=35 B=7
-rotate seal_l -90 axis=y
-move seal_l -43,0,eh
+move wheel_el 9.25,0,eh
+part vring_f parts/std/vring.gcad
+rotate vring_f 90 axis=y
+move vring_f 59.85,0,eh
+part shim_f parts/std/collar.gcad d=15 D=21 W=1
+rotate shim_f 90 axis=y
+move shim_f 64.35,0,eh
+part boomclamp_f parts/std/clampcoupling.gcad
+rotate boomclamp_f 90 axis=y
+move boomclamp_f 65.35,0,eh
+part boom_f parts/std/tube.gcad L=boom
+rotate boom_f 90 axis=y
+move boom_f 97.35,0,eh
+part vring_l parts/std/vring.gcad
+rotate vring_l -90 axis=y
+move vring_l -59.85,0,eh
 part shim_l parts/std/collar.gcad d=15 D=21 W=1
 rotate shim_l -90 axis=y
-move shim_l -50,0,eh
+move shim_l -64.35,0,eh
 part boomclamp_l parts/std/clampcoupling.gcad
 rotate boomclamp_l -90 axis=y
-move boomclamp_l -51,0,eh
+move boomclamp_l -65.35,0,eh
 part boom_l parts/std/tube.gcad L=boom
 rotate boom_l -90 axis=y
-move boom_l -83,0,eh
-part brg_r parts/std/bearing.gcad d=15 D=35 B=11
-rotate brg_r 90 axis=y
-move brg_r 32,0,eh
-part seal_r parts/std/seal.gcad d=15 D=35 B=7
-rotate seal_r 90 axis=y
-move seal_r 43,0,eh
-part shim_r parts/std/collar.gcad d=15 D=21 W=1
-rotate shim_r 90 axis=y
-move shim_r 50,0,eh
-part boomclamp_r parts/std/clampcoupling.gcad
-rotate boomclamp_r 90 axis=y
-move boomclamp_r 51,0,eh
-part boom_r parts/std/tube.gcad L=boom
-rotate boom_r 90 axis=y
-move boom_r 83,0,eh
-part gland_col parts/std/gland.gcad
-rotate gland_col -90 axis=y
-move gland_col -35,30,150
-part vent_col parts/std/vent.gcad
-rotate vent_col -90 axis=y
-move vent_col -35,0,135
+move boom_l -97.35,0,eh
+part gland_el parts/std/gland.gcad
+rotate gland_el 90 axis=x
+move gland_el 30,-73.25,140
+part vent_el parts/std/vent.gcad
+rotate vent_el 90 axis=x
+move vent_el 5,-73.25,135
 axis za 0,0,0 0,0,1
-axis wa a,0,zw a,1,zw
+axis wa 0,38,38 1,38,38
 axis ea 0,0,eh 1,0,eh
-axis wea 0,wy,0 0,wy,1
-joint az turret bearing_az_low turn about=za min=-270 max=270 at=az
-concentric wheel_az:bored.side turret:low.side
-flush key_az:k.start turret:keyway.end
-joint spin_az worm_az block_az turn about=wa
-couple spin_az az ratio=60
-flush col.left:<Z turret:disc.end
-flush col.right:<Z turret:disc.end
-flush col.cord:cord.start col.right:shell.start
-flush block_el:spine.end col.left:cav.end
+axis wea 4.25,38,0 4.25,38,1
+joint az spindle box turn about=za min=-270 max=270 at=az
+concentric wheel_az:bored.side spindle:rod.side
+flush key_az:k.start spindle:keyway.end
+concentric collar:bore.side spindle:rod.side
+flush turret:plate.start collar:flange.end
+concentric collar_screw_1:shank.side collar:fix.side near=13.435,13.435,100
+concentric collar_screw_2:shank.side collar:fix.side near=-13.435,13.435,100
+concentric collar_screw_3:shank.side collar:fix.side near=-13.435,-13.435,100
+concentric collar_screw_4:shank.side collar:fix.side near=13.435,-13.435,100
+concentric elbox:mount1.side turret:box.side near=30,-45,114
+if cover concentric ellid:bearing.side elbox:bearing.side
+concentric plates.floor:pass.side elbox:bearing.side
+concentric plates.lid:pass.side elbox:bearing.side
+concentric kfl_f:bore.side elbox:bearing.side
+concentric kfl_l:bore.side elbox:bearing.side
+flush box_bolt_1:head.start turret:plate.start
+flush box_bolt_2:head.start turret:plate.start
+flush box_bolt_3:head.start turret:plate.start
+flush box_bolt_4:head.start turret:plate.start
+concentric box_nut_1:n.side elbox:mount1.side near=30,-45,117
+concentric box_nut_2:n.side elbox:mount.side near=30,45,117
+concentric box_nut_3:n.side elbox:mount.side near=5,45,117
+concentric box_nut_4:n.side elbox:mount.side near=5,-45,117
+flush kfl_f_bolt_1:head.start kfl_f:flange.end
+concentric kfl_f_nut_1:n.side kfl_f:bolts.side
+flush kfl_f_bolt_2:head.start kfl_f:flange.end
+concentric kfl_f_nut_2:n.side kfl_f:bolts.side
+flush kfl_l_bolt_1:head.start kfl_l:flange.end
+concentric kfl_l_nut_1:n.side kfl_l:bolts.side
+flush kfl_l_bolt_2:head.start kfl_l:flange.end
+concentric kfl_l_nut_2:n.side kfl_l:bolts.side
+flush block_el:spine.end plates.floor:plate.end
 flush brg_a_el:ring.end block_el:seat_a.bottom
 flush brg_b_el:ring.start block_el:seat_b.bottom
 flush wcollar_el:ring.start brg_b_el:ring.end
 flush coupling_el:hub.end brg_a_el:ring.start
 flush motor_el:front.end block_el:motor.start
+concentric rod_el:rod.side coupling_el:bore.side
 flush enc_el.cap:>Z motor_el:can.start
 flush enc_el.pcb:board.start enc_el.cap:posts.end
 flush enc_el.magnet:bore.bottom motor_el:tail.end
 flush enc_el.disc:mag.end enc_el.magnet:pocket.bottom
-concentric rod_el:rod.side coupling_el:bore.side
+flush blk_screw_el_1:head.start block_el:spine.start
+flush blk_screw_el_2:head.start block_el:spine.start
+flush blk_screw_el_3:head.start block_el:spine.start
+flush blk_screw_el_4:head.start block_el:spine.start
+flush mot_screw_el_1:head.start block_el:motor.end
+flush mot_screw_el_2:head.start block_el:motor.end
+flush mot_screw_el_3:head.start block_el:motor.end
+flush mot_screw_el_4:head.start block_el:motor.end
+joint spin_az worm_az block_az turn about=wa
+couple spin_az az ratio=60
 joint spin_el worm_el block_el turn about=wea
-joint el elshaft col.left turn about=ea min=-6 max=186 at=el
+joint el elshaft elbox turn about=ea min=-6 max=186 at=el
 couple spin_el el ratio=60
 concentric wheel_el:bored.side elshaft:rod.side
 flush key_el:k.start elshaft:keyway.end
-flush brg_l:ring.start col.left:seat.bottom
-flush brg_r:ring.start col.right:seat.bottom
-flush seal_l:ring.start brg_l:ring.end
-flush seal_r:ring.start brg_r:ring.end
+concentric boomclamp_f:small.side elshaft:rod.side
+flush shim_f:ring.end boomclamp_f:hub.start
+flush boom_f:tube.start boomclamp_f:large.bottom
+flush vring_f:ring.start kfl_f:inner.end
 concentric boomclamp_l:small.side elshaft:rod.side
-concentric boomclamp_r:small.side elshaft:rod.side
 flush shim_l:ring.end boomclamp_l:hub.start
-flush shim_r:ring.end boomclamp_r:hub.start
 flush boom_l:tube.start boomclamp_l:large.bottom
-flush boom_r:tube.start boomclamp_r:large.bottom
-flush gland_col:nut.start col.left:shell.end
-flush vent_col:nut.start col.left:shell.end
-if cover part screw_lid parts/std/screw.gcad d=4 L=12
-if cover move screw_lid 66,-40,85
-if cover concentric screw_lid:shank.side lid:fix.side near=66,-40,85
-if cover flush screw_lid:head.start lid:fix.cbore_floor
-if cover pattern screw_lid holes=lid:fix.side
-part screw_col_1 parts/std/screw.gcad d=4 L=40
-rotate screw_col_1 -90 axis=y
-move screw_col_1 -30,58,131
-flush screw_col_1:head.start col.left:join.cbore_floor
-part screw_col_2 parts/std/screw.gcad d=4 L=40
-rotate screw_col_2 -90 axis=y
-move screw_col_2 -30,58,222
-flush screw_col_2:head.start col.left:join.cbore_floor
-part screw_col_3 parts/std/screw.gcad d=4 L=40
-rotate screw_col_3 -90 axis=y
-move screw_col_3 -30,58,280
-flush screw_col_3:head.start col.left:join.cbore_floor
-part screw_col_4 parts/std/screw.gcad d=4 L=40
-rotate screw_col_4 -90 axis=y
-move screw_col_4 -30,-58,131
-flush screw_col_4:head.start col.left:join.cbore_floor
-part screw_col_5 parts/std/screw.gcad d=4 L=40
-rotate screw_col_5 -90 axis=y
-move screw_col_5 -30,-58,222
-flush screw_col_5:head.start col.left:join.cbore_floor
-part screw_col_6 parts/std/screw.gcad d=4 L=40
-rotate screw_col_6 -90 axis=y
-move screw_col_6 -30,-58,280
-flush screw_col_6:head.start col.left:join.cbore_floor
-part screw_col_7 parts/std/screw.gcad d=4 L=40
-rotate screw_col_7 -90 axis=y
-move screw_col_7 -30,20,307
-flush screw_col_7:head.start col.left:join.cbore_floor
-part screw_col_8 parts/std/screw.gcad d=4 L=40
-rotate screw_col_8 -90 axis=y
-move screw_col_8 -30,-20,307
-flush screw_col_8:head.start col.left:join.cbore_floor
-part screw_turret parts/std/screw.gcad d=5 L=16
-rotate screw_turret 180 axis=x
-move screw_turret 17,45,103.5
-concentric screw_turret:shank.side turret:mount.side near=17,45,103.5
-flush screw_turret:head.start turret:mount.cbore_floor
-pattern screw_turret holes=turret:mount.side
-part screw_blk_el_1 parts/std/screw.gcad d=4 L=12
-rotate screw_blk_el_1 -90 axis=y
-move screw_blk_el_1 -35,-45,225
-flush screw_blk_el_1:head.start col.left:shell.end
-part screw_blk_el_2 parts/std/screw.gcad d=4 L=12
-rotate screw_blk_el_2 -90 axis=y
-move screw_blk_el_2 -35,-31,225
-flush screw_blk_el_2:head.start col.left:shell.end
-part screw_blk_el_3 parts/std/screw.gcad d=4 L=12
-rotate screw_blk_el_3 -90 axis=y
-move screw_blk_el_3 -35,-45,275
-flush screw_blk_el_3:head.start col.left:shell.end
-part screw_blk_el_4 parts/std/screw.gcad d=4 L=12
-rotate screw_blk_el_4 -90 axis=y
-move screw_blk_el_4 -35,-31,275
-flush screw_blk_el_4:head.start col.left:shell.end
-if cover part screw_blk_az parts/std/screw.gcad d=4 L=12
-if cover rotate screw_blk_az 180 axis=x
-if cover move screw_blk_az 31,45,5
-if cover concentric screw_blk_az:shank.side box:drive.side near=31,45,5
-if cover flush screw_blk_az:head.start box:drive.cbore_floor
-if cover pattern screw_blk_az holes=box:drive.side
-part screw_mast parts/std/screw.gcad d=6 L=12
-rotate screw_mast 180 axis=x
-move screw_mast 28.28,28.28,-3.5
-concentric screw_mast:shank.side mastclamp.main:mounts.side near=28.28,28.28,-3.5
-flush screw_mast:head.start mastclamp.main:mounts.cbore_floor
-pattern screw_mast holes=mastclamp.main:mounts.side
-part screw_mot_az parts/std/screw.gcad d=3 L=10
-move screw_mot_az 15.5,15.5,-63.5
-rotate screw_mot_az 180 axis=z
-rotate screw_mot_az 90 axis=x
-move screw_mot_az a,0,zw
-concentric screw_mot_az:shank.side block_az:mounts.side
-flush screw_mot_az:head.start block_az:motor.end
-pattern screw_mot_az holes=block_az:mounts.side
-part screw_mot_el parts/std/screw.gcad d=3 L=10
-move screw_mot_el 15.5,15.5,-63.5
-rotate screw_mot_el 90 axis=z
-move screw_mot_el 0,wy,eh
-concentric screw_mot_el:shank.side block_el:mounts.side
-flush screw_mot_el:head.start block_el:motor.end
-pattern screw_mot_el holes=block_el:mounts.side
+flush vring_l:ring.start kfl_l:inner.end
+flush gland_el:nut.start elbox:<Y
+flush vent_el:nut.start elbox:<Y
 interference none
 interference joint=az steps=18
 interference joint=el steps=16

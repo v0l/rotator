@@ -1,0 +1,6 @@
+let d=6 af=10 m=5
+ngon af/cos(30) 6
+circle d+0.04
+n: extrude m
+color #1e1f22
+material stainless

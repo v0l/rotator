@@ -1,0 +1,11 @@
+let d=15 hub=30 hl=12 F=50 ft=8 pcd=38 screw=4.2
+circle hub
+h: extrude hl
+plane h.end
+circle F
+flange: extrude ft
+plane flange.end
+bore: hole d+0.04 0,0
+fix: hole 5.5 pcd/2*cos(45),pcd/2*sin(45) -pcd/2*cos(45),pcd/2*sin(45) -pcd/2*cos(45),-pcd/2*sin(45) pcd/2*cos(45),-pcd/2*sin(45)
+color #3a3d42
+material steel

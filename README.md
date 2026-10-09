@@ -14,21 +14,26 @@ gcad export rotator.gasm rotator.step
 
 ## Layout
 
-- Az: solid spindle turned into the turret, 6202 below and 6005 + 25x47x7 lip seal in the lid.
-  KHK BG1-60R1 wheel (rebored 15H7, keyway) driven by a KHK SW1-R1 worm.
-- El: clamshell column split across the el axis, 6202-2RS + 15x35x7 lip seal in each half,
-  15 mm keyed shaft, same worm set. Crossboom halves clamp in 15/25 rigid couplings.
-- Each worm runs on an 8 mm shaft in two 608 bearings in `driveblock.gcad`, coupled to a
-  dual-shaft NEMA17 (17HS4401) with a 5-8 jaw coupling.
+- Two Hammond 1550Z220 die-cast IP66 boxes: the az box on the mast, the el box standing
+  on the turret plate. Every other made part is a cut plate, two short turned shafts, the
+  mast clamp and the two drive blocks.
+- Az: 15 mm spindle in two KFL002 flange units, one on the chassis plate and one under a
+  bearing plate on three standoffs. A flange collar on top carries the turret plate. The
+  spindle leaves the lid through a V-ring.
+- El: 15 mm shaft in KFL002 units bolted outside the el box floor and lid, with backing
+  plates inside. Crossboom halves clamp in 15/25 rigid couplings.
+- Each axis: KHK BG1-60R1 wheel on a keyed shaft, KHK SW1-R1 worm on an 8 mm shaft in two
+  608s in `driveblock.gcad`, jaw-coupled to a dual-shaft NEMA17.
 - Absolute magnetic encoder on each motor's rear shaft; turns are counted on a 1/2AA
   ER14250 cell in the base so position survives power loss.
+- `parts/std/hammond_1550z220.gcad` is drawn from measurements of Hammond's STEP, which
+  gcad cannot import yet (v0l/gcad#6).
 
 ## Sealing
 
-Lid: O-ring cord in a radial groove on the lid spigot. Column: cord in a face groove on
-the left half. Mast clamp: face O-ring. Shafts: lip seals outboard of sealed bearings,
-labyrinth skirt on the turret. Cables through IP68 M16 glands, M12 breather vent in each
-enclosure. Use bonded seal washers under the column and drive block screws.
+The boxes seal on their own gaskets. Shafts leave through V-rings against the bearing
+units or the lid, cables through IP68 M16 glands, and each box has an M12 breather vent.
+The mast clamp seals the floor holes with a face O-ring.
 
 ## Ratings
 
