@@ -1,13 +1,13 @@
 # Az/el antenna rotator
 
 Weatherproof az/el rotator for small satellite yagis on a 25 mm crossboom, modelled in
-[gcad](https://github.com/v0l/gcad). Housings are CNC aluminium; everything else is
-catalogue parts.
+[gcad](https://github.com/v0l/gcad). Housings are Hammond die-cast boxes; the made parts
+are cut plates and a few turned and milled pieces, see `QUOTE.md`.
 
 ```sh
 gcad rotator.gasm                         # viewer, joints `az` and `el`
 gcad check rotator.gasm                   # build, interference and joint sweeps
-gcad render rotator.gasm out.png --set cover=0   # without the base box and lid
+gcad render rotator.gasm out.png --set cover=0   # without the two box lids
 gcad bom rotator.gasm
 gcad export rotator.gasm rotator.step
 ```
