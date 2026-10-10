@@ -19,6 +19,11 @@ material post_3 stainless
 move post_3 40,14,3
 part post_screw_3 parts/std/screwcsk.gcad d=8 L=12
 move post_screw_3 40,14,78
+part post_4 parts/std/standoff.gcad L=70 af=13 d=8 stud=10
+material post_4 stainless
+move post_4 -38,16,3
+part post_screw_4 parts/std/screwcsk.gcad d=8 L=12
+move post_screw_4 -38,16,78
 part ctl parts/ctl_board.gcad
 part ctl_post_1 parts/std/standoff.gcad L=18 af=5.5 stud=6 d=3
 material ctl_post_1 aluminium

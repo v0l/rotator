@@ -26,7 +26,7 @@ if vendor rotate 90 axis=x
 if vendor move 0,0,body
 if az plane XY rx=180
 if az fix: hole 6.5 xs-26.5,0 xs+26.5,0 depth=floor+1
-if az posts: hole 8.5 xs-38,36 xs+38,36 xs+40,-14 depth=floor+1
+if az posts: hole 8.5 xs-38,36 xs+38,36 xs+40,-14 xs-38,-16 depth=floor+1
 if az drive: hole 4.5 xs-15,-30 xs-15,-46 xs-48,-26 xs-48,-50 depth=floor+1
 if az ctl: hole 3.4 xs-130,-10 xs-50,-10 xs-130,41.5 xs-50,40 xs-12.7,50 xs+12.7,50 depth=floor+1
 if az plane YZ offset=-L/2 ry=180

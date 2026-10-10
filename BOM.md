@@ -52,7 +52,7 @@ the UK adds Irish import VAT and a carrier handling fee.
 
 | qty | part | where |
 |---|---|---|
-| 3 | Hex standoff M8 x 70, male-female, 13 mm hex, A2 stainless (bearing plate posts) | [Accu](https://www.accu.co.uk) |
+| 4 | Hex standoff M8 x 70, male-female, 13 mm hex, A2 stainless (bearing plate posts) | [Accu](https://www.accu.co.uk) |
 | 2 | Aluminium tube 25 x 2, 500 mm (crossboom) | [Aluminium Online](https://www.aluminium-online.co.uk/product/25mm-x-2mm-aluminium-round-tube-2/) |
 | 1 | EPDM sheet 1 mm, for the gaskets under the el bearing units | Amazon, Delta Rubber |
 | 4 | Hex standoff M3 x 18, male-female, 5.5 mm, 6 mm stud, aluminium (control board) | [Accu](https://www.accu.co.uk) |
@@ -60,7 +60,7 @@ the UK adds Irish import VAT and a carrier handling fee.
 | 1 | Takachi CR123A-R battery holder with 140 mm leads, plus a JST PHR-2 housing and 2 SPH crimps | Conrad, item 1882324 |
 | 1 | CR123A lithium cell | any |
 | 1 | RJ45 plug for the PoE cable, crimped inside the box after the cable is through the gland | any |
-| | A4 screws: M3x6 (4), M3x8 countersunk (2), M3x10 (8), M4x10 (4), M4x16 (4), M4x16 countersunk (4), M5x30 (2), M5x6 set screw (1), M6x10 (2), M6x16 (2), M6x20 (4), M8x12 countersunk (3); nuts M4 (4), M6 (4), M5 nyloc (2) | [Accu](https://www.accu.co.uk) |
+| | A4 screws: M3x6 (4), M3x8 countersunk (2), M3x10 (8), M4x10 (4), M4x16 (4), M4x16 countersunk (4), M5x30 (2), M5x6 set screw (1), M6x10 (2), M6x16 (2), M6x20 (4), M8x12 countersunk (4); nuts M4 (4), M6 (4), M5 nyloc (2) | [Accu](https://www.accu.co.uk) |
 
 ## Totals in EUR with 23% VAT
 

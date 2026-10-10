@@ -10,7 +10,7 @@ tap drill size; the thread is in the table.
 
 | part | qty | plate | holes |
 |---|---|---|---|
-| `bearing_plate` | 1 | 5 mm, 98 x 68 R6 | 3x Ø9 countersunk for M8; 2x M6; Ø20 |
+| `bearing_plate` | 1 | 5 mm, 98 x 68 R6 | 4x Ø9 countersunk for M8; 2x M6; Ø20 |
 | `el_floor_plate` | 1 | 5 mm, 88 x 107 R5 | 2x Ø6.5; Ø20; 4x M4 |
 | `el_lid_plate` | 1 | 5 mm, 60 x 80 R5 | 2x Ø6.5; Ø20 |
 
@@ -19,7 +19,7 @@ tap drill size; the thread is in the table.
 | part | qty | notes |
 |---|---|---|
 | `drive_block` | 2 | 6082-T6, 43 x 52 x 104 block; 2x Ø22 H7 x 7 (608), Ø14 thru, Ø22.4 motor pilot, 4x Ø3.4 on 31 square, 4x Ø4.5 in spine |
-| `mast_clamp` | 1 | 6082-T6, 200 x 136 x 10 flange on a Ø68 x 70 socket (weldment or machined from plate plus bar); Ø48.7 x 62 bore; 2.6 x 1.5 O-ring cord groove 4 mm in from the flange edge; blind 8 deep: 2x M6, 3x M8, 4x M4, 6x M3; 3x M8 radial |
+| `mast_clamp` | 1 | 6082-T6, 200 x 136 x 10 flange on a Ø68 x 70 socket (weldment or machined from plate plus bar); Ø48.7 x 62 bore; 2.6 x 1.5 O-ring cord groove 4 mm in from the flange edge; blind 8 deep: 2x M6, 4x M8, 4x M4, 6x M3; 3x M8 radial |
 | `flange_collar` | 1 | steel, Ø44 x 8 flange on a Ø24 x 12 hub; Ø15 H7 bore with 5 JS9 keyway; 4x Ø4.5 on 34 PCD; M5 set screw in the hub |
 | `az_spindle` | 1 | Ø15 silver steel, 107 long; keyseat 5 P9 x 3 x 20 at 23 from the bottom end; keyseat 5 P9 x 3 x 18 open at the top end |
 | `el_shaft` | 1 | Ø15 silver steel, 194.7 long; keyseat 5 P9 x 3 x 20 at 86.6 from one end; Ø5.2 cross holes at 17.35 and 177.35 |
@@ -30,7 +30,7 @@ Two Hammond 1550Z220 die-cast boxes (IP66, gasket and lid screws included). Have
 KHK wheels reworked with an M4 set screw over the key as well as the 15 mm bore. The
 `*_1550Z220` STEP files show where to drill:
 
-- az box: floor 2x Ø6.5, 3x Ø8.5, 4x Ø4.5, 6x Ø3.4 (all into the mast clamp); M12x1.5 side wall (vent); 2x Ø16.2 end wall (glands)
+- az box: floor 2x Ø6.5, 4x Ø8.5, 4x Ø4.5, 6x Ø3.4 (all into the mast clamp); M12x1.5 side wall (vent); 2x Ø16.2 end wall (glands)
 - az lid: Ø20 (spindle)
 - el box: Ø20 + 2x Ø6.5 floor (bearing unit); end wall Ø16 (spindle) and 4x Ø4.5 countersunk on 34 PCD (collar), with a Ø46 spot face inside, milled square to the floor to take out the wall's draft; Ø16.2 (gland) and M12x1.5 (vent) side wall
 - el lid: Ø20 + 2x Ø6.5 (bearing unit)

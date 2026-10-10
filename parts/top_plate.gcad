@@ -1,10 +1,10 @@
 let tz=73 tt=5 kfl=26.5
-let s1x=-38 s1y=-36 s2x=38 s2y=-36 s3x=40 s3y=14
+let s1x=-38 s1y=-36 s2x=38 s2y=-36 s3x=40 s3y=14 s4x=-38 s4y=16
 plane XY offset=tz
 rect 98 68 at=1,-10 r=6
 cap: extrude tt
 plane cap.end
-posts: hole M8 s1x,s1y s2x,s2y s3x,s3y csink=M8
+posts: hole M8 s1x,s1y s2x,s2y s3x,s3y s4x,s4y csink=M8
 kfl: hole 5 -kfl,0 kfl,0 thread=M6
 pass: hole 20 0,0
 color #c4cad1

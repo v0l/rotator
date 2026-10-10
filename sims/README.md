@@ -20,7 +20,7 @@ bearing carries 620 N and the lower 475 N.
 | `spindle` | Ø15 silver steel az spindle, bearings, wheel keyway, collar | 80 MPa above the upper bearing, 155 MPa peak at the keyway corner, safety 2.6 |
 | `elshaft` | Ø15 el shaft, bush contact at each crossboom end | 87 MPa at the bearing, 28 MPa at the cross hole, safety 4.6 at the bearing |
 | `elbox` | el box body on the collar, gusty-side bearing loads | under 10 MPa in the die-cast walls; the box top moves 0.34 mm |
-| `azframe` | mast clamp, box floor, three posts and the bearing plate | posts 28 MPa, floor 13 MPa, clamp 4 MPa; bearing plate moves 0.1 mm |
+| `azframe` | mast clamp, box floor, posts and the bearing plate (run with three posts; the fourth was added after) | posts 28 MPa, floor 13 MPa, clamp 4 MPa; bearing plate moves 0.1 mm |
 
 Peak stresses printed at fixed-face edges and bonded joints are mesh singularities; the
 `expect` lines check probes away from them.
@@ -28,7 +28,7 @@ Peak stresses printed at fixed-face edges and bonded joints are mesh singulariti
 What this changed:
 
 - The three posts were M6 brass, 10 mm hex. They had about 10 N·m at each base and the
-  brass ran close to yield, so they are now M8 stainless, 13 mm hex, 70 mm long.
+  brass ran close to yield, so they are now M8 stainless, 13 mm hex, 70 mm long, and there are four of them.
 - The mast clamp flange is lightly stressed; the floor of the az box is too.
 
 Not covered here: the worm wheels. The gusty-side 16.6 N·m on the az wheel is more than

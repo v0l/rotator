@@ -25,7 +25,7 @@ gcad export rotator.gasm rotator.step
   turned shafts, the flange collar, the mast clamp and the two drive blocks.
 - The mast clamp's flange covers the underside of the az box and seals to it with one
   O-ring cord. Everything inside the az box screws through the floor into it: the lower
-  bearing, the drive block, three M8 posts, the control board and the battery holder.
+  bearing, the drive block, four M8 posts, the control board and the battery holder.
 - Az: 15 mm spindle in two KFL002 flange units, one on the box floor and one under a
   bearing plate on the posts. The spindle leaves the lid through a V-ring and ends inside
   the el box in a keyed flange collar with a set screw, bolted to a spot face on the el

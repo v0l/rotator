@@ -10,3 +10,6 @@ move post_2 38,-36,3
 part post_3 ../parts/std/standoff.gcad L=70 stud=0.5 af=13 d=8
 material post_3 stainless
 move post_3 40,14,3
+part post_4 ../parts/std/standoff.gcad L=70 stud=0.5 af=13 d=8
+material post_4 stainless
+move post_4 -38,16,3
