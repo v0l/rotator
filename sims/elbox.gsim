@@ -1,0 +1,17 @@
+sim static
+let q=680 cda_ant=0.08 cda_boom=0.015 shield=0.5 xa=500 xb=-529.5 xf=36.85 xl=-66.35 wside=25
+let ff=q*(cda_ant+cda_boom)
+let fl=ff*shield
+let rf=(ff*(xa-xl)+fl*(xb-xl))/(xf-xl)
+let rl=ff+fl-rf
+part ../parts/std/hammond_1550z220_box.gcad el=1 xe=26.75
+material diecast E=71 nu=0.33 yield=160 density=2.7
+mesh 3
+collar: fix collar.side,seat.end
+load kfl.side force=-wside,rf,0
+load shell.end force=-wside,rl,0
+wall_beside_seat: probe -109.75,25,26.5
+wall_other_side: probe -109.75,-25,26.5
+floor_at_bearing: probe 60,0,1.5
+floor_corner: probe -105,0,1.5
+expect wall_beside_seat.stress<50 floor_corner.stress<50 displacement<1

@@ -1,0 +1,23 @@
+sim static
+let q=680 cda_ant=0.08 cda_boom=0.015 shield=0.5 w=10 s=18 xa=449 xla=447.9
+let ff=q*(cda_ant+cda_boom)
+let fl=ff*shield
+let pof=ff*xa/s
+let pif=ff-pof
+let pol=fl*xla/s
+let pil=fl-pol
+let pow=w*xa/s
+let piw=w-pow
+part elshaft_fea.gcad
+material silversteel E=200 nu=0.29 yield=400 density=7.85
+mesh 1.2
+bearing_l: pin kl_.side
+bearing_f: pin kf.side
+key: fix kw.end
+load bof.side force=0,pof,-pow
+load bif.side force=0,pif,-piw
+load bol.side force=0,pol,-pow
+load bil.side force=0,pil,-piw
+at_bearing_f: probe 0,-7.3,154
+cross_hole_f: probe 3.5,-6.6,177.35
+expect at_bearing_f.stress<200 cross_hole_f.stress<200

@@ -1,0 +1,46 @@
+let d=15 L=194.7 kz=86.6 kl=20 bw=2 x1=17.35 x2=177.35
+let o1=11.5 i1=29.5 bl=44.75 bf=147.95 i2=162.2 o2=180.2
+circle d-0.02
+a: extrude o1
+plane a.end
+circle d-0.02
+bol: extrude bw
+plane bol.end
+circle d-0.02
+b: extrude i1-o1-bw
+plane b.end
+circle d-0.02
+bil: extrude bw
+plane bil.end
+circle d-0.02
+c: extrude bl-i1-bw
+plane c.end
+circle d-0.02
+kl_: extrude bw
+plane kl_.end
+circle d-0.02
+e: extrude bf-bl-bw
+plane e.end
+circle d-0.02
+kf: extrude bw
+plane kf.end
+circle d-0.02
+f: extrude i2-bf-bw
+plane f.end
+circle d-0.02
+bif: extrude bw
+plane bif.end
+circle d-0.02
+g: extrude o2-i2-bw
+plane g.end
+circle d-0.02
+bof: extrude bw
+plane bof.end
+circle d-0.02
+h: extrude L-o2-bw
+plane XY offset=kz+kl
+rect 4 5 at=d/2-1.5,0
+kw: cut kl
+plane YZ offset=10
+cross: hole 5.2 0,x1 0,x2
+material steel
