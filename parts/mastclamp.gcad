@@ -1,6 +1,6 @@
-let F=100 ft=10 D=68 L=80 mast=48.3 depth=62 bolt=28 og=86 ow=2.6 od=1.5
+let fl=200 fw=136 fx=-48 ft=10 r=8 D=68 L=80 mast=48.3 depth=62 ow=2.6 od=1.5 inset=4 blind=8 detail=1
 plane XY offset=-ft
-circle F
+rect fl fw at=fx,0 r=r
 flange: extrude ft
 plane XY offset=-ft
 circle D
@@ -8,18 +8,22 @@ socket: extrude -(L-ft)
 plane socket.end
 bore: hole mast+0.4 0,0 depth=depth
 plane flange.end
-mounts: hole 5 40,0 -40,0 bolt,-bolt -bolt,-bolt depth=9 thread=M6
-circle og+2*ow
-circle og
-oring: cut od
-grub: hole 6.8 0,40 120,40 240,40 on=socket.side thread=M8
-chamfer 1 socket.end&socket.side
+if detail fix: hole 5 -26.5,0 26.5,0 depth=blind thread=M6
+if detail posts: hole 6.8 -38,-36 38,-36 40,14 depth=blind thread=M8
+if detail drive: hole 3.3 -15,30 -15,46 -48,26 -48,50 depth=blind thread=M4
+if detail ctl: hole 2.5 -130,10 -50,10 -130,-41.5 -50,-40 -12.7,-50 12.7,-50 depth=blind thread=M3
+if detail plane flange.end
+if detail rect fl-2*inset fw-2*inset at=fx,0 r=r-inset
+if detail rect fl-2*inset-2*ow fw-2*inset-2*ow at=fx,0 r=r-inset-ow
+if detail oring: cut od
+if detail grub: hole 6.8 0,40 120,40 240,40 on=socket.side thread=M8
+if detail chamfer 1 socket.end&socket.side
 color #a9b1ba
 material aluminium
 body oring
 plane XY offset=-od
-circle og+2*ow-0.2
-circle og+0.2
+rect fl-2*inset-0.2 fw-2*inset-0.2 at=fx,0 r=r-inset-0.1
+rect fl-2*inset-2*ow+0.2 fw-2*inset-2*ow+0.2 at=fx,0 r=r-inset-ow+0.1
 ring: extrude od
 color #111111
-material density=1.2
+material epdm density=1.2

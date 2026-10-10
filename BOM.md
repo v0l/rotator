@@ -20,12 +20,11 @@ clamp, drive blocks) and drilling the boxes are in `QUOTE.md`.
 | 4 | SKF 608-2RSH | [608-2rsh-skf](https://www.simplybearings.ie/products/608-2rsh-skf) | €6.12 | €24.48 |
 | 2 | Shaft collar 8 mm, CABU08Z | [cabu08z](https://www.simplybearings.ie/products/cabu08z) | €1.40 | €2.80 |
 | 3 | V-ring VA14 nitrile, for 13.5-15.5 mm shafts | [v14a-nbr-nak](https://www.simplybearings.ie/products/v14a-nbr-nak) | €1.00 | €3.00 |
-| 2 | Feather key 5x5x20, A4 stainless | [fkss-2re-5x5x20mm](https://www.simplybearings.ie/products/fkss-2re-5x5x20mm) | €2.26 | €4.52 |
-| 1 | O-ring 86 x 2.5 EPDM (mast clamp) | [2-5x86-epdm](https://www.simplybearings.ie/products/2-5x86-epdm) | €1.00 | €1.00 |
+| 3 | Feather key 5x5x20, A4 stainless (one cut to 16 for the collar) | [fkss-2re-5x5x20mm](https://www.simplybearings.ie/products/fkss-2re-5x5x20mm) | €2.26 | €6.78 |
 | 2 | Bronze bush AM1521-20, 15x21x20 (crossboom) | [am-1521-20-pl](https://www.simplybearings.ie/products/am-1521-20-pl) | €5.64 | €11.28 |
 | 1 | Silver steel 8 mm x 325, cut into two 85 mm worm shafts | [ssm0080-325mm](https://www.simplybearings.ie/products/ssm0080-325mm) | €9.26 | €9.26 |
 | 1 | Silver steel 15 mm x 325, cut into the 98 mm spindle and 194.7 mm el shaft | [ssm0150-325mm](https://www.simplybearings.ie/products/ssm0150-325mm) | €22.66 | €22.66 |
-| | | | | **€109.76** |
+| | | | | **€111.02** |
 
 ## R.A. Rodriguez, KHK distributor (UK, GBP)
 
@@ -53,15 +52,15 @@ the UK adds Irish import VAT and a carrier handling fee.
 
 | qty | part | where |
 |---|---|---|
-| 1 | Flanged shaft collar 15 mm, Ø50 flange, 4x Ø5.5 on 38 PCD (turret) | Misumi flanged collars; not found at Ruland or Simply Bearings |
-| 3 | Standoff M6 x 65, male-female, 10 mm hex | [Vital Parts HMF-M6-65](https://www.vital-parts.co.uk/threaded-hex-standoffs-male-female/11836-hmf-m6-65-s10-a1) |
+| 3 | Hex standoff M8 x 70, male-female, 13 mm hex, A2 stainless (bearing plate posts) | [Accu](https://www.accu.co.uk) |
 | 2 | Aluminium tube 25 x 2, 500 mm (crossboom) | [Aluminium Online](https://www.aluminium-online.co.uk/product/25mm-x-2mm-aluminium-round-tube-2/) |
 | 1 | EPDM sheet 1 mm, for the gaskets under the el bearing units | Amazon, Delta Rubber |
-| 4 | Hex standoff M3 x 12, male-female, 5.5 mm, aluminium (control board) | [Accu](https://www.accu.co.uk) |
+| 4 | Hex standoff M3 x 18, male-female, 5.5 mm, 6 mm stud, aluminium (control board) | [Accu](https://www.accu.co.uk) |
+| 1 | EPDM O-ring cord 2.5 mm, 0.7 m, bonded into a loop (mast clamp face seal) | Simply Bearings, Polymax |
 | 1 | Takachi CR123A-R battery holder with 140 mm leads, plus a JST PHR-2 housing and 2 SPH crimps | Conrad, item 1882324 |
 | 1 | CR123A lithium cell | any |
 | 1 | RJ45 plug for the PoE cable, crimped inside the box after the cable is through the gland | any |
-| | A4 screws: M3x6 (4), M3x6 countersunk (2), M3x10 (8), M4x10 (8), M5x12 (4), M5x30 (2), M6x10 (2), M6x12 (2), M6x12 countersunk (3), M6x16 (8), M6x20 (4); nuts M6 (8), M5 nyloc (2); bonded seal washers M6 (8) | [Accu](https://www.accu.co.uk) |
+| | A4 screws: M3x6 (4), M3x8 countersunk (2), M3x10 (8), M4x10 (4), M4x16 (4), M4x16 countersunk (4), M5x30 (2), M5x6 set screw (1), M6x10 (2), M6x16 (2), M6x20 (4), M8x12 countersunk (3); nuts M4 (4), M6 (4), M5 nyloc (2) | [Accu](https://www.accu.co.uk) |
 
 ## Totals in EUR with 23% VAT
 
@@ -70,14 +69,14 @@ GBP converted at 1.1805 (mid-market, 9 Oct 2026). Shipping not included.
 | supplier | ex VAT | with VAT |
 |---|---|---|
 | Farnell Ireland | €95.97 | €118.04 |
-| Simply Bearings Ireland | €109.76 | €135.00 |
+| Simply Bearings Ireland | €111.02 | €136.55 |
 | R.A. Rodriguez (£92.56) | €109.27 | €134.40 |
 | StepperOnline (£33.88) | €40.00 | €49.20 |
 | Goodwins, 25 mm tube x 1 m | €8.90 | €10.95 |
 | Control board parts, Mouser (`board/tools/bom.md`) | €65.97 | €81.14 |
-| **priced parts** | **€429.87** | **€528.73** |
+| **priced parts** | **€431.13** | **€530.28** |
 
-The unpriced rows (turret collar, standoffs, screws, gasket sheet, battery holder) are an
+The unpriced rows (standoffs, O-ring cord, screws, gasket sheet, battery holder) are an
 estimate of about €85 with VAT, which brings the bought parts to roughly **€615**. The control
 board PCB itself (4 layers, ENIG, JLCPCB) and its assembly are not priced yet, and its
 STM32H563RIT6 is on backorder (Mouser expects stock on 11 Dec 2026). The made parts in

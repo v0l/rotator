@@ -1,4 +1,4 @@
-let d=15 hub=30 hl=12 F=50 ft=8 pcd=38 screw=4.2
+let d=15 hub=30 hl=12 F=50 ft=8 pcd=38 screw=4.2 key=5 t2=2.3 grub=4.2
 circle hub
 h: extrude hl
 plane h.end
@@ -6,6 +6,10 @@ circle F
 flange: extrude ft
 plane flange.end
 bore: hole d+0.04 0,0
-fix: hole 5.5 pcd/2*cos(45),pcd/2*sin(45) -pcd/2*cos(45),pcd/2*sin(45) -pcd/2*cos(45),-pcd/2*sin(45) pcd/2*cos(45),-pcd/2*sin(45)
+plane flange.end
+rect key t2+1 at=0,-(d/2+(t2-1)/2)
+keyway: cut hl+ft
+fix: hole screw pcd/2*cos(45),pcd/2*sin(45) -pcd/2*cos(45),pcd/2*sin(45) -pcd/2*cos(45),-pcd/2*sin(45) pcd/2*cos(45),-pcd/2*sin(45)
+setscrew: hole grub 0,hl/2 on=h.side depth=(hub-d)/2+1 thread=M5
 color #3a3d42
 material steel

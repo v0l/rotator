@@ -21,13 +21,19 @@ gcad export rotator.gasm rotator.step
 ## Layout
 
 - Two Hammond 1550Z220 die-cast IP66 boxes: the az box on the mast, the el box standing
-  on the turret plate. Every other made part is a cut plate, two short turned shafts, the
-  mast clamp and the two drive blocks.
-- Az: 15 mm spindle in two KFL002 flange units, one on the chassis plate and one under a
-  bearing plate on three standoffs. A flange collar on top carries the turret plate. The
-  spindle leaves the lid through a V-ring.
+  on the az spindle 5 mm above the az lid. Every other made part is a cut plate, two short
+  turned shafts, the flange collar, the mast clamp and the two drive blocks.
+- The mast clamp's flange covers the underside of the az box and seals to it with one
+  O-ring cord. Everything inside the az box screws through the floor into it: the lower
+  bearing, the drive block, three M8 posts, the control board and the battery holder.
+- Az: 15 mm spindle in two KFL002 flange units, one on the box floor and one under a
+  bearing plate on the posts. The spindle leaves the lid through a V-ring and ends inside
+  the el box in a keyed flange collar with a set screw, bolted to a spot face on the el
+  box's end wall.
 - El: 15 mm shaft in KFL002 units bolted outside the el box floor and lid, with backing
   plates inside. Crossboom tubes slide over the shaft ends on bronze bushes and are cross-bolted.
+  The el axis is 226 mm above the az box floor, and the el head sits 14.75 mm off the az axis
+  so the collar's bolts land in the box body, not the lid.
 - Each axis: KHK CG1-60R1 wheel on a keyed shaft, KHK SW1-R1 worm on an 8 mm shaft in two
   608s in `driveblock.gcad`, jaw-coupled to a StepperOnline 17HS15-1504-ME1K closed-loop
   NEMA17 with a built-in 1000 PPR magnetic encoder. Turn counting and its battery backup
@@ -42,7 +48,7 @@ gcad export rotator.gasm rotator.step
 `board/` is the controller in the az box: one PoE cable in, both motors and encoders out. An
 STM32H563 with a LAN8720A PHY, two TMC2209 drivers on UART, a Silvertel Ag5424 PoE module, and
 a CR123A cell that keeps the encoder counters alive through a power cut. It sits on four
-aluminium M3 standoffs on the chassis plate, which also carry its heat away. See
+aluminium M3 standoffs screwed into the mast clamp, which also carry its heat away. See
 `board/DESIGN.md`.
 
 ![Control board](docs/board.png)
@@ -52,6 +58,12 @@ aluminium M3 standoffs on the chassis plate, which also carry its heat away. See
 The boxes seal on their own gaskets. Shafts leave through V-rings against the bearing
 units or the lid, cables through IP68 M16 glands, and each box has an M12 breather vent.
 The mast clamp seals the floor holes with a face O-ring.
+
+## Strength
+
+`sims/` holds gcad FEA of the spindle, the el shaft, the el box on its collar and the az
+frame under a 120 km/h gusty-side wind; see `sims/README.md`. Everything sits at safety 2.5
+or better, with the worm wheels the open question.
 
 ## Ratings
 

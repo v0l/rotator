@@ -10,3 +10,4 @@ board/models/V8BR-1AX1-GH.*
 board/*.result.json
 board/tools/.mouser_cache.json
 board/fab/
+sims/*.result.json
