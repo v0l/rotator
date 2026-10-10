@@ -61,9 +61,11 @@ The mast clamp seals the floor holes with a face O-ring.
 
 ## Strength
 
-`sims/` holds gcad FEA of the spindle, the el shaft, the el box on its collar and the az
-frame under a 120 km/h gusty-side wind; see `sims/README.md`. Everything sits at safety 2.5
-or better, with the worm wheels the open question.
+`sims/` holds gcad FEA of the KFL002 housing, the spindle, the el shaft and the el box on
+its collar under a 120 km/h gusty-side wind, and the bearing loads against the KFL002
+ratings; see `sims/README.md`. The worst bearing sees 768 N against a 2.9 kN static rating,
+and the shafts stay under 90 MPa away from the singular spots. The worm wheels are the open
+question.
 
 ## Ratings
 

@@ -1,5 +1,5 @@
 sim static
-let q=680 cda_ant=0.08 cda_boom=0.015 shield=0.5 xa=500 xb=-529.5 xf=36.85 xl=-66.35 wside=25
+let q=680 cda_ant=0.08 cda_boom=0.015 shield=0.5 xa=500 xb=-529.5 xf=33.1 xl=-62.6 wside=25
 let ff=q*(cda_ant+cda_boom)
 let fl=ff*shield
 let rf=(ff*(xa-xl)+fl*(xb-xl))/(xf-xl)

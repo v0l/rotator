@@ -11,26 +11,56 @@ Static FEA in gcad, `gcad sim NAME.gsim`, one load case: survival wind of 120 km
 | Wind on the el box | 15 N |
 | Gusty side | one antenna takes full wind, the other half, so the az axis sees 16.6 N·m |
 | Horizontal load at the el axis | 144 N, 226 mm above the az box floor |
+| Worm on the az wheel | 553 N at the 30 mm pitch radius, 32 mm above the floor |
 
-The az bearings are 49 mm apart and the load is 213 mm above the lower one, so the upper
-bearing carries 620 N and the lower 475 N.
+## Bearings
+
+KFL002: a K002 insert (15 x 32 mm, outer ring 9 wide, inner ring 16.5) in a two-bolt
+zinc die-cast flange. Ratings from Mädler (62661500) and AMI: C = 5.7 kN, C0 = 2.9 kN;
+Mädler gives these as the unit's maximum radial load, axial about 20% of that. The ball row
+sits 4.5 mm from the short end of the inner ring (AMI `n`), which is 6.6 mm from the
+flange's mounting face (Z - Bi + n). Datasheets are in `board/ref/maedler_*.pdf` and
+`board/ref/kfl000_silver.pdf`.
+
+| bearing | ball row | worst radial load | C0 / P0 |
+|---|---|---|---|
+| az upper | z 66.4 | 768 N (wind 549 N plus worm 218 N in line) | 3.8 |
+| az lower | z 9.6 | 740 N (wind 405 N against worm 335 N) | 3.9 |
+| el, wind side | x 33.1 | 222 N | 13 |
+| el, lee side | x -62.6 | 125 N | 23 |
+
+The az pair is 56.8 mm apart. Axial load is the head's weight, about 60 N, a tenth of the
+axial limit.
+
+## Sims
 
 | sim | what it models | result |
 |---|---|---|
-| `spindle` | Ø15 silver steel az spindle, bearings, wheel keyway, collar | 80 MPa above the upper bearing, 155 MPa peak at the keyway corner, safety 2.6 |
-| `elshaft` | Ø15 el shaft, bush contact at each crossboom end | 87 MPa at the bearing, 28 MPa at the cross hole, safety 4.6 at the bearing |
-| `elbox` | el box body on the collar, gusty-side bearing loads | under 10 MPa in the die-cast walls; the box top moves 0.34 mm |
-| `azframe` | mast clamp, box floor, posts and the bearing plate (run with three posts; the fourth was added after) | posts 28 MPa, floor 13 MPa, clamp 4 MPa; bearing plate moves 0.1 mm |
+| `kfl` | KFL002 zinc housing, bolt holes held, mounting face on the plate, 768 N on the ring seat plus 60 N axial | 2.5 MPa in the boss, 4.3 MPa at the flange root, 13 MPa peak; seat moves 2 µm. `--set ang=0` loads it along the bolt line: lower still |
+| `spindle` | Ø15 silver steel az spindle pinned at the ball rows, wind at the el axis, az torque, worm force on the keyway | 80 MPa above the upper bearing, 73 MPa below the collar, 50 MPa at the keyway end |
+| `elshaft` | Ø15 el shaft pinned at the ball rows, bush contact at each crossboom end | 87 MPa at the bearing, 28 MPa at the cross hole |
+| `elbox` | el box body on the collar, gusty-side bearing loads | under 10 MPa in the die-cast walls; the box top moves 0.37 mm |
 
-Peak stresses printed at fixed-face edges and bonded joints are mesh singularities; the
-`expect` lines check probes away from them.
+Peaks printed at fixed-face edges and at the ends of the pinned bands are mesh
+singularities; the `expect` lines check probes away from them. A `pin` on a 2 mm band
+still holds some moment, so the pinned reactions are skewed; the bearing loads above are
+from statics.
 
-What this changed:
+Everything here is one body. The bearing, the shaft and the housing should be one bonded
+assembly, but gcad's bonded joints leak moment: a shaft bonded into a bore and loaded at the
+far end reports half the root moment and half the deflection of the same shape as one solid
+(see `~/git/gcad/TODO.md`). The az frame sim (clamp, floor, posts, bearing plate) was bonded
+too, so it was removed. By hand: the bearing plate on four posts is a portal frame, so each
+post sees 192 N and 6.7 N·m at each end. An A2-70 M8 standoff preloaded to about 11 kN holds
+that on its 13 mm shoulder with a wide margin.
 
-- The three posts were M6 brass, 10 mm hex. They had about 10 N·m at each base and the
-  brass ran close to yield, so they are now M8 stainless, 13 mm hex, 70 mm long, and there are four of them.
-- The mast clamp flange is lightly stressed; the floor of the az box is too.
+## What this changed
 
-Not covered here: the worm wheels. The gusty-side 16.6 N·m on the az wheel is more than
-the 7.4 N·m KHK lists for CG1-60R1 at 100 rpm, which is a wear rating. Check the static
-bending rating before trusting the gears in a storm.
+- The bearing plate posts were M6 brass. They are M8 stainless, 13 mm hex, 70 mm long,
+  four of them.
+
+## Open
+
+The gusty-side 16.6 N·m on the az wheel is more than the 7.4 N·m KHK lists for CG1-60R1
+at 100 rpm, which is a wear rating. Check the static bending rating before trusting the
+gears in a storm.

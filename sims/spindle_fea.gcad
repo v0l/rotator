@@ -1,4 +1,4 @@
-let d=15 b0=9.35 b1=58.65 bw=2 c0=87.2 c1=107.2 head=222 kz=23 kl=20
+let d=15 b0=5.6 b1=62.4 bw=2 c0=87.2 c1=107.2 head=222 kz=23 kl=20
 circle d-0.02
 s0: extrude b0-bw/2
 plane s0.end

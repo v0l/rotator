@@ -1,0 +1,15 @@
+let a=67 b=42 e=53 g=6.5 x=13 Z=18.6 Bi=16.5 Be=9 n=4.5 D=32 boss=38 s=7
+let zb=Z-Bi+n
+slot a b
+flange: extrude g
+plane flange.end
+circle boss
+hub: extrude x-g
+plane flange.start
+seat: hole D 0,0
+relief: hole D+1 0,0 depth=zb-Be/2
+plane hub.end
+relief2: hole D+1 0,0 depth=x-zb-Be/2
+plane flange.start
+bolts: hole s -e/2,0 e/2,0
+material zinc E=96 nu=0.27 yield=208 density=6.6

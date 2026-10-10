@@ -1,9 +1,0 @@
-let fl=200 fw=136 fx=-48 t=3
-rect fl fw at=fx,0 r=8
-floor: extrude t
-plane floor.end
-kfl: hole 6.5 -26.5,0 26.5,0
-posts: hole 8.5 -38,-36 38,-36 40,14 -38,16
-drive: hole 4.5 -15,30 -15,46 -48,26 -48,50
-color #b9c0c8
-material diecast density=2.7 E=71 nu=0.33 yield=160

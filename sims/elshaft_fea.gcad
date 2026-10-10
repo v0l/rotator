@@ -1,5 +1,5 @@
 let d=15 L=194.7 kz=86.6 kl=20 bw=2 x1=17.35 x2=177.35
-let o1=11.5 i1=29.5 bl=44.75 bf=147.95 i2=162.2 o2=180.2
+let o1=11.5 i1=29.5 bl=48.5 bf=144.2 i2=162.2 o2=180.2
 circle d-0.02
 a: extrude o1
 plane a.end
