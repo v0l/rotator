@@ -52,6 +52,9 @@ isolation), five schematic sheets, `ctl.pcb.toml` (placed and routed), and the s
   not feed the unpowered PHY and drivers, drop the core clock, and keep TIM2 and TIM3 running.
   Write the positions to flash on stop. The outage current is not measured yet.
 - VBAT_SENSE is the cell through a 1M / 1M divider.
+- Set the RMII pins to GPIO speed high (OSPEEDR 10), not very high. At 1.9 ns edges (datasheet,
+  10 pF) every RMII trace, the longest being TXD1 at 43 mm, is under a twelfth of a wavelength
+  and needs no termination; very high (1.4 ns) puts TXD1 at the limit.
 - Y1 is an Epson FC-135 with CL 7 pF and ESR 70 kOhm max, which needs about 0.76 uA/V of
   oscillator gm (AN2867). Set LSEDRV to medium high (1.7 uA/V) or high; the low settings
   leave no margin. C21/C22 are 6.8 pF for 7 pF with about 3.5 pF of stray.
@@ -70,6 +73,10 @@ isolation), five schematic sheets, `ctl.pcb.toml` (placed and routed), and the s
 - With no inner planes under them, the bridges cool only through their own pours, so each
   bridge pin has a pour on both outer layers joined by four or five vias.
 - No signal runs on In1 or In2.
+- Only the two Ethernet pairs are impedance controlled. The field solver gives 96 ohm
+  differential for the Eth class (0.24 mm, 0.2 mm gap, with mask) and 87 ohm for the USB pair.
+  Both are short for their edges (100BASE-TX 3 ns, USB full speed 4 ns or slower), so the
+  14 ps Ethernet skew and the 57 ps USB skew do not matter.
 - The 3V3 buck keeps its loops on the top layer: C3 sits below U3 between VIN and GND, the
   inductor and output caps to its right, and the feedback divider on the back under FB.
 - C2 is the Ag5424 output cap. The datasheet's operating conditions want 220 to 470 uF, so
