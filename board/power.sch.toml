@@ -50,25 +50,25 @@ value = "M3"
 
 [[parts]]
 ref = "D1"
-symbol = "CDBHM2100L-G"
+symbol = "MDB10S"
 at = [86.36, 165.1]
-value = "CDBHM2100L-G"
-fields = { mpn = "CDBHM2100L-G", mfr = "Comchip" }
+value = "MDB10S"
+fields = { mpn = "MDB10S", mfr = "onsemi" }
 
 [[parts]]
 ref = "D2"
-symbol = "CDBHM2100L-G"
+symbol = "MDB10S"
 at = [101.6, 165.1]
-value = "CDBHM2100L-G"
-fields = { mpn = "CDBHM2100L-G", mfr = "Comchip" }
+value = "MDB10S"
+fields = { mpn = "MDB10S", mfr = "onsemi" }
 
 [[parts]]
 ref = "C1"
 symbol = "C"
 at = [116.84, 165.1]
-value = "100n/100V"
+value = "10n/100V"
 footprint = "C_0805_2012Metric"
-fields = { mpn = "GRM21BR72A104KAC4L", mfr = "Murata" }
+fields = { mpn = "GRM21BR72A103KA01L", mfr = "Murata" }
 
 [[parts]]
 ref = "C2"
@@ -90,8 +90,8 @@ fields = { mpn = "ERJ-8ENF2402V", mfr = "Panasonic" }
 ref = "R2"
 symbol = "R"
 at = [162.56, 165.1]
-value = "10k"
-fields = { mpn = "RC0402FR-0710KL", mfr = "Yageo" }
+value = "47k"
+fields = { mpn = "RC0402FR-0747KL", mfr = "Yageo" }
 
 [[parts]]
 ref = "D4"
@@ -180,13 +180,13 @@ pins = ["D1.3"]
 name = "POE_VC36"
 class = "PoE"
 style = "label"
-pins = ["D1.2"]
+pins = ["D1.4"]
 
 [[nets]]
 name = "POE_VC45"
 class = "PoE"
 style = "label"
-pins = ["D2.2"]
+pins = ["D2.4"]
 
 [[nets]]
 name = "POE_VC78"
@@ -204,7 +204,7 @@ pins = ["D1.1", "D2.1", "C1.1", "U1.1", "R1.1"]
 name = "POE_N"
 class = "PoE"
 style = "label"
-pins = ["D1.4", "D2.4", "C1.2", "U1.2"]
+pins = [ "C1.2", "U1.2", "D1.2", "D2.2"]
 
 [[nets]]
 name = "POE_LED"

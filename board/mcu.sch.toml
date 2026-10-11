@@ -22,15 +22,15 @@ fields = { mpn = "FC-135 32.7680KA-AG0", mfr = "Epson" }
 ref = "C21"
 symbol = "C"
 at = [40.64, 165.1]
-value = "10p/50V"
-fields = { mpn = "GRM1555C1H100JA01D", mfr = "Murata" }
+value = "6.8p/50V"
+fields = { mpn = "GRM1555C1H6R8CA01D", mfr = "Murata" }
 
 [[parts]]
 ref = "C22"
 symbol = "C"
 at = [55.88, 165.1]
-value = "10p/50V"
-fields = { mpn = "GRM1555C1H100JA01D", mfr = "Murata" }
+value = "6.8p/50V"
+fields = { mpn = "GRM1555C1H6R8CA01D", mfr = "Murata" }
 
 [[parts]]
 ref = "C20"
@@ -101,8 +101,8 @@ fields = { mpn = "GRM155R71A104KA01D", mfr = "Murata" }
 ref = "C27"
 symbol = "C"
 at = [193.04, 165.1]
-value = "4.7u/6.3V"
-fields = { mpn = "GRM155R60J475ME47D", mfr = "Murata" }
+value = "4.7u/10V"
+fields = { mpn = "C1005X5R1A475K050BC", mfr = "TDK" }
 
 [[parts]]
 ref = "C28"

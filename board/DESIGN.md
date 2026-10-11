@@ -10,12 +10,12 @@ isolation), five schematic sheets, `ctl.pcb.toml` (placed and routed), and the s
 
 | block | parts | notes |
 |---|---|---|
-| PoE in | J1 Bel V8BR-1AX1-GH vertical magjack, D1 D2 Comchip CDBHM2100L-G Schottky bridges, U1 Silvertel Ag5424 | 802.3at class 4, 24 V out. Data and spare pairs both rectified. |
-| AT detect | U2 LTV-357T | Ag5424 AT-DET across the barrier to PC13. |
+| PoE in | J1 Bel V8BR-1AX1-GH vertical magjack, D1 D2 onsemi MDB10S silicon bridges, C1 10 nF, U1 Silvertel Ag5424 | 802.3at class 4, 24 V out. Data and spare pairs both rectified. The bridges are silicon, not Schottky: the idle bridge leaks across the PD signature during detection, and Comchip's curve for the CDBHM2100L-G puts that near 0.1 mA at 10 V once warm, enough to pull 25k under the 19k minimum. MDB10S leaks 10 uA max at 1000 V. C1 is the 10 nF the Ag5400 datasheet shows (figures 3 and 13); more would add to the module's own input capacitance in the detection signature. |
+| AT detect | U2 LTV-357T, R1 24k, R2 47k | Ag5424 AT-DET across the barrier to PC13. R1 gives 1.7 mA at 42.5 V; the worst-case CTR there (50 % min at 5 mA, times 0.6 from figure 5) still sinks 0.5 mA, ten times what 47k needs. |
 | 3V3 | U3 AP63201WU buck from VBUCK, 205k/62k sets 3.45 V, L1 6.8 uH | VBUCK is V24 through D4, or USB VBUS through D5, so the logic runs from USB on the bench. The rail is 3.45 V, not 3.3 V, because the encoders need 3.3 V at the end of a mux and a cable; every part on it is rated to 3.6 V. |
 | Keep-alive | J10 CR123A lead, D10, U5 TPS61099 boost (487k/200k sets 3.44 V), U6 TPS2116 mux | VKEEP is 3V3 when it is up, otherwise the cell. MAIN_OK (U6 status) tells the MCU which. The whole group sits in the top right corner beside the encoder headers, so VKEEP reaches J4, J5 and the MCU without crossing the board. |
 | MCU | U10 STM32H563RIT6 on VKEEP | No HSE: HSI, HSI48 with CRS for USB, LSE 32.768 kHz for the RTC. |
-| Ethernet | U14 LAN8720A RMII, Y2 25 MHz | The PHY makes the 50 MHz REF_CLK (nINTSEL strapped low by R29) and feeds PA1. |
+| Ethernet | U14 LAN8720A RMII, Y2 ECS-250-12-33B, R5 499R | The PHY makes the 50 MHz REF_CLK (nINTSEL strapped low by R29) and feeds PA1. Y2 is rated 200 uW and 12 pF, so it uses the LAN8720A's 100 uW crystal circuit (datasheet 5.6.2): R5 in series with XTAL2 and C60/C61 15 pF for 12 pF with 3 pF of pin capacitance. |
 | Drivers | U12 U13 TMC2209 | UART only. STEP and DIR are tied low; the MCU moves the motors with VACTUAL. Shared MOT_EN, DIAG to PB1/PB2, 0.11 ohm sense. |
 | Encoders | J4 J5 JST XH 5 pin, U16 U17 USBLC6-4SC6, 220 ohm series | Powered from VKEEP, so TIM2 (az) and TIM3 (el) keep counting through an outage. The 17HS15-1504-ME1K encoder wants 3.3 to 5.5 V (StepperOnline spec); VKEEP is 3.43 V. Only the + side of each differential output is used. |
 | USB | J7 GCT USB4960 vertical USB-C, U15 USBLC6-2SC6 | Vertical so the plug goes in from above instead of into the az motor; the assembly has 35 mm of clear height over it. | DFU via BOOT0 (SW2). SWD on J6, a TC2030 pad with no part to fit. |
@@ -52,6 +52,9 @@ isolation), five schematic sheets, `ctl.pcb.toml` (placed and routed), and the s
   not feed the unpowered PHY and drivers, drop the core clock, and keep TIM2 and TIM3 running.
   Write the positions to flash on stop. The outage current is not measured yet.
 - VBAT_SENSE is the cell through a 1M / 1M divider.
+- Y1 is an Epson FC-135 with CL 7 pF and ESR 70 kOhm max, which needs about 0.76 uA/V of
+  oscillator gm (AN2867). Set LSEDRV to medium high (1.7 uA/V) or high; the low settings
+  leave no margin. C21/C22 are 6.8 pF for 7 pF with about 3.5 pF of stray.
 
 ## Layout
 
@@ -64,6 +67,8 @@ isolation), five schematic sheets, `ctl.pcb.toml` (placed and routed), and the s
   to spare, so no secondary plane sits 0.2 mm under primary copper. GND reaches the chassis
   through H1 to H4, so the 802.3 1500 V isolation applies to it. POE_P and POE_N run 2.6 mm in
   from the left edge.
+- With no inner planes under them, the bridges cool only through their own pours, so each
+  bridge pin has a pour on both outer layers joined by four or five vias.
 - No signal runs on In1 or In2.
 - The 3V3 buck keeps its loops on the top layer: C3 sits below U3 between VIN and GND, the
   inductor and output caps to its right, and the feedback divider on the back under FB.
@@ -88,18 +93,19 @@ isolation), five schematic sheets, `ctl.pcb.toml` (placed and routed), and the s
 | `ctl-dc-v24` | 0.96 A to the drivers and buck, 21 mV drop |
 | `ctl-dc-motor` | 1.4 A per coil, 23 mV drop per side |
 | `ctl-dc-3v3` | 240 mA from 3.45 V, worst 3.42 V at the MCU, 3.43 V at the encoders |
-| `ctl-thermal` | 50 C inside the box, both motors at 1.4 A RMS: TMC2209 junctions 100 and 105 C, U1 output pins 126 C |
-| `ctl-thermal-1a` | same at 1.0 A RMS: drivers 79 and 83 C, U1 pins 102 C |
+| `ctl-thermal` | 50 C inside the box, both motors at 1.4 A RMS: TMC2209 junctions 100 and 106 C, U1 output pins 126 C, D1 pads 123 C at 1.0 W (junction about 138 C of 150 C) |
+| `ctl-thermal-1a` | same at 1.0 A RMS: drivers 80 and 83 C, U1 pins 102 C, D1 pads 88 C at 0.5 W |
 
 The thermal sims send heat out through the four mounting holes at 5 C/W each, so the board
 must sit on the aluminium M3 standoffs on the chassis plate. They also put all of the Ag5424
 loss (2.3 W full load, 1.6 W typical, from its efficiency curve) into its output pins, which
-makes the U1 pin temperature an upper bound.
+makes the U1 pin temperature an upper bound. D1 takes the bridge loss: two diodes at about
+0.85 V (MDB10S figure 1, typical at 0.6 A) and 0.6 A, the input current at 42.5 V and full load.
 
 ## Parts and fab
 
 - `tools/bom.md` is the priced BOM, made by `python3 tools/bom.py` from Mouser (keys in
-  `~/.config/agentee/distributors.toml`). Parts for one board come to about EUR 67 ex VAT.
+  `~/.config/agentee/distributors.toml`). Parts for one board come to about EUR 66 ex VAT.
 - The STM32H563RIT6 is out of stock at Mouser, Farnell, LCSC and ST; Mouser expects 1941 on
   2026-12-11. Backorder it.
 - J1 comes from Farnell (3588276).

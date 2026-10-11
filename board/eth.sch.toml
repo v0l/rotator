@@ -28,15 +28,15 @@ fields = { mpn = "ECS-250-12-33B-CWY-TR3", mfr = "ECS" }
 ref = "C60"
 symbol = "C"
 at = [40.64, 165.1]
-value = "18p/50V"
-fields = { mpn = "GRM1555C1H180JA01D", mfr = "Murata" }
+value = "15p/50V"
+fields = { mpn = "GRM1555C1H150JA01D", mfr = "Murata" }
 
 [[parts]]
 ref = "C61"
 symbol = "C"
 at = [55.88, 165.1]
-value = "18p/50V"
-fields = { mpn = "GRM1555C1H180JA01D", mfr = "Murata" }
+value = "15p/50V"
+fields = { mpn = "GRM1555C1H150JA01D", mfr = "Murata" }
 
 [[parts]]
 ref = "FB1"
@@ -171,6 +171,14 @@ at = [101.6, 185.42000000000002]
 value = "10k"
 fields = { mpn = "RC0402FR-0710KL", mfr = "Yageo" }
 
+[[parts]]
+ref = "R5"
+symbol = "R"
+at = [160.02, 140.97]
+value = "499"
+footprint = "R_0402_1005Metric"
+fields = { mpn = "RC0402FR-07499RL", mfr = "Yageo" }
+
 [[nets]]
 name = "POE_VC12"
 class = "PoE"
@@ -253,7 +261,7 @@ pins = ["U14.5", "Y2.1", "C60.1"]
 name = "PHY_XO"
 class = "Clock"
 style = "label"
-pins = ["U14.4", "Y2.3", "C61.1"]
+pins = [ "Y2.3", "C61.1", "R5.2"]
 
 [[nets]]
 name = "RBIAS"
@@ -332,3 +340,8 @@ name = "PHY_LED2"
 class = "Signal"
 style = "label"
 pins = ["U14.2", "R29.1"]
+
+[[nets]]
+name = "PHY_XTAL2"
+class = "Clock"
+pins = ["U14.4", "R5.1"]

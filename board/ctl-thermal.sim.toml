@@ -47,7 +47,7 @@ power = "0.2W"
 
 [[sources]]
 ref = "D1"
-power = "0.58W"
+power = "1.0W"
 
 [[sources]]
 ref = "U1"

@@ -25,3 +25,6 @@ track VDDA B.Cu 19.3,34 20.49,34.7 --width 0.4mm
 track VDDA B.Cu 20.49,37.9 20.08,39.2 20.49,40.8 --width 0.4mm
 track VDDA B.Cu 17.642,43.9 20.49,44 --width 0.4mm
 track VDDA B.Cu 20.49,44 19.88,45.3 --width 0.4mm
+track PHY_XTAL2 F.Cu 30.225,42.3 30.225,43.12 --width 0.15mm
+track PHY_XO F.Cu 30.225,44.08 30.225,44.7 30.45,44.95 30.45,45.4 --width 0.15mm
+track PHY_XI F.Cu 32.575,46.675 32.575,47.4 --width 0.15mm

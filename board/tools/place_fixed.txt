@@ -10,8 +10,8 @@ place J5 51.1,3.85 --rotation 0 --locked
 place J4 67.4,3.85 --rotation 0 --locked
 place J8 84.6,33.1 --rotation 90 --locked
 place J9 84.6,46.9 --rotation 90 --locked
-place D1 11.65,23.3 --rotation 270 --locked
-place D2 21,55.1 --rotation 90 --locked
+place D1 11.65,23.05 --rotation 180 --locked
+place D2 21,55.1 --rotation 0 --locked
 place C1 26.5,55.1 --rotation 90 --locked
 place U2 38,55.5 --rotation 0 --locked
 place U10 46,32 --rotation 0 --locked
@@ -38,7 +38,8 @@ place C80 66.25,38.3 --rotation 0 --locked
 place C81 62.2,41.65 --rotation 0 --locked
 place C82 65.2,47.3 --rotation 0 --locked
 place U14 30,40 --rotation 90 --locked
-place Y2 31.3,46.2 --rotation 90 --locked
+place Y2 31.3,46.65 --rotation 90 --locked
+place R5 30.225,43.6 --rotation 270 --locked
 place C61 28.9,45.8 --rotation 90 --locked
 place R30 27.4,43.4 --rotation 270 --locked
 place R34 21,34.7 --rotation 0 --bottom --locked

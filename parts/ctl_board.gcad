@@ -51,16 +51,6 @@ plane XY offset=zb+t
 circle 10 at=-59.87,-53.00
 c2: extrude 10.50
 combine main c2
-body d1
-plane XY offset=zb+t
-rect 4.70 7.00 at=-122.35,-9.30
-d1: extrude 2.71
-combine main d1
-body d2
-plane XY offset=zb+t
-rect 4.70 7.00 at=-113.00,-41.10
-d2: extrude 2.71
-combine main d2
 body c83
 plane XY offset=zb+t
 circle 8 at=-68.40,-5.80

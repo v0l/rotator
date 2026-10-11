@@ -1,0 +1,89 @@
+name = "Diode_Bridge_OnSemi_MicroDIP-4"
+description = "onsemi MicroDIP 4-lead bridge rectifier, 1.3 x 4 x 5 mm, land pattern from the MDB6S/MDB8S/MDB10S datasheet rev 1.2.1 figure 4 (drawing MKT-TDI04AREV1)"
+tags = ["bridge", "MicroDIP", "MDB10S"]
+mount = "smd"
+height = "1.45mm"
+
+[[pads]]
+number = "1"
+kind = "smd"
+shape = "rect"
+at = [-2.0, 2.95]
+size = [0.85, 1.55]
+
+[[pads]]
+number = "2"
+kind = "smd"
+shape = "rect"
+at = [2.0, 2.95]
+size = [0.85, 1.55]
+
+[[pads]]
+number = "3"
+kind = "smd"
+shape = "rect"
+at = [2.0, -2.95]
+size = [0.85, 1.55]
+
+[[pads]]
+number = "4"
+kind = "smd"
+shape = "rect"
+at = [-2.0, -2.95]
+size = [0.85, 1.55]
+
+[[graphics]]
+kind = "rect"
+layer = "F.Fab"
+start = [-2.0, -2.2]
+end = [2.0, 2.2]
+width = 0.1
+
+[[graphics]]
+kind = "line"
+layer = "F.SilkS"
+start = [-2.15, -1.9]
+end = [-2.15, 1.9]
+width = 0.15
+
+[[graphics]]
+kind = "line"
+layer = "F.SilkS"
+start = [2.15, -1.9]
+end = [2.15, 1.9]
+width = 0.15
+
+[[graphics]]
+kind = "line"
+layer = "F.SilkS"
+start = [-1.3, 1.6]
+end = [-0.7, 1.6]
+width = 0.15
+
+[[graphics]]
+kind = "line"
+layer = "F.SilkS"
+start = [-1.0, 1.3]
+end = [-1.0, 1.9]
+width = 0.15
+
+[[graphics]]
+kind = "line"
+layer = "F.SilkS"
+start = [0.7, 1.6]
+end = [1.3, 1.6]
+width = 0.15
+
+[[graphics]]
+kind = "rect"
+layer = "F.CrtYd"
+start = [-2.7, -3.95]
+end = [2.7, 3.95]
+width = 0.05
+
+[[graphics]]
+kind = "text"
+layer = "F.SilkS"
+text = "${REFERENCE}"
+at = [0, -4.6]
+size = 1.0
