@@ -1,0 +1,30 @@
+name = "ctl-eth"
+description = "100BASE-TX pairs seen from the LAN8720A pins: the traces to the magjack with the 49.9 ohm terminations to VDDA and its decoupling in place. The jack pins are open (the magnetics are not modelled), and agentee cannot put a port on a through-hole pad with plane antipads, so the far end has no port."
+layout = "ctl"
+cell = 0.1
+region = [14, 31, 36, 48]
+
+[frequency]
+start = "10MHz"
+stop = "1GHz"
+points = 100
+
+[[ports]]
+name = "PHY_TXP"
+pad = "U14.21"
+reference = "In1.Cu"
+
+[[ports]]
+name = "PHY_TXN"
+pad = "U14.20"
+reference = "In1.Cu"
+
+[[ports]]
+name = "PHY_RXP"
+pad = "U14.23"
+reference = "In1.Cu"
+
+[[ports]]
+name = "PHY_RXN"
+pad = "U14.22"
+reference = "In1.Cu"

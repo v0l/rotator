@@ -1,0 +1,81 @@
+name = "ctl-rmii"
+description = "RMII between the STM32H563 and the LAN8720A: TXD0, TXD1 and TX_EN driven from the MCU, RXD0, RXD1, CRS_DV and REF_CLK (through R35, 33 ohm) from the PHY, a 50 ohm port at each end."
+layout = "ctl"
+cell = 0.1
+region = [26, 31, 55, 45]
+
+[frequency]
+start = "10MHz"
+stop = "1GHz"
+points = 100
+
+[[ports]]
+name = "MCU_TXD0"
+pad = "U10.33"
+reference = "In1.Cu"
+
+[[ports]]
+name = "MCU_TXD1"
+pad = "U10.36"
+reference = "In1.Cu"
+
+[[ports]]
+name = "MCU_TXEN"
+pad = "U10.21"
+reference = "In1.Cu"
+
+[[ports]]
+name = "MCU_RXD0"
+pad = "U10.24"
+reference = "In1.Cu"
+
+[[ports]]
+name = "MCU_RXD1"
+pad = "U10.25"
+reference = "In1.Cu"
+
+[[ports]]
+name = "MCU_CRSDV"
+pad = "U10.23"
+reference = "In1.Cu"
+
+[[ports]]
+name = "MCU_REFCLK"
+pad = "U10.15"
+reference = "In1.Cu"
+
+[[ports]]
+name = "PHY_TXD0"
+pad = "U14.17"
+reference = "In1.Cu"
+
+[[ports]]
+name = "PHY_TXD1"
+pad = "U14.18"
+reference = "In1.Cu"
+
+[[ports]]
+name = "PHY_TXEN"
+pad = "U14.16"
+reference = "In1.Cu"
+
+[[ports]]
+name = "PHY_RXD0"
+pad = "U14.8"
+reference = "In1.Cu"
+
+[[ports]]
+name = "PHY_RXD1"
+pad = "U14.7"
+reference = "In1.Cu"
+
+[[ports]]
+name = "PHY_CRSDV"
+pad = "U14.11"
+reference = "In1.Cu"
+
+[[ports]]
+name = "PHY_REFCLK"
+pad = "U14.14"
+reference = "In1.Cu"
+

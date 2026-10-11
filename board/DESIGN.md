@@ -52,9 +52,9 @@ isolation), five schematic sheets, `ctl.pcb.toml` (placed and routed), and the s
   not feed the unpowered PHY and drivers, drop the core clock, and keep TIM2 and TIM3 running.
   Write the positions to flash on stop. The outage current is not measured yet.
 - VBAT_SENSE is the cell through a 1M / 1M divider.
-- Set the RMII pins to GPIO speed high (OSPEEDR 10), not very high. At 1.9 ns edges (datasheet,
-  10 pF) every RMII trace, the longest being TXD1 at 43 mm, is under a twelfth of a wavelength
-  and needs no termination; very high (1.4 ns) puts TXD1 at the limit.
+- Set the RMII pins to GPIO speed high (OSPEEDR 10), not very high. `ctl-rmii` puts TXD1 (43 mm)
+  at 10 % overshoot with very high edges (1.4 ns) and a 30 ohm driver, and under 2 % at high
+  (1.9 ns); no RMII line needs termination at high.
 - Y1 is an Epson FC-135 with CL 7 pF and ESR 70 kOhm max, which needs about 0.76 uA/V of
   oscillator gm (AN2867). Set LSEDRV to medium high (1.7 uA/V) or high; the low settings
   leave no margin. C21/C22 are 6.8 pF for 7 pF with about 3.5 pF of stray.
@@ -102,6 +102,15 @@ isolation), five schematic sheets, `ctl.pcb.toml` (placed and routed), and the s
 | `ctl-dc-3v3` | 240 mA from 3.45 V, worst 3.42 V at the MCU, 3.43 V at the encoders |
 | `ctl-thermal` | 50 C inside the box, both motors at 1.4 A RMS: TMC2209 junctions 100 and 106 C, U1 output pins 126 C, D1 pads 123 C at 1.0 W (junction about 138 C of 150 C) |
 | `ctl-thermal-1a` | same at 1.0 A RMS: drivers 80 and 83 C, U1 pins 102 C, D1 pads 88 C at 0.5 W |
+| `ctl-eth` | FDTD of both 100BASE-TX pairs from the PHY pins, terminations and centre-tap decoupling in place: Sdd11 -48 dB (TX) and -51 dB (RX) at 100 MHz, -41 and -42 dB at 200 MHz; TX to RX differential crosstalk -44 dB at 100 MHz |
+| `ctl-rmii` | FDTD of the seven RMII lines, a port at each end: insertion loss under 0.25 dB and crosstalk under -38 dB at 200 MHz, one-way delays 110 to 400 ps (TXD1 longest). `tools/rmii_step.py` turns it into the step at each receiver: with a 30 ohm driver TXD1 overshoots 10 % at 1.4 ns edges and 2 % at 1.9 ns, the PHY outputs under 6 % at 1 ns, REF_CLK none behind R35 |
+
+The magjack pins are through-hole pads inside plane antipads, where agentee cannot place a port,
+so `ctl-eth` has ports at the PHY only and sees the jack end as open; the magnetics are not
+modelled. `tools/rmii_step.py` drives each RMII line from 30 and 50 ohm (the STM32 and LAN8720A
+outputs are 0.4 V at 8 mA, so 50 ohm or less) into the receiver's pin capacitance (2 pF LAN8720A,
+5 pF STM32) with a Gaussian edge; the LAN8720A gives no output edge time, so 1 ns stands in for
+it.
 
 The thermal sims send heat out through the four mounting holes at 5 C/W each, so the board
 must sit on the aluminium M3 standoffs on the chassis plate. They also put all of the Ag5424

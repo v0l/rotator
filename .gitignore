@@ -11,3 +11,4 @@ board/*.result.json
 board/tools/.mouser_cache.json
 board/fab/
 sims/*.result.json
+board/*.s[0-9]*p
