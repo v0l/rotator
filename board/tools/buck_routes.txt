@@ -1,0 +1,18 @@
+track VBUCK F.Cu 49.8625,52.95 49.8625,53.7 49.525,54.04 49.525,54.9 --width 0.8mm
+track VBUCK F.Cu 48.05,57.2 48.05,56.4 49.525,54.925 --width 0.8mm
+track GND F.Cu 52.1375,52.95 52.475,53.6 52.475,54.9 --width 0.5mm
+via GND 53.7,54.4
+via GND 53.7,55.4
+track SW_3V3 F.Cu 52.1375,52 54.975,52 --width 0.6mm
+track BST_3V3 F.Cu 52.12,49.75 52.1375,51.05 --width 0.4mm
+track SW_3V3 F.Cu 53.08,49.75 53.6,49.75 54.6,50.75 --width 0.6mm
+zone 3V3 --layers F.Cu --priority 200 --pad-connection solid --outline 57,52.6 59.6,52.6 59.6,57.4 57,57.4
+via 3V3 57.6,56.85
+via 3V3 58.6,56.85
+track V24 F.Cu 51.35,57.2 52.75,58.6 55.4,58.6 56.875,60.075 56.875,62.075 --width 0.8mm
+track FB_3V3 F.Cu 49.8625,51.05 49.475,50.6625 49.475,50.425 --width 0.15mm
+via FB_3V3 49.475,50.425 --via small
+track FB_3V3 B.Cu 49.475,50.425 48.81,49.76 48.81,48.9 48.78,47.9 --width 0.15mm
+track FB_3V3 B.Cu 49.475,50.425 51.11,50.425 51.11,49.2 --width 0.15mm
+track 3V3 B.Cu 47.82,47.9 47.79,48.9 46.9,49.4 --width 0.5mm
+via 3V3 46.9,49.4 --via small

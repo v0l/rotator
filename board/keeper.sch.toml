@@ -1,5 +1,5 @@
 name = "keeper"
-description = "TPS2116 mux from 3V3 to a CR123A boost when main power drops, feeding the MCU and both encoders so the timers keep counting"
+description = "TPS2116 mux from 3V3 to a CR123A boost (both 3.45 V) when main power drops, feeding the MCU and both encoders so the timers keep counting"
 board = "ctl"
 no_connect = ["U16.6", "U17.6"]
 
@@ -150,8 +150,8 @@ fields = { mpn = "RC0402FR-071ML", mfr = "Yageo" }
 ref = "R58"
 symbol = "R"
 at = [223.52, 165.1]
-value = "453k"
-fields = { tolerance = "1%", mpn = "RC0402FR-07453KL", mfr = "Yageo" }
+value = "487k"
+fields = { tolerance = "1%", mpn = "RC0402FR-07487KL", mfr = "Yageo" }
 
 [[parts]]
 ref = "R59"

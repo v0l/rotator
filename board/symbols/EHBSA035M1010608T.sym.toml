@@ -1,9 +1,9 @@
 # imported from KiCad Device:C_Polarized
-name = "C_Polarized"
+name = "EHBSA035M1010608T"
 reference = "C"
 description = "Polarized capacitor"
 keywords = ["cap", "capacitor"]
-footprint = "CP_Elec_10x10.5"
+footprint = "CP_Elec_6.3x7.7"
 footprint_filters = ["CP_*"]
 pin_name_offset = 0.254
 hide_pin_numbers = true

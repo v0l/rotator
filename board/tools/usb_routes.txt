@@ -1,0 +1,37 @@
+track USB_DP F.Cu 47.825,8.575 40.925,8.575 38.25,5.9 38.25,5.3675 --width 0.2621mm
+track USB_DP F.Cu 37.75,3.6325 37.75,4.3 38.25,4.8 38.25,5.3675 --width 0.2621mm
+track USB_DN F.Cu 47.825,10.475 42.225,10.475 37.75,6 37.75,5.3675 --width 0.2621mm
+track USB_DN F.Cu 38.25,3.6325 38.25,3.15 36.575,1.475 35.075,1.475 34.625,1.925 34.625,3.975 34.825,4.175 34.825,4.275 35.175,4.625 35.575,4.625 36.225,5.275 36.225,5.875 36.475,6.125 37.725,6.125 --width 0.2621mm
+track CC1 B.Cu 39.3,10.14 37.325,8.165 37.325,4.575 --width 0.15mm
+track CC1 F.Cu 37.325,4.575 37.25,4.5 37.25,3.6325 --width 0.15mm
+via CC1 37.325,4.575 --via small
+track CC2 B.Cu 36.3,10.19 36.675,9.815 36.675,4.525 37.125,4.075 38.225,4.075 38.675,4.525 --width 0.15mm
+track CC2 F.Cu 38.675,4.525 38.75,4.6 38.75,5.3675 --width 0.15mm
+via CC2 38.675,4.525 --via small
+track VBUS F.Cu 36.75,3.6325 36.75,5.3675 --width 0.4mm
+track VBUS F.Cu 39.25,3.6325 39.25,5.3675 --width 0.4mm
+track VBUS F.Cu 36.75,3.6325 36.75,2.75 --width 0.4mm
+track VBUS F.Cu 39.25,3.6325 39.25,2.75 --width 0.4mm
+track VBUS B.Cu 36.75,2.75 36.75,1.3 43.2,1.3 47.275,5.375 48.775,5.375 --width 0.4mm
+track VBUS B.Cu 39.25,2.75 39.25,1.3 --width 0.4mm
+track VBUS F.Cu 48.775,5.375 51.775,8.375 51.775,9.225 51.475,9.525 50.7375,9.75 --width 0.4mm
+track VBUS F.Cu 47.225,46.625 53.875,39.975 --width 0.4mm
+track VBUS B.Cu 53.875,39.975 58.375,35.475 --width 0.4mm
+track VBUS F.Cu 58.375,35.475 58.375,30.775 --width 0.4mm
+track VBUS B.Cu 58.375,30.775 57.975,30.375 57.975,28.875 57.775,28.675 57.775,28.325 --width 0.4mm
+track VBUS F.Cu 57.775,28.325 56.475,27.025 --width 0.4mm
+track VBUS B.Cu 56.475,27.025 55.375,25.925 55.375,24.225 --width 0.4mm
+track VBUS F.Cu 55.375,24.225 51.225,20.075 51.225,11.675 51.775,11.125 51.775,10.275 51.375,9.875 --width 0.4mm
+via VBUS 36.75,2.75 --via small
+via VBUS 39.25,2.75 --via small
+via VBUS 48.775,5.375 --via std
+via VBUS 53.875,39.975 --via small
+via VBUS 58.375,35.475 --via small
+via VBUS 58.375,30.775 --via small
+via VBUS 57.775,28.325 --via small
+via VBUS 56.475,27.025 --via small
+via VBUS 55.375,24.225 --via small
+track GND F.Cu 35.25,3.6325 35.25,2.6 --width 0.3mm
+track GND F.Cu 35.25,5.3675 35.25,6.4 --width 0.3mm
+track GND F.Cu 40.75,3.6325 40.75,2.6 --width 0.3mm
+track GND F.Cu 40.75,5.3675 40.75,6.4 --width 0.3mm

@@ -38,15 +38,15 @@ size = 1.0
 [[graphics]]
 kind = "line"
 layer = "F.SilkS"
-start = [-0.675, -0.875]
-end = [0.675, -0.875]
+start = [-0.5, -0.875]
+end = [0.5, -0.875]
 width = 0.15
 
 [[graphics]]
 kind = "line"
 layer = "F.SilkS"
-start = [-0.675, 0.875]
-end = [0.675, 0.875]
+start = [-0.5, 0.875]
+end = [0.5, 0.875]
 width = 0.15
 
 [[graphics]]

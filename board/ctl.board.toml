@@ -25,7 +25,7 @@ diameter = "0.4mm"
 [[netclasses]]
 name = "Default"
 voltage = "3.3VDC"
-description = "Fallback only, every net names a class. Layers: F signal, In1 ground, In2 power (3V3, 24V), B signal"
+description = "Fallback only, every net names a class. Layers: F signal, In1 ground, In2 3V3 plane, B signal"
 track_width = "0.15mm"
 clearance = "0.15mm"
 via = ["small", "std"]
@@ -41,7 +41,7 @@ via = ["small", "std"]
 [[netclasses]]
 name = "Data"
 voltage = "3.3VDC"
-description = "RMII, MDIO and the quad SPI flash"
+description = "RMII and MDIO"
 track_width = "0.15mm"
 clearance = "0.15mm"
 via = ["small", "std"]
@@ -73,8 +73,8 @@ neckdown = "1.5mm"
 
 [[netclasses]]
 name = "Power3V3"
-voltage = "3.3VDC"
-description = "3V3 from the AP63203 and the rails it feeds"
+voltage = "3.45VDC"
+description = "3V3 (3.45 V) from the AP63201 and the rails it feeds"
 track_width = "0.5mm"
 clearance = "0.15mm"
 current = "0.8A"
@@ -84,8 +84,8 @@ neckdown = "2mm"
 
 [[netclasses]]
 name = "Rail"
-voltage = "3.3VDC"
-description = "Small rails: VDD_HP core, PSRAM and flash LDO outputs, VKEEP, the cell, driver 5VOUT"
+voltage = "5VDC"
+description = "Small rails: VKEEP, the cell and its boost, driver 5VOUT, PHY VDDA and VDDCR"
 track_width = "0.4mm"
 clearance = "0.15mm"
 current = "0.5A"
@@ -147,7 +147,7 @@ via = "std"
 [[netclasses]]
 name = "USB"
 voltage = "5VDC"
-description = "USB serial/JTAG pair"
+description = "USB full speed pair to the STM32"
 impedance = "90ohm"
 diff_gap = "0.15mm"
 layers = ["F.Cu"]

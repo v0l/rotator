@@ -154,7 +154,7 @@ unit = 1
 [[pins]]
 number = "6"
 name = "VDDCR"
-type = "power_in"
+type = "power_out"
 at = [-2.54, -30.48]
 side = "top"
 length = 2.54

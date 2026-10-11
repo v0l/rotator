@@ -5,7 +5,6 @@ BOARDS = 5
 KEY = tomllib.load(open(os.path.expanduser("~/.config/agentee/distributors.toml"), "rb"))["mouser"]["api_key"]
 CACHE = "tools/.mouser_cache.json"
 ELSEWHERE = {
-    "TYPE-C-31-M-12": ("LCSC C165948", 0.25),
     "V8BR-1AX1-GH": ("Farnell 3588276", 9.31),
 }
 cache = json.load(open(CACHE)) if os.path.exists(CACHE) else {}

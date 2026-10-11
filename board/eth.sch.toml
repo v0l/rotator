@@ -1,5 +1,5 @@
 name = "eth"
-description = "LAN8720A in REFCLKO mode feeding the P4 RMII clock, Bel PoE+ magjack"
+description = "LAN8720A in REFCLKO mode feeding the STM32 RMII clock, Bel PoE+ magjack"
 board = "ctl"
 no_connect = ["U14.3", "U14.10", "J1.17", "J1.18", "J1.19", "J1.20", "J1.1", "J1.2", "J1.3", "J1.7", "J1.8", "J1.9"]
 

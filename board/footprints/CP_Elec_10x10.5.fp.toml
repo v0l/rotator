@@ -3,7 +3,8 @@ name = "CP_Elec_10x10.5"
 description = "SMD capacitor, aluminum electrolytic, Vishay 1010, 10.0x10.5mm, http://www.vishay.com/docs/28395/150crz.pdf"
 tags = ["capacitor", "electrolytic"]
 mount = "smd"
-model = "${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/CP_Elec_10x10.5.step"
+model = "3dmodels/CP_Elec_10x10.5.step"
+height = "10.50mm"
 
 [[pads]]
 number = "1"

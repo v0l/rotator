@@ -1,0 +1,489 @@
+[[parts]]
+key = "1N5819HW-7-F"
+manufacturer = "Diodes"
+refs = ["D4", "D5", "D10"]
+url = "https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0011437026/DIOD-S-A0011683586-1.pdf?hkey=6D3A4C79FDBF58556ACFDE234799DDF0"
+source = "Farnell"
+sha256 = "1646b1c076b89d62511abab4ba6910922149b2ad0cb5a5265f4ca8e778a889c5"
+revision = "Document number: DS30217 Rev. 20 - 2 www.diodes.com © Diodes Incorporated"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "32.7680KA-AG0"
+manufacturer = "Epson"
+refs = ["Y1"]
+missing = "no datasheet URL found"
+
+[[parts]]
+key = "AP63203WU-7"
+manufacturer = "Diodes"
+refs = ["U3"]
+url = "https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf"
+source = "symbol AP63203WU"
+sha256 = "ef99daa3789d835bc025dfcb4c605c5c2e6d3e7223e86d40b33e6b497ea5a722"
+revision = "Document number: DS41326 Rev. 3 - 2 www.diodes.com © 2024 Copyright Diodes Incorporated. All Rights Reserved."
+fetched = "2026-10-11"
+
+[[parts]]
+key = "Ag5424"
+manufacturer = "Silvertel"
+refs = ["U1"]
+url = "https://silvertel.com/images/datasheets/Ag5400-datasheet-high%20Efficiency-30W-Power-Over-Ethernet-Plus-Module-PoE+PD.pdf"
+source = "symbol Ag5424"
+sha256 = "74d91d8bbc5a8de81e3fbcf3b725919680a96572233737f227900a803b61d7d6"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "B2B-PH-K-S(LF)(SN)"
+manufacturer = "JST"
+refs = ["J10"]
+url = "http://www.farnell.com/datasheets/4648554.pdf"
+source = "Farnell"
+sha256 = "dd60971fa074f07ada7b147e1f352e4f5fb0ff4918e2fe7b0daa34120df0dabc"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "B4B-XH-A(LF)(SN)"
+manufacturer = "JST"
+refs = ["J8", "J9"]
+url = "http://www.farnell.com/datasheets/2082976.pdf"
+source = "Farnell"
+sha256 = "6fd893d32071b5ec03bed2955f66e31ec675ee121ea571cc77e5a43eb836adcd"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "B5B-XH-A(LF)(SN)"
+manufacturer = "JST"
+refs = ["J4", "J5"]
+url = "http://www.farnell.com/datasheets/2082976.pdf"
+source = "Farnell"
+sha256 = "6fd893d32071b5ec03bed2955f66e31ec675ee121ea571cc77e5a43eb836adcd"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "BLM18KG601SN1D"
+manufacturer = "Murata"
+refs = ["FB1"]
+url = "http://www.farnell.com/datasheets/4799550.pdf"
+source = "Farnell"
+sha256 = "668c0f6ced5de9e839f0cdc5f40ed8f1afbd49036299b7fc29012423d9f2d539"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "C0603C475K8PAC"
+manufacturer = "KEMET"
+refs = ["C74", "C81"]
+missing = "https://www.mouser.com/datasheet/3/508/1/KEM_C1006_X5R_SMD.pdf: an HTML page, not a PDF (Access to this page has been denied.)"
+
+[[parts]]
+key = "C3216X5R1H106K160AB"
+manufacturer = "TDK"
+refs = ["C3"]
+url = "http://www.farnell.com/datasheets/4520405.pdf"
+source = "Farnell"
+sha256 = "9f444376f528d0071ab18868a4a3ffdf3debfcaf19db539b984678f9255691e7"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "CDBHM2100L-G"
+manufacturer = "Comchip"
+refs = ["D1", "D2"]
+missing = "https://www.comchiptech.com/admin/files/product/CDBHM220L-G%20Thru.%20CDBHM2100L-G%20RevB.pdf: an HTML page, not a PDF (Comchip Technology (典琦科技)); https://www.mouser.com/datasheet/3/819/1/CDBHM220L-G Thru850080. CDBHM2100L-G RevB.pdf: http: invalid uri character"
+
+[[parts]]
+key = "CL21A226MPCLRNC"
+manufacturer = "Samsung"
+refs = ["C5", "C6", "C93"]
+url = "http://www.farnell.com/datasheets/2735913.pdf"
+source = "Farnell"
+sha256 = "ab1d57d00982746ec8687e341be298c03ea652ef8870625bcdbdf917d3fd7f84"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "DFE201610E-2R2M=P2"
+manufacturer = "Murata"
+refs = ["L3"]
+url = "http://www.farnell.com/datasheets/2339713.pdf"
+source = "Farnell"
+sha256 = "2089cc2d55eae097fd7494d76174b81cde743d0a9e0810490d3f02407d3da4e3"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "ECS-250-12-33B-CWY-TR3"
+manufacturer = "ECS"
+refs = ["Y2"]
+missing = "https://www.mouser.com/datasheet/3/294/1/ECS_33B.pdf: an HTML page, not a PDF (Access to this page has been denied.)"
+
+[[parts]]
+key = "EEE-FK1V101XP"
+manufacturer = "Panasonic"
+refs = ["C76", "C83"]
+url = "http://www.farnell.com/datasheets/4379353.pdf"
+source = "Farnell"
+sha256 = "4e35796831c32f053244264f9e49f25c2bbb582b56832cbec569fd2c506c2095"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "EEH-ZA1V221P"
+manufacturer = "Panasonic"
+refs = ["C2"]
+url = "http://www.farnell.com/datasheets/4424085.pdf"
+source = "Farnell"
+sha256 = "5ae37be220eb5a05d6905f1eb31dd8938e4b6b354568d7ae52063d0fc37d6f8c"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "ERJ-8ENF2402V"
+manufacturer = "Panasonic"
+refs = ["R1"]
+url = "https://4donline.ihs.com/images/VipMasterIC/IC/PANA/PANA-S-A0007945459/PANA-S-A0007945459-1.pdf?hkey=6D3A4C79FDBF58556ACFDE234799DDF0"
+source = "Farnell"
+sha256 = "925dbc94ebe6fb231587b38cb19e0e6a9b1398e6f555dfa4e4b4457f0ef9a739"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "GCM188R71H104KA57D"
+manufacturer = "Murata"
+refs = ["C70", "C71", "C73", "C77", "C78", "C80"]
+url = "http://www.farnell.com/datasheets/4153200.pdf"
+source = "Farnell"
+sha256 = "45023bee7d18574a2eeef519c9a69fd82343c6affe7167bbfe2bb3e0e31b842f"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "GRM1555C1H100JA01D"
+manufacturer = "Murata"
+refs = ["C21", "C22"]
+url = "http://www.farnell.com/datasheets/4087652.pdf"
+source = "Farnell"
+sha256 = "1ea59aef9b406183d9c6256372827201425e1c1b63faa7f820142c1c04faf2d3"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "GRM1555C1H180JA01D"
+manufacturer = "Murata"
+refs = ["C60", "C61"]
+url = "http://www.farnell.com/datasheets/4087668.pdf"
+source = "Farnell"
+sha256 = "e069b34de25c793efa66be1bc2db2f7e915789a9a3de58115d47e15245990a47"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "GRM1555C1H471JA01D"
+manufacturer = "Murata"
+refs = ["C68"]
+missing = "https://www.mouser.com/datasheet/3/76/1/GRM1555C1H471JA01-01A.pdf: an HTML page, not a PDF (Access to this page has been denied.); https://www.murata.com/en-us/products/productdetail?partno=GRM1555C1H471JA01%23: an HTML page, not a PDF"
+
+[[parts]]
+key = "GRM155R60J475ME47D"
+manufacturer = "Murata"
+refs = ["C27"]
+missing = "https://www.mouser.com/datasheet/3/76/1/GRM155R60J475ME47_01A.pdf: an HTML page, not a PDF (Access to this page has been denied.); https://www.murata.com/en-us/products/productdetail?partno=GRM155R60J475ME47%23: an HTML page, not a PDF"
+
+[[parts]]
+key = "GRM155R61A225ME01D"
+manufacturer = "Murata"
+refs = ["C31", "C32"]
+url = "https://4donline.ihs.com/images/VipMasterIC/IC/MURE/MURE-S-A0025626515/MURE-S-A0025631600-1.pdf?hkey=6D3A4C79FDBF58556ACFDE234799DDF0"
+source = "Farnell"
+sha256 = "27ab15e73e0990f20d277b811eb2befff2987ec8e93eebd6e3eac3cd548d0f50"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "GRM155R61E105MA12D"
+manufacturer = "Murata"
+refs = ["C29", "C62", "C65", "C67", "C89", "C92", "C99"]
+url = "https://4donline.ihs.com/images/VipMasterIC/IC/MURE/MURE-S-A0025626515/MURE-S-A0025627818-1.pdf?hkey=6D3A4C79FDBF58556ACFDE234799DDF0"
+source = "Farnell"
+sha256 = "b40bea0b72fae729a5a4eec35b94dd249ca1dfe28ef2235224aa6f119115bb5e"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "GRM155R71A104KA01D"
+manufacturer = "Murata"
+refs = ["C20", "C23", "C24", "C25", "C26", "C28", "C30", "C63", "C64", "C66", "C75", "C82", "C98"]
+url = "http://www.farnell.com/datasheets/4087771.pdf"
+source = "Farnell"
+sha256 = "31ae9c9791597d6cb82ca62bcdea91486adaac2b46142202a97c01963c28f608"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "GRM155R71H104KE14D"
+manufacturer = "Murata"
+refs = ["C4"]
+url = "http://www.farnell.com/datasheets/3979589.pdf"
+source = "Farnell"
+sha256 = "2a0b76c79e0f800d6fd1ff2a50e3a1885da46869f5f667d5e7a9e992c62fbdcc"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "GRM155R71H223KA12D"
+manufacturer = "Murata"
+refs = ["C59", "C69", "C72", "C79"]
+missing = "https://www.mouser.com/datasheet/3/76/4/GRM155R71H223KA12_01A.pdf: an HTML page, not a PDF (Access to this page has been denied.); https://www.murata.com/en-us/products/productdetail?partno=GRM155R71H223KA12%23: an HTML page, not a PDF"
+
+[[parts]]
+key = "GRM188R61A106ME69D"
+manufacturer = "Murata"
+refs = ["C90", "C91"]
+missing = "https://www.murata.com/en-us/products/productdetail?partno=GRM188R61A106ME69%23: an HTML page, not a PDF"
+
+[[parts]]
+key = "GRM21BR72A104KAC4L"
+manufacturer = "Murata"
+refs = ["C1"]
+missing = "https://www.mouser.com/datasheet/3/76/4/GRM21BR72A104KAC4_01A.pdf: an HTML page, not a PDF (Access to this page has been denied.)"
+
+[[parts]]
+key = "LAN8720AI-CP-TR"
+manufacturer = "Microchip"
+refs = ["U14"]
+url = "http://ww1.microchip.com/downloads/en/DeviceDoc/8720a.pdf"
+source = "symbol LAN8720A"
+sha256 = "886cf468ebeb777448bf2e74a694cb621f6af1d9ca6a700e732e5e1d6ab03188"
+revision = "SMSC LAN8720A/LAN8720Ai Revision 1.4 (08-23-12)"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "LTST-C191KGKT"
+manufacturer = "LITEON"
+refs = ["LED1"]
+missing = "https://www.mouser.com/datasheet/3/281/1/LTST_C191KGKT.pdf: an HTML page, not a PDF (Access to this page has been denied.)"
+
+[[parts]]
+key = "LTST-C191KRKT"
+manufacturer = "LITEON"
+refs = ["LED2"]
+missing = "https://www.mouser.com/datasheet/3/281/1/LTST_C191KRKT.pdf: an HTML page, not a PDF (Access to this page has been denied.)"
+
+[[parts]]
+key = "LTV-357T"
+manufacturer = "Liteon"
+refs = ["U2"]
+missing = "https://www.buerklin.com/medias/sys_master/download/download/h91/ha0/8892020588574.pdf: HTTP 404"
+
+[[parts]]
+key = "PTS810SJM250SMTRLFS"
+manufacturer = "C&K"
+refs = ["SW1", "SW2"]
+url = "https://4donline.ihs.com/images/VipMasterIC/IC/CKCI/CKCI-S-A0014471833/CKCI-S-A0014948171-1.pdf?hkey=6D3A4C79FDBF58556ACFDE234799DDF0"
+source = "Farnell"
+sha256 = "6b537e5e57ee544599ec8181e9ab42e53d154aff22f87dc5813b2b59f94b392b"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "RC0402FR-07100KL"
+manufacturer = "Yageo"
+refs = ["R53", "R54"]
+url = "https://www.yageogroup.com/component-documentation/download/specsheet/RC0402FR-07100KL"
+source = "Farnell"
+sha256 = "ef1fd01371a1f395f412b493062b8ab0b5c0d8198b600542eb41e10e05c62352"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "RC0402FR-0710KL"
+manufacturer = "Yageo"
+refs = ["R2", "R22", "R29", "R36", "R42"]
+url = "https://www.yageogroup.com/component-documentation/download/specsheet/RC0402FR-0710KL"
+source = "Farnell"
+sha256 = "77db3fcf21523f43111c1456d582e4a564c271e85fd5e2f8a3ea975471831f86"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "RC0402FR-0712K1L"
+manufacturer = "Yageo"
+refs = ["R30"]
+url = "https://www.yageogroup.com/component-documentation/download/specsheet/RC0402FR-0712K1L"
+source = "Farnell"
+sha256 = "4badf77ef9346602da55084df35dccfcd733a60ac03b4c7c8c50ad179d1601b2"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "RC0402FR-07180KL"
+manufacturer = "Yageo"
+refs = ["R52"]
+url = "https://www.yageogroup.com/component-documentation/download/specsheet/RC0402FR-07180KL"
+source = "Farnell"
+sha256 = "e73182d058d663f3c0617efb806bd54b5a950084a1ed645548f35592ff236ef8"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "RC0402FR-071K5L"
+manufacturer = "Yageo"
+refs = ["R37"]
+url = "https://www.yageogroup.com/component-documentation/download/specsheet/RC0402FR-071K5L"
+source = "Farnell"
+sha256 = "daac162d04049873704cde5b54ee47cc381665c7e58ac25f07dcc1ea062148c9"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "RC0402FR-071KL"
+manufacturer = "Yageo"
+refs = ["R27", "R46"]
+url = "https://www.yageogroup.com/component-documentation/download/specsheet/RC0402FR-071KL"
+source = "Farnell"
+sha256 = "cc00726e98c4cb94bc9de825bfbdfc58cdeae5e792e1e4aab012da7289bbd675"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "RC0402FR-071ML"
+manufacturer = "Yageo"
+refs = ["R50", "R57"]
+url = "https://www.yageogroup.com/component-documentation/download/specsheet/RC0402FR-071ML"
+source = "Farnell"
+sha256 = "9a25a99a489072b1de8c6076cdc1c68a2fe39c59e30154eabffbc8e1d578c756"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "RC0402FR-07200KL"
+manufacturer = "Yageo"
+refs = ["R59"]
+url = "https://www.yageogroup.com/component-documentation/download/specsheet/RC0402FR-07200KL"
+source = "Farnell"
+sha256 = "7ea132fca40a182ab5a18a9f0dfb10fdb7aaa7d2075bc854dc52f9ae44a5b22f"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "RC0402FR-07220RL"
+manufacturer = "Yageo"
+refs = ["R63", "R64", "R65", "R66", "R67", "R68"]
+url = "https://www.yageogroup.com/component-documentation/download/specsheet/RC0402FR-07220RL"
+source = "Farnell"
+sha256 = "3d4bd4e7e004a3ecde13966f5d3ff4b69c75ee1bcfd95f20e64e92e257f648c7"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "RC0402FR-072K2L"
+manufacturer = "Yageo"
+refs = ["R28"]
+url = "https://www.yageogroup.com/component-documentation/download/specsheet/RC0402FR-072K2L"
+source = "Farnell"
+sha256 = "b01552e2d13e33c0ef2e12a0966128eb81a7e5af0d5a73a3013da2c435c692f6"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "RC0402FR-0733RL"
+manufacturer = "Yageo"
+refs = ["R35"]
+url = "https://www.yageogroup.com/component-documentation/download/specsheet/RC0402FR-0733RL"
+source = "Farnell"
+sha256 = "e7bea5890cc96b66d42fa896e78955b1d61314d48de14ab623d5e6d3dbd6cf7f"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "RC0402FR-07453KL"
+manufacturer = "Yageo"
+refs = ["R58"]
+url = "https://www.yageogroup.com/component-documentation/download/specsheet/RC0402FR-07453KL"
+source = "Farnell"
+sha256 = "5603e229ef6dc7e21f3df484628c499e909fe9bf947a9038397dc07e531bdc62"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "RC0402FR-0749R9L"
+manufacturer = "Yageo"
+refs = ["R31", "R32", "R33", "R34"]
+url = "https://www.yageogroup.com/component-documentation/download/specsheet/RC0402FR-0749R9L"
+source = "Farnell"
+sha256 = "99940eeacc6aa020625aefbed6061af7af9b15780f39c3f2519b5c77e8f0db75"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "RC0402FR-075K1L"
+manufacturer = "Yageo"
+refs = ["R23", "R24"]
+url = "https://www.yageogroup.com/component-documentation/download/specsheet/RC0402FR-075K1L"
+source = "Farnell"
+sha256 = "afeaed5c1207b1157c6cee5db790bc9f72e2eb93d2193835678f397af60f128f"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "RL1632R-R110-F"
+manufacturer = "Susumu"
+refs = ["R40", "R41", "R43", "R44"]
+missing = "https://www.mouser.com/datasheet/3/826/1/n_catalog_partition08_en.pdf: an HTML page, not a PDF (Access to this page has been denied.)"
+
+[[parts]]
+key = "SRN4018-4R7M"
+manufacturer = "Bourns"
+refs = ["L1"]
+url = "http://www.farnell.com/datasheets/2547496.pdf"
+source = "Farnell"
+sha256 = "a703f2a744c945df6090de0c42921308e87482bc0d2561e6a51bc374e13d6fe4"
+revision = "REV. 09/17"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "STM32H563RIT6"
+manufacturer = "ST"
+refs = ["U10"]
+url = "http://www.farnell.com/datasheets/4659681.pdf"
+source = "Farnell"
+sha256 = "f9497fcad236b767810db349d3b8e54829c29cf81a3e4c46ea31ade437871144"
+revision = "May 2025 DS14258 Rev 6 1/277"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "TMC2209-LA-T"
+manufacturer = "ADI"
+refs = ["U12", "U13"]
+url = "http://www.farnell.com/datasheets/3119145.pdf"
+source = "Farnell"
+sha256 = "f04ab82f928f8944e41ce3cbfd7bcfc2eb127fd176253ef81e9e572cb8252b94"
+revision = "TMC2209 DATASHEET (Rev. 1.05 / 2020-MAY-18) 2"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "TPS2116DRLR"
+manufacturer = "TI"
+refs = ["U6"]
+url = "https://www.ti.com/lit/ds/symlink/tps2116.pdf"
+source = "symbol TPS2116DRL"
+sha256 = "5babd88afb84e2e65c9c0da23b75f85758c0c730e34102a0fb746ac9573ed1d5"
+revision = "SLVSFG1A – JANUARY 2021 – REVISED MAY 2021"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "TPS61099DRVR"
+manufacturer = "TI"
+refs = ["U5"]
+url = "https://www.ti.com/lit/gpn/TPS61099"
+source = "symbol TPS61099DRV"
+sha256 = "922c6396085dd53bc2e7531e90f1659b529bc7e648563a10ee260e8e28439581"
+revision = "SLVSD88M – JULY 2016 – REVISED AUGUST 2026"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "TYPE-C-31-M-12"
+manufacturer = "HRO"
+refs = ["J7"]
+missing = "https://www.usb.org/sites/default/files/documents/usb_type-c.zip: a zip"
+
+[[parts]]
+key = "USBLC6-2SC6"
+manufacturer = "ST"
+refs = ["U15"]
+url = "http://www.farnell.com/datasheets/1690354.pdf"
+source = "Farnell"
+sha256 = "8ba7ab4ec1781b7f6052f5999a2304bd611c0ed2b5e8f36ffa5092552932a42e"
+revision = "October 2011 Doc ID 11265 Rev 5 1/14"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "USBLC6-4SC6"
+manufacturer = "ST"
+refs = ["U16", "U17"]
+url = "http://www.farnell.com/datasheets/1996763.pdf"
+source = "Farnell"
+sha256 = "433df99613e2506e2b31cf55857d577c5b757e4cebaaf6b45f799bd92e1ea1e2"
+revision = "November 2015 DocID11068 Rev 7 1/13"
+fetched = "2026-10-11"
+
+[[parts]]
+key = "V8BR-1AX1-GH"
+manufacturer = "Bel"
+refs = ["J1"]
+url = "https://www.belfuse.com/media/datasheets/products/magjack%20ICMs/ds-MAG-vertical-mout-magjack-icm.pdf"
+source = "Farnell"
+sha256 = "9143344edde981e22a4824aaf6b74ed4b3d9cd9ac63978526c34b9caed65b581"
+fetched = "2026-10-11"

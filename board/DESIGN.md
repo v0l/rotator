@@ -12,13 +12,13 @@ isolation), five schematic sheets, `ctl.pcb.toml` (placed and routed), and the s
 |---|---|---|
 | PoE in | J1 Bel V8BR-1AX1-GH vertical magjack, D1 D2 Comchip CDBHM2100L-G Schottky bridges, U1 Silvertel Ag5424 | 802.3at class 4, 24 V out. Data and spare pairs both rectified. |
 | AT detect | U2 LTV-357T | Ag5424 AT-DET across the barrier to PC13. |
-| 3V3 | U3 AP63203WU buck from VBUCK | VBUCK is V24 through D4, or USB VBUS through D5, so the logic runs from USB on the bench. |
-| Keep-alive | J10 CR123A lead, D10, U5 TPS61099 boost (453k/200k sets 3.27 V), U6 TPS2116 mux | VKEEP is 3V3 when it is up, otherwise the cell. MAIN_OK (U6 status) tells the MCU which. The whole group sits in the top right corner beside the encoder headers, so VKEEP reaches J4, J5 and the MCU without crossing the board. |
+| 3V3 | U3 AP63201WU buck from VBUCK, 205k/62k sets 3.45 V, L1 6.8 uH | VBUCK is V24 through D4, or USB VBUS through D5, so the logic runs from USB on the bench. The rail is 3.45 V, not 3.3 V, because the encoders need 3.3 V at the end of a mux and a cable; every part on it is rated to 3.6 V. |
+| Keep-alive | J10 CR123A lead, D10, U5 TPS61099 boost (487k/200k sets 3.44 V), U6 TPS2116 mux | VKEEP is 3V3 when it is up, otherwise the cell. MAIN_OK (U6 status) tells the MCU which. The whole group sits in the top right corner beside the encoder headers, so VKEEP reaches J4, J5 and the MCU without crossing the board. |
 | MCU | U10 STM32H563RIT6 on VKEEP | No HSE: HSI, HSI48 with CRS for USB, LSE 32.768 kHz for the RTC. |
 | Ethernet | U14 LAN8720A RMII, Y2 25 MHz | The PHY makes the 50 MHz REF_CLK (nINTSEL strapped low by R29) and feeds PA1. |
 | Drivers | U12 U13 TMC2209 | UART only. STEP and DIR are tied low; the MCU moves the motors with VACTUAL. Shared MOT_EN, DIAG to PB1/PB2, 0.11 ohm sense. |
-| Encoders | J4 J5 JST XH 5 pin, U16 U17 USBLC6-4SC6, 220 ohm series | Powered from VKEEP, so TIM2 (az) and TIM3 (el) keep counting through an outage. |
-| USB | J7 USB-C, U15 USBLC6-2SC6 | DFU via BOOT0 (SW2). SWD on J6, a TC2030 pad with no part to fit. |
+| Encoders | J4 J5 JST XH 5 pin, U16 U17 USBLC6-4SC6, 220 ohm series | Powered from VKEEP, so TIM2 (az) and TIM3 (el) keep counting through an outage. The 17HS15-1504-ME1K encoder wants 3.3 to 5.5 V (StepperOnline spec); VKEEP is 3.43 V. Only the + side of each differential output is used. |
+| USB | J7 GCT USB4960 vertical USB-C, U15 USBLC6-2SC6 | Vertical so the plug goes in from above instead of into the az motor; the assembly has 35 mm of clear height over it. | DFU via BOOT0 (SW2). SWD on J6, a TC2030 pad with no part to fit. |
 
 ## MCU pins
 
@@ -59,13 +59,25 @@ isolation), five schematic sheets, `ctl.pcb.toml` (placed and routed), and the s
 - Primary (PoE) and secondary nets are separate domains with a 2 mm clearance, 2.5 mm
   creepage barrier. Under the Ag5424 the datasheet (V1.3, figure 12) wants no copper between
   15.3 and 42.1 mm from pin 1; a cutout on all four layers clears x 0 to 54.1, y 59.5 to 80.
+- The barrier also holds through the board: In1 and In2 are cut out under every piece of
+  primary copper (J1 centre taps, the bridges, R1, the opto input, POE_P and POE_N) with 2 mm
+  to spare, so no secondary plane sits 0.2 mm under primary copper. GND reaches the chassis
+  through H1 to H4, so the 802.3 1500 V isolation applies to it. POE_P and POE_N run 2.6 mm in
+  from the left edge.
+- No signal runs on In1 or In2.
+- The 3V3 buck keeps its loops on the top layer: C3 sits below U3 between VIN and GND, the
+  inductor and output caps to its right, and the feedback divider on the back under FB.
+- C2 is the Ag5424 output cap. The datasheet's operating conditions want 220 to 470 uF, so
+  it is 330 uF and still passes at -20 %. It is as close to U1.8 as the module's courtyard
+  allows, joined by a V24 pour.
 - The U1 courtyard is the stepped keep-out of figure 14.
 - The Ag5424 sheds heat through its output pins (datasheet section 4): pins 7, 8 and 10 join
   solid to a V24 pour and the GND pours on both outer layers, stitched with vias.
 - Everything that must stay put is in `tools/place_fixed.txt`; the hand routes are in
-  `tools/*_routes.txt`, the keep-alive group in `tools/keeper_place.txt` and the pours and
-  the module cutout in `tools/zones.txt`. `tools/place.sh` rebuilds the
-  placement from those files and wipes the routing.
+  `tools/*_routes.txt`, the keep-alive group in `tools/keeper_place.txt`, the buck in
+  `tools/buck_place.txt` and the pours, the module cutout and the primary plane cutout in
+  `tools/zones.txt`. `tools/place.sh` rebuilds the placement from those files and wipes the
+  routing.
 
 ## Sims
 
@@ -73,11 +85,11 @@ isolation), five schematic sheets, `ctl.pcb.toml` (placed and routed), and the s
 
 | sim | result |
 |---|---|
-| `ctl-dc-v24` | 0.96 A to the drivers and buck, 26 mV drop |
+| `ctl-dc-v24` | 0.96 A to the drivers and buck, 21 mV drop |
 | `ctl-dc-motor` | 1.4 A per coil, 23 mV drop per side |
-| `ctl-dc-3v3` | 240 mA, worst 3.27 V at the MCU, 3.28 V at the encoders |
-| `ctl-thermal` | 50 C inside the box, both motors at 1.4 A RMS: TMC2209 junctions 100 and 105 C, U1 output pins 127 C |
-| `ctl-thermal-1a` | same at 1.0 A RMS: drivers 80 and 83 C, U1 pins 103 C |
+| `ctl-dc-3v3` | 240 mA from 3.45 V, worst 3.42 V at the MCU, 3.43 V at the encoders |
+| `ctl-thermal` | 50 C inside the box, both motors at 1.4 A RMS: TMC2209 junctions 100 and 105 C, U1 output pins 126 C |
+| `ctl-thermal-1a` | same at 1.0 A RMS: drivers 79 and 83 C, U1 pins 102 C |
 
 The thermal sims send heat out through the four mounting holes at 5 C/W each, so the board
 must sit on the aluminium M3 standoffs on the chassis plate. They also put all of the Ag5424
@@ -87,10 +99,13 @@ makes the U1 pin temperature an upper bound.
 ## Parts and fab
 
 - `tools/bom.md` is the priced BOM, made by `python3 tools/bom.py` from Mouser (keys in
-  `~/.config/agentee/distributors.toml`). Parts for one board come to about EUR 66 ex VAT.
+  `~/.config/agentee/distributors.toml`). Parts for one board come to about EUR 67 ex VAT.
 - The STM32H563RIT6 is out of stock at Mouser, Farnell, LCSC and ST; Mouser expects 1941 on
   2026-12-11. Backorder it.
-- J7 (HRO TYPE-C-31-M-12) comes from LCSC, J1 from Farnell (3588276).
+- J1 comes from Farnell (3588276).
+- J7 has no vendor footprint in KiCad; `footprints/USB_C_Receptacle_GCT_USB4960_Vertical`
+  is drawn from the GCT drawing (rev A, 2025-12-08). Its slots are round holes the fab can
+  drill: Ø0.65 for the 0.72 x 0.52 peg slot, Ø0.8 for the 0.85 x 0.60 stake slots.
 - `agentee fab ctl -o fab` writes Gerbers, drill, placement and the JLCPCB BOM into `fab/`.
 - The CR123A holder is a Takachi CR123A-R with 140 mm leads; crimp a JST PHR-2 housing on.
 

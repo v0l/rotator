@@ -1,0 +1,10 @@
+place U3 51,52 --rotation 0 --locked
+place C3 51,54.9 --rotation 0 --locked
+place D4 49.7,57.2 --rotation 0 --locked
+place L1 56.5,52 --rotation 0 --locked
+place C4 52.6,49.75 --rotation 0 --locked
+place C5 56.6,55.3 --rotation 180 --locked
+place C6 60.1,55.3 --rotation 0 --locked
+place R4 50.6,49.2 --rotation 0 --bottom --locked
+place R3 48.3,48.9 --rotation 180 --bottom --locked
+place C7 48.3,47.9 --rotation 180 --bottom --locked

@@ -1,8 +1,0 @@
-let w=8.94 d=7.3 h=3.26 yf=4.15
-plane XY
-rect w d at=0,-(yf-d/2)
-shell: extrude h
-plane <Y offset=0.5
-rect 8.34 2.56 at=0,h/2 r=1
-mouth: cut 7
-color #c9ccd1

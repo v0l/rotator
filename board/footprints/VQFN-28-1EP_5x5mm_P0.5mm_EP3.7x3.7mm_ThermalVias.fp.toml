@@ -472,3 +472,10 @@ layer = "F.Fab"
 at = [0.0, 0.0]
 text = "${REFERENCE}"
 size = 1.0
+
+[[graphics]]
+kind = "rect"
+layer = "B.CrtYd"
+start = [-2.0, -2.0]
+end = [2.0, 2.0]
+width = 0.05

@@ -5,7 +5,7 @@ cell = 0.1
 
 [[supplies]]
 pad = "L1.2"
-voltage = "3.3V"
+voltage = "3.45V"
 
 [[supplies]]
 pad = "U3.4"

@@ -1,5 +1,5 @@
 name = "power"
-description = "PoE+ through two bridges into a Silvertel Ag5424 (24 V, isolated), AT detect through an opto, AP63203 3V3 buck fed from 24 V or USB VBUS, TLV62569 VDD_HP core buck under ESP32-P4 control"
+description = "PoE+ through two bridges into a Silvertel Ag5424 (24 V, isolated), AT detect through an opto, AP63201 buck set to 3.45 V on the 3V3 rail, fed from 24 V or USB VBUS"
 board = "ctl"
 no_connect = ["U1.4", "U1.5", "U1.6", "U1.9"]
 
@@ -19,10 +19,10 @@ fields = { mpn = "LTV-357T", mfr = "Liteon" }
 
 [[parts]]
 ref = "U3"
-symbol = "AP63203WU"
+symbol = "AP63201WU"
 at = [177.8, 50.8]
-value = "AP63203WU"
-fields = { mpn = "AP63203WU-7", mfr = "Diodes" }
+value = "AP63201WU"
+fields = { mpn = "AP63201WU-7", mfr = "Diodes" }
 
 [[parts]]
 ref = "H1"
@@ -72,11 +72,11 @@ fields = { mpn = "GRM21BR72A104KAC4L", mfr = "Murata" }
 
 [[parts]]
 ref = "C2"
-symbol = "C_Polarized"
+symbol = "EEH-ZK1V331P"
 at = [132.08, 165.1]
-value = "220u/35V"
+value = "330u/35V"
 footprint = "CP_Elec_10x10.5"
-fields = { mpn = "EEH-ZA1V221P", mfr = "Panasonic" }
+fields = { mpn = "EEH-ZK1V331P", mfr = "Panasonic" }
 
 [[parts]]
 ref = "R1"
@@ -124,11 +124,11 @@ fields = { mpn = "GRM155R71H104KE14D", mfr = "Murata" }
 
 [[parts]]
 ref = "L1"
-symbol = "L"
+symbol = "SRN4018-6R8M"
 at = [238.76, 165.1]
-value = "4.7u"
+value = "6.8u"
 footprint = "L_Bourns-SRN4018"
-fields = { mpn = "SRN4018-4R7M", mfr = "Bourns" }
+fields = { mpn = "SRN4018-6R8M", mfr = "Bourns" }
 
 [[parts]]
 ref = "C5"
@@ -145,6 +145,30 @@ at = [25.4, 185.42000000000002]
 value = "22u/10V"
 footprint = "C_0805_2012Metric"
 fields = { mpn = "CL21A226MPCLRNC", mfr = "Samsung" }
+
+[[parts]]
+ref = "R3"
+symbol = "R"
+at = [198.12, 40.64]
+value = "205k"
+footprint = "R_0402_1005Metric"
+fields = { mpn = "RC0402FR-07205KL", mfr = "Yageo" }
+
+[[parts]]
+ref = "R4"
+symbol = "R"
+at = [198.12, 60.96]
+value = "62k"
+footprint = "R_0402_1005Metric"
+fields = { mpn = "RC0402FR-0762KL", mfr = "Yageo" }
+
+[[parts]]
+ref = "C7"
+symbol = "C"
+at = [208.28, 40.64]
+value = "100p/50V"
+footprint = "C_0402_1005Metric"
+fields = { mpn = "GRM1555C1H101JA01D", mfr = "Murata" }
 
 [[nets]]
 name = "POE_VC12"
@@ -204,7 +228,7 @@ pins = ["U2.4", "R2.2"]
 name = "GND"
 class = "Ground"
 style = "power"
-pins = ["H1.1", "H2.1", "H3.1", "H4.1", "U2.3", "U1.7", "U1.10", "C2.2", "U3.4", "C3.2", "C5.2", "C6.2"]
+pins = ["H1.1", "H2.1", "H3.1", "H4.1", "U2.3", "U1.7", "U1.10", "C2.2", "U3.4", "C3.2", "C5.2", "C6.2", "R4.2"]
 
 [[nets]]
 name = "V24"
@@ -240,4 +264,9 @@ pins = ["U3.6", "C4.1"]
 name = "3V3"
 class = "Power3V3"
 style = "power"
-pins = ["L1.2", "U3.1", "C5.1", "C6.1", "R2.1"]
+pins = ["L1.2", "C5.1", "C6.1", "R2.1", "R3.1", "C7.1"]
+
+[[nets]]
+name = "FB_3V3"
+class = "Analog"
+pins = ["U3.1", "R4.1", "R3.2", "C7.2"]

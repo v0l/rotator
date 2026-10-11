@@ -1,5 +1,5 @@
 name = "mcu"
-description = "ESP32-P4 with 16 MB flash, 40 MHz crystal, decoupling per the Espressif reference, USB serial/JTAG, boot and reset buttons, status LED"
+description = "STM32H563RIT6 on VKEEP, LSE crystal, vertical USB-C for DFU, SWD pad, boot and reset buttons, status LED"
 board = "ctl"
 no_connect = ["U10.5", "U10.6", "U10.17", "U10.20", "U10.22", "U10.29", "U10.34", "U10.35", "U10.40", "U10.42", "U10.43", "U10.53", "U10.54", "U10.56", "U10.57", "U10.58", "U10.59", "U10.61", "J7.A8", "J7.B8", "U15.4", "U15.6", "J6.6"]
 
@@ -141,10 +141,11 @@ fields = { mpn = "GRM155R61A225ME01D", mfr = "Murata" }
 
 [[parts]]
 ref = "J7"
-symbol = "USB_C_Receptacle_USB2.0_16P"
+symbol = "USB4960"
 at = [177.8, 50.8]
-value = "TYPE-C-31-M-12"
-fields = { mpn = "TYPE-C-31-M-12", mfr = "HRO" }
+value = "USB4960"
+fields = { mpn = "USB4960-00-C", mfr = "GCT" }
+footprint = "USB_C_Receptacle_GCT_USB4960_Vertical"
 
 [[parts]]
 ref = "R23"

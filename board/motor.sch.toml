@@ -86,11 +86,11 @@ fields = { mpn = "GRM155R71A104KA01D", mfr = "Murata" }
 
 [[parts]]
 ref = "C76"
-symbol = "C_Polarized"
+symbol = "EHBSA035M1010608T"
 at = [132.08, 165.1]
 value = "100u/35V"
 footprint = "CP_Elec_6.3x7.7"
-fields = { mpn = "EEE-FK1V101XP", mfr = "Panasonic" }
+fields = { mpn = "EHBSA035M1010608T", mfr = "Eaton" }
 
 [[parts]]
 ref = "R40"
@@ -163,11 +163,11 @@ fields = { mpn = "GRM155R71A104KA01D", mfr = "Murata" }
 
 [[parts]]
 ref = "C83"
-symbol = "C_Polarized"
+symbol = "EHBSA035M1010608T"
 at = [40.64, 185.42000000000002]
 value = "100u/35V"
 footprint = "CP_Elec_6.3x7.7"
-fields = { mpn = "EEE-FK1V101XP", mfr = "Panasonic" }
+fields = { mpn = "EHBSA035M1010608T", mfr = "Eaton" }
 
 [[parts]]
 ref = "R43"

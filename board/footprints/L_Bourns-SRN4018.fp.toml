@@ -3,7 +3,8 @@ name = "L_Bourns-SRN4018"
 description = "Bourns SRN4018 series SMD inductor, https://www.bourns.com/docs/Product-Datasheets/SRN4018.pdf"
 tags = ["Bourns", "SRN4018", "SMD", "inductor"]
 mount = "smd"
-model = "${KICAD9_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Bourns-SRN4018.step"
+model = "3dmodels/L_Bourns-SRN4018.step"
+height = "1.80mm"
 
 [[pads]]
 number = "1"

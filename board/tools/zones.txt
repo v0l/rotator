@@ -8,3 +8,4 @@ zone POE_VC45 --layers F.Cu,B.Cu --priority 5 --outline 17.2,50.6 21,50.6 21,53.
 zone POE_VC78 --layers F.Cu,B.Cu --priority 5 --outline 21.5,51.5 25,51.5 25,53.6 21.5,53.6
 zone V24 --layers F.Cu,B.Cu --priority 5 --pad-connection solid --outline 56.6,61 59,61 59,70.4 64.5,70.4 64.5,78.6 54.4,78.6 54.4,70.4 56.6,70.4
 cutout --layers F.Cu,In1.Cu,In2.Cu,B.Cu --point 0,59.5 54.1,59.5 54.1,80 0,80
+cutout --layers In1.Cu,In2.Cu --point 0,15.5 18.5,15.5 18.5,27 17.5,30.5 15.5,32.5 15.5,46.5 18.5,48.6 40.3,48.6 40.3,60 0,60

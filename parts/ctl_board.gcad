@@ -38,8 +38,8 @@ j8: extrude 7.00
 combine main j8
 body j7
 plane XY offset=zb+t
-rect 8.94 7.92 at=-96.00,11.11
-j7: extrude 3.26
+rect 8.94 5.11 at=-96.00,9.50
+j7: extrude 6.51
 combine main j7
 body j10
 plane XY offset=zb+t
@@ -48,7 +48,7 @@ j10: extrude 6.00
 combine main j10
 body c2
 plane XY offset=zb+t
-circle 10 at=-61.80,-55.43
+circle 10 at=-59.87,-53.00
 c2: extrude 10.50
 combine main c2
 body d1
