@@ -14,8 +14,10 @@ spine: extrude -spine
 plane top.end
 seat_b: hole brg 0,0 depth=bb
 pass: hole 14 0,0
+cover_b: hole M3 0,15 depth=pt
 plane bottom.end
 seat_a: hole brg 0,0 depth=bb
+cover_a: hole M3 0,-15 depth=pt
 plane motor.end
 pilot: hole 22.4 0,0
 mounts: hole 3.4 pitch/2,pitch/2 -pitch/2,pitch/2 -pitch/2,-pitch/2 pitch/2,-pitch/2

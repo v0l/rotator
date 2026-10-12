@@ -155,6 +155,54 @@ move motor_az 0,0,-69.5
 rotate motor_az 90 axis=y
 rotate motor_az -90 axis=x
 move motor_az 0,38,32
+part cover_az parts/gearcover.gcad az=1
+rotate cover_az.low 90 axis=y
+rotate cover_az.high 90 axis=y
+rotate cover_az.low -90 axis=x
+rotate cover_az.high -90 axis=x
+move cover_az.low 0,38,32
+move cover_az.high 0,38,32
+part cov_fix_az_1 parts/std/screw.gcad d=3 L=14
+move cov_fix_az_1 0,15,32
+rotate cov_fix_az_1 90 axis=y
+rotate cov_fix_az_1 -90 axis=x
+move cov_fix_az_1 0,38,32
+part cov_fix_az_2 parts/std/screw.gcad d=3 L=14
+rotate cov_fix_az_2 180 axis=x
+move cov_fix_az_2 0,15,-32
+rotate cov_fix_az_2 90 axis=y
+rotate cov_fix_az_2 -90 axis=x
+move cov_fix_az_2 0,38,32
+part cov_screw_az_1 parts/std/screw.gcad d=3 L=10
+rotate cov_screw_az_1 90 axis=x
+move cov_screw_az_1 75,-5,0
+rotate cov_screw_az_1 90 axis=y
+rotate cov_screw_az_1 -90 axis=x
+move cov_screw_az_1 0,38,32
+part cov_screw_az_2 parts/std/screw.gcad d=3 L=10
+rotate cov_screw_az_2 90 axis=x
+move cov_screw_az_2 50.655,-5,34.769
+rotate cov_screw_az_2 90 axis=y
+rotate cov_screw_az_2 -90 axis=x
+move cov_screw_az_2 0,38,32
+part cov_screw_az_3 parts/std/screw.gcad d=3 L=10
+rotate cov_screw_az_3 90 axis=x
+move cov_screw_az_3 50.655,-5,-34.769
+rotate cov_screw_az_3 90 axis=y
+rotate cov_screw_az_3 -90 axis=x
+move cov_screw_az_3 0,38,32
+part cov_screw_az_4 parts/std/screw.gcad d=3 L=10
+rotate cov_screw_az_4 90 axis=x
+move cov_screw_az_4 -16,-5,15
+rotate cov_screw_az_4 90 axis=y
+rotate cov_screw_az_4 -90 axis=x
+move cov_screw_az_4 0,38,32
+part cov_screw_az_5 parts/std/screw.gcad d=3 L=10
+rotate cov_screw_az_5 90 axis=x
+move cov_screw_az_5 -16,-5,-15
+rotate cov_screw_az_5 90 axis=y
+rotate cov_screw_az_5 -90 axis=x
+move cov_screw_az_5 0,38,32
 part blk_screw_az_1 parts/std/screw.gcad d=4 L=16
 rotate blk_screw_az_1 90 axis=x
 move blk_screw_az_1 8,23,-15
@@ -266,6 +314,45 @@ part motor_el parts/std/nema17.gcad L=43.5 rear=0
 move motor_el 0,0,-69.5
 rotate motor_el -90 axis=z
 move motor_el -10.5,38,eh
+part cover_el parts/gearcover.gcad az=0
+rotate cover_el.low -90 axis=z
+rotate cover_el.high -90 axis=z
+move cover_el.low -10.5,38,eh
+move cover_el.high -10.5,38,eh
+part cov_fix_el_1 parts/std/screw.gcad d=3 L=14
+move cov_fix_el_1 0,15,32
+rotate cov_fix_el_1 -90 axis=z
+move cov_fix_el_1 -10.5,38,eh
+part cov_fix_el_2 parts/std/screw.gcad d=3 L=14
+rotate cov_fix_el_2 180 axis=x
+move cov_fix_el_2 0,15,-32
+rotate cov_fix_el_2 -90 axis=z
+move cov_fix_el_2 -10.5,38,eh
+part cov_screw_el_1 parts/std/screw.gcad d=3 L=10
+rotate cov_screw_el_1 90 axis=x
+move cov_screw_el_1 75,-5,0
+rotate cov_screw_el_1 -90 axis=z
+move cov_screw_el_1 -10.5,38,eh
+part cov_screw_el_2 parts/std/screw.gcad d=3 L=10
+rotate cov_screw_el_2 90 axis=x
+move cov_screw_el_2 50.655,-5,34.769
+rotate cov_screw_el_2 -90 axis=z
+move cov_screw_el_2 -10.5,38,eh
+part cov_screw_el_3 parts/std/screw.gcad d=3 L=10
+rotate cov_screw_el_3 90 axis=x
+move cov_screw_el_3 50.655,-5,-34.769
+rotate cov_screw_el_3 -90 axis=z
+move cov_screw_el_3 -10.5,38,eh
+part cov_screw_el_4 parts/std/screw.gcad d=3 L=10
+rotate cov_screw_el_4 90 axis=x
+move cov_screw_el_4 -16,-5,15
+rotate cov_screw_el_4 -90 axis=z
+move cov_screw_el_4 -10.5,38,eh
+part cov_screw_el_5 parts/std/screw.gcad d=3 L=10
+rotate cov_screw_el_5 90 axis=x
+move cov_screw_el_5 -16,-5,-15
+rotate cov_screw_el_5 -90 axis=z
+move cov_screw_el_5 -10.5,38,eh
 part blk_screw_el_1 parts/std/screw.gcad d=4 L=10
 rotate blk_screw_el_1 90 axis=x
 move blk_screw_el_1 8,23,-15
@@ -393,6 +480,15 @@ flush mot_screw_el_1:head.start block_el:motor.end
 flush mot_screw_el_2:head.start block_el:motor.end
 flush mot_screw_el_3:head.start block_el:motor.end
 flush mot_screw_el_4:head.start block_el:motor.end
+concentric cover_el.low:fix_a.side block_el:cover_b.side
+concentric cover_el.high:hub.side cover_el.low:shaft.side
+concentric cov_fix_el_1:shank.side block_el:cover_b.side
+concentric cov_fix_el_2:shank.side block_el:cover_a.side
+concentric cov_screw_el_1:shank.side cover_el.high:lid.side near=-15.5,-37,eh
+concentric cov_screw_el_2:shank.side cover_el.high:lid.side near=-15.5,-12.655,eh+34.769
+concentric cov_screw_el_3:shank.side cover_el.high:lid.side near=-15.5,-12.655,eh-34.769
+concentric cov_screw_el_4:shank.side cover_el.high:wlid.side near=-15.5,54,eh+15
+concentric cov_screw_el_5:shank.side cover_el.high:wlid.side near=-15.5,54,eh-15
 joint spin_az worm_az block_az turn about=wa
 couple spin_az az ratio=60
 joint spin_el worm_el block_el turn about=wea

@@ -18,11 +18,22 @@ tap drill size; the thread is in the table.
 
 | part | qty | notes |
 |---|---|---|
-| `drive_block` | 2 | 6082-T6, 43 x 52 x 104 block; 2x Ø22 H7 x 7 (608), Ø14 thru, Ø22.4 motor pilot, 4x Ø3.4 on 31 square, 4x Ø4.5 in spine |
+| `drive_block` | 2 | 6082-T6, 43 x 52 x 104 block; 2x Ø22 H7 x 7 (608), Ø14 thru, Ø22.4 motor pilot, 4x Ø3.4 on 31 square, 4x Ø4.5 in spine, 2x Ø3.4 beside the bearing seats (gear cover) |
 | `mast_clamp` | 1 | 6082-T6, 200 x 136 x 10 flange on a Ø68 x 70 socket (weldment or machined from plate plus bar); Ø48.7 x 62 bore; 2.6 x 1.5 O-ring cord groove 4 mm in from the flange edge; blind 8 deep: 2x M6, 4x M8, 4x M4, 6x M3; 3x M8 radial |
 | `flange_collar` | 1 | steel, Ø44 x 8 flange on a Ø24 x 12 hub; Ø15 H7 bore with 5 JS9 keyway; 4x Ø4.5 on 34 PCD; M5 set screw in the hub |
 | `az_spindle` | 1 | Ø15 silver steel, 107 long; keyseat 5 P9 x 3 x 20 at 23 from the bottom end; keyseat 5 P9 x 3 x 18 open at the top end |
 | `el_shaft` | 1 | Ø15 silver steel, 194.7 long; keyseat 5 P9 x 3 x 20 at 86.6 from one end; Ø5.2 cross holes at 17.35 and 177.35 |
+
+## Printed
+
+PETG, 4 perimeters, 30% infill. `az_gearcover_*` and `el_gearcover_*` STLs in `out/step/`,
+already turned to print. Melt in five M3 heat-set inserts per low half (lid bosses) and two
+in its trough ends.
+
+| part | qty |
+|---|---|
+| `az_gearcover_low`, `az_gearcover_high` | 1 each |
+| `el_gearcover_low`, `el_gearcover_high` | 1 each |
 
 ## Drilled enclosures
 

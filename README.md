@@ -38,6 +38,13 @@ gcad export rotator.gasm rotator.step
   608s in `driveblock.gcad`, jaw-coupled to a StepperOnline 17HS15-1504-ME1K closed-loop
   NEMA17 with a built-in 1000 PPR magnetic encoder. Turn counting and its battery backup
   live on the control board.
+- Each worm and wheel runs in a PETG grease cover, `parts/gearcover.gcad` (`az=1` notches
+  it round the bearing plate posts). It splits on the wheel's mid-plane: the low half takes
+  two M3x14 through the drive block's plates and five M3 heat-set inserts, the high half
+  screws onto it with five M3x10. The trough ends stop 0.5 mm short of the drive block
+  plates, which close them. Fit the low half over the shaft before the wheel. Print the
+  high half on its outer face; the low half stands on its worm trough and needs support
+  under the wheel ring. `./export.sh` writes the four STLs turned that way.
 - The boxes are `parts/std/hammond_1550z220_box.gcad` and `_lid.gcad`. Without
   Hammond's STEP they are drawn from its measurements. Download the STEP from
   https://www.hammfg.com/part/1550Z220, save it as `parts/vendor/1550Z220.stp`, and run

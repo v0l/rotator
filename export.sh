@@ -15,6 +15,13 @@ part() {
   "$gcad" export "$wrap" "$out/$name.svg"
   rm "$wrap"
 }
+print() {
+  name=$1 file=$2 args=$3 turn=$4
+  wrap="$out/.$name.gasm"
+  printf 'part %s ../../%s %s\nrotate %s %s axis=x\n' "$name" "$file" "$args" "$name" "$turn" > "$wrap"
+  "$gcad" export "$wrap" "$out/$name.stl"
+  rm "$wrap"
+}
 part bearing_plate parts/top_plate.gcad
 part flange_collar parts/std/flangecollar.gcad "F=44 hub=24 pcd=34 screw=4.5"
 part el_floor_plate parts/el_plates.gcad body=floor
@@ -27,4 +34,8 @@ part az_box_1550Z220 parts/std/hammond_1550z220_box.gcad "az=1 vendor=$hammond"
 part az_lid_1550Z220 parts/std/hammond_1550z220_lid.gcad "az=1 vendor=$hammond"
 part el_box_1550Z220 parts/std/hammond_1550z220_box.gcad "el=1 xe=26.75 vendor=$hammond"
 part el_lid_1550Z220 parts/std/hammond_1550z220_lid.gcad "el=1 xe=26.75 vendor=$hammond"
+print az_gearcover_low parts/gearcover.gcad "az=1 body=low" -90
+print az_gearcover_high parts/gearcover.gcad "az=1 body=high" 90
+print el_gearcover_low parts/gearcover.gcad "az=0 body=low" -90
+print el_gearcover_high parts/gearcover.gcad "az=0 body=high" 90
 "$gcad" export rotator.gasm out/rotator.step --set hammond=$hammond

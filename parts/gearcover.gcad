@@ -1,0 +1,82 @@
+let az=1 cx=38 R=33.6 rc=31.75 g=6 t=2.5 wx=-21 wx2=12 wz=22.5 wr=10 wlo=18.5 whi=12 pc=15 bo=37 ba=70 hub=32 shaft=18
+let pw=31 pz=20 lx=-16 lz=15 boss=10
+let b1x=cx+bo b2x=cx+bo*cos(ba) b2z=bo*sin(ba)
+let zi=sqrt(R*R-(cx-wx2)*(cx-wx2)) a0=atan2(zi,wx2-cx) ph=acos((bo*bo+R*R-boss*boss/4)/(2*bo*R)) ro=bo+boss/2
+body low
+plane XZ
+pen wx,-wz
+line wx2,-wz
+line wx2,-zi
+arc cx+R*cos(-ba-ph),R*sin(-ba-ph) via=cx+R*cos(-(a0+ba+ph)/2),R*sin(-(a0+ba+ph)/2)
+arc cx+R*cos(-ba+ph),R*sin(-ba+ph) via=cx+ro*cos(-ba),ro*sin(-ba)
+arc cx+R*cos(-ph),R*sin(-ph) via=cx+R*cos(-ba/2),R*sin(-ba/2)
+arc cx+R*cos(ph),R*sin(ph) via=cx+ro*cos(0),ro*sin(0)
+arc cx+R*cos(ba-ph),R*sin(ba-ph) via=cx+R*cos(ba/2),R*sin(ba/2)
+arc cx+R*cos(ba+ph),R*sin(ba+ph) via=cx+ro*cos(ba),ro*sin(ba)
+arc wx2,zi via=cx+R*cos((a0+ba+ph)/2),R*sin((a0+ba+ph)/2)
+line wx2,wz
+line wx,wz
+close
+shell: extrude -(g+t)
+plane XZ offset=-(g+t)
+rect wx2-wx 2*wz at=(wx+wx2)/2,0
+wbox: extrude -(wlo-g-t)
+plane XY offset=wz
+trough: hole 2*wr 0,0
+plane XZ
+cavity: hole 2*rc cx,0 depth=g
+plane XY offset=wz+pz
+rect pw 50 at=0,7
+plate_a: cut pz
+plane XY offset=-wz
+rect pw 50 at=0,7
+plate_b: cut pz
+if az plane XZ
+if az circle 15.6 at=22,-38
+if az circle 15.6 at=24,40
+if az posts: cut thru
+plane XZ
+shaft: hole shaft cx,0
+lid: hole M3 b1x,0 b2x,b2z b2x,-b2z lx,lz lx,-lz fit=insert
+plane XY offset=wz
+fix_a: hole M3 0,pc fit=insert
+plane XY offset=-wz rx=180
+fix_b: hole M3 0,-pc fit=insert
+color #e0782c
+material petg
+body high
+plane XZ
+pen wx,-wz
+line wx2,-wz
+line wx2,-zi
+arc cx+R*cos(-ba-ph),R*sin(-ba-ph) via=cx+R*cos(-(a0+ba+ph)/2),R*sin(-(a0+ba+ph)/2)
+arc cx+R*cos(-ba+ph),R*sin(-ba+ph) via=cx+ro*cos(-ba),ro*sin(-ba)
+arc cx+R*cos(-ph),R*sin(-ph) via=cx+R*cos(-ba/2),R*sin(-ba/2)
+arc cx+R*cos(ph),R*sin(ph) via=cx+ro*cos(0),ro*sin(0)
+arc cx+R*cos(ba-ph),R*sin(ba-ph) via=cx+R*cos(ba/2),R*sin(ba/2)
+arc cx+R*cos(ba+ph),R*sin(ba+ph) via=cx+ro*cos(ba),ro*sin(ba)
+arc wx2,zi via=cx+R*cos((a0+ba+ph)/2),R*sin((a0+ba+ph)/2)
+line wx2,wz
+line wx,wz
+close
+shell: extrude whi
+plane XY offset=wz
+trough: hole 2*wr 0,0
+plane XZ rx=180
+cavity: hole 2*rc cx,0 depth=whi-t
+plane XY offset=wz+pz
+rect pw 50 at=0,7
+plate_a: cut pz
+plane XY offset=-wz
+rect pw 50 at=0,7
+plate_b: cut pz
+if az plane XZ
+if az circle 15.6 at=22,-38
+if az circle 15.6 at=24,40
+if az posts: cut thru
+plane XZ offset=whi
+hub: hole hub cx,0
+lid: hole M3 b1x,0 b2x,b2z b2x,-b2z cbore=6.5,7
+wlid: hole M3 lx,lz lx,-lz cbore=6.5,7
+color #e0782c
+material petg
