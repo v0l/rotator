@@ -126,8 +126,8 @@ makes the U1 pin temperature an upper bound. D1 takes the bridge loss: two diode
   2026-12-11. Backorder it.
 - J1 comes from Farnell (3588276).
 - J7 has no vendor footprint in KiCad; `footprints/USB_C_Receptacle_GCT_USB4960_Vertical`
-  is drawn from the GCT drawing (rev A, 2025-12-08). Its slots are round holes the fab can
-  drill: Ø0.65 for the 0.72 x 0.52 peg slot, Ø0.8 for the 0.85 x 0.60 stake slots.
+  is drawn from the GCT drawing (rev A, 2025-12-08). The stake slots are 1.2 x 0.6, long
+  enough to drill at the 2:1 the fab needs, and the 0.72 x 0.52 peg slot is a round Ø0.75.
 - `agentee fab ctl -o fab` writes Gerbers, drill, placement and the JLCPCB BOM into `fab/`.
 - The CR123A holder is a Takachi CR123A-R with 140 mm leads; crimp a JST PHR-2 housing on.
 
