@@ -1,7 +1,37 @@
-let a=38 ph=0
-part wheel ../parts/khk_cg1_60r1.gcad
-part worm ../parts/khk_sw1_r1.gcad
-rotate worm 90 axis=x
-move worm 0,ph,0
-move worm a,0,5
+let az=0 el=0 eh=226
+part base dowel:4x16
+move base 0,0,-200
+part spindle ../parts/shaft.gcad L=107 kz=23 kl=20 k2l=18
+move spindle 0,0,4
+part wheel_az ../parts/khk_cg1_60r1.gcad
+move wheel_az 0,0,27
+part worm_az ../parts/khk_sw1_r1.gcad
+rotate worm_az 90 axis=y
+rotate worm_az -90 axis=x
+move worm_az 0,38,32
+part worm_el ../parts/khk_sw1_r1.gcad
+rotate worm_el -90 axis=z
+move worm_el -10.5,38,eh
+part elshaft ../parts/shaft.gcad L=194.7 kz=86.6 kl=20 xh=1 x1=17.35 x2=177.35
+rotate elshaft 90 axis=y
+rotate elshaft -90 axis=x
+move elshaft -112.1,0,eh
+part wheel_el ../parts/khk_cg1_60r1.gcad
+rotate wheel_el -90 axis=y
+rotate wheel_el -90 axis=x
+move wheel_el -5.5,0,eh
+axis za 0,0,0 0,0,1
+axis wa 0,38,32 1,38,32
+axis ea 0,0,eh 1,0,eh
+axis wea -10.5,38,0 -10.5,38,1
+concentric wheel_az:bored.side spindle:rod.side
+concentric wheel_el:bored.side elshaft:rod.side
+joint az spindle base turn about=za min=0 max=12
+joint spin_az worm_az base turn about=wa
+couple spin_az az ratio=60
+joint el elshaft base turn about=ea min=0 max=12
+joint spin_el worm_el base turn about=wea
+couple spin_el el ratio=-60
 interference none
+interference joint=az steps=24
+interference joint=el steps=24

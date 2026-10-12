@@ -1,0 +1,4 @@
+sim torque
+part ../rotator.gasm
+sweep el steps=16
+expect el<1

@@ -1,37 +1,21 @@
-let p=pi/cos(3.583) ha=1 hf=1.25 r=8 face=20 hub=12 hd=14 bore=8
-let ta=p/4-ha*tan(20) tf=p/4+hf*tan(20) ro=r+ha ri=r-hf
-plane XZ
-pen bore/2+0.02,-face/2
-line ri,-face/2
-line ri,(-5*p/2)-tf
-line ro,(-5*p/2)-ta
-line ro,(-5*p/2)+ta
-line ri,(-5*p/2)+tf
-line ri,(-3*p/2)-tf
-line ro,(-3*p/2)-ta
-line ro,(-3*p/2)+ta
-line ri,(-3*p/2)+tf
-line ri,(-1*p/2)-tf
-line ro,(-1*p/2)-ta
-line ro,(-1*p/2)+ta
-line ri,(-1*p/2)+tf
-line ri,(1*p/2)-tf
-line ro,(1*p/2)-ta
-line ro,(1*p/2)+ta
-line ri,(1*p/2)+tf
-line ri,(3*p/2)-tf
-line ro,(3*p/2)-ta
-line ro,(3*p/2)+ta
-line ri,(3*p/2)+tf
-line ri,(5*p/2)-tf
-line ro,(5*p/2)-ta
-line ro,(5*p/2)+ta
-line ri,(5*p/2)+tf
-line ri,face/2
-line hd/2,face/2
-line hd/2,face/2+hub
-line bore/2+0.02,face/2+hub
+let p=pi/cos(3.583) ha=1 hf=1.25 r=8 face=20 hub=12 hd=14 bore=8 sl=0.02
+let ro=r+ha ri=r-hf ta=p/4-ha*tan(20) tf=p/4+hf*tan(20) rb=bore/2+0.02
+let c1=360*ta/p c2=360*tf/p rm=(ro+ri)/2 cm=(c1+c2)/2 s=asin(sl/2/ri) sb=asin(sl/2/rb) a0=-180-180*face/p
+plane XY offset=-face/2 rz=a0
+pen ri*cos(180+s),ri*sin(180+s)
+arc ri*cos(360-c2),ri*sin(360-c2) via=ri*cos(270-c2/2),ri*sin(270-c2/2)
+arc ro*cos(-c1),ro*sin(-c1) via=rm*cos(360-cm),rm*sin(360-cm)
+arc ro*cos(c1),ro*sin(c1) via=ro,0
+arc ri*cos(c2),ri*sin(c2) via=rm*cos(cm),rm*sin(cm)
+arc ri*cos(180-s),ri*sin(180-s) via=ri*cos(90+c2/2),ri*sin(90+c2/2)
+line rb*cos(180-sb),rb*sin(180-sb)
+arc rb,0 via=0,rb
+arc rb*cos(180+sb),rb*sin(180+sb) via=0,-rb
 close
-worm: revolve 360 axis=y
+worm: extrude face twist=360*face/p
+plane XY offset=face/2
+circle hd
+circle 2*rb
+hub: extrude hub
 color #4a4d52
 material steel

@@ -40,6 +40,7 @@ axial limit.
 | `spindle` | Ø15 silver steel az spindle pinned at the ball rows, wind at the el axis, az torque, worm force on the keyway | 80 MPa above the upper bearing, 73 MPa below the collar, 50 MPa at the keyway end |
 | `elshaft` | Ø15 el shaft pinned at the ball rows, bush contact at each crossboom end | 87 MPa at the bearing, 28 MPa at the cross hole |
 | `elbox` | el box body on the collar, gusty-side bearing loads | under 10 MPa in the die-cast walls; the box top moves 0.37 mm |
+| `torque` | gravity on both joints, el swept -6 to 186 | el 0.18 N·m at the shaft, 0.003 N·m at the motor; the yagi is clamped at its balance point |
 
 Peaks printed at fixed-face edges and at the ends of the pinned bands are mesh
 singularities; the `expect` lines check probes away from them. A `pin` on a 2 mm band
@@ -58,6 +59,19 @@ that on its 13 mm shoulder with a wide margin.
 
 - The bearing plate posts were M6 brass. They are M8 stainless, 13 mm hex, 70 mm long,
   four of them.
+
+## Drive torque in wind
+
+Wind at 120 km/h with the yagi pointing up and the wind across the crossboom. By hand: the yagi
+takes about 22 N (boom 15 N at Cd 1.2, elements 5 N, clamp 2 N) at 300 mm from the az axis, and
+the two crossboom tubes nearly cancel, so az sees about 6.3 N·m. The 9 mm `wind` run reads
+8.9 N·m, high because the 4 mm elements are thinner than a cell. El sees under 0.5 N·m.
+
+The worm's lead angle is 3.58°, so it locks when friction is over 0.063. Below that, back-driving
+takes about 0.02 N·m at the motor, 5% of its 0.45 N·m holding torque: it holds either way.
+Driving is the limit. Through 60:1 at friction 0.15 from rest the motor gives 7.8 N·m at the
+wheel, and 11.8 N·m once moving at 0.08. That is a thin margin at 120 km/h, and with 1.5 times
+margin it drives up to about 90 to 110 km/h, so park above about 80 km/h.
 
 ## Open
 

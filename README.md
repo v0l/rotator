@@ -37,7 +37,9 @@ gcad export rotator.gasm rotator.step
 - Each axis: KHK CG1-60R1 wheel on a keyed shaft, KHK SW1-R1 worm on an 8 mm shaft in two
   608s in `driveblock.gcad`, jaw-coupled to a StepperOnline 17HS15-1504-ME1K closed-loop
   NEMA17 with a built-in 1000 PPR magnetic encoder. Turn counting and its battery backup
-  live on the control board.
+  live on the control board. The worm thread and the wheel teeth are helical at the 3.58°
+  lead, so they mesh at every angle; `gcad check checks/worm_mesh.gasm` sweeps both pairs
+  in half-degree steps. The helical wheel needs gcad newer than 0.3.1.
 - Each worm and wheel runs in a PETG grease cover, `parts/gearcover.gcad` (`az=1` notches
   it round the bearing plate posts). It splits on the wheel's mid-plane: the low half takes
   two M3x14 through the drive block's plates and five M3 heat-set inserts, the high half

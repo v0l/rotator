@@ -587,7 +587,7 @@ joint spin_az worm_az block_az turn about=wa
 couple spin_az az ratio=60
 joint spin_el worm_el block_el turn about=wea
 joint el elshaft elbox turn about=ea min=-6 max=186
-couple spin_el el ratio=60
+couple spin_el el ratio=-60
 concentric wheel_el:bored.side elshaft:rod.side
 flush key_el:k.start elshaft:keyway.end
 concentric bush_f:cross.side elshaft:cross.side near=80,0,eh
