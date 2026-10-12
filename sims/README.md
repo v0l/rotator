@@ -40,7 +40,7 @@ axial limit.
 | `spindle` | Ø15 silver steel az spindle pinned at the ball rows, wind at the el axis, az torque, worm force on the keyway | 80 MPa above the upper bearing, 73 MPa below the collar, 50 MPa at the keyway end |
 | `elshaft` | Ø15 el shaft pinned at the ball rows, bush contact at each crossboom end | 87 MPa at the bearing, 28 MPa at the cross hole |
 | `elbox` | el box body on the collar, gusty-side bearing loads | under 10 MPa in the die-cast walls; the box top moves 0.37 mm |
-| `torque` | gravity on both joints, el swept -6 to 186 | el 0.18 N·m at the shaft, 0.003 N·m at the motor; the yagi is clamped at its balance point |
+| `torque` | gravity plus the 120 km/h wind torques on both joints, worm losses from `lead=3.583 friction=mu`, el swept -6 to 186 | at friction 0.1: az motor 0.39 N·m, el motor 0.03 N·m, both worms lock; gravity alone is 0.18 N·m on el |
 
 Peaks printed at fixed-face edges and at the ends of the pinned bands are mesh
 singularities; the `expect` lines check probes away from them. A `pin` on a 2 mm band
@@ -67,11 +67,20 @@ takes about 22 N (boom 15 N at Cd 1.2, elements 5 N, clamp 2 N) at 300 mm from t
 the two crossboom tubes nearly cancel, so az sees about 6.3 N·m. The 9 mm `wind` run reads
 8.9 N·m, high because the 4 mm elements are thinner than a cell. El sees under 0.5 N·m.
 
-The worm's lead angle is 3.58°, so it locks when friction is over 0.063. Below that, back-driving
-takes about 0.02 N·m at the motor, 5% of its 0.45 N·m holding torque: it holds either way.
-Driving is the limit. Through 60:1 at friction 0.15 from rest the motor gives 7.8 N·m at the
-wheel, and 11.8 N·m once moving at 0.08. That is a thin margin at 120 km/h, and with 1.5 times
-margin it drives up to about 90 to 110 km/h, so park above about 80 km/h.
+`torque.gsim` puts 8.9 N·m on az and 0.5 N·m on el and carries them through the worms with
+their 3.583° lead. The mesh friction is the unknown, so it is a variable,
+`gcad sim torque.gsim --set mu=0.15`:
+
+| mesh friction | worm efficiency | az motor torque | el motor torque | back-drives |
+|---|---|---|---|---|
+| 0.05 (greased, running) | 0.55 | 0.27 N·m | 0.02 N·m | yes, 0.03 N·m at the az motor |
+| 0.10 | 0.38 | 0.39 N·m | 0.03 N·m | no, locks |
+| 0.15 (from rest) | 0.29 | 0.51 N·m | 0.04 N·m | no, locks |
+
+The motor holds 0.45 N·m. It holds the head in any of these, since the worm locks above 0.063
+and back-driving takes 7% of the motor at 0.05. Driving az starts to stall from rest at
+120 km/h with the 8.9 N·m reading; with the 6.3 N·m hand figure it needs 0.36 N·m there. Park
+above about 80 km/h.
 
 ## Open
 

@@ -1,4 +1,4 @@
-let az=0 el=90 eh=226 boom=500 cover=1 hammond=0 yx=300 yy=-402 yz=35
+let az=0 el=90 eh=226 boom=500 cover=1 hammond=0 yx=300 yy=-402 yz=35 mu=0.1
 part box parts/std/hammond_1550z220_box.gcad az=1 vendor=hammond
 move box -40,0,0
 if cover part lid parts/std/hammond_1550z220_lid.gcad az=1 vendor=hammond
@@ -584,10 +584,10 @@ concentric cov_screw_el_3:shank.side cover_el.high:lid.side near=-15.5,-12.655,e
 concentric cov_screw_el_4:shank.side cover_el.high:wlid.side near=-15.5,54,eh+15
 concentric cov_screw_el_5:shank.side cover_el.high:wlid.side near=-15.5,54,eh-15
 joint spin_az worm_az block_az turn about=wa
-couple spin_az az ratio=60
+couple spin_az az ratio=60 lead=3.583 friction=mu
 joint spin_el worm_el block_el turn about=wea
 joint el elshaft elbox turn about=ea min=-6 max=186
-couple spin_el el ratio=-60
+couple spin_el el ratio=-60 lead=3.583 friction=mu
 concentric wheel_el:bored.side elshaft:rod.side
 flush key_el:k.start elshaft:keyway.end
 concentric bush_f:cross.side elshaft:cross.side near=80,0,eh

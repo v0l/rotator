@@ -1,4 +1,7 @@
+let mu=0.1 waz=8.9 wel=0.5
 sim torque
-part ../rotator.gasm
+part ../rotator.gasm mu=mu
+torque az waz
+torque el wel
 sweep el steps=16
-expect el<1
+expect spin_az<0.45 spin_el<0.45
