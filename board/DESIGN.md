@@ -128,6 +128,12 @@ makes the U1 pin temperature an upper bound. D1 takes the bridge loss: two diode
 - J7 has no vendor footprint in KiCad; `footprints/USB_C_Receptacle_GCT_USB4960_Vertical`
   is drawn from the GCT drawing (rev A, 2025-12-08). The stake slots are 1.2 x 0.6, long
   enough to drill at the 2:1 the fab needs, and the 0.72 x 0.52 peg slot is a round Ø0.75.
+- No via needs plugging or filling. The only holes in pads are the footprint thermal vias in
+  the exposed pads of U12 and U13 (16 each) and U14 (9), all 0.2 mm, open on top and tented
+  from the bottom. Both datasheets ask for them: TMC2209 section 21.1 for heat (the drivers
+  reach 106 C in `ctl-thermal`), and the LAN8720A pin table because the pad is its only VSS.
+  The bottom tent traps air so the barrels take little of the paste. Order with tented vias
+  and no via-in-pad process, and answer a fab query about these holes the same way.
 - `agentee fab ctl -o fab` writes Gerbers, drill, placement and the JLCPCB BOM into `fab/`.
 - `agentee parts ctl --spares --distributor mouser --order fab/order --no-alternatives` writes
   the Mouser cart (`fab/order/ctl-mouser.csv`, the top block is the order): about EUR 66 for one
