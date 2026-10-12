@@ -1,5 +1,5 @@
 name = "USB_C_Receptacle_GCT_USB4960_Vertical"
-description = "USB 2.0 Type-C receptacle, 16 contacts, vertical, SMT with TH shell stakes, H 6.5 mm, GCT USB4960 drawing rev A 2025-12-08 (https://gct.co/files/drawings/usb4960.pdf). Drawing slots made round holes the fab can drill: second peg 0.65 for 0.72x0.52, stakes 0.8 for 0.85x0.60"
+description = "USB 2.0 Type-C receptacle, 16 contacts, vertical, SMT with TH shell stakes, H 6.5 mm, GCT USB4960 drawing rev A 2025-12-08 (https://gct.co/files/drawings/usb4960.pdf). Stake slots 1.2x0.6 for the drawing's 0.85x0.60, which is under the 2:1 slot length fabs drill, and they take the 4.80 +/-0.15 stake spacing at the minimum plated size; second peg round 0.75 for the drawing's 0.72x0.52 non-plated slot"
 tags = ["usb", "usb-c", "2.0", "vertical"]
 mount = "smd"
 height = "6.5mm"
@@ -16,8 +16,8 @@ layers = ["*.Cu", "*.Mask"]
 kind = "npth"
 shape = "circle"
 at = [3.75, 0.0]
-size = [0.65, 0.65]
-drill = 0.65
+size = [0.75, 0.75]
+drill = 0.75
 layers = ["*.Cu", "*.Mask"]
 
 [[pads]]
@@ -104,32 +104,32 @@ number = "S1"
 kind = "tht"
 shape = "oval"
 at = [-2.4, -2.15]
-size = [1.35, 1.15]
-drill = 0.8
+size = [1.5, 1.1]
+drill = [1.2, 0.6]
 
 [[pads]]
 number = "S1"
 kind = "tht"
 shape = "oval"
 at = [2.4, -2.15]
-size = [1.35, 1.15]
-drill = 0.8
+size = [1.5, 1.1]
+drill = [1.2, 0.6]
 
 [[pads]]
 number = "S1"
 kind = "tht"
 shape = "oval"
 at = [-2.4, 2.15]
-size = [1.35, 1.15]
-drill = 0.8
+size = [1.5, 1.1]
+drill = [1.2, 0.6]
 
 [[pads]]
 number = "S1"
 kind = "tht"
 shape = "oval"
 at = [2.4, 2.15]
-size = [1.35, 1.15]
-drill = 0.8
+size = [1.5, 1.1]
+drill = [1.2, 0.6]
 
 [[graphics]]
 kind = "rect"
@@ -150,20 +150,6 @@ kind = "line"
 layer = "F.SilkS"
 start = [4.6, -1.4]
 end = [4.6, 1.4]
-width = 0.15
-
-[[graphics]]
-kind = "line"
-layer = "F.SilkS"
-start = [-1.4, -1.75]
-end = [1.4, -1.75]
-width = 0.15
-
-[[graphics]]
-kind = "line"
-layer = "F.SilkS"
-start = [-1.4, 1.75]
-end = [1.4, 1.75]
 width = 0.15
 
 [[graphics]]
