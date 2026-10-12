@@ -8,7 +8,7 @@ ref = "U1"
 symbol = "Ag5424"
 at = [25.4, 50.8]
 value = "Ag5424"
-fields = { mpn = "Ag5424", mfr = "Silvertel" }
+fields = { mpn = "Ag5424", mfr = "Silvertel", spares = "0" }
 
 [[parts]]
 ref = "U2"

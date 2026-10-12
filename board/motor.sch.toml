@@ -44,7 +44,7 @@ symbol = "C"
 at = [40.64, 165.1]
 value = "100n/50V"
 footprint = "C_0603_1608Metric"
-fields = { mpn = "GCM188R71H104KA57D", mfr = "Murata" }
+fields = { mpn = "C0603C104K5RACTU", mfr = "KEMET" }
 
 [[parts]]
 ref = "C71"
@@ -52,7 +52,7 @@ symbol = "C"
 at = [55.88, 165.1]
 value = "100n/50V"
 footprint = "C_0603_1608Metric"
-fields = { mpn = "GCM188R71H104KA57D", mfr = "Murata" }
+fields = { mpn = "C0603C104K5RACTU", mfr = "KEMET" }
 
 [[parts]]
 ref = "C72"
@@ -67,7 +67,7 @@ symbol = "C"
 at = [86.36, 165.1]
 value = "100n/50V"
 footprint = "C_0603_1608Metric"
-fields = { mpn = "GCM188R71H104KA57D", mfr = "Murata" }
+fields = { mpn = "C0603C104K5RACTU", mfr = "KEMET" }
 
 [[parts]]
 ref = "C74"
@@ -75,7 +75,7 @@ symbol = "C"
 at = [101.6, 165.1]
 value = "4.7u/10V"
 footprint = "C_0603_1608Metric"
-fields = { mpn = "C0603C475K8PAC", mfr = "KEMET" }
+fields = { mpn = "C0603C475K8PACTU", mfr = "KEMET" }
 
 [[parts]]
 ref = "C75"
@@ -121,7 +121,7 @@ symbol = "C"
 at = [193.04, 165.1]
 value = "100n/50V"
 footprint = "C_0603_1608Metric"
-fields = { mpn = "GCM188R71H104KA57D", mfr = "Murata" }
+fields = { mpn = "C0603C104K5RACTU", mfr = "KEMET" }
 
 [[parts]]
 ref = "C78"
@@ -129,7 +129,7 @@ symbol = "C"
 at = [208.28, 165.1]
 value = "100n/50V"
 footprint = "C_0603_1608Metric"
-fields = { mpn = "GCM188R71H104KA57D", mfr = "Murata" }
+fields = { mpn = "C0603C104K5RACTU", mfr = "KEMET" }
 
 [[parts]]
 ref = "C79"
@@ -144,7 +144,7 @@ symbol = "C"
 at = [238.76, 165.1]
 value = "100n/50V"
 footprint = "C_0603_1608Metric"
-fields = { mpn = "GCM188R71H104KA57D", mfr = "Murata" }
+fields = { mpn = "C0603C104K5RACTU", mfr = "KEMET" }
 
 [[parts]]
 ref = "C81"
@@ -152,7 +152,7 @@ symbol = "C"
 at = [254.0, 165.1]
 value = "4.7u/10V"
 footprint = "C_0603_1608Metric"
-fields = { mpn = "C0603C475K8PAC", mfr = "KEMET" }
+fields = { mpn = "C0603C475K8PACTU", mfr = "KEMET" }
 
 [[parts]]
 ref = "C82"

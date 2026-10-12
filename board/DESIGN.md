@@ -129,6 +129,11 @@ makes the U1 pin temperature an upper bound. D1 takes the bridge loss: two diode
   is drawn from the GCT drawing (rev A, 2025-12-08). The stake slots are 1.2 x 0.6, long
   enough to drill at the 2:1 the fab needs, and the 0.72 x 0.52 peg slot is a round Ø0.75.
 - `agentee fab ctl -o fab` writes Gerbers, drill, placement and the JLCPCB BOM into `fab/`.
+- `agentee parts ctl --spares --distributor mouser --order fab/order --no-alternatives` writes
+  the Mouser cart (`fab/order/ctl-mouser.csv`, the top block is the order): about EUR 66 for one
+  board with hand assembly spares, without U10 and J1. U1 has `spares = "0"`. The 0603 caps on the
+  motor sheet are KEMET cut tape (`...TU`), since the Murata GCM and plain KEMET 4.7u sell in
+  reels of 40000 and 4000 at Mouser.
 - The CR123A holder is a Takachi CR123A-R with 140 mm leads; crimp a JST PHR-2 housing on.
 
 ## Vendor files
