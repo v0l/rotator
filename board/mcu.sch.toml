@@ -16,7 +16,7 @@ symbol = "Crystal"
 at = [25.4, 165.1]
 value = "32.768k"
 footprint = "Crystal_SMD_3215-2Pin_3.2x1.5mm"
-fields = { mpn = "FC-135 32.7680KA-AG0", mfr = "Epson" }
+fields = { mpn = "FC-135 32.7680KA-AG0", mfr = "Epson", library = "FC-135-32.7680KA-AG0" }
 
 [[parts]]
 ref = "C21"
@@ -67,7 +67,7 @@ ref = "J6"
 symbol = "Conn_ARM_SWD_TagConnect_TC2030-NL"
 at = [101.6, 50.8]
 value = "TC2030"
-fields = { assembly = "no" }
+fields = { assembly = "no", library = "no" }
 
 [[parts]]
 ref = "C23"
