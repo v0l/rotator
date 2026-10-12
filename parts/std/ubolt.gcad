@@ -1,0 +1,15 @@
+let d=6 a=15.7 L=40 nz=30 af=10 m=5.2
+plane XY
+circle d at=a,0
+bend: revolve 180 axis=y
+plane XY
+circle d at=a,0
+leg: extrude L
+circle d at=-a,0
+leg2: extrude L
+plane XY offset=nz
+ngon af/cos(30) 6 at=a,0
+ngon af/cos(30) 6 at=-a,0
+nut: extrude m
+color #a7adb4
+material stainless

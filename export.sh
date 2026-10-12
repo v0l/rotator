@@ -30,6 +30,8 @@ part drive_block parts/driveblock.gcad
 part mast_clamp parts/mastclamp.gcad body=main
 part az_spindle parts/shaft.gcad "L=107 kz=23 kl=20 k2l=18"
 part el_shaft parts/shaft.gcad "L=194.7 kz=86.6 kl=20 xh=1"
+part cross_clamp parts/crossclamp.gcad
+part yagi_boom parts/yagi435.gcad
 part az_box_1550Z220 parts/std/hammond_1550z220_box.gcad "az=1 vendor=$hammond"
 part az_lid_1550Z220 parts/std/hammond_1550z220_lid.gcad "az=1 vendor=$hammond"
 part el_box_1550Z220 parts/std/hammond_1550z220_box.gcad "el=1 xe=26.75 vendor=$hammond"

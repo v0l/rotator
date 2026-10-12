@@ -1,0 +1,15 @@
+let w=60 zb=6 zt=30 rx=12.5 ry=10 c=0.1 ax=15.7 ay=13.2 px=22 py=22
+plane XY offset=zb
+rect w w r=4
+block: extrude zt-zb
+plane YZ offset=w
+circle 2*(rx+c)
+xsad: cut thru
+plane XZ offset=w
+circle 2*(ry+c) at=0,zt+5
+ysad: cut thru
+plane XY offset=zt
+xu: hole M6 px,ax px,-ax -px,ax -px,-ax
+yu: hole M6 ay,py -ay,py ay,-py -ay,-py
+color #c4cad1
+material aluminium

@@ -1,0 +1,13 @@
+let D=20 t=1.5 h=4.2 st=25 ov=40
+let y_r=0 y_dr=137.8 y_d1=189.5 y_d2=313.6 y_d3=461.7 y_d4=634 y_d5=827
+plane XZ offset=ov
+circle D
+boom: extrude -(y_d5+st+2*ov)
+plane XZ offset=ov
+bore: hole D-2*t 0,0
+plane YZ offset=D
+ha: hole h y_r,0 y_dr,0 y_d1,0 y_d2,0 y_d3,0 y_d4,0 y_d5,0
+plane XY offset=D
+hb: hole h 0,y_r+st 0,y_dr+st 0,y_d1+st 0,y_d2+st 0,y_d3+st 0,y_d4+st 0,y_d5+st
+color #c9ced4
+material aluminium

@@ -1,4 +1,4 @@
-let az=0 el=0 eh=226 boom=500 cover=1 hammond=0
+let az=0 el=90 eh=226 boom=500 cover=1 hammond=0 yx=300 yy=-402 yz=35
 part box parts/std/hammond_1550z220_box.gcad az=1 vendor=hammond
 move box -40,0,0
 if cover part lid parts/std/hammond_1550z220_lid.gcad az=1 vendor=hammond
@@ -415,6 +415,100 @@ part boom_bolt_f parts/std/screw.gcad d=5 L=30
 move boom_bolt_f 65.25,0,eh+12.5
 part boom_nut_f parts/std/nut.gcad d=5 af=8 m=4
 move boom_nut_f 65.25,0,eh-16.5
+part xclamp parts/crossclamp.gcad
+move xclamp yx,0,eh
+part yagi parts/yagi435.gcad
+rotate yagi 45 axis=y
+move yagi yx,yy,eh+yz
+part ub_x1 parts/std/ubolt.gcad
+rotate ub_x1 90 axis=z
+move ub_x1 yx+22,0,eh
+part ub_x2 parts/std/ubolt.gcad
+rotate ub_x2 90 axis=z
+move ub_x2 yx-22,0,eh
+part ub_y1 parts/std/ubolt.gcad a=13.2 L=38 nz=29
+rotate ub_y1 180 axis=x
+move ub_y1 yx,22,eh+yz
+part ub_y2 parts/std/ubolt.gcad a=13.2 L=38 nz=29
+rotate ub_y2 180 axis=x
+move ub_y2 yx,-22,eh+yz
+part el_a_r parts/std/rod.gcad d=4 L=346.4 c=0.3
+material el_a_r aluminium
+rotate el_a_r 90 axis=y
+move el_a_r -173.2,0,0
+rotate el_a_r 45 axis=y
+move el_a_r yx,yy,eh+yz
+part el_b_r parts/std/rod.gcad d=4 L=346.4 c=0.3
+material el_b_r aluminium
+move el_b_r 0,25,-173.2
+rotate el_b_r 45 axis=y
+move el_b_r yx,yy,eh+yz
+part el_a_dr parts/std/rod.gcad d=4 L=323.8 c=0.3
+material el_a_dr aluminium
+rotate el_a_dr 90 axis=y
+move el_a_dr -161.9,137.8,0
+rotate el_a_dr 45 axis=y
+move el_a_dr yx,yy,eh+yz
+part el_b_dr parts/std/rod.gcad d=4 L=323.8 c=0.3
+material el_b_dr aluminium
+move el_b_dr 0,162.8,-161.9
+rotate el_b_dr 45 axis=y
+move el_b_dr yx,yy,eh+yz
+part el_a_d1 parts/std/rod.gcad d=4 L=311.3 c=0.3
+material el_a_d1 aluminium
+rotate el_a_d1 90 axis=y
+move el_a_d1 -155.65,189.5,0
+rotate el_a_d1 45 axis=y
+move el_a_d1 yx,yy,eh+yz
+part el_b_d1 parts/std/rod.gcad d=4 L=311.3 c=0.3
+material el_b_d1 aluminium
+move el_b_d1 0,214.5,-155.65
+rotate el_b_d1 45 axis=y
+move el_b_d1 yx,yy,eh+yz
+part el_a_d2 parts/std/rod.gcad d=4 L=307.8 c=0.3
+material el_a_d2 aluminium
+rotate el_a_d2 90 axis=y
+move el_a_d2 -153.9,313.6,0
+rotate el_a_d2 45 axis=y
+move el_a_d2 yx,yy,eh+yz
+part el_b_d2 parts/std/rod.gcad d=4 L=307.8 c=0.3
+material el_b_d2 aluminium
+move el_b_d2 0,338.6,-153.9
+rotate el_b_d2 45 axis=y
+move el_b_d2 yx,yy,eh+yz
+part el_a_d3 parts/std/rod.gcad d=4 L=304.2 c=0.3
+material el_a_d3 aluminium
+rotate el_a_d3 90 axis=y
+move el_a_d3 -152.1,461.7,0
+rotate el_a_d3 45 axis=y
+move el_a_d3 yx,yy,eh+yz
+part el_b_d3 parts/std/rod.gcad d=4 L=304.2 c=0.3
+material el_b_d3 aluminium
+move el_b_d3 0,486.7,-152.1
+rotate el_b_d3 45 axis=y
+move el_b_d3 yx,yy,eh+yz
+part el_a_d4 parts/std/rod.gcad d=4 L=300.8 c=0.3
+material el_a_d4 aluminium
+rotate el_a_d4 90 axis=y
+move el_a_d4 -150.4,634,0
+rotate el_a_d4 45 axis=y
+move el_a_d4 yx,yy,eh+yz
+part el_b_d4 parts/std/rod.gcad d=4 L=300.8 c=0.3
+material el_b_d4 aluminium
+move el_b_d4 0,659,-150.4
+rotate el_b_d4 45 axis=y
+move el_b_d4 yx,yy,eh+yz
+part el_a_d5 parts/std/rod.gcad d=4 L=297.8 c=0.3
+material el_a_d5 aluminium
+rotate el_a_d5 90 axis=y
+move el_a_d5 -148.9,827,0
+rotate el_a_d5 45 axis=y
+move el_a_d5 yx,yy,eh+yz
+part el_b_d5 parts/std/rod.gcad d=4 L=297.8 c=0.3
+material el_b_d5 aluminium
+move el_b_d5 0,852,-148.9
+rotate el_b_d5 45 axis=y
+move el_b_d5 yx,yy,eh+yz
 part vring_l parts/std/vring.gcad
 rotate vring_l -90 axis=y
 move vring_l -74.6,0,eh
@@ -500,6 +594,26 @@ concentric bush_f:cross.side elshaft:cross.side near=80,0,eh
 concentric boom_f:cross.side elshaft:cross.side near=80,0,eh
 concentric boom_bolt_f:shank.side elshaft:cross.side near=80,0,eh
 concentric boom_nut_f:n.side elshaft:cross.side near=80,0,eh
+concentric xclamp:xsad.side boom_f:tube.side near=yx,0,eh
+concentric yagi:boom.side xclamp:ysad.side
+concentric ub_x1:leg.side xclamp:xu.side near=yx+22,15.7,eh+20
+concentric ub_x2:leg.side xclamp:xu.side near=yx-22,15.7,eh+20
+concentric ub_y1:leg.side xclamp:yu.side near=yx+13.2,22,eh+18
+concentric ub_y2:leg.side xclamp:yu.side near=yx+13.2,-22,eh+18
+concentric el_a_r:rod.side yagi:ha.side near=yx,yy+0,eh+yz
+concentric el_b_r:rod.side yagi:hb.side near=yx,yy+25,eh+yz
+concentric el_a_dr:rod.side yagi:ha.side near=yx,yy+137.8,eh+yz
+concentric el_b_dr:rod.side yagi:hb.side near=yx,yy+162.8,eh+yz
+concentric el_a_d1:rod.side yagi:ha.side near=yx,yy+189.5,eh+yz
+concentric el_b_d1:rod.side yagi:hb.side near=yx,yy+214.5,eh+yz
+concentric el_a_d2:rod.side yagi:ha.side near=yx,yy+313.6,eh+yz
+concentric el_b_d2:rod.side yagi:hb.side near=yx,yy+338.6,eh+yz
+concentric el_a_d3:rod.side yagi:ha.side near=yx,yy+461.7,eh+yz
+concentric el_b_d3:rod.side yagi:hb.side near=yx,yy+486.7,eh+yz
+concentric el_a_d4:rod.side yagi:ha.side near=yx,yy+634,eh+yz
+concentric el_b_d4:rod.side yagi:hb.side near=yx,yy+659,eh+yz
+concentric el_a_d5:rod.side yagi:ha.side near=yx,yy+827,eh+yz
+concentric el_b_d5:rod.side yagi:hb.side near=yx,yy+852,eh+yz
 flush vring_f:ring.start kfl_f:inner.end
 concentric bush_l:cross.side elshaft:cross.side near=-80,0,eh
 concentric boom_l:cross.side elshaft:cross.side near=-80,0,eh

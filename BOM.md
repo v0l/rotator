@@ -60,6 +60,12 @@ the UK adds Irish import VAT and a carrier handling fee.
 | 1 | Takachi CR123A-R battery holder with 140 mm leads, plus a JST PHR-2 housing and 2 SPH crimps | Conrad, item 1882324 |
 | 1 | CR123A lithium cell | any |
 | 1 | RJ45 plug for the PoE cable, crimped inside the box after the cable is through the gland | any |
+| 1 | Aluminium tube 20 x 1.5, 1 m (yagi boom) | [Aluminium Online](https://www.aluminium-online.co.uk) |
+| 5 | Aluminium rod 4 mm, 1 m (yagi elements, three per bar) | [Aluminium Online](https://www.aluminium-online.co.uk) |
+| 24 | Push-on star lock washer, 4 mm shaft, A2 (parasitic elements, both sides of the boom) | [Accu](https://www.accu.co.uk) |
+| 2 | Dipole centre insulator box for a 20 mm boom (split driven elements) | DK7ZB, WiMo |
+| 2 | M6 U-bolt for 25 mm tube, A4, with nuts | [Accu](https://www.accu.co.uk) |
+| 2 | M6 U-bolt for 20 mm tube, A4, with nuts | [Accu](https://www.accu.co.uk) |
 | 14 | Ruthex M3 heat-set insert, 5.7 long (gear covers) | [3DJake Ireland](https://www.3djake.ie/) |
 | 1 | PETG filament, about 150 g (gear covers) | [3DJake Ireland](https://www.3djake.ie/) |
 | | A4 screws: M3x6 (4), M3x8 countersunk (2), M3x10 (18), M3x14 (4), M4x10 (4), M4x16 (4), M4x16 countersunk (4), M5x30 (2), M5x6 set screw (1), M6x10 (2), M6x16 (2), M6x20 (4), M8x12 countersunk (4); nuts M4 (4), M6 (4), M5 nyloc (2) | [Accu](https://www.accu.co.uk) |

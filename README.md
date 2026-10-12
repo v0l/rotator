@@ -8,7 +8,7 @@ are cut plates and a few turned and milled pieces, see `QUOTE.md`.
 
 ![Inside, box lids hidden](docs/inside.png)
 
-![Turned to az 60°](docs/posed.png)
+![Turned to az 60°, el 30°](docs/posed.png)
 
 ```sh
 gcad rotator.gasm                         # viewer, joints `az` and `el`
@@ -49,6 +49,30 @@ gcad export rotator.gasm rotator.step
   Hammond's STEP they are drawn from its measurements. Download the STEP from
   https://www.hammfg.com/part/1550Z220, save it as `parts/vendor/1550Z220.stp`, and run
   with `--set hammond=1` to drill the real boxes; `./export.sh` uses it when present.
+
+## 70 cm yagi
+
+A crossed 7-element yagi for 435 MHz, cut from the DL6WU design in
+[antenna toolbox](https://github.com/v0l/antenna-toolbox) (4 mm elements bonded through a
+20 mm metal boom). Solved per plane: 11.9 dBi, F/B 30 dB, about 39 - j5 Ω at each driven
+element. The two planes sit 25 mm apart along the boom in an X, 45° off the crossboom, and are
+fed RHCP through a quarter-wave phasing harness. The model points it at the zenith (`el=90`).
+
+| element | length | from the reflector |
+|---|---|---|
+| reflector | 346.4 | 0 |
+| driven, tip to tip, split at the boom | 323.8 | 137.8 |
+| D1 | 311.3 | 189.5 |
+| D2 | 307.8 | 313.6 |
+| D3 | 304.2 | 461.7 |
+| D4 | 300.8 | 634.0 |
+| D5 | 297.8 | 827.0 |
+
+The second plane is the same set 25 mm further along. Parasitic lengths include DL6WU's
++10.8 mm boom correction. The boom (`parts/yagi435.gcad`) is 932 mm of 20 x 1.5 tube, with
+40 mm past the reflector and the last director. It crosses the right-hand crossboom tube
+300 mm out, at the yagi's balance point, on a milled cross clamp (`parts/crossclamp.gcad`)
+held by four M6 U-bolts.
 
 ## Control board
 

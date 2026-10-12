@@ -1,0 +1,5 @@
+sim flow
+part ../rotator.gasm
+leave ctl* cell* eth_*
+mesh 9
+wind 33.3 toward=0,1,0

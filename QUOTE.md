@@ -22,6 +22,8 @@ tap drill size; the thread is in the table.
 | `mast_clamp` | 1 | 6082-T6, 200 x 136 x 10 flange on a Ø68 x 70 socket (weldment or machined from plate plus bar); Ø48.7 x 62 bore; 2.6 x 1.5 O-ring cord groove 4 mm in from the flange edge; blind 8 deep: 2x M6, 4x M8, 4x M4, 6x M3; 3x M8 radial |
 | `flange_collar` | 1 | steel, Ø44 x 8 flange on a Ø24 x 12 hub; Ø15 H7 bore with 5 JS9 keyway; 4x Ø4.5 on 34 PCD; M5 set screw in the hub |
 | `az_spindle` | 1 | Ø15 silver steel, 107 long; keyseat 5 P9 x 3 x 20 at 23 from the bottom end; keyseat 5 P9 x 3 x 18 open at the top end |
+| `cross_clamp` | 1 | 6082-T6, 60 x 60 x 24 block, R4 corners; Ø25.2 saddle 6.6 deep along one side, Ø20.2 saddle 5 deep across the other; 8x Ø6.6 through |
+| `yagi_boom` | 1 | 20 x 1.5 aluminium tube, 932 long; 14x Ø4.2 cross holes in two planes at 90°, see the drawing |
 | `el_shaft` | 1 | Ø15 silver steel, 194.7 long; keyseat 5 P9 x 3 x 20 at 86.6 from one end; Ø5.2 cross holes at 17.35 and 177.35 |
 
 ## Printed
