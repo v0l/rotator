@@ -39,8 +39,7 @@ gcad export rotator.gasm rotator.step
   NEMA17 with a built-in 1000 PPR magnetic encoder. Turn counting and its battery backup
   live on the control board. The worm thread and the wheel teeth are helical at the 3.58°
   lead, so they mesh at every angle; `gcad check checks/worm_mesh.gasm` sweeps both pairs
-  in half-degree steps. The helical wheel needs gcad newer than 0.3.1, and the worm losses in the couples need
-  gcad's `flat-glue` branch.
+  in half-degree steps. The helical wheel, the worm losses and the joint drag need gcad's `joint-drag` branch.
 - Each worm and wheel runs in a PETG grease cover, `parts/gearcover.gcad` (`az=1` notches
   it round the bearing plate posts). It splits on the wheel's mid-plane: the low half takes
   two M3x14 through the drive block's plates and five M3 heat-set inserts, the high half
@@ -105,5 +104,6 @@ question.
 
 60:1 through a worm of 3.583° lead, 0.45 N·m motors. At mesh friction 0.1 the worm is 38%
 efficient and locks, so the output gets about 10 N·m and the load cannot turn the motor;
-`sims/torque.gsim` checks the motor torque against the wind and models the friction as `mu`.
+`sims/torque.gsim` checks the motor torque against the wind, with the mesh friction as `mu`
+and bearing and seal drag on every joint.
 KHK lists CG1-60R1 (cast iron) at 7.4 N·m at 100 rpm worm speed.

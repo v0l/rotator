@@ -40,7 +40,7 @@ axial limit.
 | `spindle` | Ø15 silver steel az spindle pinned at the ball rows, wind at the el axis, az torque, worm force on the keyway | 80 MPa above the upper bearing, 73 MPa below the collar, 50 MPa at the keyway end |
 | `elshaft` | Ø15 el shaft pinned at the ball rows, bush contact at each crossboom end | 87 MPa at the bearing, 28 MPa at the cross hole |
 | `elbox` | el box body on the collar, gusty-side bearing loads | under 10 MPa in the die-cast walls; the box top moves 0.37 mm |
-| `torque` | gravity plus the 120 km/h wind torques on both joints, worm losses from `lead=3.583 friction=mu`, el swept -6 to 186 | at friction 0.1: az motor 0.39 N·m, el motor 0.03 N·m, both worms lock; gravity alone is 0.18 N·m on el |
+| `torque` | gravity plus the 120 km/h wind torques on both joints, worm losses from `lead=3.583 friction=mu`, bearing and seal drag on every joint, el swept -6 to 186 | at friction 0.1: az motor 0.42 N·m, el motor 0.07 N·m, both worms lock; gravity alone is 0.18 N·m on el |
 
 Peaks printed at fixed-face edges and at the ends of the pinned bands are mesh
 singularities; the `expect` lines check probes away from them. A `pin` on a 2 mm band
@@ -68,19 +68,29 @@ the two crossboom tubes nearly cancel, so az sees about 6.3 N·m. The 9 mm `wind
 8.9 N·m, high because the 4 mm elements are thinner than a cell. El sees under 0.5 N·m.
 
 `torque.gsim` puts 8.9 N·m on az and 0.5 N·m on el and carries them through the worms with
-their 3.583° lead. The mesh friction is the unknown, so it is a variable,
+their 3.583° lead. Every other friction in the drive is a `drag=` on its joint, from the SKF
+friction model (seal moment K_S1·d_s^β + K_S2 per seal, rolling 0.5·μ·P·d):
+
+| joint | what drags | drag |
+|---|---|---|
+| `az`, `el` | two KFL002 inserts, both sides sealed, 0.06 N·m each; rolling under the worst bearing loads (768 N and 740 N on az, μ 0.0015, 15 mm), 0.02 N·m; V-rings, 0.02 N·m each | 0.16 N·m (`daz`, `del`) |
+| `spin_az`, `spin_el` | two 608-2RSH, 0.011 N·m each; one taking the worm's 300 N thrust at μ 0.004, 0.005 N·m | 0.03 N·m (`dw`) |
+
+The crossboom bushes are cross-bolted and do not turn, and grease churn at a few degrees a
+second is too small to count. The mesh friction is the unknown, so it is a variable,
 `gcad sim torque.gsim --set mu=0.15`:
 
 | mesh friction | worm efficiency | az motor torque | el motor torque | back-drives |
 |---|---|---|---|---|
-| 0.05 (greased, running) | 0.55 | 0.27 N·m | 0.02 N·m | yes, 0.03 N·m at the az motor |
-| 0.10 | 0.38 | 0.39 N·m | 0.03 N·m | no, locks |
-| 0.15 (from rest) | 0.29 | 0.51 N·m | 0.04 N·m | no, locks |
+| 0.05 (greased, running) | 0.55 | 0.30 N·m | 0.06 N·m | no, the worm shaft seals hold it |
+| 0.10 | 0.38 | 0.42 N·m | 0.07 N·m | no, the worm locks |
+| 0.15 (from rest) | 0.29 | 0.55 N·m | 0.08 N·m | no, the worm locks |
 
-The motor holds 0.45 N·m. It holds the head in any of these, since the worm locks above 0.063
-and back-driving takes 7% of the motor at 0.05. Driving az starts to stall from rest at
-120 km/h with the 8.9 N·m reading; with the 6.3 N·m hand figure it needs 0.36 N·m there. Park
-above about 80 km/h.
+The motor holds 0.45 N·m, and nothing turns the motors back at any of these. Of the az motor's
+0.42 N·m at friction 0.1, the worm mesh takes 0.39, the worm shaft bearings 0.03 and the
+spindle bearings and V-ring 0.007. Driving az at 120 km/h with the 8.9 N·m reading has 6%
+margin at friction 0.1 and stalls from rest; with the 6.3 N·m hand figure it needs 0.40 N·m
+from rest. Park above about 80 km/h.
 
 ## Open
 

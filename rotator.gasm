@@ -1,4 +1,4 @@
-let az=0 el=90 eh=226 boom=500 cover=1 hammond=0 yx=300 yy=-402 yz=35 mu=0.1
+let az=0 el=90 eh=226 boom=500 cover=1 hammond=0 yx=300 yy=-402 yz=35 mu=0.1 daz=0.16 del=0.16 dw=0.03
 part box parts/std/hammond_1550z220_box.gcad az=1 vendor=hammond
 move box -40,0,0
 if cover part lid parts/std/hammond_1550z220_lid.gcad az=1 vendor=hammond
@@ -532,7 +532,7 @@ axis za 0,0,0 0,0,1
 axis wa 0,38,32 1,38,32
 axis ea 0,0,eh 1,0,eh
 axis wea -10.5,38,0 -10.5,38,1
-joint az spindle box turn about=za min=-270 max=270
+joint az spindle box turn about=za min=-270 max=270 drag=daz
 concentric wheel_az:bored.side spindle:rod.side
 flush key_az:k.start spindle:keyway.end
 flush key_col:k.start spindle:keyway2.end
@@ -583,10 +583,10 @@ concentric cov_screw_el_2:shank.side cover_el.high:lid.side near=-15.5,-12.655,e
 concentric cov_screw_el_3:shank.side cover_el.high:lid.side near=-15.5,-12.655,eh-34.769
 concentric cov_screw_el_4:shank.side cover_el.high:wlid.side near=-15.5,54,eh+15
 concentric cov_screw_el_5:shank.side cover_el.high:wlid.side near=-15.5,54,eh-15
-joint spin_az worm_az block_az turn about=wa
+joint spin_az worm_az block_az turn about=wa drag=dw
 couple spin_az az ratio=60 lead=3.583 friction=mu
-joint spin_el worm_el block_el turn about=wea
-joint el elshaft elbox turn about=ea min=-6 max=186
+joint spin_el worm_el block_el turn about=wea drag=dw
+joint el elshaft elbox turn about=ea min=-6 max=186 drag=del
 couple spin_el el ratio=-60 lead=3.583 friction=mu
 concentric wheel_el:bored.side elshaft:rod.side
 flush key_el:k.start elshaft:keyway.end
