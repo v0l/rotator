@@ -68,13 +68,13 @@ rotate blk_screw_az_2 -90 axis=x
 move blk_screw_az_2 0,38,32
 part blk_screw_az_3 parts/std/screw.gcad d=4 L=16
 rotate blk_screw_az_3 90 axis=x
-move blk_screw_az_3 12,23,-48
+move blk_screw_az_3 12,23,-40
 rotate blk_screw_az_3 90 axis=y
 rotate blk_screw_az_3 -90 axis=x
 move blk_screw_az_3 0,38,32
 part blk_screw_az_4 parts/std/screw.gcad d=4 L=16
 rotate blk_screw_az_4 90 axis=x
-move blk_screw_az_4 -12,23,-48
+move blk_screw_az_4 -12,23,-40
 rotate blk_screw_az_4 90 axis=y
 rotate blk_screw_az_4 -90 axis=x
 move blk_screw_az_4 0,38,32

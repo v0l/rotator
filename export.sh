@@ -27,6 +27,7 @@ part flange_collar parts/std/flangecollar.gcad "F=44 hub=24 pcd=34 screw=4.5"
 part el_floor_plate parts/el_plates.gcad body=floor
 part el_lid_plate parts/el_plates.gcad body=lid
 part drive_block parts/driveblock.gcad
+part worm_shaft parts/wormshaft.gcad
 part mast_clamp parts/mastclamp.gcad body=main
 part az_spindle parts/shaft.gcad "L=107 kz=23 kl=20 k2l=18"
 part el_shaft parts/shaft.gcad "L=194.7 kz=86.6 kl=20 xh=1"

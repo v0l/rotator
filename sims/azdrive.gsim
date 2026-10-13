@@ -5,7 +5,7 @@ let fhead=side*(2*fside+q*cda_box)
 let whead=m_head*g
 let taz=fside*(1-shield)*arm/1000
 part ../azstage.gasm
-leave *screw* vring drive.cov* drive.coupling drive.motor
+leave *screw* vring drive.cov* drive.nut drive.motor
 material kfl_low zinc E=96 nu=0.27 yield=208 density=6.6
 material kfl_up zinc E=96 nu=0.27 yield=208 density=6.6
 material top aluminium
@@ -20,7 +20,7 @@ post2: fix post_2:hexbody.start,stud.side
 post3: fix post_3:hexbody.start,stud.side
 post4: fix post_4:hexbody.start,stud.side
 block: fix drive.block:fix.side
-motor: fix drive.rod:rod.start
+motor: fix drive.shaft:dbore.side
 load collar:fix.side force=0,fhead,-whead
 torque collar:fix.side fhead*(zel-zc)/1000 axis=-x at=0,0,zc
 torque collar:fix.side taz axis=z at=0,0,zc

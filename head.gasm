@@ -190,12 +190,12 @@ rotate blk_screw_2 -90 axis=z
 move blk_screw_2 -10.5,38,eh
 part blk_screw_3 parts/std/screw.gcad d=4 L=10
 rotate blk_screw_3 90 axis=x
-move blk_screw_3 12,23,-48
+move blk_screw_3 12,23,-40
 rotate blk_screw_3 -90 axis=z
 move blk_screw_3 -10.5,38,eh
 part blk_screw_4 parts/std/screw.gcad d=4 L=10
 rotate blk_screw_4 90 axis=x
-move blk_screw_4 -12,23,-48
+move blk_screw_4 -12,23,-40
 rotate blk_screw_4 -90 axis=z
 move blk_screw_4 -10.5,38,eh
 if cover concentric ellid:bearing.side elbox:bearing.side

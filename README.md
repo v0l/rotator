@@ -25,7 +25,7 @@ and brings in two sub-assemblies, joined by the `az` and `el` joints:
 |---|---|---|
 | `azstage.gasm` | `base` | bearing plate and posts, both az KFLs, spindle, wheel, keys, flange collar, and the az worm drive as `base.drive` |
 | `head.gasm` | `head` | el box and lid, plates, el KFLs, el shaft, wheel, crossbooms, yagi and the el worm drive as `head.drive` |
-| `drive.gasm` | `base.drive`, `head.drive` | one worm drive in its own frame (worm axis on z): block, worm, 608s, worm shaft, coupling, motor, grease cover and screws, and its `spin` joint |
+| `drive.gasm` | `base.drive`, `head.drive` | one worm drive in its own frame (worm axis on z): block, worm, 608s, worm shaft, spacers and nut, motor, grease cover and screws, and its `spin` joint |
 
 Screws that join a sub-assembly to something outside it live where both parts are: the drive
 blocks' screws to the az floor, the lower KFL's and the collar's in `rotator.gasm`, the el
@@ -48,9 +48,14 @@ drive block's in `head.gasm`. Each sub-assembly opens, checks and simulates on i
   plates inside. Crossboom tubes slide over the shaft ends on bronze bushes and are cross-bolted.
   The el axis is 226 mm above the az box floor, and the el head sits 14.75 mm off the az axis
   so the collar's bolts land in the box body, not the lid.
-- Each axis: KHK CG1-60R1 wheel on a keyed shaft, KHK SW1-R1 worm on an 8 mm shaft in two
-  608s in `driveblock.gcad`, jaw-coupled to a StepperOnline 17HS15-1504-ME1K closed-loop
-  NEMA17 with a built-in 1000 PPR magnetic encoder. Turn counting and its battery backup
+- Each axis: KHK CG1-60R1 wheel on a keyed shaft, KHK SW1-R1 worm on a turned 8 mm shaft in
+  two 608s in `driveblock.gcad`, driven by a StepperOnline 17HS15-1504-ME1K closed-loop NEMA17
+  with a built-in 1000 PPR magnetic encoder. The worm shaft's shoulder end has a D-bore that
+  slides over the motor's D-cut shaft, so the motor passes torque only; there is no coupling.
+  The shaft's shoulder, the lower 608's inner ring, a spacer, the worm, a spacer, the upper
+  608's inner ring and a spacer are clamped by an M8x1 thin nut, so the worm's thrust goes
+  into the 608s, each taking it one way against its seat's shoulder; the worm's own M4 set
+  screw on a flat carries the torque. Turn counting and its battery backup
   live on the control board. The worm thread and the wheel teeth are helical at the 3.58°
   lead, so they mesh at every angle; `gcad check checks/worm_mesh.gasm` sweeps both pairs
   in half-degree steps. The helical wheel, the worm losses and the joint drag need gcad's `joint-drag` branch.

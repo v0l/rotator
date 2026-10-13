@@ -18,13 +18,11 @@ clamp, drive blocks) and drilling the boxes are in `QUOTE.md`.
 |---|---|---|---|---|
 | 4 | KFL002 flange bearing unit, 15 mm | [kfl002](https://www.simplybearings.ie/products/kfl002) | €7.69 | €30.76 |
 | 4 | SKF 608-2RSH | [608-2rsh-skf](https://www.simplybearings.ie/products/608-2rsh-skf) | €6.12 | €24.48 |
-| 2 | Shaft collar 8 mm, CABU08Z | [cabu08z](https://www.simplybearings.ie/products/cabu08z) | €1.40 | €2.80 |
 | 3 | V-ring VA14 nitrile, for 13.5-15.5 mm shafts | [v14a-nbr-nak](https://www.simplybearings.ie/products/v14a-nbr-nak) | €1.00 | €3.00 |
 | 3 | Feather key 5x5x20, A4 stainless (one cut to 16 for the collar) | [fkss-2re-5x5x20mm](https://www.simplybearings.ie/products/fkss-2re-5x5x20mm) | €2.26 | €6.78 |
 | 2 | Bronze bush AM1521-20, 15x21x20 (crossboom) | [am-1521-20-pl](https://www.simplybearings.ie/products/am-1521-20-pl) | €5.64 | €11.28 |
-| 1 | Silver steel 8 mm x 325, cut into two 85 mm worm shafts | [ssm0080-325mm](https://www.simplybearings.ie/products/ssm0080-325mm) | €9.26 | €9.26 |
 | 1 | Silver steel 15 mm x 325, cut into the 98 mm spindle and 194.7 mm el shaft | [ssm0150-325mm](https://www.simplybearings.ie/products/ssm0150-325mm) | €22.66 | €22.66 |
-| | | | | **€111.02** |
+| | | | | **€98.96** |
 
 ## R.A. Rodriguez, KHK distributor (UK, GBP)
 
@@ -45,8 +43,7 @@ the UK adds Irish import VAT and a carrier handling fee.
 | qty | part | link | unit | total |
 |---|---|---|---|---|
 | 2 | 17HS15-1504-ME1K closed-loop NEMA17, 45 Ncm, magnetic encoder 1000 PPR built in, 43.5 mm long | [17HS15-1504-ME1K](https://www.omc-stepperonline.com/nema-17-closed-loop-stepper-motor-45ncm-64oz-in-with-magnetic-encoder-1000ppr-4000cpr-17hs15-1504-me1k) | £14.36 | £28.72 |
-| 2 | MH2025-5-8 jaw coupling 5 to 8 mm, 20x25 | [MH2025-5-8](https://www.omc-stepperonline.com/5mm-8mm-flexible-jaw-coupling-20x25mm-cnc-stepper-motor-shaft-coupler-mh2025-5-8) | £2.58 | £5.16 |
-| | | | | **£33.88** |
+| | | | | **£28.72** |
 
 ## Not price-checked yet
 
@@ -68,7 +65,7 @@ the UK adds Irish import VAT and a carrier handling fee.
 | 2 | M6 U-bolt for 20 mm tube, A4, with nuts | [Accu](https://www.accu.co.uk) |
 | 14 | Ruthex M3 heat-set insert, 5.7 long (gear covers) | [3DJake Ireland](https://www.3djake.ie/) |
 | 1 | PETG filament, about 150 g (gear covers) | [3DJake Ireland](https://www.3djake.ie/) |
-| | A4 screws: M3x6 (4), M3x8 countersunk (2), M3x10 (18), M3x14 (4), M4x10 (4), M4x16 (4), M4x16 countersunk (4), M5x30 (2), M5x6 set screw (1), M6x10 (2), M6x16 (2), M6x20 (4), M8x12 countersunk (4); nuts M4 (4), M6 (4), M5 nyloc (2) | [Accu](https://www.accu.co.uk) |
+| | A4 screws: M3x6 (4), M3x8 countersunk (2), M3x10 (18), M3x14 (4), M4x10 (4), M4x16 (4), M4x16 countersunk (4), M5x30 (2), M5x6 set screw (1), M6x10 (2), M6x16 (2), M6x20 (4), M8x12 countersunk (4); nuts M4 (4), M6 (4), M5 nyloc (2), M8x1 thin DIN 936 (2, worm shafts) | [Accu](https://www.accu.co.uk) |
 
 ## Totals in EUR with 23% VAT
 
@@ -77,15 +74,15 @@ GBP converted at 1.1805 (mid-market, 9 Oct 2026). Shipping not included.
 | supplier | ex VAT | with VAT |
 |---|---|---|
 | Farnell Ireland | €95.97 | €118.04 |
-| Simply Bearings Ireland | €111.02 | €136.55 |
+| Simply Bearings Ireland | €98.96 | €121.72 |
 | R.A. Rodriguez (£92.56) | €109.27 | €134.40 |
-| StepperOnline (£33.88) | €40.00 | €49.20 |
+| StepperOnline (£28.72) | €33.90 | €41.70 |
 | Goodwins, 25 mm tube x 1 m | €8.90 | €10.95 |
 | Control board parts, Mouser (`board/tools/bom.md`) | €65.97 | €81.14 |
-| **priced parts** | **€431.13** | **€530.28** |
+| **priced parts** | **€412.97** | **€507.95** |
 
 The unpriced rows (standoffs, O-ring cord, screws, gasket sheet, battery holder) are an
-estimate of about €85 with VAT, which brings the bought parts to roughly **€615**. The control
+estimate of about €85 with VAT, which brings the bought parts to roughly **€595**. The control
 board PCB itself (4 layers, ENIG, JLCPCB) and its assembly are not priced yet, and its
 STM32H563RIT6 is on backorder (Mouser expects stock on 11 Dec 2026). The made parts in
 `QUOTE.md` (plates, shafts, mast clamp, drive blocks, gear reboring) still need quotes.

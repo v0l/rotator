@@ -1,4 +1,4 @@
-let bw=30 back=29 spine=6 pt=9 zb=23 mp=6 zm=-69.5 brg=22 bb=7 pitch=31
+let bw=30 back=29 spine=6 pt=9 zb=23 mp=6 zm=-52 brg=22 bb=7 pitch=31
 plane XY offset=zb
 rect bw-1 back+bw/2 at=0,(back-bw/2)/2 r=3
 top: extrude pt
@@ -22,6 +22,6 @@ plane motor.end
 pilot: hole 22.4 0,0
 mounts: hole 3.4 pitch/2,pitch/2 -pitch/2,pitch/2 -pitch/2,-pitch/2 pitch/2,-pitch/2
 plane spine.end
-fix: hole 4.5 8,-15 -8,-15 12,-48 -12,-48 depth=spine
+fix: hole 4.5 8,-15 -8,-15 12,-40 -12,-40 depth=spine
 color #a9b1ba
 material aluminium

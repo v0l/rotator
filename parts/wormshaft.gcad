@@ -1,0 +1,19 @@
+let d=8 L=85 D=11 s=13 bore=5 depth=18 flat=4.5 entry=3 c=0.5
+let r=(bore+0.04)/2 y0=flat-bore/2+0.02 x0=sqrt(r*r-y0*y0)
+circle D
+shoulder: extrude s
+plane shoulder.end
+circle d
+shaft: extrude L-s
+chamfer c shaft.end&shaft.side
+plane XY offset=depth
+pen x0,y0
+line -x0,y0
+arc x0,y0 via=0,-r
+close
+dbore: cut depth
+plane XY offset=entry
+circle bore+0.1
+mouth: cut entry
+color #b8bec6
+material steel

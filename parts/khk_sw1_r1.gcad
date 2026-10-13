@@ -14,5 +14,7 @@ plane XY offset=face/2
 circle hd
 circle bore+0.06
 hub: extrude hub
+plane YZ offset=hd/2
+setscrew: hole 3.3 0,face/2+hub-5 depth=(hd-bore)/2+1 thread=M4
 color #4a4d52
 material steel
