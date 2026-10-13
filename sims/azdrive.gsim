@@ -5,17 +5,20 @@ let fhead=side*(2*fside+q*cda_box)
 let whead=m_head*g
 let taz=fside*(1-shield)*arm/1000
 part ../rotator.gasm
-leave box lid top post_* ctl* cell* eth_* kfl_*_screw_* vring_* collar_screw_* collar_nut_* mastclamp* mast vent_* gland_* coupling_* motor_* cover_* cov_* blk_* mot_* elbox ellid plates* kfl_f kfl_l kfl_f_* kfl_l_* *_el *_el_* elshaft bush_* boom_* xclamp yagi ub_* el_*
+leave box lid post_screw_* ctl* cell* eth_* kfl_*_screw_* vring_* collar_screw_* collar_nut_* mastclamp* mast vent_* gland_* coupling_* motor_* cover_* cov_* blk_* mot_* elbox ellid plates* kfl_f kfl_l kfl_f_* kfl_l_* *_el *_el_* elshaft bush_* boom_* xclamp yagi ub_* el_*
 material kfl_low zinc E=96 nu=0.27 yield=208 density=6.6
 material kfl_up zinc E=96 nu=0.27 yield=208 density=6.6
+material top aluminium
 material spindle silversteel E=200 nu=0.29 yield=400 density=7.85
 contact wheel_az worm_az
-contact kfl_low spindle
-contact kfl_up spindle
+bearing kfl_low:bore.side spindle axial at=0,0,9.6 C0=2900
+bearing kfl_up:bore.side spindle axial at=0,0,66.4 C0=2900
 mesh 1.5
 low: fix kfl_low:bolts.side
-up: fix kfl_up:bolts.side
-thrust: slide spindle:rod.start
+post1: fix post_1:hexbody.start,stud.side
+post2: fix post_2:hexbody.start,stud.side
+post3: fix post_3:hexbody.start,stud.side
+post4: fix post_4:hexbody.start,stud.side
 block: fix block_az:fix.side
 motor: fix rod_az:rod.start
 load collar:fix.side force=0,fhead,-whead
