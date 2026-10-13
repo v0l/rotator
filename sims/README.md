@@ -74,7 +74,7 @@ friction model (seal moment K_S1·d_s^β + K_S2 per seal, rolling 0.5·μ·P·d)
 | joint | what drags | drag |
 |---|---|---|
 | `az`, `el` | two KFL002 inserts, both sides sealed, 0.06 N·m each; rolling under the worst bearing loads (768 N and 740 N on az, μ 0.0015, 15 mm), 0.02 N·m; V-rings, 0.02 N·m each | 0.16 N·m (`daz`, `del`) |
-| `spin_az`, `spin_el` | two 608-2RSH, 0.011 N·m each; one taking the worm's 300 N thrust at μ 0.004, 0.005 N·m | 0.03 N·m (`dw`) |
+| `base.drive.spin`, `head.drive.spin` | two 608-2RSH, 0.011 N·m each; one taking the worm's 300 N thrust at μ 0.004, 0.005 N·m | 0.03 N·m (`dw`) |
 
 The crossboom bushes are cross-bolted and do not turn, and grease churn at a few degrees a
 second is too small to count. The mesh friction is the unknown, so it is a variable,

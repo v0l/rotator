@@ -3,7 +3,7 @@ sim torque
 part ../rotator.gasm mu=mu
 torque az waz
 torque el wel
-speed spin_az rpm
-speed spin_el rpm
+speed base.drive.spin rpm
+speed head.drive.spin rpm
 sweep el steps=16
-expect spin_az<0.36 spin_el<0.36
+expect base.drive.spin<0.36 head.drive.spin<0.36

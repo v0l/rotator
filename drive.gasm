@@ -1,0 +1,65 @@
+let az=0 dw=0.03
+part block parts/driveblock.gcad
+part worm parts/khk_sw1_r1.gcad
+part brg_a parts/std/bearing.gcad
+move brg_a 0,0,-32
+part brg_b parts/std/bearing.gcad
+move brg_b 0,0,25
+part rod parts/std/rod.gcad L=85
+move rod 0,0,-44.5
+part wcollar parts/std/collar.gcad
+move wcollar 0,0,32
+part coupling parts/std/coupling.gcad
+move coupling 0,0,-57
+part motor parts/std/nema17.gcad L=43.5 rear=0
+move motor 0,0,-69.5
+part cover parts/gearcover.gcad az=az
+part cov_fix_1 parts/std/screw.gcad d=3 L=14
+move cov_fix_1 0,15,32
+part cov_fix_2 parts/std/screw.gcad d=3 L=14
+rotate cov_fix_2 180 axis=x
+move cov_fix_2 0,15,-32
+part cov_screw_1 parts/std/screw.gcad d=3 L=10
+rotate cov_screw_1 90 axis=x
+move cov_screw_1 75,-5,0
+part cov_screw_2 parts/std/screw.gcad d=3 L=10
+rotate cov_screw_2 90 axis=x
+move cov_screw_2 50.655,-5,34.769
+part cov_screw_3 parts/std/screw.gcad d=3 L=10
+rotate cov_screw_3 90 axis=x
+move cov_screw_3 50.655,-5,-34.769
+part cov_screw_4 parts/std/screw.gcad d=3 L=10
+rotate cov_screw_4 90 axis=x
+move cov_screw_4 -16,-5,15
+part cov_screw_5 parts/std/screw.gcad d=3 L=10
+rotate cov_screw_5 90 axis=x
+move cov_screw_5 -16,-5,-15
+part mot_screw_1 parts/std/screw.gcad d=3 L=10
+move mot_screw_1 15.5,15.5,-63.5
+part mot_screw_2 parts/std/screw.gcad d=3 L=10
+move mot_screw_2 -15.5,15.5,-63.5
+part mot_screw_3 parts/std/screw.gcad d=3 L=10
+move mot_screw_3 -15.5,-15.5,-63.5
+part mot_screw_4 parts/std/screw.gcad d=3 L=10
+move mot_screw_4 15.5,-15.5,-63.5
+axis wa 0,0,0 0,0,1
+flush brg_a:ring.end block:seat_a.bottom
+flush brg_b:ring.start block:seat_b.bottom
+flush wcollar:ring.start brg_b:ring.end
+flush coupling:hub.end brg_a:ring.start
+flush motor:front.end block:motor.start
+concentric rod:rod.side coupling:bore.side
+flush mot_screw_1:head.start block:motor.end
+flush mot_screw_2:head.start block:motor.end
+flush mot_screw_3:head.start block:motor.end
+flush mot_screw_4:head.start block:motor.end
+concentric cover.low:fix_a.side block:cover_b.side
+concentric cover.high:hub.side cover.low:shaft.side
+concentric cov_fix_1:shank.side block:cover_b.side
+concentric cov_fix_2:shank.side block:cover_a.side
+concentric cov_screw_1:shank.side cover.high:lid.side near=75,-5,0
+concentric cov_screw_2:shank.side cover.high:lid.side near=50.655,-5,34.769
+concentric cov_screw_3:shank.side cover.high:lid.side near=50.655,-5,-34.769
+concentric cov_screw_4:shank.side cover.high:wlid.side near=-16,-5,15
+concentric cov_screw_5:shank.side cover.high:wlid.side near=-16,-5,-15
+joint spin worm block turn about=wa drag=dw

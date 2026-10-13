@@ -18,6 +18,20 @@ gcad bom rotator.gasm
 gcad export rotator.gasm rotator.step
 ```
 
+`rotator.gasm` holds the az box and what is fixed in it (board, battery, mast clamp, glands)
+and brings in two sub-assemblies, joined by the `az` and `el` joints:
+
+| file | in `rotator.gasm` as | what |
+|---|---|---|
+| `azstage.gasm` | `base` | bearing plate and posts, both az KFLs, spindle, wheel, keys, flange collar, and the az worm drive as `base.drive` |
+| `head.gasm` | `head` | el box and lid, plates, el KFLs, el shaft, wheel, crossbooms, yagi and the el worm drive as `head.drive` |
+| `drive.gasm` | `base.drive`, `head.drive` | one worm drive in its own frame (worm axis on z): block, worm, 608s, worm shaft, coupling, motor, grease cover and screws, and its `spin` joint |
+
+Screws that join a sub-assembly to something outside it live where both parts are: the drive
+blocks' screws to the az floor, the lower KFL's and the collar's in `rotator.gasm`, the el
+drive block's in `head.gasm`. Each sub-assembly opens, checks and simulates on its own:
+`gcad drive.gasm`, and `sims/azdrive.gsim` loads `azstage.gasm`.
+
 ## Layout
 
 - Two Hammond 1550Z220 die-cast IP66 boxes: the az box on the mast, the el box standing
