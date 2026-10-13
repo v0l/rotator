@@ -107,3 +107,6 @@ efficient and locks, so the output gets about 10 N·m and the load cannot turn t
 `sims/torque.gsim` checks the motor torque against the wind, with the mesh friction as `mu`
 and bearing and seal drag on every joint.
 KHK lists CG1-60R1 (cast iron) at 7.4 N·m at 100 rpm worm speed.
+Az drives up to about 100 km/h of wind even with cold grease and parks above that (the motor
+cannot drive 8.9 N·m at 120 km/h, and the wheel would carry 9.1 N·m); the rule is in the firmware
+notes of `board/DESIGN.md`.
