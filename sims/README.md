@@ -40,17 +40,17 @@ axial limit.
 | `spindle` | Ø15 silver steel az spindle pinned at the ball rows, wind at the el axis, az torque, worm force on the keyway | 80 MPa above the upper bearing, 73 MPa below the collar, 50 MPa at the keyway end |
 | `elshaft` | Ø15 el shaft pinned at the ball rows, bush contact at each crossboom end | 87 MPa at the bearing, 28 MPa at the cross hole |
 | `elbox` | el box body on the collar, gusty-side bearing loads | under 10 MPa in the die-cast walls; the box top moves 0.37 mm |
-| `torque` | gravity plus the 120 km/h wind torques on both joints, worm losses from `lead=3.583 friction=mu`, bearing and seal drag on every joint, el swept -6 to 186 | at friction 0.1: az motor 0.42 N·m, el motor 0.07 N·m, both worms lock; gravity alone is 0.18 N·m on el |
+| `torque` | gravity plus wind torque on both joints at `kmh` (90 unless set, 8.9 N·m at 120 km/h scaled with speed squared), worm losses at friction `mu` (0.15, cold grease), the KHK mesh geometry, bearing and seal drag on every joint, both worms at 60 rpm, el swept -6 to 186 | az motor 0.33 N·m against the 0.36 the TMC2209 gets from it, el 0.08 N·m, both worms lock; FC200 wheel at 39 MPa Lewis bending (safety 5.1), 202 MPa contact, 1.3 W mesh heat |
+| `azdrive` | the az drive as an assembly: spindle turning in both KFLs (frictionless contact, held axially at its foot), wheel and keys bonded, worm in frictionless contact with the wheel, worm shaft on its bearings in the drive block and held at the coupling end as a motor holding position; the gusty-case side load, overturning moment and 16.6 N·m on the collar's bolt holes | 80 MPa in the spindle above the upper KFL, 49 MPa at the wheel's tooth roots away from the contact, worm safety 4.8; worm thrust 437 N into the motor end. Torque alone (`--set side=0`) twists the collar 0.14° (0.053 mm at r 21.5): about 120 N·m per degree, play not included |
 
 Peaks printed at fixed-face edges and at the ends of the pinned bands are mesh
 singularities; the `expect` lines check probes away from them. A `pin` on a 2 mm band
 still holds some moment, so the pinned reactions are skewed; the bearing loads above are
 from statics.
 
-Everything here is one body. The bearing, the shaft and the housing should be one bonded
-assembly, but gcad's bonded joints leak moment: a shaft bonded into a bore and loaded at the
-far end reports half the root moment and half the deflection of the same shape as one solid
-(see `~/git/gcad/TODO.md`). The az frame sim (clamp, floor, posts, bearing plate) was bonded
+`azdrive` is a bonded assembly; the rest are one body each. gcad's ties used to leak moment
+(a shaft bonded into a bore reported half its root moment) and now carry it exactly. The az
+frame sim (clamp, floor, posts, bearing plate) was bonded
 too, so it was removed. By hand: the bearing plate on four posts is a portal frame, so each
 post sees 192 N and 6.7 N·m at each end. An A2-70 M8 standoff preloaded to about 11 kN holds
 that on its 13 mm shoulder with a wide margin.
