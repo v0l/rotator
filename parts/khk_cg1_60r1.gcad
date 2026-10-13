@@ -12,4 +12,4 @@ bored: hole bore+0.04 0,0
 rect key kd*2 at=0,bore/2
 keyway: cut face+hubl
 color #5b5f66
-material density=7.2
+material density=7.2 E=100 nu=0.26 yield=200

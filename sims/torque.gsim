@@ -1,7 +1,9 @@
-let mu=0.1 waz=8.9 wel=0.5
+let mu=0.15 kmh=90 waz=8.9*kmh*kmh/14400 wel=0.5 rpm=60
 sim torque
 part ../rotator.gasm mu=mu
 torque az waz
 torque el wel
+speed spin_az rpm
+speed spin_el rpm
 sweep el steps=16
-expect spin_az<0.45 spin_el<0.45
+expect spin_az<0.36 spin_el<0.36

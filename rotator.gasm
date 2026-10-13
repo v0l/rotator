@@ -584,10 +584,10 @@ concentric cov_screw_el_3:shank.side cover_el.high:lid.side near=-15.5,-12.655,e
 concentric cov_screw_el_4:shank.side cover_el.high:wlid.side near=-15.5,54,eh+15
 concentric cov_screw_el_5:shank.side cover_el.high:wlid.side near=-15.5,54,eh-15
 joint spin_az worm_az block_az turn about=wa drag=dw
-couple spin_az az ratio=60 lead=3.583 friction=mu
+couple spin_az az ratio=60 lead=3.583 friction=mu module=1/cos(3.583) face=10 pressure=20 gear=wheel_az pinion=worm_az
 joint spin_el worm_el block_el turn about=wea drag=dw
 joint el elshaft elbox turn about=ea min=-6 max=186 drag=del
-couple spin_el el ratio=-60 lead=3.583 friction=mu
+couple spin_el el ratio=-60 lead=3.583 friction=mu module=1/cos(3.583) face=10 pressure=20 gear=wheel_el pinion=worm_el
 concentric wheel_el:bored.side elshaft:rod.side
 flush key_el:k.start elshaft:keyway.end
 concentric bush_f:cross.side elshaft:cross.side near=80,0,eh

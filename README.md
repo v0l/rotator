@@ -102,11 +102,13 @@ question.
 
 ## Ratings
 
-60:1 through a worm of 3.583° lead, 0.45 N·m motors. At mesh friction 0.1 the worm is 38%
-efficient and locks, so the output gets about 10 N·m and the load cannot turn the motor;
-`sims/torque.gsim` checks the motor torque against the wind, with the mesh friction as `mu`
-and bearing and seal drag on every joint.
+60:1 through a worm of 3.583° lead. The 17HS15-1504-ME1K pulls 0.42 to 0.43 N·m up to 210 rpm
+at 1.69 A and 24 V (StepperOnline's pull-out curve), so about 0.36 N·m at the TMC2209's 1.4 A
+RMS. At mesh friction 0.1 the worm is 38% efficient and locks, so the load cannot turn the motor.
+`sims/torque.gsim` checks the motor torque against the wind at 90 km/h with cold grease
+(friction 0.15): 0.33 N·m at 1 rpm, with the mesh at 39 MPa Lewis bending in the FC200 wheel
+and 1.3 W of friction heat. Wind torque is taken as 8.9 N·m at 120 km/h (CFD) scaled with
+speed squared, and every joint carries its bearing and seal drag.
 KHK lists CG1-60R1 (cast iron) at 7.4 N·m at 100 rpm worm speed.
-Az drives up to about 100 km/h of wind even with cold grease and parks above that (the motor
-cannot drive 8.9 N·m at 120 km/h, and the wheel would carry 9.1 N·m); the rule is in the firmware
-notes of `board/DESIGN.md`.
+Az drives up to about 90 km/h of wind with cold grease (100 km/h with fresh) and parks above
+that; the rule is in the firmware notes of `board/DESIGN.md`.

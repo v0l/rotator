@@ -52,17 +52,18 @@ isolation), five schematic sheets, `ctl.pcb.toml` (placed and routed), and the s
   not feed the unpowered PHY and drivers, drop the core clock, and keep TIM2 and TIM3 running.
   Write the positions to flash on stop. The outage current is not measured yet.
 - Park az in high wind instead of driving it. With cold or dry grease (worm friction 0.15) the
-  az motor needs 0.17 N·m at 60 km/h, 0.27 at 80, 0.39 at 100 and 0.55 at 120 km/h
-  (`sims/torque.gsim --set waz=... --set mu=0.15`, wind torque scaling with speed squared from
-  8.9 N·m at 120 km/h). The motor holds 0.45 N·m, so it cannot drive the antenna at 120 km/h,
-  and 100 km/h puts 6.3 N·m through the wheel against KHK's 7.4 N·m rating for the CG1-60R1
-  while 120 km/h puts 9.1 N·m. There is no anemometer, so judge the wind by the drive: when the
-  az encoder lags the commanded position by more than a few degrees of motor turn, or StallGuard
-  (SG_RESULT) falls near zero, halve VACTUAL and retry; after three stalls in a row stop az,
-  report "parked: wind" and try again after 10 minutes. Parked, the worm locks while its
-  friction is above tan(3.583°) = 0.063, and powered the motor holds against the 0.02 N·m the
-  load can turn it back with; keep IHOLD at about 0.4 A (roughly 0.12 N·m) while parked for wind
-  rather than dropping it to zero, since fresh grease can bring the friction near 0.05.
+  az motor needs 0.17 N·m at 60 km/h, 0.27 at 80, 0.33 at 90, 0.39 at 100 and 0.55 at 120 km/h
+  (`sims/torque.gsim --set kmh=...`, wind torque 8.9 N·m at 120 km/h scaled with speed
+  squared). The motor pulls about 0.36 N·m at 1.4 A RMS, so it drives to about 90 km/h with cold
+  grease (100 km/h at friction 0.1, 0.31 N·m) and not at all at 120 km/h. 100 km/h puts 6.3 N·m
+  through the wheel against KHK's 7.4 N·m rating for the CG1-60R1, 120 km/h 9.1 N·m. There is no
+  anemometer, so judge the wind by the drive: when the az encoder lags the commanded position by
+  more than a few degrees of motor turn, or StallGuard (SG_RESULT) falls near zero, halve
+  VACTUAL and retry; after three stalls in a row stop az, report "parked: wind" and try again
+  after 10 minutes. Parked, the worm locks while its friction is above tan(3.583°) = 0.063, and
+  powered the motor holds against the 0.02 N·m the load can turn it back with; keep IHOLD at
+  about 0.4 A (roughly 0.10 N·m) while parked for wind rather than dropping it to zero, since
+  fresh grease can bring the friction near 0.05.
 - VBAT_SENSE is the cell through a 1M / 1M divider.
 - Set the RMII pins to GPIO speed high (OSPEEDR 10), not very high. `ctl-rmii` puts TXD1 (43 mm)
   at 10 % overshoot with very high edges (1.4 ns) and a 30 ohm driver, and under 2 % at high
