@@ -48,7 +48,7 @@ rotate vring_l 90 axis=y
 move vring_l 78,20,eh
 part collar_l parts/std/collar.gcad d=12 D=22 W=8
 rotate collar_l 90 axis=y
-move collar_l 82.5,20,eh
+move collar_l 84.5,20,eh
 part washer_f parts/std/spacer.gcad d=5.3 D=20 L=2
 rotate washer_f -90 axis=y
 move washer_f -24.5,20,eh
@@ -66,11 +66,11 @@ move yoke 0,20,eh
 part tube parts/std/tube.gcad D=25 t=2 L=390
 rotate tube 90 axis=y
 move tube -40,20,eh+112.5
-part tclamp_1 parts/std/ubolt.gcad L=26 nz=17.5
+part tclamp_1 parts/std/ubolt.gcad L=26 nz=15.5
 rotate tclamp_1 180 axis=x
 rotate tclamp_1 90 axis=z
 move tclamp_1 -10,20,eh+112.5
-part tclamp_2 parts/std/ubolt.gcad L=26 nz=17.5
+part tclamp_2 parts/std/ubolt.gcad L=26 nz=15.5
 rotate tclamp_2 180 axis=x
 rotate tclamp_2 90 axis=z
 move tclamp_2 80,20,eh+112.5

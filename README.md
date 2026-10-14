@@ -47,8 +47,8 @@ sub-assembly opens, checks and simulates on its own: `gcad drive.gasm`, and
   only twist over the ±270° travel. The collar flange seals against the el box and overhangs
   the outside KFL003 as a rain shield.
 - El: a Hammond 1550Z117 (160 x 100 x 81) on the collar. A 12 mm el shaft crosses it on two
-  KFL001s, the floor one outside, the lid one inside the lid. A U yoke bent from one 5 mm plate
-  is keyed straight onto both shaft ends and held by an M5 end screw and washer; the right arm
+  KFL001s, the floor one outside, the lid one inside the lid. A U yoke laser cut from 3 mm 5052 and
+  bent, with two pressed darts in each bend, is keyed straight onto both shaft ends and held by an M5 end screw and washer; the right arm
   clamps against a shaft collar outside the lid's V-ring. The head is 134 mm wide along the
   el axis. A 25 mm tube clamped to the yoke's crossbar carries the yagi 300 mm out, clear of
   the el box at every angle.
