@@ -20,7 +20,7 @@ post2: fix post_2:hexbody.start,stud.side
 post3: fix post_3:hexbody.start,stud.side
 post4: fix post_4:hexbody.start,stud.side
 block: fix drive.block:fix.side
-motor: fix drive.shaft:dbore.side
+motor: slide drive.shaft:+Z
 load collar:fix.side force=0,fhead,-whead
 torque collar:fix.side fhead*(zel-zc)/1000 axis=-x at=0,0,zc
 torque collar:fix.side taz axis=z at=0,0,zc
