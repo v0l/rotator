@@ -7,8 +7,8 @@ part kfl_f parts/std/kfl002.gcad a=63 b=38 e=48 g=6 x=12 Z=16.5 Bi=14.5 s=7 d=12
 rotate kfl_f -90 axis=y
 move kfl_f -3,20,eh
 part kfl_l parts/std/kfl002.gcad a=63 b=38 e=48 g=6 x=12 Z=16.5 Bi=14.5 s=7 d=12 hub=30 ring=19.5
-rotate kfl_l 90 axis=y
-move kfl_l 78,20,eh
+rotate kfl_l -90 axis=y
+move kfl_l 75,20,eh
 part kfl_f_bolt_1 parts/std/screw.gcad d=6 L=16
 rotate kfl_f_bolt_1 -90 axis=y
 move kfl_f_bolt_1 -9,20,eh-24
@@ -17,10 +17,10 @@ rotate kfl_f_nut_1 90 axis=y
 move kfl_f_nut_1 0,20,eh-24
 part kfl_l_bolt_1 parts/std/screw.gcad d=6 L=16
 rotate kfl_l_bolt_1 90 axis=y
-move kfl_l_bolt_1 84,20,eh-24
+move kfl_l_bolt_1 78,20,eh-24
 part kfl_l_nut_1 parts/std/nut.gcad
 rotate kfl_l_nut_1 -90 axis=y
-move kfl_l_nut_1 75,20,eh-24
+move kfl_l_nut_1 69,20,eh-24
 part kfl_f_bolt_2 parts/std/screw.gcad d=6 L=16
 rotate kfl_f_bolt_2 -90 axis=y
 move kfl_f_bolt_2 -9,20,eh+24
@@ -29,13 +29,13 @@ rotate kfl_f_nut_2 90 axis=y
 move kfl_f_nut_2 0,20,eh+24
 part kfl_l_bolt_2 parts/std/screw.gcad d=6 L=16
 rotate kfl_l_bolt_2 90 axis=y
-move kfl_l_bolt_2 84,20,eh+24
+move kfl_l_bolt_2 78,20,eh+24
 part kfl_l_nut_2 parts/std/nut.gcad
 rotate kfl_l_nut_2 -90 axis=y
-move kfl_l_nut_2 75,20,eh+24
-part elshaft parts/shaft.gcad d=12 key=4 kd=2.5 L=157 kz=65.5 kl=18 k0l=20 k2l=20
+move kfl_l_nut_2 69,20,eh+24
+part elshaft parts/shaft.gcad d=12 key=4 kd=2.5 L=119 kz=48.5 kl=18 k0l=6 k2l=5.5 tap=1
 rotate elshaft 90 axis=y
-move elshaft -41,20,eh
+move elshaft -24,20,eh
 part wheel parts/khk_cg1_60r1.gcad n=60 m=0.8/cos(3.283) face=9 hub=25 hubl=9 throat=49.6 bore=12 key=4 kd=1.8 lead=3.283
 material wheel density=8.8 E=100 nu=0.34 yield=140
 rotate wheel 90 axis=y
@@ -43,27 +43,37 @@ move wheel 24.5,20,eh
 part key parts/std/key.gcad b=4 h=4 L=16
 rotate key 90 axis=y
 move key 25.5,25.5,eh
-part hub_f parts/std/flangecollar.gcad d=12 hub=24 hl=12 F=44 ft=8 pcd=34 screw=4.5 key=4 t2=1.8
-rotate hub_f -90 axis=y
-rotate hub_f 180 axis=x
-move hub_f -21,20,eh
-part hub_l parts/std/flangecollar.gcad d=12 hub=24 hl=12 F=44 ft=8 pcd=34 screw=4.5 key=4 t2=1.8
-rotate hub_l 90 axis=y
-rotate hub_l 180 axis=x
-move hub_l 96,20,eh
+part vring_l parts/std/vring.gcad d=12 D=21
+rotate vring_l 90 axis=y
+move vring_l 78,20,eh
+part collar_l parts/std/collar.gcad d=12 D=22 W=8
+rotate collar_l 90 axis=y
+move collar_l 82.5,20,eh
+part washer_f parts/std/spacer.gcad d=5.3 D=20 L=2
+rotate washer_f -90 axis=y
+move washer_f -24.5,20,eh
+part end_f parts/std/screw.gcad d=5 L=12
+rotate end_f -90 axis=y
+move end_f -26.5,20,eh
+part washer_l parts/std/spacer.gcad d=5.3 D=20 L=2
+rotate washer_l 90 axis=y
+move washer_l 95.5,20,eh
+part end_l parts/std/screw.gcad d=5 L=12
+rotate end_l 90 axis=y
+move end_l 97.5,20,eh
 part yoke parts/yoke.gcad
 move yoke 0,20,eh
 part tube parts/std/tube.gcad D=25 t=2 L=390
 rotate tube 90 axis=y
-move tube -60,20,eh+112.5
+move tube -40,20,eh+112.5
 part tclamp_1 parts/std/ubolt.gcad L=26 nz=17.5
 rotate tclamp_1 180 axis=x
 rotate tclamp_1 90 axis=z
-move tclamp_1 -20,20,eh+112.5
+move tclamp_1 -10,20,eh+112.5
 part tclamp_2 parts/std/ubolt.gcad L=26 nz=17.5
 rotate tclamp_2 180 axis=x
 rotate tclamp_2 90 axis=z
-move tclamp_2 95,20,eh+112.5
+move tclamp_2 80,20,eh+112.5
 part xclamp parts/crossclamp.gcad
 move xclamp yx,20,ec
 part yagi parts/yagi435.gcad
@@ -182,12 +192,12 @@ concentric kfl_f:bore.side elbox:bearing.side
 concentric kfl_l:bore.side elbox:bearing.side
 flush kfl_f_bolt_1:head.start kfl_f:flange.end
 concentric kfl_f_nut_1:n.side kfl_f:bolts.side near=2,20,eh-24
-flush kfl_l_bolt_1:head.start kfl_l:flange.end
-concentric kfl_l_nut_1:n.side kfl_l:bolts.side near=73,20,eh-24
+concentric kfl_l_bolt_1:shank.side kfl_l:bolts.side near=76,20,eh-24
+concentric kfl_l_nut_1:n.side kfl_l:bolts.side near=67,20,eh-24
 flush kfl_f_bolt_2:head.start kfl_f:flange.end
 concentric kfl_f_nut_2:n.side kfl_f:bolts.side near=2,20,eh+24
-flush kfl_l_bolt_2:head.start kfl_l:flange.end
-concentric kfl_l_nut_2:n.side kfl_l:bolts.side near=73,20,eh+24
+concentric kfl_l_bolt_2:shank.side kfl_l:bolts.side near=76,20,eh+24
+concentric kfl_l_nut_2:n.side kfl_l:bolts.side near=67,20,eh+24
 concentric blk_screw_1:shank.side elbox:drive.side near=-1,-3,eh-15
 concentric drive.plates.base:fix1.side blk_screw_1:shank.side
 concentric blk_screw_2:shank.side drive.plates.base:fix2.side
@@ -195,12 +205,16 @@ concentric blk_screw_3:shank.side drive.plates.base:fix3.side
 concentric blk_screw_4:shank.side drive.plates.base:fix4.side
 concentric wheel:bored.side elshaft:rod.side
 flush key:k.start elshaft:keyway.end
-concentric hub_f:bore.side elshaft:rod.side
-concentric hub_l:bore.side elshaft:rod.side
-concentric yoke:hub_l.side hub_f:bore.side
-concentric tclamp_1:leg.side yoke:clamp.side near=-20,35.7,eh+100
+concentric yoke:hub_l.side elshaft:rod.side
+concentric vring_l:bore.side elshaft:rod.side
+concentric collar_l:bore.side elshaft:rod.side
+concentric end_f:shank.side elshaft:rod.side
+concentric end_l:shank.side elshaft:rod.side
+concentric washer_f:bore.side end_f:shank.side
+concentric washer_l:bore.side end_l:shank.side
+concentric tclamp_1:leg.side yoke:clamp.side near=-10,35.7,eh+100
 tangent tube:tube.side yoke:>Z
-concentric tclamp_2:leg.side yoke:clamp.side near=95,35.7,eh+100
+concentric tclamp_2:leg.side yoke:clamp.side near=80,35.7,eh+100
 concentric xclamp:xsad.side tube:tube.side near=yx,20,ec
 concentric yagi:boom.side xclamp:ysad.side
 concentric ub_x1:leg.side xclamp:xu.side near=yx+22,15.7+20,ec+20

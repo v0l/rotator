@@ -1,4 +1,4 @@
-let d=15 L=166 kz=78 kl=20 key=5 kd=3 xh=0 x1=17.35 x2=177.35 k2l=0 k0l=0
+let d=15 L=166 kz=78 kl=20 key=5 kd=3 xh=0 x1=17.35 x2=177.35 k2l=0 k0l=0 tap=0
 circle d-0.02
 rod: extrude L
 plane XY offset=kz+kl
@@ -12,6 +12,10 @@ if k0l rect key kd+1 at=0,d/2-kd/2+0.5
 if k0l keyway0: cut k0l
 chamfer 0.5 rod.end&rod.side
 chamfer 0.5 rod.start&rod.side
+if tap plane XY rx=180
+if tap tap0: hole 4.2 0,0 depth=10 thread=M5
+if tap plane XY offset=L
+if tap tap1: hole 4.2 0,0 depth=10 thread=M5
 if xh plane XZ offset=10
 if xh cross: hole 5.2 0,x1 0,x2
 color #b8bec6

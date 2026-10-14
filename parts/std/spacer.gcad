@@ -1,6 +1,7 @@
 let d=8 D=12 L=15
 circle D
-circle d+0.1
 tube: extrude L
+plane tube.end
+bore: hole d+0.1 0,0
 color #c8ccd2
 material steel

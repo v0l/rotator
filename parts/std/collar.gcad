@@ -1,7 +1,8 @@
 let d=8 D=16 W=8
 circle D
-circle d+0.04
 ring: extrude W
+plane ring.end
+bore: hole d+0.04 0,0
 chamfer 0.3 ring.end&ring.side
 chamfer 0.3 ring.start&ring.side
 color #3a3d42
