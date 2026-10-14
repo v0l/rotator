@@ -1,21 +1,21 @@
-let zp=60.5 tb=5 yw=26 tw=4 xw0=-41 xw1=62 zt=198 boss=3 rb=3.5
-let px=21 pz=198 sx=40.5 sy=37.5 sz=107 sw=27
-plane XY offset=zp
+let zb=154 tb=5 yw=26 tw=4 xw0=-41 xw1=62 zw=24 boss=3 rb=3.5 rib=40
+let px=21 pz=143 sx=40.5 sz=40 sw=27
+plane XY offset=zb-tb
 rect xw1-xw0 38 at=(xw0+xw1)/2,45
 base: extrude tb
 plane XZ offset=-yw
-rect xw1-xw0 zt-zp at=(xw0+xw1)/2,(zp+zt)/2
+rect xw1-xw0 zb-zw at=(xw0+xw1)/2,(zb+zw)/2
 wall: extrude -tw
 plane YZ offset=xw0
-pen yw+tw,zp+tb
-line 64,zp+tb
-line yw+tw,zp+tb+40
+pen yw+tw,zb-tb
+line 64,zb-tb
+line yw+tw,zb-tb-rib
 close
 gusset_a: extrude 3
 plane YZ offset=xw1-3
-pen yw+tw,zp+tb
-line 64,zp+tb
-line yw+tw,zp+tb+40
+pen yw+tw,zb-tb
+line 64,zb-tb
+line yw+tw,zb-tb-rib
 close
 gusset_b: extrude 3
 plane XZ offset=-(yw+tw)
@@ -36,8 +36,8 @@ rect 2.5 5 at=sx-sw/2-3,sz+55
 rect 2.5 5 at=sx+sw/2+3,sz+55
 tie: cut tw+1
 plane XZ offset=-yw
-grid: hole 3.4 -31,75 -31,95 -31,115 -31,155 -31,175 -11,75 -11,95 -11,115 -11,155 -11,175 9,75 9,95 9,115 9,135 9,155 9,175 29,75 29,95 29,115 29,135 29,155 29,175 49,75 49,95 49,115 49,135 49,155 49,175 depth=tw+1
-plane XY offset=zp+tb
-mount: hole 3.4 12,40 12,56 27,40 27,56 cbore=6.5,3
+grid: hole 3.4 -31,34 -31,54 -31,94 -31,114 -11,34 -11,54 -11,94 -11,114 9,34 9,54 9,74 9,94 9,114 depth=tw+1
+plane XY offset=zb-tb rx=180
+mount: hole 4.5 12,-40 12,-56 -13.5,-36 -13.5,-60 depth=tb+1
 color #e0782c
 material petg

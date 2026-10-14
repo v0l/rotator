@@ -15,11 +15,10 @@ collar) and drilling the boxes are in `QUOTE.md`.
 
 | qty | part | link | unit | total |
 |---|---|---|---|---|
-| 2 | KFL002 flange bearing unit, 15 mm (az) | [kfl002](https://www.simplybearings.ie/products/kfl002) | €7.69 | €15.38 |
+| 2 | KFL003 flange bearing unit, 17 mm (az) | [kfl003](https://www.simplybearings.ie/products/kfl003) | €9.82 | €19.64 |
 | 4 | SKF 608-2RSH | [608-2rsh-skf](https://www.simplybearings.ie/products/608-2rsh-skf) | €6.12 | €24.48 |
-| 1 | V-ring VA14 nitrile, for 13.5-15.5 mm shafts | [v14a-nbr-nak](https://www.simplybearings.ie/products/v14a-nbr-nak) | €1.00 | €1.00 |
 | 1 | Silver steel 8 mm x 325, cut into two 83 mm worm shafts | [ssm0080-325mm](https://www.simplybearings.ie/products/ssm0080-325mm) | €9.26 | €9.26 |
-| | | | | **€50.12** |
+| | | | | **€53.38** |
 
 ## R.A. Rodriguez, KHK distributor (UK, GBP)
 
@@ -53,8 +52,9 @@ the UK adds Irish import VAT and a carrier handling fee.
 | 1 | V-ring VA12 nitrile, for 11.5-13.5 mm shafts (el lid) | Simply Bearings |
 | 1 | Shaft collar 12 mm, set screw (el lid side) | Simply Bearings |
 | 1 | Silver steel 12 mm x 325 (el shaft) | Simply Bearings |
-| 1 | Precision steel tube 15 x 3 E355+SR, 300 mm (az spindle) | hydraulic tube stockists |
-| 2 | Dowel pin Ø4 m6, 30 and 24 long (wheel and collar on the spindle) | Accu |
+| 1 | 42CrMo4+QT (4140 pre-hard) bar Ø20 x 120 (az spindle) | steel stockholders |
+| 2 | Dowel pin Ø4 m6, 30 and 28 long (wheel and collar on the spindle) | Accu |
+| 4 | M4 spacer Ø8 x 7.5, A4 (az drive hangers) | Accu |
 | 3 | Feather key 4x4, A4 (el wheel, both yoke arms) | Simply Bearings |
 | 2 | M8 U-bolt and V-saddle for 48 mm tube, A4 (mast clamp) | aerial suppliers, Accu |
 | 1 | Aluminium tube 25 x 2, 390 mm (yagi bracket) | Goodwins (below) |
@@ -62,7 +62,7 @@ the UK adds Irish import VAT and a carrier handling fee.
 | 4 | Hex standoff M3 x 10, female-female, 5.5 mm, aluminium (control board) | [Accu](https://www.accu.co.uk) |
 | 1 | Takachi CR123A-R battery holder with 140 mm leads, plus a JST PHR-2 housing and 2 SPH crimps | Conrad, item 1882324 |
 | 1 | CR123A lithium cell | any |
-| | Optional Pi and SDR: Raspberry Pi 5, PoE HAT, RTL-SDR Blog V4, 4x M2.5 x 11 male-female standoffs, 4x M2.5 heat-set inserts, 4x M3x8 (bracket to drive plate), short USB-A extension | Raspberry Pi resellers, rtl-sdr.com |
+| | Optional Pi and SDR: Raspberry Pi 5, PoE HAT, RTL-SDR Blog V4, 4x M2.5 x 11 male-female standoffs, 4x M2.5 heat-set inserts, 4x M4x10 (bracket to the drive base plate), short USB-A extension | Raspberry Pi resellers, rtl-sdr.com |
 | 1 | RJ45 plug for the PoE cable, crimped inside the box after the cable is through the gland | any |
 | 1 | Aluminium tube 20 x 1.5, 1 m (yagi boom) | [Aluminium Online](https://www.aluminium-online.co.uk) |
 | 5 | Aluminium rod 4 mm, 1 m (yagi elements, three per bar) | [Aluminium Online](https://www.aluminium-online.co.uk) |
@@ -72,7 +72,7 @@ the UK adds Irish import VAT and a carrier handling fee.
 | 2 | M6 U-bolt for 20 mm tube, A4, with nuts | [Accu](https://www.accu.co.uk) |
 | 12 | Ruthex M3 heat-set insert, 5.7 long (gear covers) | [3DJake Ireland](https://www.3djake.ie/) |
 | 1 | PETG filament, about 150 g (gear covers) | [3DJake Ireland](https://www.3djake.ie/) |
-| | A4 screws: M3x6 (4), M3x8 countersunk (2), M3x10 (16), M3x12 countersunk (24, drive plates), M3x14 (4), M5x12 (2, el shaft ends), M6x16 (4); O-ring sealing screws: M3x8 (4, board), M4x10 (8, drive base plates), M4x20 (4, collar), M6x16 (6, KFLs through the walls); nuts M3 (2), M4 (4), M6 (6, nyloc), M8 nyloc (4) with sealing washers (mast U-bolts inside the az box); washers 5.3 x 20 (2) | [Accu](https://www.accu.co.uk) |
+| | A4 screws: M3x6 (4), M3x8 countersunk (2), M3x10 (16), M3x12 countersunk (24, drive plates), M3x14 (4), M5x12 (2, el shaft ends), M6x16 (4); O-ring sealing screws: M3x8 (4, board), M4x10 (4, el drive base plate), M4x16 (4, az drive hangers), M4x20 (4, collar), M6x16 (2, el KFLs through the walls), M6x25 (2, az KFL003 pair); nuts M3 (2), M4 (4), M6 (4, nyloc), M8 nyloc (4) with sealing washers (mast U-bolts inside the az box); washers 5.3 x 20 (2) | [Accu](https://www.accu.co.uk) |
 
 ## Totals in EUR with 23% VAT
 
@@ -81,12 +81,12 @@ GBP converted at 1.1805 (mid-market, 9 Oct 2026). Shipping not included.
 | supplier | ex VAT | with VAT |
 |---|---|---|
 | Farnell Ireland | €16.61 | €20.43 |
-| Simply Bearings Ireland | €50.12 | €61.65 |
+| Simply Bearings Ireland | €53.38 | €65.66 |
 | R.A. Rodriguez (£46.28) | €54.63 | €67.20 |
 | StepperOnline (£28.72) | €33.90 | €41.70 |
 | Goodwins, 25 mm tube x 1 m | €8.90 | €10.95 |
 | Control board parts, Mouser (`board/tools/bom.md`) | €65.97 | €81.14 |
-| **priced parts** | **€230.13** | **€283.07** |
+| **priced parts** | **€233.39** | **€287.07** |
 
 The unpriced rows now include both Hammond boxes, the el worm pair and the KFL001s, so the
 priced total is well short of the bought parts; they need pricing before the total means

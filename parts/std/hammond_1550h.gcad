@@ -1,5 +1,5 @@
 let L=222 W=146 Hb=101 lid=4 t=4 r=6 ri=3 yb=-30
-let sx=27 sy=10 kfl=26.5 ub=29 uz1=56 uz2=170
+let sx=27 sy=10 kfl=28 ub=29 uz1=40 uz2=150
 let bx=-24 bz=115
 body main
 plane XZ offset=-yb
@@ -9,13 +9,12 @@ plane XZ offset=-(yb+t)
 rect W-2*t L-2*t at=0,L/2 r=ri
 pocket: cut Hb-t
 plane XY rx=180
-kfl_lo: hole 6.5 sx-kfl,-sy sx+kfl,-sy depth=t+1
-drive: hole 4.5 sx-15,-(sy+30) sx-15,-(sy+46) sx-40.5,-(sy+26) sx-40.5,-(sy+50) depth=t+1
 gland: hole 16.2 -58,0 -32,0 depth=t+1
 vent: hole 10.5 -45,18 depth=t+1 thread=M12
 plane XY offset=L
-spindle: hole 20 sx,sy depth=t+1
+spindle: hole 21 sx,sy depth=t+1
 kfl_up: hole 6.5 sx-kfl,sy sx+kfl,sy depth=t+1
+hang: hole 4.5 -12,40 -12,56 40,46 40,58 depth=t+1
 plane XZ offset=-yb
 mast: hole 9 -ub,uz1 ub,uz1 -ub,uz2 ub,uz2 depth=t+1
 ctl: hole 3.4 bx-40,bz-36 bx+40,bz-36 bx-40,bz+15.5 bx+40,bz+14 depth=t+1

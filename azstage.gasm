@@ -1,28 +1,26 @@
-let dw=0.03 sx=27 sy=10 zt=222 top=40
-part kfl_low parts/std/kfl002.gcad
-move kfl_low sx,sy,4
-part kfl_up parts/std/kfl002.gcad
-rotate kfl_up 180 axis=x
-move kfl_up sx,sy,zt-4
-part spindle parts/spindle_tube.gcad L=zt+top-5
-move spindle sx,sy,5
-part wheel parts/khk_cg1_60r1.gcad key=0 pin=4
-move wheel sx,sy,28
-part vring parts/std/vring.gcad
-move vring sx,sy,zt
-part collar parts/std/flangecollar.gcad F=44 hub=24 pcd=34 screw=4.5 key=0 pin=4
+let dw=0.03 sx=27 sy=10 zt=222 W=183 zs=160 zc=242.2
+part kfl_in parts/std/kfl002.gcad a=71 b=46 e=56 g=7 x=14 Z=19.5 Bi=17.5 s=7 d=17 hub=37 ring=25
+rotate kfl_in 180 axis=x
+move kfl_in sx,sy,zt-4
+part kfl_out parts/std/kfl002.gcad a=71 b=46 e=56 g=7 x=14 Z=19.5 Bi=17.5 s=7 d=17 hub=37 ring=25
+move kfl_out sx,sy,zt
+part spindle parts/spindle_tube.gcad L=zc+20-zs pw=W+10-zs pc=zc+6-zs
+move spindle sx,sy,zs
+part wheel parts/khk_cg1_60r1.gcad bore=17 key=0 pin=4
+move wheel sx,sy,W-5
+part collar parts/std/flangecollar.gcad d=17 F=48 hub=28 pcd=38 screw=4.5 key=0 pin=4
 rotate collar 180 axis=z
-move collar sx,sy,zt+top-19.8
+move collar sx,sy,zc
 part dowel_w parts/std/rod.gcad d=4 L=30
 rotate dowel_w -90 axis=x
-move dowel_w sx,sy-15,43
-part dowel_c parts/std/rod.gcad d=4 L=24
+move dowel_w sx,sy-15,W+10
+part dowel_c parts/std/rod.gcad d=4 L=28
 rotate dowel_c -90 axis=x
-move dowel_c sx,sy-12,zt+top-13.8
+move dowel_c sx,sy-14,zc+6
 part drive drive.gasm az=0 dw=dw
 rotate drive 90 axis=y
 rotate drive -90 axis=x
-move drive sx,sy+38,33
+move drive sx,sy+38,W
 concentric wheel:bored.side spindle:tube.side
 concentric collar:bore.side spindle:tube.side
 concentric dowel_w:rod.side wheel:pinh.side

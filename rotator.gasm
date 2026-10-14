@@ -78,111 +78,105 @@ move vent -45,-18,0
 part mast parts/std/tube.gcad D=48.3 t=3.2 L=500
 move mast 0,-60.15,-250
 part saddle_1 parts/std/vsaddle.gcad
-move saddle_1 0,-30,56
+move saddle_1 0,-30,40
 part ubolt_1 parts/std/ubolt.gcad d=8 a=29 L=42 nz=34.15 af=13 m=6.5
 rotate ubolt_1 -90 axis=x
-move ubolt_1 0,-60.15,56
+move ubolt_1 0,-60.15,40
 part saddle_2 parts/std/vsaddle.gcad
-move saddle_2 0,-30,170
+move saddle_2 0,-30,150
 part ubolt_2 parts/std/ubolt.gcad d=8 a=29 L=42 nz=34.15 af=13 m=6.5
 rotate ubolt_2 -90 axis=x
-move ubolt_2 0,-60.15,170
-part kfl_low_bolt_1 parts/std/screw.gcad d=6 L=16
-rotate kfl_low_bolt_1 180 axis=x
-move kfl_low_bolt_1 sx-26.5,sy,0
-part kfl_low_nut_1 parts/std/nut.gcad d=6 af=10 m=5
-move kfl_low_nut_1 sx-26.5,sy,10.5
-part kfl_up_bolt_1 parts/std/screw.gcad d=6 L=16
-move kfl_up_bolt_1 sx-26.5,sy,zt
-part kfl_up_nut_1 parts/std/nut.gcad d=6 af=10 m=5
-move kfl_up_nut_1 sx-26.5,sy,zt-15.5
-part kfl_low_bolt_2 parts/std/screw.gcad d=6 L=16
-rotate kfl_low_bolt_2 180 axis=x
-move kfl_low_bolt_2 sx+26.5,sy,0
-part kfl_low_nut_2 parts/std/nut.gcad d=6 af=10 m=5
-move kfl_low_nut_2 sx+26.5,sy,10.5
-part kfl_up_bolt_2 parts/std/screw.gcad d=6 L=16
-move kfl_up_bolt_2 sx+26.5,sy,zt
-part kfl_up_nut_2 parts/std/nut.gcad d=6 af=10 m=5
-move kfl_up_nut_2 sx+26.5,sy,zt-15.5
-part drv_screw_1 parts/std/screw.gcad d=4 L=10
-rotate drv_screw_1 180 axis=x
-move drv_screw_1 sx-15,sy+30,0
-part drv_screw_2 parts/std/screw.gcad d=4 L=10
-rotate drv_screw_2 180 axis=x
-move drv_screw_2 sx-15,sy+46,0
-part drv_screw_3 parts/std/screw.gcad d=4 L=10
-rotate drv_screw_3 180 axis=x
-move drv_screw_3 sx-40.5,sy+26,0
-part drv_screw_4 parts/std/screw.gcad d=4 L=10
-rotate drv_screw_4 180 axis=x
-move drv_screw_4 sx-40.5,sy+50,0
+move ubolt_2 0,-60.15,150
+part kfl_bolt_1 parts/std/screw.gcad d=6 L=25
+move kfl_bolt_1 sx-28,sy,zt+7
+part kfl_nut_1 parts/std/nut.gcad d=6 af=10 m=5
+move kfl_nut_1 sx-28,sy,zt-16
+part kfl_bolt_2 parts/std/screw.gcad d=6 L=25
+move kfl_bolt_2 sx+28,sy,zt+7
+part kfl_nut_2 parts/std/nut.gcad d=6 af=10 m=5
+move kfl_nut_2 sx+28,sy,zt-16
+part hang_spacer_1 parts/std/spacer.gcad L=7.5 d=4.3 D=8
+move hang_spacer_1 -12,40,210.5
+part hang_screw_1 parts/std/screw.gcad d=4 L=16
+move hang_screw_1 -12,40,zt
+part hang_spacer_2 parts/std/spacer.gcad L=7.5 d=4.3 D=8
+move hang_spacer_2 -12,56,210.5
+part hang_screw_2 parts/std/screw.gcad d=4 L=16
+move hang_screw_2 -12,56,zt
+part hang_spacer_3 parts/std/spacer.gcad L=7.5 d=4.3 D=8
+move hang_spacer_3 40,46,210.5
+part hang_screw_3 parts/std/screw.gcad d=4 L=16
+move hang_screw_3 40,46,zt
+part hang_spacer_4 parts/std/spacer.gcad L=7.5 d=4.3 D=8
+move hang_spacer_4 40,58,210.5
+part hang_screw_4 parts/std/screw.gcad d=4 L=16
+move hang_screw_4 40,58,zt
 part bracket parts/accessory_bracket.gcad
-part bracket_screw_1 parts/std/screw.gcad d=3 L=8
-move bracket_screw_1 12,40,62.5
-part bracket_screw_2 parts/std/screw.gcad d=3 L=8
-move bracket_screw_2 12,56,62.5
-part bracket_screw_3 parts/std/screw.gcad d=3 L=8
-move bracket_screw_3 27,40,62.5
-part bracket_screw_4 parts/std/screw.gcad d=3 L=8
-move bracket_screw_4 27,56,62.5
+part bracket_screw_1 parts/std/screw.gcad d=4 L=10
+rotate bracket_screw_1 180 axis=x
+move bracket_screw_1 12,40,149
+part bracket_screw_2 parts/std/screw.gcad d=4 L=10
+rotate bracket_screw_2 180 axis=x
+move bracket_screw_2 12,56,149
+part bracket_screw_3 parts/std/screw.gcad d=4 L=10
+rotate bracket_screw_3 180 axis=x
+move bracket_screw_3 -13.5,36,149
+part bracket_screw_4 parts/std/screw.gcad d=4 L=10
+rotate bracket_screw_4 180 axis=x
+move bracket_screw_4 -13.5,60,149
 part rpi parts/std/rpi5.gcad
 rotate rpi -90 axis=x
 rotate rpi 90 axis=y
-move rpi 21,33,198
+move rpi 21,33,143
 part hat_post_1 parts/std/standoff.gcad L=11 af=5 d=2.5 stud=4
 material hat_post_1 aluminium
 rotate hat_post_1 -90 axis=x
-move hat_post_1 17.5,34.6,194.5
+move hat_post_1 17.5,34.6,139.5
 part hat_post_2 parts/std/standoff.gcad L=11 af=5 d=2.5 stud=4
 material hat_post_2 aluminium
 rotate hat_post_2 -90 axis=x
-move hat_post_2 17.5,34.6,136.5
+move hat_post_2 17.5,34.6,81.5
 part hat_post_3 parts/std/standoff.gcad L=11 af=5 d=2.5 stud=4
 material hat_post_3 aluminium
 rotate hat_post_3 -90 axis=x
-move hat_post_3 -31.5,34.6,194.5
+move hat_post_3 -31.5,34.6,139.5
 part hat_post_4 parts/std/standoff.gcad L=11 af=5 d=2.5 stud=4
 material hat_post_4 aluminium
 rotate hat_post_4 -90 axis=x
-move hat_post_4 -31.5,34.6,136.5
+move hat_post_4 -31.5,34.6,81.5
 part poe_hat parts/std/poe_hat.gcad
 rotate poe_hat -90 axis=x
 rotate poe_hat 90 axis=y
-move poe_hat 21,45.6,198
+move poe_hat 21,45.6,143
 part sdr parts/std/rtlsdr.gcad
-move sdr 40.5,36.5,107
+move sdr 40.5,36.5,40
 part base azstage.gasm dw=dw sx=sx sy=sy zt=zt
 part head head.gasm dw=dw cover=cover
 part collar_screw_1 parts/std/screw.gcad d=4 L=20
-move collar_screw_1 sx+12.021,sy+12.021,269.2
+move collar_screw_1 sx+13.435,sy+13.435,269.2
 part collar_nut_1 parts/std/nut.gcad d=4 af=7 m=3.2
-move collar_nut_1 sx+12.021,sy+12.021,251
+move collar_nut_1 sx+13.435,sy+13.435,251
 part collar_screw_2 parts/std/screw.gcad d=4 L=20
-move collar_screw_2 sx-12.021,sy+12.021,269.2
+move collar_screw_2 sx-13.435,sy+13.435,269.2
 part collar_nut_2 parts/std/nut.gcad d=4 af=7 m=3.2
-move collar_nut_2 sx-12.021,sy+12.021,251
+move collar_nut_2 sx-13.435,sy+13.435,251
 part collar_screw_3 parts/std/screw.gcad d=4 L=20
-move collar_screw_3 sx+12.021,sy-12.021,269.2
+move collar_screw_3 sx+13.435,sy-13.435,269.2
 part collar_nut_3 parts/std/nut.gcad d=4 af=7 m=3.2
-move collar_nut_3 sx+12.021,sy-12.021,251
+move collar_nut_3 sx+13.435,sy-13.435,251
 part collar_screw_4 parts/std/screw.gcad d=4 L=20
-move collar_screw_4 sx-12.021,sy-12.021,269.2
+move collar_screw_4 sx-13.435,sy-13.435,269.2
 part collar_nut_4 parts/std/nut.gcad d=4 af=7 m=3.2
-move collar_nut_4 sx-12.021,sy-12.021,251
+move collar_nut_4 sx-13.435,sy-13.435,251
 axis za sx,sy,0 sx,sy,1
 joint az base.spindle box turn about=za min=-270 max=270 drag=daz
-concentric drv_screw_1:shank.side base.drive.plates.base:fix1.side
-concentric drv_screw_2:shank.side base.drive.plates.base:fix2.side
-concentric drv_screw_3:shank.side base.drive.plates.base:fix3.side
-concentric drv_screw_4:shank.side base.drive.plates.base:fix4.side
 couple base.drive.spin az ratio=60 lead=3.583 friction=mu module=1/cos(3.583) face=10 pressure=20 gear=base.wheel pinion=base.drive.worm
 joint el head.elshaft head.elbox turn about=head.ea min=-6 max=186 drag=del
-concentric collar_screw_1:shank.side base.collar:fix.side near=sx+12.021,sy+12.021,258
+concentric collar_screw_1:shank.side base.collar:fix.side near=sx+13.435,sy+13.435,258
 concentric head.elbox:c1.side collar_screw_1:shank.side
-concentric collar_screw_2:shank.side head.elbox:collar.side near=sx-12.021,sy+12.021,265
-concentric collar_screw_3:shank.side head.elbox:collar.side near=sx+12.021,sy-12.021,265
-concentric collar_screw_4:shank.side head.elbox:collar.side near=sx-12.021,sy-12.021,265
+concentric collar_screw_2:shank.side head.elbox:collar.side near=sx-13.435,sy+13.435,265
+concentric collar_screw_3:shank.side head.elbox:collar.side near=sx+13.435,sy-13.435,265
+concentric collar_screw_4:shank.side head.elbox:collar.side near=sx-13.435,sy-13.435,265
 concentric collar_nut_1:n.side collar_screw_1:shank.side
 concentric collar_nut_2:n.side collar_screw_2:shank.side
 concentric collar_nut_3:n.side collar_screw_3:shank.side
