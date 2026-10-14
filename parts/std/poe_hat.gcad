@@ -1,0 +1,13 @@
+let L=65 W=56.5 t=1.6 hx=58 hy=49 e=3.5
+rect L W at=L/2,W/2 r=3
+pcb: extrude t
+plane pcb.end
+mounts: hole 2.7 e,e e+hx,e e,e+hy e+hx,e+hy
+plane pcb.end
+rect 22 18 at=44,24
+transformer: extrude 9
+plane XY
+rect 40 40 at=31,24
+fan: extrude -8
+color #1f4f9a
+material density=2.0

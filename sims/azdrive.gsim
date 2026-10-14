@@ -1,27 +1,24 @@
 sim static
-let q=680 cda_ant=0.08 cda_boom=0.015 cda_box=0.022 m_head=5 g=9.81 shield=0.5 arm=515 zel=226 zc=95 side=1
+let q=680 cda_ant=0.08 cda_boom=0.015 cda_box=0.016 m_head=4 g=9.81 arm=273 sx=27 sy=10 zel=372.2 zc=258 side=1
 let fside=q*(cda_ant+cda_boom)
-let fhead=side*(2*fside+q*cda_box)
+let fhead=side*(fside+q*cda_box)
 let whead=m_head*g
-let taz=fside*(1-shield)*arm/1000
+let taz=fside*arm/1000
 part ../azstage.gasm
-leave *screw* vring drive.cov* drive.nut drive.motor
+leave *screw* vring drive.cov* drive.motor
 material kfl_low zinc E=96 nu=0.27 yield=208 density=6.6
 material kfl_up zinc E=96 nu=0.27 yield=208 density=6.6
-material top aluminium
 material spindle silversteel E=200 nu=0.29 yield=400 density=7.85
 contact wheel drive.worm
-bearing kfl_low:bore.side spindle axial at=0,0,9.6 C0=2900
-bearing kfl_up:bore.side spindle axial at=0,0,66.4 C0=2900
+bearing kfl_low:bore.side spindle axial at=sx,sy,10.6 C0=2900
+bearing kfl_up:bore.side spindle axial at=sx,sy,211.4 C0=2900
 mesh 1.5
 low: fix kfl_low:bolts.side
-post1: fix post_1:hexbody.start,stud.side
-post2: fix post_2:hexbody.start,stud.side
-post3: fix post_3:hexbody.start,stud.side
-post4: fix post_4:hexbody.start,stud.side
-block: fix drive.block:fix.side
+up: fix kfl_up:bolts.side
+block: fix drive.plates.base:fix1.side,fix2.side,fix3.side,fix4.side
 motor: slide drive.shaft:+Z
 load collar:fix.side force=0,fhead,-whead
-torque collar:fix.side fhead*(zel-zc)/1000 axis=-x at=0,0,zc
-torque collar:fix.side taz axis=z at=0,0,zc
-rim: probe 0,21.5,95
+torque collar:fix.side fhead*(zel-zc)/1000 axis=-x at=sx,sy,zc
+torque collar:fix.side taz axis=z at=sx,sy,zc
+rim: probe sx,sy+21.5,zc
+expect kfl_low.safety>2 kfl_up.safety>2

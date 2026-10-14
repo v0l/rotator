@@ -20,7 +20,7 @@ cable: hole 16.2 -40,-10 depth=t+1
 plane XZ offset=-yb
 mast: hole 9 -ub,uz1 ub,uz1 -ub,uz2 ub,uz2 depth=t+1
 ctl: hole 3.4 bx-40,bz-36 bx+40,bz-36 bx-40,bz+15.5 bx+40,bz+14 depth=t+1
-cell: hole 3.4 -57.7,190 -32.3,190 depth=t+1
+cell: hole 3.4 -57.7,199 -32.3,199 depth=t+1
 color #b9bec4
 material diecast density=2.7
 body lid

@@ -2,8 +2,6 @@
 set -e
 cd "$(dirname "$0")"
 gcad=${GCAD:-gcad}
-hammond=0
-[ -f parts/vendor/1550Z220.stp ] && hammond=1
 out=out/step
 rm -rf "$out"
 mkdir -p "$out"
@@ -22,21 +20,23 @@ print() {
   "$gcad" export "$wrap" "$out/$name.stl"
   rm "$wrap"
 }
-part bearing_plate parts/top_plate.gcad
+part drive_side parts/driveplates.gcad body=side_b
+part drive_motor parts/driveplates.gcad body=motor
+part drive_base parts/driveplates.gcad body=base
+part drive_top parts/driveplates.gcad body=top
+part yoke parts/yoke.gcad
 part flange_collar parts/std/flangecollar.gcad "F=44 hub=24 pcd=34 screw=4.5"
-part drive_block parts/driveblock.gcad
 part worm_shaft parts/wormshaft.gcad
-part mast_clamp parts/mastclamp.gcad body=main
-part az_spindle parts/shaft.gcad "L=107 kz=23 kl=20 k2l=18"
-part el_shaft parts/shaft.gcad "L=194.7 kz=91.6 kl=20 xh=1"
+part az_spindle parts/shaft.gcad "L=257 kz=23 kl=20 k2l=18"
+part el_shaft parts/shaft.gcad "d=12 key=4 kd=2.5 L=119 kz=48.5 kl=18 k0l=6 k2l=5.5 tap=1"
 part cross_clamp parts/crossclamp.gcad
 part yagi_boom parts/yagi435.gcad
-part az_box_1550Z220 parts/std/hammond_1550z220_box.gcad "az=1 vendor=$hammond"
-part az_lid_1550Z220 parts/std/hammond_1550z220_lid.gcad "az=1 vendor=$hammond"
-part el_box_1550Z220 parts/std/hammond_1550z220_box.gcad "el=1 xe=26.75 vendor=$hammond"
-part el_lid_1550Z220 parts/std/hammond_1550z220_lid.gcad "el=1 xe=26.75 vendor=$hammond"
-print az_gearcover_low parts/gearcover.gcad "az=1 body=low" -90
-print az_gearcover_high parts/gearcover.gcad "az=1 body=high" 90
-print el_gearcover_low parts/gearcover.gcad "az=0 body=low" -90
-print el_gearcover_high parts/gearcover.gcad "az=0 body=high" 90
-"$gcad" export rotator.gasm out/rotator.step --set hammond=$hammond
+part bracket_tube parts/std/tube.gcad "D=25 t=2 L=390"
+part az_box_1550WH parts/std/hammond_1550h.gcad body=main
+part el_box_1550Z117 parts/std/hammond_1550z117.gcad body=main
+part el_lid_1550Z117 parts/std/hammond_1550z117.gcad body=lid
+print az_gearcover_low parts/gearcover.gcad "az=0 body=low" -90
+print az_gearcover_high parts/gearcover.gcad "az=0 body=high" 90
+print el_gearcover_low parts/gearcover.gcad "az=0 cx=31 R=27.4 rc=25.5 g=5 wr=8.5 wx2=10 bo=30.5 hub=27 shaft=14 body=low" -90
+print el_gearcover_high parts/gearcover.gcad "az=0 cx=31 R=27.4 rc=25.5 g=5 wr=8.5 wx2=10 bo=30.5 hub=27 shaft=14 body=high" 90
+"$gcad" export rotator.gasm out/rotator.step

@@ -1,39 +1,39 @@
 # Bill of materials (bought parts)
 
-Prices checked on 9 Oct 2026, unit prices ex VAT. Made parts (plates, shafts, mast
-clamp, drive blocks) and drilling the boxes are in `QUOTE.md`.
+Prices checked on 9 Oct 2026, unit prices ex VAT. Made parts (plates, yoke, shafts,
+collar) and drilling the boxes are in `QUOTE.md`.
 
 ## Farnell Ireland (EUR, free delivery over €75)
 
 | qty | part | order code | unit | total |
 |---|---|---|---|---|
-| 2 | Hammond 1550Z220 die-cast box | [1823112](https://ie.farnell.com/hammond/1550z220/box-diecast-82x146x222mm/dp/1823112) | €37.48 | €74.96 |
-| 3 | TE 1478769-2 cable gland M16, IP68, with locknut | [1174602](https://ie.farnell.com/te-connectivity/1478769-2/cable-gland-pa-10mm-m16-black/dp/1174602) | €4.07 | €12.21 |
-| 2 | TE 2490541-2 breather vent M12x1.5 | [4753219](https://ie.farnell.com/amp-te-connectivity/2490541-2/ventilation-cable-gland-70l-h/dp/4753219) | €4.40 | €8.80 |
-| | | | | **€95.97** |
+| 4 | TE 1478769-2 cable gland M16, IP68, with locknut | [1174602](https://ie.farnell.com/te-connectivity/1478769-2/cable-gland-pa-10mm-m16-black/dp/1174602) | €4.07 | €16.28 |
+| 1 | TE 2490541-2 breather vent M12x1.5 | [4753219](https://ie.farnell.com/amp-te-connectivity/2490541-2/ventilation-cable-gland-70l-h/dp/4753219) | €4.40 | €4.40 |
+| | | | | **€20.68** |
 
 ## Simply Bearings Ireland (EUR)
 
 | qty | part | link | unit | total |
 |---|---|---|---|---|
-| 4 | KFL002 flange bearing unit, 15 mm | [kfl002](https://www.simplybearings.ie/products/kfl002) | €7.69 | €30.76 |
+| 2 | KFL002 flange bearing unit, 15 mm (az) | [kfl002](https://www.simplybearings.ie/products/kfl002) | €7.69 | €15.38 |
 | 4 | SKF 608-2RSH | [608-2rsh-skf](https://www.simplybearings.ie/products/608-2rsh-skf) | €6.12 | €24.48 |
 | 1 | V-ring VA14 nitrile, for 13.5-15.5 mm shafts | [v14a-nbr-nak](https://www.simplybearings.ie/products/v14a-nbr-nak) | €1.00 | €1.00 |
-| 3 | Feather key 5x5x20, A4 stainless (one cut to 16 for the collar) | [fkss-2re-5x5x20mm](https://www.simplybearings.ie/products/fkss-2re-5x5x20mm) | €2.26 | €6.78 |
-| 2 | Bronze bush AM1521-20, 15x21x20 (crossboom) | [am-1521-20-pl](https://www.simplybearings.ie/products/am-1521-20-pl) | €5.64 | €11.28 |
-| 1 | Silver steel 15 mm x 325, cut into the 98 mm spindle and 194.7 mm el shaft | [ssm0150-325mm](https://www.simplybearings.ie/products/ssm0150-325mm) | €22.66 | €22.66 |
-| | | | | **€96.96** |
+| 2 | Feather key 5x5x20, A4 stainless (one cut to 16 for the collar) | [fkss-2re-5x5x20mm](https://www.simplybearings.ie/products/fkss-2re-5x5x20mm) | €2.26 | €4.52 |
+| 1 | Silver steel 15 mm x 325, cut into the 257 mm az spindle | [ssm0150-325mm](https://www.simplybearings.ie/products/ssm0150-325mm) | €22.66 | €22.66 |
+| 1 | Silver steel 8 mm x 325, cut into two 83 mm worm shafts | [ssm0080-325mm](https://www.simplybearings.ie/products/ssm0080-325mm) | €9.26 | €9.26 |
+| | | | | **€77.30** |
 
 ## R.A. Rodriguez, KHK distributor (UK, GBP)
 
 | qty | part | link | unit | total |
 |---|---|---|---|---|
-| 2 | KHK CG1-60R1 worm wheel, m1, 60:1, cast iron | [cg1-60r1](https://www.rargears.com/gears/worm-wheels/gray-iron-worm-wheels/cg1-60r1) | £26.86 | £53.72 |
-| 2 | KHK SW1-R1 steel worm, m1 | [SW1-R1](https://www.rargears.com/gears/worm-wheels/steel-worms/SW1-R1) | £19.42 | £38.84 |
-| | | | | **£92.56** |
+| 1 | KHK CG1-60R1 worm wheel, m1, 60:1, cast iron (az) | [cg1-60r1](https://www.rargears.com/gears/worm-wheels/gray-iron-worm-wheels/cg1-60r1) | £26.86 | £26.86 |
+| 1 | KHK SW1-R1 steel worm, m1 (az) | [SW1-R1](https://www.rargears.com/gears/worm-wheels/steel-worms/SW1-R1) | £19.42 | £19.42 |
+| | | | | **£46.28** |
 
-The wheels come with a 10 mm plain bore and the worms with 6 mm; have them bored to
-15 mm H7 with a 5 mm keyway and to 8 mm H7. RAR does not list the bronze BG1-60R1. Its
+The el pair, KHK BG0.8-60R1 (bronze, m0.8, 60:1) and SW0.8-R1, is not price-checked.
+
+The wheels come with plain bores and the worms with 6 mm; the reboring is in `QUOTE.md`. RAR does not list the bronze BG1-60R1. Its
 bronze 60:1 option is AG1-60R1J15 (£158.85, already bored 15 mm with keyway), but that
 pairs with the SWG1-R1 ground worm (£80.12), which I have not modelled. Shipping from
 the UK adds Irish import VAT and a carrier handling fee.
@@ -49,11 +49,17 @@ the UK adds Irish import VAT and a carrier handling fee.
 
 | qty | part | where |
 |---|---|---|
-| 4 | Hex standoff M8 x 70, male-female, 13 mm hex, A2 stainless (bearing plate posts) | [Accu](https://www.accu.co.uk) |
-| 2 | Aluminium tube 25 x 2, 500 mm (crossboom) | [Aluminium Online](https://www.aluminium-online.co.uk/product/25mm-x-2mm-aluminium-round-tube-2/) |
-| 1 | EPDM sheet 1 mm, for the gaskets under the el bearing units | Amazon, Delta Rubber |
-| 4 | Hex standoff M3 x 18, male-female, 5.5 mm, 6 mm stud, aluminium (control board) | [Accu](https://www.accu.co.uk) |
-| 1 | EPDM O-ring cord 2.5 mm, 0.7 m, bonded into a loop (mast clamp face seal) | Simply Bearings, Polymax |
+| 1 | Hammond 1550WH die-cast box, 222 x 146 x 105, IP66 (az) | Farnell, RS, Mouser |
+| 1 | Hammond 1550Z117 die-cast box, 160 x 100 x 81, IP66 (el) | Farnell, RS, Mouser |
+| 2 | KFL001 flange bearing unit, 12 mm (el) | [Simply Bearings](https://www.simplybearings.co.uk/products/kfl001) |
+| 1 | V-ring VA12 nitrile, for 11.5-13.5 mm shafts (el lid) | Simply Bearings |
+| 1 | Shaft collar 12 mm, set screw (el lid side) | Simply Bearings |
+| 1 | Silver steel 12 mm x 325 (el shaft) | Simply Bearings |
+| 3 | Feather key 4x4, A4 (el wheel, both yoke arms) | Simply Bearings |
+| 2 | M8 U-bolt and V-saddle for 48 mm tube, A4 (mast clamp) | aerial suppliers, Accu |
+| 1 | Aluminium tube 25 x 2, 390 mm (yagi bracket) | Goodwins (below) |
+| 1 | EPDM sheet 1 mm, for the gasket under the outside el bearing unit | Amazon, Delta Rubber |
+| 4 | Hex standoff M3 x 10, female-female, 5.5 mm, aluminium (control board) | [Accu](https://www.accu.co.uk) |
 | 1 | Takachi CR123A-R battery holder with 140 mm leads, plus a JST PHR-2 housing and 2 SPH crimps | Conrad, item 1882324 |
 | 1 | CR123A lithium cell | any |
 | 1 | RJ45 plug for the PoE cable, crimped inside the box after the cable is through the gland | any |
@@ -61,11 +67,11 @@ the UK adds Irish import VAT and a carrier handling fee.
 | 5 | Aluminium rod 4 mm, 1 m (yagi elements, three per bar) | [Aluminium Online](https://www.aluminium-online.co.uk) |
 | 24 | Push-on star lock washer, 4 mm shaft, A2 (parasitic elements, both sides of the boom) | [Accu](https://www.accu.co.uk) |
 | 2 | Dipole centre insulator box for a 20 mm boom (split driven elements) | DK7ZB, WiMo |
-| 2 | M6 U-bolt for 25 mm tube, A4, with nuts | [Accu](https://www.accu.co.uk) |
+| 4 | M6 U-bolt for 25 mm tube, A4, with nuts (two on the cross clamp, two on the yoke) | [Accu](https://www.accu.co.uk) |
 | 2 | M6 U-bolt for 20 mm tube, A4, with nuts | [Accu](https://www.accu.co.uk) |
-| 14 | Ruthex M3 heat-set insert, 5.7 long (gear covers) | [3DJake Ireland](https://www.3djake.ie/) |
+| 12 | Ruthex M3 heat-set insert, 5.7 long (gear covers) | [3DJake Ireland](https://www.3djake.ie/) |
 | 1 | PETG filament, about 150 g (gear covers) | [3DJake Ireland](https://www.3djake.ie/) |
-| | A4 screws: M3x6 (4), M3x8 countersunk (2), M3x10 (18), M3x14 (4), M4x16 (8), M4x16 countersunk (4), M5x30 (2), M5x6 set screw (1), M6x10 (2), M6x16 (6), M8x12 countersunk (4); nuts M4 (4), M4 nyloc (4), M6 (4), M5 nyloc (2), M8x1 thin DIN 936 (2, worm shafts); M4 bonded sealing washers (4, el drive block through the el box floor) | [Accu](https://www.accu.co.uk) |
+| | A4 screws: M3x6 (4), M3x8 countersunk (2), M3x10 (16), M3x12 countersunk (24, drive plates), M3x14 (4), M5x12 (2, el shaft ends), M6x16 (4); O-ring sealing screws: M3x8 (4, board), M4x10 (8, drive base plates), M4x20 (4, collar), M6x16 (6, KFLs through the walls); nuts M3 (2), M4 (4), M6 (6, nyloc), M8 nyloc (4) with sealing washers (mast U-bolts inside the az box); washers 5.3 x 20 (2) | [Accu](https://www.accu.co.uk) |
 
 ## Totals in EUR with 23% VAT
 
@@ -73,19 +79,19 @@ GBP converted at 1.1805 (mid-market, 9 Oct 2026). Shipping not included.
 
 | supplier | ex VAT | with VAT |
 |---|---|---|
-| Farnell Ireland | €95.97 | €118.04 |
-| Simply Bearings Ireland | €96.96 | €119.26 |
-| R.A. Rodriguez (£92.56) | €109.27 | €134.40 |
+| Farnell Ireland | €20.68 | €25.44 |
+| Simply Bearings Ireland | €77.30 | €95.08 |
+| R.A. Rodriguez (£46.28) | €54.63 | €67.20 |
 | StepperOnline (£28.72) | €33.90 | €41.70 |
 | Goodwins, 25 mm tube x 1 m | €8.90 | €10.95 |
 | Control board parts, Mouser (`board/tools/bom.md`) | €65.97 | €81.14 |
-| **priced parts** | **€410.97** | **€505.49** |
+| **priced parts** | **€261.38** | **€321.51** |
 
-The unpriced rows (standoffs, O-ring cord, screws, gasket sheet, battery holder) are an
-estimate of about €85 with VAT, which brings the bought parts to roughly **€595**. The control
-board PCB itself (4 layers, ENIG, JLCPCB) and its assembly are not priced yet, and its
-STM32H563RIT6 is on backorder (Mouser expects stock on 11 Dec 2026). The made parts in
-`QUOTE.md` (plates, shafts, mast clamp, drive blocks, gear reboring) still need quotes.
+The unpriced rows now include both Hammond boxes, the el worm pair and the KFL001s, so the
+priced total is well short of the bought parts; they need pricing before the total means
+anything. The control board PCB (4 layers, ENIG, JLCPCB) and its assembly are not priced yet,
+and its STM32H563RIT6 is on backorder (Mouser expects stock on 11 Dec 2026). The made parts in
+`QUOTE.md` still need quotes.
 
 ## Other Irish suppliers
 

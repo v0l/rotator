@@ -1,6 +1,6 @@
 # Az/el antenna rotator
 
-Weatherproof az/el rotator for small satellite yagis on a 25 mm crossboom, modelled in
+Weatherproof az/el rotator for small satellite yagis on a U yoke, modelled in
 [gcad](https://github.com/v0l/gcad). Housings are Hammond die-cast boxes; the made parts
 are cut plates and a few turned and milled pieces, see `QUOTE.md`.
 
@@ -18,65 +18,58 @@ gcad bom rotator.gasm
 gcad export rotator.gasm rotator.step
 ```
 
-`rotator.gasm` holds the az box and what is fixed in it (board, battery, mast clamp, glands)
-and brings in two sub-assemblies, joined by the `az` and `el` joints:
+`rotator.gasm` holds the az box and what is fixed to it (board, battery, glands, vent, mast
+U-bolts) and brings in the sub-assemblies, joined by the `az` and `el` joints:
 
 | file | in `rotator.gasm` as | what |
 |---|---|---|
-| `azstage.gasm` | `base` | bearing plate and posts, both az KFLs, spindle, wheel, keys, flange collar, and the az worm drive as `base.drive` |
-| `head.gasm` | `head` | el box and lid, el KFLs, el shaft, wheel, crossbooms, yagi and the el worm drive as `head.drive` |
-| `drive.gasm` | `base.drive`, `head.drive` | one worm drive in its own frame (worm axis on z): block, worm, 608s, worm shaft, spacers and nut, motor, grease cover and screws, and its `spin` joint |
+| `azstage.gasm` | `base` | both az KFL002s, the spindle, wheel, keys, V-ring, flange collar, and the az worm drive as `base.drive` |
+| `head.gasm` | `head` | el box and lid, el KFL001s, el shaft, wheel, U yoke, bracket tube, yagi, and the el worm drive as `head.drive` |
+| `drive.gasm` | `base.drive` | az worm drive in its own frame (worm axis on z): cut plates, KHK SW1-R1 worm, 608s, worm shaft, spacers, NEMA17, grease cover |
+| `drive_el.gasm` | `head.drive` | the same frame with the module 0.8 SW0.8-R1 worm and a cover for the BG0.8 wheel |
 
-Screws that join a sub-assembly to something outside it live where both parts are: the drive
-blocks' screws to the az floor, the lower KFL's and the collar's in `rotator.gasm`, the el
-drive block's in `head.gasm`. Each sub-assembly opens, checks and simulates on its own:
-`gcad drive.gasm`, and `sims/azdrive.gsim` loads `azstage.gasm`.
+Screws that join a sub-assembly to something outside it live where both parts are. Each
+sub-assembly opens, checks and simulates on its own: `gcad drive.gasm`, and
+`sims/azdrive.gsim` loads `azstage.gasm`.
 
 ## Layout
 
-- Two Hammond 1550Z220 die-cast IP66 boxes: the az box on the mast, the el box standing
-  on the az spindle 5 mm above the az lid. Every other made part is a cut plate, two short
-  turned shafts, the flange collar, the mast clamp and the two drive blocks.
-- The mast clamp's flange covers the underside of the az box and seals to it with one
-  O-ring cord. Everything inside the az box screws through the floor into it: the lower
-  bearing, the drive block, four M8 posts, the control board and the battery holder.
-- Az: 15 mm spindle in two KFL002 flange units, one on the box floor and one under a
-  bearing plate on the posts. The spindle leaves the lid through a V-ring and ends inside
-  the el box in a keyed flange collar with a set screw, bolted to a spot face on the el
-  box's end wall.
-- El: 15 mm shaft in KFL002 units bolted straight through the el box floor and lid on EPDM
-  gaskets; the el drive block bolts through the floor too, on sealing washers. Crossboom tubes slide over the shaft ends on bronze bushes and are cross-bolted.
-  The el axis is 226 mm above the az box floor, and the el head sits 14.75 mm off the az axis
-  so the collar's bolts land in the box body, not the lid.
-- Each axis: KHK CG1-60R1 wheel on a keyed shaft, KHK SW1-R1 worm on a turned 8 mm shaft in
-  two 608s in `driveblock.gcad`, driven by a StepperOnline 17HS15-1504-ME1K closed-loop NEMA17
-  with a built-in 1000 PPR magnetic encoder. The worm shaft's shoulder end has a D-bore that
-  slides over the motor's D-cut shaft, so the motor passes torque only; there is no coupling.
-  The shaft's shoulder, the lower 608's inner ring, a spacer, the worm, a spacer, the upper
-  608's inner ring and a spacer are clamped by an M8x1 thin nut, so the worm's thrust goes
-  into the 608s, each taking it one way against its seat's shoulder; the worm's own M4 set
-  screw on a flat carries the torque. Turn counting and its battery backup
-  live on the control board. The worm thread and the wheel teeth are helical at the 3.58°
-  lead, so they mesh at every angle; `gcad check checks/worm_mesh.gasm` sweeps both pairs
-  in half-degree steps. The helical wheel, the worm losses and the joint drag need gcad's `joint-drag` branch.
-- Each worm and wheel runs in a PETG grease cover, `parts/gearcover.gcad` (`az=1` notches
-  it round the bearing plate posts). It splits on the wheel's mid-plane: the low half takes
-  two M3x14 through the drive block's plates and five M3 heat-set inserts, the high half
-  screws onto it with five M3x10. The trough ends stop 0.5 mm short of the drive block
-  plates, which close them. Fit the low half over the shaft before the wheel. Print the
-  high half on its outer face; the low half stands on its worm trough and needs support
-  under the wheel ring. `./export.sh` writes the four STLs turned that way.
-- The boxes are `parts/std/hammond_1550z220_box.gcad` and `_lid.gcad`. Without
-  Hammond's STEP they are drawn from its measurements. Download the STEP from
-  https://www.hammfg.com/part/1550Z220, save it as `parts/vendor/1550Z220.stp`, and run
-  with `--set hammond=1` to drill the real boxes; `./export.sh` uses it when present.
+- Az: a Hammond 1550WH (222 x 146 x 105, IP66) stands on its end beside the mast, held by two
+  M8 U-bolts on V-saddles through its back wall. Its lid faces the front, so the control board
+  and both az parts come out without touching the head.
+- The 15 mm az spindle runs up the box on two KFL002s, one on each end wall inside, 201 mm
+  apart, and leaves the top wall through a V-ring. A keyed flange collar on its top end
+  carries the el box.
+- El: a Hammond 1550Z117 (160 x 100 x 81) on the collar. A 12 mm el shaft crosses it on two
+  KFL001s, the floor one outside, the lid one inside the lid. A U yoke bent from one 5 mm plate
+  is keyed straight onto both shaft ends and held by an M5 end screw and washer; the right arm
+  clamps against a shaft collar outside the lid's V-ring. The head is 134 mm wide along the
+  el axis. A 25 mm tube clamped to the yoke's crossbar carries the yagi 300 mm out, clear of
+  the el box at every angle.
+- Az drive: KHK CG1-60R1 wheel and SW1-R1 worm, 60:1. El drive: KHK BG0.8-60R1 bronze wheel and
+  SW0.8-R1 worm, 60:1, 31 mm centres, small enough for the 1550Z117. Both run in the same
+  cut-plate frame (`parts/driveplates.gcad`): a base plate, two 10 mm side plates with blind
+  608 seats on their inside faces, a motor plate and a top plate, joined by countersunk M3
+  screws into tapped plate edges. The worm and two spacers sit between the 608 inner rings,
+  so the side plates capture the worm when they are screwed to the base plate; the worm's
+  M4 set screw carries the torque. The plain 8 mm worm shaft has a D-bore at the motor end
+  that slides over the StepperOnline 17HS15-1504-ME1K's D-cut shaft, so the motor passes
+  torque only, with no coupling. Each base plate takes four M4 O-ring sealing screws from
+  outside its box.
+- The az drive's top plate is a level shelf at z 60.5 with four M3 tapped holes on 16 x 15
+  for a printed holder. Above it is clear space 136 wide, 46 deep and 136 tall (y 24 to 70,
+  z 61 to 198), enough for a Raspberry Pi 5 with a PoE HAT standing parallel to the lid and an
+  RTL-SDR Blog V4 beside it, close to the coax. `parts/std/rpi5.gcad` (from the official
+  STEP), `poe_hat.gcad` and `rtlsdr.gcad` are reference models for designing it.
+- Each worm and wheel runs in a PETG grease cover, `parts/gearcover.gcad`, split on the wheel's
+  mid-plane, held to the side plates by two M3x14 into heat-set inserts.
 
 ## 70 cm yagi
 
 A crossed 7-element yagi for 435 MHz, cut from the DL6WU design in
 [antenna toolbox](https://github.com/v0l/antenna-toolbox) (4 mm elements bonded through a
 20 mm metal boom). Solved per plane: 11.9 dBi, F/B 30 dB, about 39 - j5 Ω at each driven
-element. The two planes sit 25 mm apart along the boom in an X, 45° off the crossboom, and are
+element. The two planes sit 25 mm apart along the boom in an X, 45° off the bracket tube, and are
 fed RHCP through a quarter-wave phasing harness. The model points it at the zenith (`el=90`).
 
 | element | length | from the reflector |
@@ -91,34 +84,33 @@ fed RHCP through a quarter-wave phasing harness. The model points it at the zeni
 
 The second plane is the same set 25 mm further along. Parasitic lengths include DL6WU's
 +10.8 mm boom correction. The boom (`parts/yagi435.gcad`) is 932 mm of 20 x 1.5 tube, with
-40 mm past the reflector and the last director. It crosses the right-hand crossboom tube
-300 mm out, at the yagi's balance point, on a milled cross clamp (`parts/crossclamp.gcad`)
-held by four M6 U-bolts.
+40 mm past the reflector and the last director. It crosses the bracket tube 300 mm out, at the
+yagi's balance point, on a milled cross clamp (`parts/crossclamp.gcad`) held by four M6
+U-bolts.
 
 ## Control board
 
 `board/` is the controller in the az box: one PoE cable in, both motors and encoders out. An
 STM32H563 with a LAN8720A PHY, two TMC2209 drivers on UART, a Silvertel Ag5424 PoE module, and
-a CR123A cell that keeps the encoder counters alive through a power cut. It sits on four
-aluminium M3 standoffs screwed into the mast clamp, which also carry its heat away. See
-`board/DESIGN.md`.
+a CR123A cell that keeps the encoder counters alive through a power cut. It stands on four
+10 mm aluminium M3 standoffs on the az box's back wall, facing the lid, held by O-ring sealing
+screws from outside. See `board/DESIGN.md`.
 
 ![Control board](docs/board.png)
 
 ## Sealing
 
-The boxes seal on their own gaskets. The az spindle leaves the lid through a V-ring running on
-the lid; the el shaft leaves through the KFL inserts' own seals, their flanges on EPDM
-gaskets; cables through IP68 M16 glands, and each box has an M12 breather vent.
-The mast clamp seals the floor holes with a face O-ring.
+The boxes seal on their own gaskets. Every fixing through a box wall is an O-ring sealing
+screw or has a sealing washer. The az spindle leaves the top wall through a V-ring running on
+it; the el shaft leaves the floor through the outside KFL001's insert seal on an EPDM gasket,
+and the lid through a V-ring. The el motor cable runs from a gland under the el box to a gland
+in the az box's top wall, with a loop for the az travel; the PoE cable and az cables use the
+glands in the bottom wall, beside the M12 breather vent.
 
 ## Strength
 
-`sims/` holds gcad FEA of the KFL002 housing, the spindle, the el shaft and the el box on
-its collar under a 120 km/h gusty-side wind, and the bearing loads against the KFL002
-ratings; see `sims/README.md`. The worst bearing sees 768 N against a 2.9 kN static rating,
-and the shafts stay under 90 MPa away from the singular spots. The worm wheels are the open
-question.
+`sims/` holds gcad FEA under a 120 km/h wind; see `sims/README.md`. `azdrive` and `torque`
+are current for this layout; the el shaft, el box and wind sims are from the old layout.
 
 ## Ratings
 
@@ -130,5 +122,7 @@ RMS. At mesh friction 0.1 the worm is 38% efficient and locks, so the load canno
 and 1.3 W of friction heat. Wind torque is taken as 8.9 N·m at 120 km/h (CFD) scaled with
 speed squared, and every joint carries its bearing and seal drag.
 KHK lists CG1-60R1 (cast iron) at 7.4 N·m at 100 rpm worm speed.
+El: the same motor through the BG0.8-60R1 (3°17' lead) needs 0.15 N·m; the mesh carries 2.0 N·m
+against KHK's 6.9 N·m at 100 rpm, 26 MPa Lewis bending in the bronze.
 Az drives up to about 90 km/h of wind with cold grease (100 km/h with fresh) and parks above
 that; the rule is in the firmware notes of `board/DESIGN.md`.

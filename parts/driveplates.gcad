@@ -70,5 +70,6 @@ tj3: hole 3.4 8,-zb-ts/2 csink=M3
 tj4: hole 3.4 -8,-zb-ts/2 csink=M3
 tj5: hole 3.4 8,zm+t/2 csink=M3
 tj6: hole 3.4 -8,zm+t/2 csink=M3
+mount: hole 2.5 8,0 -8,0 8,-15 -8,-15 depth=t+1 thread=M3
 color #c4cad1
 material aluminium

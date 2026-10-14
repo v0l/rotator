@@ -1,0 +1,30 @@
+let L=85 W=56 t=1.6 hx=58 hy=49 e=3.5 hdr=8.5
+rect L W at=L/2,W/2 r=3
+pcb: extrude t
+plane pcb.end
+mounts: hole 2.7 e,e e+hx,e e,e+hy e+hx,e+hy
+plane pcb.end
+rect 21.5 15.9 at=77.25,10.25
+eth: extrude 13
+rect 17.5 14.4 at=79.25,29
+usb_a: extrude 15.9
+rect 17.5 14.4 at=79.25,47
+usb_b: extrude 15.9
+rect 9 7.3 at=11.2,2.45
+usbc: extrude 3
+rect 7.5 7 at=25.8,2.5
+hdmi0: extrude 3.5
+rect 7.5 7 at=39.2,2.5
+hdmi1: extrude 3.5
+rect 16.9 16.9 at=33.15,22.75
+soc: extrude 2.1
+rect 3 16.7 at=48.6,8.45
+cam0: extrude 3.7
+rect 3 16.7 at=54.8,8.45
+cam1: extrude 3.7
+rect 50.8 5 at=32.5,52.5
+gpio: extrude hdr
+rect 5 5 at=66.75,52
+poe: extrude hdr
+color #1f7a3a
+material density=2.2

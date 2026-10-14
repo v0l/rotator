@@ -1,0 +1,11 @@
+let L=69 W=27 H=13 usb=12 sma=9
+rect W H at=0,0 r=2
+body: extrude L
+plane body.end
+circle 6.4
+jack: extrude sma
+plane XY
+rect 12 4.5
+plug: extrude -usb
+color #2a2c2f
+material aluminium

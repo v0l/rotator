@@ -46,22 +46,22 @@ rotate ctl_seal_4 90 axis=x
 move ctl_seal_4 16,-30,129
 part cell_holder parts/std/cr123_holder.gcad body=main
 rotate cell_holder -90 axis=x
-move cell_holder -45,-26,190
+move cell_holder -45,-26,199
 part cell parts/std/cr123_holder.gcad body=cell
 rotate cell -90 axis=x
-move cell -45,-26,190
+move cell -45,-26,199
 part cell_screw_1 parts/std/screwcsk.gcad d=3 L=8
 rotate cell_screw_1 -90 axis=x
-move cell_screw_1 -57.7,-24.1,190
+move cell_screw_1 -57.7,-24.1,199
 part cell_nut_1 parts/std/nut.gcad d=3 af=5.5 m=2.4
 rotate cell_nut_1 90 axis=x
-move cell_nut_1 -57.7,-30,190
+move cell_nut_1 -57.7,-30,199
 part cell_screw_2 parts/std/screwcsk.gcad d=3 L=8
 rotate cell_screw_2 -90 axis=x
-move cell_screw_2 -32.3,-24.1,190
+move cell_screw_2 -32.3,-24.1,199
 part cell_nut_2 parts/std/nut.gcad d=3 af=5.5 m=2.4
 rotate cell_nut_2 90 axis=x
-move cell_nut_2 -32.3,-30,190
+move cell_nut_2 -32.3,-30,199
 part eth_plug parts/std/rj45_lead.gcad body=main
 move eth_plug -123,-23.8,39.64
 rotate eth_plug -90 axis=x
