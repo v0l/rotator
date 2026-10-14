@@ -10,7 +10,7 @@ bore: hole mast+0.4 0,0 depth=depth
 plane flange.end
 if detail fix: hole 5 -26.5,0 26.5,0 depth=blind thread=M6
 if detail posts: hole 6.8 -38,-36 38,-36 40,14 -38,16 depth=blind thread=M8
-if detail drive: hole 3.3 -15,30 -15,46 -40,26 -40,50 depth=blind thread=M4
+if detail drive: hole 3.3 -15,30 -15,46 -40.5,26 -40.5,50 depth=blind thread=M4
 if detail ctl: hole 2.5 -130,10 -50,10 -130,-41.5 -50,-40 -12.7,-50 12.7,-50 depth=blind thread=M3
 if detail plane flange.end
 if detail rect fl-2*inset fw-2*inset at=fx,0 r=r-inset

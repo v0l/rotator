@@ -1,4 +1,4 @@
-let d=8 D=22 B=7 c=0.4
+let d=8 D=22 B=7 c=0.4 fl=0 fd=25 fw=1.5
 circle D
 circle d+0.04
 ring: extrude B
@@ -8,5 +8,9 @@ plane ring.end
 circle D-(D-d)*0.22
 circle d+(D-d)*0.22
 seal: cut 0.3
+if fl plane XY
+if fl circle fd
+if fl circle D-1
+if fl flange: extrude fw
 color #9aa3ad
 material steel

@@ -35,18 +35,6 @@ move kfl_l_bolt_2 -62.5,0,eh+26.5
 part kfl_l_nut_2 parts/std/nut.gcad
 rotate kfl_l_nut_2 -90 axis=y
 move kfl_l_nut_2 -48.5,0,eh+26.5
-part blk_nut_1 parts/std/nut.gcad d=4 af=7 m=5
-rotate blk_nut_1 90 axis=y
-move blk_nut_1 26.5,30,eh-15
-part blk_nut_2 parts/std/nut.gcad d=4 af=7 m=5
-rotate blk_nut_2 90 axis=y
-move blk_nut_2 26.5,46,eh-15
-part blk_nut_3 parts/std/nut.gcad d=4 af=7 m=5
-rotate blk_nut_3 90 axis=y
-move blk_nut_3 26.5,50,eh-40
-part blk_nut_4 parts/std/nut.gcad d=4 af=7 m=5
-rotate blk_nut_4 90 axis=y
-move blk_nut_4 26.5,26,eh-40
 part elshaft parts/shaft.gcad L=194.7 kz=91.6 kl=20 xh=1 x1=17.35 x2=177.35
 rotate elshaft 90 axis=y
 rotate elshaft -90 axis=x
@@ -183,24 +171,24 @@ move vent -14.75,-73.25,129
 part drive drive.gasm az=0 dw=dw
 rotate drive -90 axis=z
 move drive -5.5,38,eh
-part blk_screw_1 parts/std/screw.gcad d=4 L=16
-rotate blk_screw_1 90 axis=x
-move blk_screw_1 8,23,-15
+part blk_screw_1 parts/std/screw.gcad d=4 L=10
+rotate blk_screw_1 -90 axis=x
+move blk_screw_1 8,32,-15
 rotate blk_screw_1 -90 axis=z
 move blk_screw_1 -5.5,38,eh
-part blk_screw_2 parts/std/screw.gcad d=4 L=16
-rotate blk_screw_2 90 axis=x
-move blk_screw_2 -8,23,-15
+part blk_screw_2 parts/std/screw.gcad d=4 L=10
+rotate blk_screw_2 -90 axis=x
+move blk_screw_2 -8,32,-15
 rotate blk_screw_2 -90 axis=z
 move blk_screw_2 -5.5,38,eh
-part blk_screw_3 parts/std/screw.gcad d=4 L=16
-rotate blk_screw_3 90 axis=x
-move blk_screw_3 12,23,-40
+part blk_screw_3 parts/std/screw.gcad d=4 L=10
+rotate blk_screw_3 -90 axis=x
+move blk_screw_3 12,32,-40.5
 rotate blk_screw_3 -90 axis=z
 move blk_screw_3 -5.5,38,eh
-part blk_screw_4 parts/std/screw.gcad d=4 L=16
-rotate blk_screw_4 90 axis=x
-move blk_screw_4 -12,23,-40
+part blk_screw_4 parts/std/screw.gcad d=4 L=10
+rotate blk_screw_4 -90 axis=x
+move blk_screw_4 -12,32,-40.5
 rotate blk_screw_4 -90 axis=z
 move blk_screw_4 -5.5,38,eh
 if cover concentric ellid:bearing.side elbox:bearing.side
@@ -247,11 +235,7 @@ concentric boom_nut_l:n.side elshaft:cross.side near=-80,0,eh
 concentric gland:stub.side elbox:gland.side
 concentric vent:stub.side elbox:vent.side
 concentric blk_screw_1:shank.side elbox:drive.side near=25,30,eh-15
-flush drive.block:spine.start blk_screw_1:head.start
-flush blk_screw_2:head.start drive.block:spine.start
-flush blk_screw_3:head.start drive.block:spine.start
-flush blk_screw_4:head.start drive.block:spine.start
-concentric blk_nut_1:n.side elbox:drive.side near=29,30,eh-15
-concentric blk_nut_2:n.side elbox:drive.side near=29,46,eh-15
-concentric blk_nut_3:n.side elbox:drive.side near=29,50,eh-40
-concentric blk_nut_4:n.side elbox:drive.side near=29,26,eh-40
+concentric drive.plates.base:fix1.side blk_screw_1:shank.side
+concentric blk_screw_2:shank.side drive.plates.base:fix2.side
+concentric blk_screw_3:shank.side drive.plates.base:fix3.side
+concentric blk_screw_4:shank.side drive.plates.base:fix4.side

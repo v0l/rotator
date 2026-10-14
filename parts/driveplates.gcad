@@ -1,0 +1,74 @@
+let t=6 ts=10 zb=25 zm=-52 w=29 yb=23 y0=-21.5 mw=43 my=-21.5 brg=22 bw=7 pass=14 pitch=31 pilot=22.4
+body side_b
+plane XY offset=zb
+rect w yb-y0 at=0,(yb+y0)/2
+pb: extrude ts
+plane pb.start
+seat_b: hole brg 0,0 depth=bw
+plane pb.end
+pass_b: hole pass 0,0
+cover_b: hole M3 0,15
+plane XZ offset=-yb rx=180
+tb1: hole 2.5 8,-(zb+ts/2) depth=8 thread=M3
+tb2: hole 2.5 -8,-(zb+ts/2) depth=8 thread=M3
+plane XZ offset=-y0
+tt_b1: hole 2.5 8,zb+ts/2 depth=8 thread=M3
+tt_b2: hole 2.5 -8,zb+ts/2 depth=8 thread=M3
+color #c4cad1
+material aluminium
+body side_a
+plane XY offset=-zb-ts
+rect w yb-y0 at=0,(yb+y0)/2
+pa: extrude ts
+plane pa.end
+seat_a: hole brg 0,0 depth=bw
+pass_a: hole pass 0,0
+cover_a: hole M3 0,15
+plane XZ offset=-yb rx=180
+ta1: hole 2.5 8,zb+ts/2 depth=8 thread=M3
+ta2: hole 2.5 -8,zb+ts/2 depth=8 thread=M3
+plane XZ offset=-y0
+tt_a1: hole 2.5 8,-zb-ts/2 depth=8 thread=M3
+tt_a2: hole 2.5 -8,-zb-ts/2 depth=8 thread=M3
+color #c4cad1
+material aluminium
+body motor
+plane XY offset=zm
+rect mw yb-my at=0,(yb+my)/2
+pm: extrude t
+plane pm.end
+pilot: hole pilot 0,0
+mounts: hole 3.4 pitch/2,pitch/2 -pitch/2,pitch/2 -pitch/2,-pitch/2 pitch/2,-pitch/2
+plane XZ offset=-yb rx=180
+tm1: hole 2.5 8,-(zm+t/2) depth=8 thread=M3
+tm2: hole 2.5 -8,-(zm+t/2) depth=8 thread=M3
+plane XZ offset=-y0
+tt_m1: hole 2.5 8,zm+t/2 depth=8 thread=M3
+tt_m2: hole 2.5 -8,zm+t/2 depth=8 thread=M3
+color #c4cad1
+material aluminium
+body base
+plane XZ offset=-yb
+rect w+1 zb+ts-zm at=0,(zb+ts+zm)/2
+bp: extrude -t
+plane bp.end
+fix1: hole 3.3 -8,-15 thread=M4
+fix2: hole 3.3 8,-15 thread=M4
+fix3: hole 3.3 -12,-40.5 thread=M4
+fix4: hole 3.3 12,-40.5 thread=M4
+join: hole 3.4 8,zb+ts/2 -8,zb+ts/2 8,-zb-ts/2 -8,-zb-ts/2 8,zm+t/2 -8,zm+t/2 csink=M3
+color #c4cad1
+material aluminium
+body top
+plane XZ offset=-y0
+rect w zb+ts-zm at=0,(zb+ts+zm)/2
+tp: extrude t
+plane XZ offset=-y0+t
+tj1: hole 3.4 8,zb+ts/2 csink=M3
+tj2: hole 3.4 -8,zb+ts/2 csink=M3
+tj3: hole 3.4 8,-zb-ts/2 csink=M3
+tj4: hole 3.4 -8,-zb-ts/2 csink=M3
+tj5: hole 3.4 8,zm+t/2 csink=M3
+tj6: hole 3.4 -8,zm+t/2 csink=M3
+color #c4cad1
+material aluminium

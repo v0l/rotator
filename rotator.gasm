@@ -54,27 +54,27 @@ part kfl_low_screw_1 parts/std/screw.gcad d=6 L=16
 move kfl_low_screw_1 -26.5,0,9.5
 part kfl_low_screw_2 parts/std/screw.gcad d=6 L=16
 move kfl_low_screw_2 26.5,0,9.5
-part blk_screw_az_1 parts/std/screw.gcad d=4 L=16
-rotate blk_screw_az_1 90 axis=x
-move blk_screw_az_1 8,23,-15
+part blk_screw_az_1 parts/std/screw.gcad d=4 L=10
+rotate blk_screw_az_1 -90 axis=x
+move blk_screw_az_1 8,32,-15
 rotate blk_screw_az_1 90 axis=y
 rotate blk_screw_az_1 -90 axis=x
 move blk_screw_az_1 0,38,32
-part blk_screw_az_2 parts/std/screw.gcad d=4 L=16
-rotate blk_screw_az_2 90 axis=x
-move blk_screw_az_2 -8,23,-15
+part blk_screw_az_2 parts/std/screw.gcad d=4 L=10
+rotate blk_screw_az_2 -90 axis=x
+move blk_screw_az_2 -8,32,-15
 rotate blk_screw_az_2 90 axis=y
 rotate blk_screw_az_2 -90 axis=x
 move blk_screw_az_2 0,38,32
-part blk_screw_az_3 parts/std/screw.gcad d=4 L=16
-rotate blk_screw_az_3 90 axis=x
-move blk_screw_az_3 12,23,-40
+part blk_screw_az_3 parts/std/screw.gcad d=4 L=10
+rotate blk_screw_az_3 -90 axis=x
+move blk_screw_az_3 12,32,-40.5
 rotate blk_screw_az_3 90 axis=y
 rotate blk_screw_az_3 -90 axis=x
 move blk_screw_az_3 0,38,32
-part blk_screw_az_4 parts/std/screw.gcad d=4 L=16
-rotate blk_screw_az_4 90 axis=x
-move blk_screw_az_4 -12,23,-40
+part blk_screw_az_4 parts/std/screw.gcad d=4 L=10
+rotate blk_screw_az_4 -90 axis=x
+move blk_screw_az_4 -12,32,-40.5
 rotate blk_screw_az_4 90 axis=y
 rotate blk_screw_az_4 -90 axis=x
 move blk_screw_az_4 0,38,32
@@ -110,10 +110,10 @@ concentric collar_nut_1:n.side base.collar:fix.side near=12.021,12.021,100
 concentric collar_nut_2:n.side base.collar:fix.side near=-12.021,12.021,100
 concentric collar_nut_3:n.side base.collar:fix.side near=-12.021,-12.021,100
 concentric collar_nut_4:n.side base.collar:fix.side near=12.021,-12.021,100
-flush blk_screw_az_1:head.start base.drive.block:spine.start
-flush blk_screw_az_2:head.start base.drive.block:spine.start
-flush blk_screw_az_3:head.start base.drive.block:spine.start
-flush blk_screw_az_4:head.start base.drive.block:spine.start
+concentric blk_screw_az_1:shank.side base.drive.plates.base:fix1.side
+concentric blk_screw_az_2:shank.side base.drive.plates.base:fix2.side
+concentric blk_screw_az_3:shank.side base.drive.plates.base:fix3.side
+concentric blk_screw_az_4:shank.side base.drive.plates.base:fix4.side
 couple base.drive.spin az ratio=60 lead=3.583 friction=mu module=1/cos(3.583) face=10 pressure=20 gear=base.wheel pinion=base.drive.worm
 joint el head.elshaft head.elbox turn about=ea min=-6 max=186 drag=del
 couple head.drive.spin el ratio=-60 lead=3.583 friction=mu module=1/cos(3.583) face=10 pressure=20 gear=head.wheel pinion=head.drive.worm

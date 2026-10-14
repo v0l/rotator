@@ -1,4 +1,4 @@
-let az=1 cx=38 R=33.6 rc=31.75 g=6 t=2.5 wx=-21 wx2=12 wz=22.5 wr=10 wlo=18.5 whi=12 pc=15 bo=37 ba=70 hub=32 shaft=18
+let az=1 cx=38 R=33.6 rc=31.75 g=6 t=2.5 wx=-21 wx2=12 wz=25 wr=10 wlo=18.5 whi=12 pc=15 bo=37 ba=70 hub=32 shaft=18
 let pw=31 pz=20 lx=-16 lz=15 boss=10
 let b1x=cx+bo b2x=cx+bo*cos(ba) b2z=bo*sin(ba)
 let zi=sqrt(R*R-(cx-wx2)*(cx-wx2)) a0=atan2(zi,wx2-cx) ph=acos((bo*bo+R*R-boss*boss/4)/(2*bo*R)) ro=bo+boss/2
