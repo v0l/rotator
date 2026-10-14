@@ -129,29 +129,29 @@ move bracket_screw_4 27,56,62.5
 part rpi parts/std/rpi5.gcad
 rotate rpi -90 axis=x
 rotate rpi 90 axis=y
-move rpi 11,33,178
+move rpi 1,33,198
 part hat_post_1 parts/std/standoff.gcad L=11 af=5 d=2.5 stud=4
 material hat_post_1 aluminium
 rotate hat_post_1 -90 axis=x
-move hat_post_1 7.5,34.6,174.5
+move hat_post_1 -2.5,34.6,194.5
 part hat_post_2 parts/std/standoff.gcad L=11 af=5 d=2.5 stud=4
 material hat_post_2 aluminium
 rotate hat_post_2 -90 axis=x
-move hat_post_2 7.5,34.6,116.5
+move hat_post_2 -2.5,34.6,136.5
 part hat_post_3 parts/std/standoff.gcad L=11 af=5 d=2.5 stud=4
 material hat_post_3 aluminium
 rotate hat_post_3 -90 axis=x
-move hat_post_3 -41.5,34.6,174.5
+move hat_post_3 -51.5,34.6,194.5
 part hat_post_4 parts/std/standoff.gcad L=11 af=5 d=2.5 stud=4
 material hat_post_4 aluminium
 rotate hat_post_4 -90 axis=x
-move hat_post_4 -41.5,34.6,116.5
+move hat_post_4 -51.5,34.6,136.5
 part poe_hat parts/std/poe_hat.gcad
 rotate poe_hat -90 axis=x
 rotate poe_hat 90 axis=y
-move poe_hat 11,45.6,178
+move poe_hat 1,45.6,198
 part sdr parts/std/rtlsdr.gcad
-move sdr 33.5,36.5,107
+move sdr 23.5,36.5,107
 part base azstage.gasm dw=dw sx=sx sy=sy zt=zt
 part head head.gasm dw=dw cover=cover
 part collar_screw_1 parts/std/screw.gcad d=4 L=20

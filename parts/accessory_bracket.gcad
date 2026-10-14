@@ -1,22 +1,16 @@
-let zp=60.5 tb=5 yw=26 tw=4 xw0=-48 xw1=50 zt=182 boss=3 rb=3.5
-let px=11 pz=178 sx=33.5 sy=37.5 sz=107 sw=27
+let zp=60.5 tb=5 yw=26 tw=4 xw0=-61 xw1=42 zt=198 boss=3 rb=3.5
+let px=1 pz=198 sx=23.5 sy=37.5 sz=107 sw=27
 plane XY offset=zp
-rect 35 38 at=19.5,45
+rect xw1-xw0 38 at=(xw0+xw1)/2,45
 base: extrude tb
 plane XZ offset=-yw
 rect xw1-xw0 zt-zp at=(xw0+xw1)/2,(zp+zt)/2
 wall: extrude -tw
-plane YZ offset=2
-pen yw+tw,zp+tb
-line 64,zp+tb
-line yw+tw,zp+tb+20
-close
+plane YZ offset=xw0
+rect 64-yw-tw zt-zp-tb at=(64+yw+tw)/2,(zp+tb+zt)/2
 gusset_a: extrude 3
-plane YZ offset=34
-pen yw+tw,zp+tb
-line 64,zp+tb
-line yw+tw,zp+tb+20
-close
+plane YZ offset=xw1-3
+rect 64-yw-tw zt-zp-tb at=(64+yw+tw)/2,(zp+tb+zt)/2
 gusset_b: extrude 3
 plane XZ offset=-(yw+tw)
 circle 2*rb at=px-3.5,pz-3.5
