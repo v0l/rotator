@@ -118,6 +118,23 @@ part drv_screw_4 parts/std/screw.gcad d=4 L=10
 rotate drv_screw_4 180 axis=x
 move drv_screw_4 sx-40.5,sy+50,0
 part base azstage.gasm dw=dw sx=sx sy=sy zt=zt
+part head head.gasm dw=dw cover=cover
+part collar_screw_1 parts/std/screw.gcad d=4 L=20
+move collar_screw_1 sx+12.021,sy+12.021,269.2
+part collar_nut_1 parts/std/nut.gcad d=4 af=7 m=3.2
+move collar_nut_1 sx+12.021,sy+12.021,251
+part collar_screw_2 parts/std/screw.gcad d=4 L=20
+move collar_screw_2 sx-12.021,sy+12.021,269.2
+part collar_nut_2 parts/std/nut.gcad d=4 af=7 m=3.2
+move collar_nut_2 sx-12.021,sy+12.021,251
+part collar_screw_3 parts/std/screw.gcad d=4 L=20
+move collar_screw_3 sx+12.021,sy-12.021,269.2
+part collar_nut_3 parts/std/nut.gcad d=4 af=7 m=3.2
+move collar_nut_3 sx+12.021,sy-12.021,251
+part collar_screw_4 parts/std/screw.gcad d=4 L=20
+move collar_screw_4 sx-12.021,sy-12.021,269.2
+part collar_nut_4 parts/std/nut.gcad d=4 af=7 m=3.2
+move collar_nut_4 sx-12.021,sy-12.021,251
 axis za sx,sy,0 sx,sy,1
 joint az base.spindle box turn about=za min=-270 max=270 drag=daz
 concentric drv_screw_1:shank.side base.drive.plates.base:fix1.side
@@ -125,6 +142,19 @@ concentric drv_screw_2:shank.side base.drive.plates.base:fix2.side
 concentric drv_screw_3:shank.side base.drive.plates.base:fix3.side
 concentric drv_screw_4:shank.side base.drive.plates.base:fix4.side
 couple base.drive.spin az ratio=60 lead=3.583 friction=mu module=1/cos(3.583) face=10 pressure=20 gear=base.wheel pinion=base.drive.worm
+joint el head.elshaft head.elbox turn about=head.ea min=-6 max=186 drag=del
+concentric collar_screw_1:shank.side base.collar:fix.side near=sx+12.021,sy+12.021,258
+concentric head.elbox:c1.side collar_screw_1:shank.side
+concentric collar_screw_2:shank.side head.elbox:collar.side near=sx-12.021,sy+12.021,265
+concentric collar_screw_3:shank.side head.elbox:collar.side near=sx+12.021,sy-12.021,265
+concentric collar_screw_4:shank.side head.elbox:collar.side near=sx-12.021,sy-12.021,265
+concentric collar_nut_1:n.side collar_screw_1:shank.side
+concentric collar_nut_2:n.side collar_screw_2:shank.side
+concentric collar_nut_3:n.side collar_screw_3:shank.side
+concentric collar_nut_4:n.side collar_screw_4:shank.side
+couple head.drive.spin el ratio=-60 lead=3.283 friction=mu module=0.8/cos(3.283) face=9 pressure=20 gear=head.wheel pinion=head.drive.worm
 pose az az
+pose el el
 interference none
 interference joint=az steps=18
+interference joint=el steps=16

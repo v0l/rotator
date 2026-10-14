@@ -1,4 +1,5 @@
-let p=pi/cos(3.583) ha=1 hf=1.25 r=8 face=20 hub=12 bore=8
+let mod=1 lead=3.583 r=8 face=20 hub=12 bore=8
+let p=pi*mod/cos(lead) ha=mod hf=1.25*mod
 let ro=r+ha ri=r-hf ta=p/4-ha*tan(20) tf=p/4+hf*tan(20) hd=2*ri-0.1
 let c1=360*ta/p c2=360*tf/p rm=(ro+ri)/2 cm=(c1+c2)/2 a0=-180-180*face/p
 plane XY offset=-face/2 rz=a0

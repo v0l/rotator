@@ -1,0 +1,31 @@
+let L=160 W=100 Hb=61 lid=20 tw=7 tf=3 r=6 ri=3
+let ey=10 ez=110 kfl=24 cx=30 pcd=34 wy=-21 wz=110
+body main
+plane YZ
+rect W L at=0,L/2 r=r
+shell: extrude Hb
+plane YZ offset=tf
+rect W-2*tw L-2*tw at=0,L/2 r=ri
+pocket: extrude Hb-tf mode=cut
+plane YZ rx=180
+bearing: hole 16 ey,-ez depth=tf+1
+kfl: hole 6.5 ey,-(ez-kfl) ey,-(ez+kfl) depth=tf+1
+drive: hole 4.5 wy+8,-(wz-15) wy-8,-(wz-15) wy+12,-(wz-40.5) wy-12,-(wz-40.5) depth=tf+1
+plane XY rx=180
+c1: hole 4.5 cx+pcd/2*cos(45),-pcd/2*sin(45) depth=tw+1
+collar: hole 4.5 cx-pcd/2*cos(45),-pcd/2*sin(45) cx+pcd/2*cos(45),pcd/2*sin(45) cx-pcd/2*cos(45),pcd/2*sin(45) depth=tw+1
+gland: hole 16.2 50,-35 depth=tw+1
+color #b9bec4
+material diecast density=2.7
+body lid
+plane YZ offset=Hb
+rect W L at=0,L/2 r=r
+cover: extrude lid
+plane YZ offset=Hb
+rect W-2*tw L-2*tw at=0,L/2 r=ri
+recess: extrude lid-tf mode=cut
+plane YZ offset=Hb+lid
+bearing_l: hole 16 ey,ez depth=tf+1
+kfl_l: hole 6.5 ey,ez-kfl ey,ez+kfl depth=tf+1
+color #b9bec4
+material diecast density=2.7

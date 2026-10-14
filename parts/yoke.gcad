@@ -1,0 +1,23 @@
+let xa1=-46 xa2=116 t=5 Ru=95 r0=-25 w=50 pcd=34 tb=12.5 ub=15.7 ux1=-20 ux2=95
+plane XZ offset=-w/2
+pen xa1,r0
+line xa1+t,r0
+line xa1+t,Ru
+line xa2,Ru
+line xa2,r0
+line xa2+t,r0
+line xa2+t,Ru+t
+line xa1,Ru+t
+close
+yoke: extrude w
+plane YZ offset=xa1+t
+hub_l: hole 14 0,0 depth=t+1
+fix_l1: hole 4.5 pcd/2*cos(45),pcd/2*sin(45) depth=t+1
+fix_l: hole 4.5 -pcd/2*cos(45),pcd/2*sin(45) pcd/2*cos(45),-pcd/2*sin(45) -pcd/2*cos(45),-pcd/2*sin(45) depth=t+1
+plane YZ offset=xa2+t
+hub_r: hole 14 0,0 depth=t+1
+fix_r: hole 4.5 pcd/2*cos(45),pcd/2*sin(45) -pcd/2*cos(45),pcd/2*sin(45) pcd/2*cos(45),-pcd/2*sin(45) -pcd/2*cos(45),-pcd/2*sin(45) depth=t+1
+plane XY offset=Ru+t
+clamp: hole 6.5 ux1,ub ux1,-ub ux2,ub ux2,-ub depth=t+1
+color #c4cad1
+material aluminium

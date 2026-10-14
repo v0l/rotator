@@ -1,0 +1,115 @@
+let az=0 dw=0.03
+part plates parts/driveplates.gcad
+part worm parts/khk_sw1_r1.gcad mod=0.8 lead=3.283 r=7 face=18 hub=12 bore=8
+part brg_a parts/std/bearing.gcad
+move brg_a 0,0,-32
+part brg_b parts/std/bearing.gcad
+move brg_b 0,0,25
+part spacer_lo parts/std/spacer.gcad L=16
+move spacer_lo 0,0,-25
+part spacer_hi parts/std/spacer.gcad L=4
+move spacer_hi 0,0,21
+part shaft parts/wormshaft.gcad
+move shaft 0,0,-49
+part motor parts/std/nema17.gcad L=43.5 rear=0 dcut=15
+move motor 0,0,-52
+part cover parts/gearcover.gcad az=0 cx=31 R=27.4 rc=25.5 g=5 wr=8.5 wx2=10 bo=30.5 hub=27 shaft=14
+part cov_fix_1 parts/std/screw.gcad d=3 L=14
+move cov_fix_1 0,15,35
+part cov_fix_2 parts/std/screw.gcad d=3 L=14
+rotate cov_fix_2 180 axis=x
+move cov_fix_2 0,15,-35
+part cov_screw_2 parts/std/screw.gcad d=3 L=10
+rotate cov_screw_2 90 axis=x
+move cov_screw_2 50.655,-5,34.769
+part cov_screw_3 parts/std/screw.gcad d=3 L=10
+rotate cov_screw_3 90 axis=x
+move cov_screw_3 50.655,-5,-34.769
+part cov_screw_4 parts/std/screw.gcad d=3 L=10
+rotate cov_screw_4 90 axis=x
+move cov_screw_4 -16,-5,15
+part cov_screw_5 parts/std/screw.gcad d=3 L=10
+rotate cov_screw_5 90 axis=x
+move cov_screw_5 -16,-5,-15
+part mot_screw_1 parts/std/screw.gcad d=3 L=10
+move mot_screw_1 15.5,15.5,-46
+part mot_screw_2 parts/std/screw.gcad d=3 L=10
+move mot_screw_2 -15.5,15.5,-46
+part mot_screw_3 parts/std/screw.gcad d=3 L=10
+move mot_screw_3 -15.5,-15.5,-46
+part mot_screw_4 parts/std/screw.gcad d=3 L=10
+move mot_screw_4 15.5,-15.5,-46
+part join_b1 parts/std/screwcsk.gcad d=3 L=12
+rotate join_b1 -90 axis=x
+move join_b1 8,29,30
+part join_b2 parts/std/screwcsk.gcad d=3 L=12
+rotate join_b2 -90 axis=x
+move join_b2 -8,29,30
+part join_a1 parts/std/screwcsk.gcad d=3 L=12
+rotate join_a1 -90 axis=x
+move join_a1 8,29,-30
+part join_a2 parts/std/screwcsk.gcad d=3 L=12
+rotate join_a2 -90 axis=x
+move join_a2 -8,29,-30
+part join_m1 parts/std/screwcsk.gcad d=3 L=12
+rotate join_m1 -90 axis=x
+move join_m1 8,29,-49
+part join_m2 parts/std/screwcsk.gcad d=3 L=12
+rotate join_m2 -90 axis=x
+move join_m2 -8,29,-49
+part top_b1 parts/std/screwcsk.gcad d=3 L=12
+rotate top_b1 90 axis=x
+move top_b1 8,-27.5,30
+part top_b2 parts/std/screwcsk.gcad d=3 L=12
+rotate top_b2 90 axis=x
+move top_b2 -8,-27.5,30
+part top_a1 parts/std/screwcsk.gcad d=3 L=12
+rotate top_a1 90 axis=x
+move top_a1 8,-27.5,-30
+part top_a2 parts/std/screwcsk.gcad d=3 L=12
+rotate top_a2 90 axis=x
+move top_a2 -8,-27.5,-30
+part top_m1 parts/std/screwcsk.gcad d=3 L=12
+rotate top_m1 90 axis=x
+move top_m1 8,-27.5,-49
+part top_m2 parts/std/screwcsk.gcad d=3 L=12
+rotate top_m2 90 axis=x
+move top_m2 -8,-27.5,-49
+axis wa 0,0,0 0,0,1
+concentric join_b1:screw plates.base:join.side near=8,29,30
+concentric plates.side_b:tb1.side join_b1:screw
+concentric join_b2:screw plates.base:join.side near=-8,29,30
+concentric join_a1:screw plates.base:join.side near=8,29,-30
+concentric plates.side_a:ta1.side join_a1:screw
+concentric join_a2:screw plates.base:join.side near=-8,29,-30
+concentric join_m1:screw plates.base:join.side near=8,29,-49
+concentric plates.motor:tm1.side join_m1:screw
+concentric join_m2:screw plates.base:join.side near=-8,29,-49
+flush brg_a:ring.start plates.side_a:seat_a.bottom
+flush brg_b:ring.end plates.side_b:seat_b.bottom
+flush spacer_lo:tube.start brg_a:ring.end
+flush spacer_hi:tube.end brg_b:ring.start
+concentric shaft:shaft.side plates.side_b:pass_b.side
+flush motor:front.end plates.motor:pm.start
+flush mot_screw_1:head.start plates.motor:pm.end
+flush mot_screw_2:head.start plates.motor:pm.end
+flush mot_screw_3:head.start plates.motor:pm.end
+flush mot_screw_4:head.start plates.motor:pm.end
+concentric cover.low:fix_a.side plates.side_b:cover_b.side
+concentric cover.high:hub.side cover.low:shaft.side
+concentric cov_fix_1:shank.side plates.side_b:cover_b.side
+concentric cov_fix_2:shank.side plates.side_a:cover_a.side
+concentric cov_screw_2:shank.side cover.high:lid.side near=50.655,-5,34.769
+concentric cov_screw_3:shank.side cover.high:lid.side near=50.655,-5,-34.769
+concentric cov_screw_4:shank.side cover.high:wlid.side near=-16,-5,15
+concentric cov_screw_5:shank.side cover.high:wlid.side near=-16,-5,-15
+flush cov_fix_1:head.start plates.side_b:pb.end
+flush cov_fix_2:head.start plates.side_a:pa.start
+concentric top_b1:screw plates.side_b:tt_b1.side
+concentric top_b2:screw plates.side_b:tt_b2.side
+concentric plates.top:tj1.side top_b1:screw
+concentric top_a1:screw plates.side_a:tt_a1.side
+concentric top_a2:screw plates.side_a:tt_a2.side
+concentric top_m1:screw plates.motor:tt_m1.side
+concentric top_m2:screw plates.motor:tt_m2.side
+joint spin worm plates.base turn about=wa drag=dw

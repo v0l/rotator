@@ -13,8 +13,8 @@ move key sx,sy+7,28
 part vring parts/std/vring.gcad
 move vring sx,sy,zt
 part collar parts/std/flangecollar.gcad F=44 hub=24 pcd=34 screw=4.5
-rotate collar 180 axis=x
-move collar sx,sy,zt+top+0.2
+rotate collar 180 axis=z
+move collar sx,sy,zt+top-19.8
 part key_col parts/std/key.gcad L=16
 move key_col sx,sy+7,zt+top-18
 part drive drive.gasm az=0 dw=dw
