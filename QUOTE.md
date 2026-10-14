@@ -42,6 +42,7 @@ in its trough ends.
 | `az_gearcover_low`, `az_gearcover_high` | 1 each |
 | `el_gearcover_low`, `el_gearcover_high` | 1 each |
 | `accessory_bracket` (optional, Pi and SDR), printed lying on its back wall; four M2.5 heat-set inserts in the bosses | 1 |
+| `cable_guide`, printed standing on its mouth with tree supports under the floor run | 1 |
 
 ## Drilled enclosures
 

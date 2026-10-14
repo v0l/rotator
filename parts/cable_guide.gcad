@@ -1,0 +1,20 @@
+let od=11 id=8 gx=47 gy=40 tx=49.5 ty=40 top=413 low=280 cy=32 hx=27 hy=10 under=275 floor=269.2 bend=6
+path tx,ty,top tx,ty,low hx,cy,under+0.5 hx,hy,under hx,hy,floor-6 r=bend
+plane path at=0
+circle od
+circle id
+tube: sweep
+plane XY offset=top
+circle 17 at=gx,gy
+mouth: extrude 414-top
+plane XY offset=414
+throat: hole 12 gx,gy depth=414-top+3
+plane XY offset=floor-0.5
+circle 13.8 at=hx,hy
+circle 10 at=hx,hy
+spigot: extrude -6
+plane XY offset=under+7
+rect 4.5 8 at=hx,hy+11
+feed: cut 5
+color #e0782c
+material petg

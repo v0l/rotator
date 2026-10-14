@@ -16,7 +16,7 @@ c1: hole 4.5 cx+pcd/2*cos(45),-pcd/2*sin(45) depth=tw+1
 collar: hole 4.5 cx-pcd/2*cos(45),-pcd/2*sin(45) cx+pcd/2*cos(45),pcd/2*sin(45) cx-pcd/2*cos(45),pcd/2*sin(45) depth=tw+1
 cables: hole 14 cx,0 depth=tw+1
 plane XY offset=L
-coax: hole 16.2 20,30 depth=tw+1
+coax: hole 16.2 50,30 depth=tw+1
 color #b9bec4
 material diecast density=2.7
 body lid

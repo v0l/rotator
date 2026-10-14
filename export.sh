@@ -39,6 +39,7 @@ part el_lid_1550Z117 parts/std/hammond_1550z117.gcad body=lid
 print az_gearcover_low parts/gearcover.gcad "az=0 shaft=19 body=low" -90
 print az_gearcover_high parts/gearcover.gcad "az=0 shaft=19 body=high" 90
 print accessory_bracket parts/accessory_bracket.gcad "" 90
+print cable_guide parts/cable_guide.gcad "" 180
 print el_gearcover_low parts/gearcover.gcad "az=0 cx=31 R=27.4 rc=25.5 g=5 wr=8.5 wx2=10 bo=30.5 hub=27 shaft=14 body=low" -90
 print el_gearcover_high parts/gearcover.gcad "az=0 cx=31 R=27.4 rc=25.5 g=5 wr=8.5 wx2=10 bo=30.5 hub=27 shaft=14 body=high" 90
 "$gcad" export rotator.gasm out/rotator.step

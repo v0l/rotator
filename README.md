@@ -114,7 +114,10 @@ screw or has a sealing washer. The az spindle leaves the top wall through the tw
 whose insert seals and flanges close the hole, under the collar's rain shield; the el shaft leaves the floor through the outside KFL001's insert seal on an EPDM gasket,
 and the lid through a V-ring. Cables crossing the az joint run inside the
 hollow spindle; the coax leaves the el box through a gland in its top wall with a slack loop
-to the yagi. The two PoE cables (board and Pi) use the glands in the az box's bottom wall,
+to the yagi. A printed guide tube (`parts/cable_guide.gcad`) runs from under that gland down
+the lid side of the el box, under the motor and into the floor hole, so a cable pushed in
+through the top gland comes out of the spindle in the az box without opening either box; the
+el motor and encoder wires drop into a slot in its floor run. The two PoE cables (board and Pi) use the glands in the az box's bottom wall,
 beside the M12 breather vent.
 
 ## Strength
