@@ -1,5 +1,5 @@
 let zp=60.5 tb=5 yw=26 tw=4 xw0=-61 xw1=42 zt=198 boss=3 rb=3.5
-let px=1 pz=198 sx=23.5 sy=37.5 sz=107 sw=27
+let px=1 pz=198 sx=20.5 sy=37.5 sz=107 sw=27
 plane XY offset=zp
 rect xw1-xw0 38 at=(xw0+xw1)/2,45
 base: extrude tb

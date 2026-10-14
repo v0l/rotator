@@ -151,7 +151,7 @@ rotate poe_hat -90 axis=x
 rotate poe_hat 90 axis=y
 move poe_hat 1,45.6,198
 part sdr parts/std/rtlsdr.gcad
-move sdr 23.5,36.5,107
+move sdr 20.5,36.5,107
 part base azstage.gasm dw=dw sx=sx sy=sy zt=zt
 part head head.gasm dw=dw cover=cover
 part collar_screw_1 parts/std/screw.gcad d=4 L=20
