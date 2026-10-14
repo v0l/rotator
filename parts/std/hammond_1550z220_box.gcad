@@ -36,6 +36,7 @@ if az vent: hole 10.5 xs+10,30 depth=wall+2 thread=M12
 if el plane XY rx=180
 if el bearing: hole 20 xe,0 depth=floor+1
 if el kfl: hole 6.5 xe-26.5,0 xe+26.5,0 depth=floor+1
+if el drive: hole 4.5 xe-15,-30 xe-15,-46 xe-40,-26 xe-40,-50 depth=floor+1
 if el plane YZ offset=-L/2 ry=180
 if el collar: hole M4 pcd/2*sin(45),ec-pcd/2*cos(45) -pcd/2*sin(45),ec-pcd/2*cos(45) pcd/2*sin(45),ec+pcd/2*cos(45) -pcd/2*sin(45),ec+pcd/2*cos(45) depth=wall+2 csink=M4
 if el spindle: hole 16 0,ec depth=wall+2

@@ -18,11 +18,11 @@ clamp, drive blocks) and drilling the boxes are in `QUOTE.md`.
 |---|---|---|---|---|
 | 4 | KFL002 flange bearing unit, 15 mm | [kfl002](https://www.simplybearings.ie/products/kfl002) | €7.69 | €30.76 |
 | 4 | SKF 608-2RSH | [608-2rsh-skf](https://www.simplybearings.ie/products/608-2rsh-skf) | €6.12 | €24.48 |
-| 3 | V-ring VA14 nitrile, for 13.5-15.5 mm shafts | [v14a-nbr-nak](https://www.simplybearings.ie/products/v14a-nbr-nak) | €1.00 | €3.00 |
+| 1 | V-ring VA14 nitrile, for 13.5-15.5 mm shafts | [v14a-nbr-nak](https://www.simplybearings.ie/products/v14a-nbr-nak) | €1.00 | €1.00 |
 | 3 | Feather key 5x5x20, A4 stainless (one cut to 16 for the collar) | [fkss-2re-5x5x20mm](https://www.simplybearings.ie/products/fkss-2re-5x5x20mm) | €2.26 | €6.78 |
 | 2 | Bronze bush AM1521-20, 15x21x20 (crossboom) | [am-1521-20-pl](https://www.simplybearings.ie/products/am-1521-20-pl) | €5.64 | €11.28 |
 | 1 | Silver steel 15 mm x 325, cut into the 98 mm spindle and 194.7 mm el shaft | [ssm0150-325mm](https://www.simplybearings.ie/products/ssm0150-325mm) | €22.66 | €22.66 |
-| | | | | **€98.96** |
+| | | | | **€96.96** |
 
 ## R.A. Rodriguez, KHK distributor (UK, GBP)
 
@@ -65,7 +65,7 @@ the UK adds Irish import VAT and a carrier handling fee.
 | 2 | M6 U-bolt for 20 mm tube, A4, with nuts | [Accu](https://www.accu.co.uk) |
 | 14 | Ruthex M3 heat-set insert, 5.7 long (gear covers) | [3DJake Ireland](https://www.3djake.ie/) |
 | 1 | PETG filament, about 150 g (gear covers) | [3DJake Ireland](https://www.3djake.ie/) |
-| | A4 screws: M3x6 (4), M3x8 countersunk (2), M3x10 (18), M3x14 (4), M4x10 (4), M4x16 (4), M4x16 countersunk (4), M5x30 (2), M5x6 set screw (1), M6x10 (2), M6x16 (2), M6x20 (4), M8x12 countersunk (4); nuts M4 (4), M6 (4), M5 nyloc (2), M8x1 thin DIN 936 (2, worm shafts) | [Accu](https://www.accu.co.uk) |
+| | A4 screws: M3x6 (4), M3x8 countersunk (2), M3x10 (18), M3x14 (4), M4x16 (8), M4x16 countersunk (4), M5x30 (2), M5x6 set screw (1), M6x10 (2), M6x16 (6), M8x12 countersunk (4); nuts M4 (4), M4 nyloc (4), M6 (4), M5 nyloc (2), M8x1 thin DIN 936 (2, worm shafts); M4 bonded sealing washers (4, el drive block through the el box floor) | [Accu](https://www.accu.co.uk) |
 
 ## Totals in EUR with 23% VAT
 
@@ -74,12 +74,12 @@ GBP converted at 1.1805 (mid-market, 9 Oct 2026). Shipping not included.
 | supplier | ex VAT | with VAT |
 |---|---|---|
 | Farnell Ireland | €95.97 | €118.04 |
-| Simply Bearings Ireland | €98.96 | €121.72 |
+| Simply Bearings Ireland | €96.96 | €119.26 |
 | R.A. Rodriguez (£92.56) | €109.27 | €134.40 |
 | StepperOnline (£28.72) | €33.90 | €41.70 |
 | Goodwins, 25 mm tube x 1 m | €8.90 | €10.95 |
 | Control board parts, Mouser (`board/tools/bom.md`) | €65.97 | €81.14 |
-| **priced parts** | **€412.97** | **€507.95** |
+| **priced parts** | **€410.97** | **€505.49** |
 
 The unpriced rows (standoffs, O-ring cord, screws, gasket sheet, battery holder) are an
 estimate of about €85 with VAT, which brings the bought parts to roughly **€595**. The control

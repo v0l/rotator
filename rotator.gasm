@@ -1,4 +1,4 @@
-let az=0 el=90 eh=226 boom=500 cover=1 hammond=0 yx=300 yy=-402 yz=35 mu=0.1 daz=0.16 del=0.16 dw=0.03
+let az=0 el=90 eh=226 boom=500 cover=1 hammond=0 yx=300 yy=-402 yz=35 mu=0.1 daz=0.16 del=0.14 dw=0.03
 part box parts/std/hammond_1550z220_box.gcad az=1 vendor=hammond
 move box -40,0,0
 if cover part lid parts/std/hammond_1550z220_lid.gcad az=1 vendor=hammond

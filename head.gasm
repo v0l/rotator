@@ -5,53 +5,61 @@ move elbox 26.5,0,199.25
 if cover part ellid parts/std/hammond_1550z220_lid.gcad el=1 xe=eh-199.25 vendor=hammond
 if cover rotate ellid -90 axis=y
 if cover move ellid 26.5,0,199.25
-part plates parts/el_plates.gcad el=eh fx=23.5 lx=-53.5
 part kfl_f parts/std/kfl002.gcad
 rotate kfl_f 90 axis=y
 move kfl_f 26.5,0,eh
 part kfl_l parts/std/kfl002.gcad
 rotate kfl_l -90 axis=y
 move kfl_l -56,0,eh
-part kfl_f_bolt_1 parts/std/screw.gcad d=6 L=20
+part kfl_f_bolt_1 parts/std/screw.gcad d=6 L=16
 rotate kfl_f_bolt_1 90 axis=y
 move kfl_f_bolt_1 33,0,eh-26.5
 part kfl_f_nut_1 parts/std/nut.gcad
 rotate kfl_f_nut_1 90 axis=y
-move kfl_f_nut_1 13.5,0,eh-26.5
-part kfl_l_bolt_1 parts/std/screw.gcad d=6 L=20
+move kfl_f_nut_1 18.5,0,eh-26.5
+part kfl_l_bolt_1 parts/std/screw.gcad d=6 L=16
 rotate kfl_l_bolt_1 -90 axis=y
 move kfl_l_bolt_1 -62.5,0,eh-26.5
 part kfl_l_nut_1 parts/std/nut.gcad
 rotate kfl_l_nut_1 -90 axis=y
-move kfl_l_nut_1 -43,0,eh-26.5
-part kfl_f_bolt_2 parts/std/screw.gcad d=6 L=20
+move kfl_l_nut_1 -48.5,0,eh-26.5
+part kfl_f_bolt_2 parts/std/screw.gcad d=6 L=16
 rotate kfl_f_bolt_2 90 axis=y
 move kfl_f_bolt_2 33,0,eh+26.5
 part kfl_f_nut_2 parts/std/nut.gcad
 rotate kfl_f_nut_2 90 axis=y
-move kfl_f_nut_2 13.5,0,eh+26.5
-part kfl_l_bolt_2 parts/std/screw.gcad d=6 L=20
+move kfl_f_nut_2 18.5,0,eh+26.5
+part kfl_l_bolt_2 parts/std/screw.gcad d=6 L=16
 rotate kfl_l_bolt_2 -90 axis=y
 move kfl_l_bolt_2 -62.5,0,eh+26.5
 part kfl_l_nut_2 parts/std/nut.gcad
 rotate kfl_l_nut_2 -90 axis=y
-move kfl_l_nut_2 -43,0,eh+26.5
-part elshaft parts/shaft.gcad L=194.7 kz=86.6 kl=20 xh=1 x1=17.35 x2=177.35
+move kfl_l_nut_2 -48.5,0,eh+26.5
+part blk_nut_1 parts/std/nut.gcad d=4 af=7 m=5
+rotate blk_nut_1 90 axis=y
+move blk_nut_1 26.5,30,eh-15
+part blk_nut_2 parts/std/nut.gcad d=4 af=7 m=5
+rotate blk_nut_2 90 axis=y
+move blk_nut_2 26.5,46,eh-15
+part blk_nut_3 parts/std/nut.gcad d=4 af=7 m=5
+rotate blk_nut_3 90 axis=y
+move blk_nut_3 26.5,50,eh-40
+part blk_nut_4 parts/std/nut.gcad d=4 af=7 m=5
+rotate blk_nut_4 90 axis=y
+move blk_nut_4 26.5,26,eh-40
+part elshaft parts/shaft.gcad L=194.7 kz=91.6 kl=20 xh=1 x1=17.35 x2=177.35
 rotate elshaft 90 axis=y
 rotate elshaft -90 axis=x
 move elshaft -112.1,0,eh
 part key parts/std/key.gcad
-move key 0,7,86.6
+move key 0,7,91.6
 rotate key 90 axis=y
 rotate key -90 axis=x
 move key -112.1,0,eh
 part wheel parts/khk_cg1_60r1.gcad
 rotate wheel -90 axis=y
 rotate wheel -90 axis=x
-move wheel -5.5,0,eh
-part vring_f parts/std/vring.gcad
-rotate vring_f 90 axis=y
-move vring_f 45.1,0,eh
+move wheel -0.5,0,eh
 part bush_f parts/std/bush.gcad xh=1 xz=14.65
 rotate bush_f 90 axis=y
 move bush_f 50.6,0,eh
@@ -156,9 +164,6 @@ material el_b_d5 aluminium
 move el_b_d5 0,852,-148.9
 rotate el_b_d5 45 axis=y
 move el_b_d5 yx,yy,eh+yz
-part vring_l parts/std/vring.gcad
-rotate vring_l -90 axis=y
-move vring_l -74.6,0,eh
 part bush_l parts/std/bush.gcad xh=1 xz=14.65
 rotate bush_l -90 axis=y
 move bush_l -80.1,0,eh
@@ -177,30 +182,28 @@ rotate vent 90 axis=x
 move vent -14.75,-73.25,129
 part drive drive.gasm az=0 dw=dw
 rotate drive -90 axis=z
-move drive -10.5,38,eh
-part blk_screw_1 parts/std/screw.gcad d=4 L=10
+move drive -5.5,38,eh
+part blk_screw_1 parts/std/screw.gcad d=4 L=16
 rotate blk_screw_1 90 axis=x
 move blk_screw_1 8,23,-15
 rotate blk_screw_1 -90 axis=z
-move blk_screw_1 -10.5,38,eh
-part blk_screw_2 parts/std/screw.gcad d=4 L=10
+move blk_screw_1 -5.5,38,eh
+part blk_screw_2 parts/std/screw.gcad d=4 L=16
 rotate blk_screw_2 90 axis=x
 move blk_screw_2 -8,23,-15
 rotate blk_screw_2 -90 axis=z
-move blk_screw_2 -10.5,38,eh
-part blk_screw_3 parts/std/screw.gcad d=4 L=10
+move blk_screw_2 -5.5,38,eh
+part blk_screw_3 parts/std/screw.gcad d=4 L=16
 rotate blk_screw_3 90 axis=x
 move blk_screw_3 12,23,-40
 rotate blk_screw_3 -90 axis=z
-move blk_screw_3 -10.5,38,eh
-part blk_screw_4 parts/std/screw.gcad d=4 L=10
+move blk_screw_3 -5.5,38,eh
+part blk_screw_4 parts/std/screw.gcad d=4 L=16
 rotate blk_screw_4 90 axis=x
 move blk_screw_4 -12,23,-40
 rotate blk_screw_4 -90 axis=z
-move blk_screw_4 -10.5,38,eh
+move blk_screw_4 -5.5,38,eh
 if cover concentric ellid:bearing.side elbox:bearing.side
-concentric plates.floor:pass.side elbox:bearing.side
-concentric plates.lid:pass.side elbox:bearing.side
 concentric kfl_f:bore.side elbox:bearing.side
 concentric kfl_l:bore.side elbox:bearing.side
 flush kfl_f_bolt_1:head.start kfl_f:flange.end
@@ -211,7 +214,6 @@ flush kfl_l_bolt_1:head.start kfl_l:flange.end
 concentric kfl_l_nut_1:n.side kfl_l:bolts.side
 flush kfl_l_bolt_2:head.start kfl_l:flange.end
 concentric kfl_l_nut_2:n.side kfl_l:bolts.side
-flush drive.block:spine.end plates.floor:plate.end
 concentric wheel:bored.side elshaft:rod.side
 flush key:k.start elshaft:keyway.end
 concentric bush_f:cross.side elshaft:cross.side near=80,0,eh
@@ -238,15 +240,18 @@ concentric el_a_d4:rod.side yagi:ha.side near=yx,yy+634,eh+yz
 concentric el_b_d4:rod.side yagi:hb.side near=yx,yy+659,eh+yz
 concentric el_a_d5:rod.side yagi:ha.side near=yx,yy+827,eh+yz
 concentric el_b_d5:rod.side yagi:hb.side near=yx,yy+852,eh+yz
-flush vring_f:ring.start kfl_f:inner.end
 concentric bush_l:cross.side elshaft:cross.side near=-80,0,eh
 concentric boom_l:cross.side elshaft:cross.side near=-80,0,eh
 concentric boom_bolt_l:shank.side elshaft:cross.side near=-80,0,eh
 concentric boom_nut_l:n.side elshaft:cross.side near=-80,0,eh
-flush vring_l:ring.start kfl_l:inner.end
 concentric gland:stub.side elbox:gland.side
 concentric vent:stub.side elbox:vent.side
-flush blk_screw_1:head.start drive.block:spine.start
+concentric blk_screw_1:shank.side elbox:drive.side near=25,30,eh-15
+flush drive.block:spine.start blk_screw_1:head.start
 flush blk_screw_2:head.start drive.block:spine.start
 flush blk_screw_3:head.start drive.block:spine.start
 flush blk_screw_4:head.start drive.block:spine.start
+concentric blk_nut_1:n.side elbox:drive.side near=29,30,eh-15
+concentric blk_nut_2:n.side elbox:drive.side near=29,46,eh-15
+concentric blk_nut_3:n.side elbox:drive.side near=29,50,eh-40
+concentric blk_nut_4:n.side elbox:drive.side near=29,26,eh-40

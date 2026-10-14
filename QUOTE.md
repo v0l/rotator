@@ -11,8 +11,6 @@ tap drill size; the thread is in the table.
 | part | qty | plate | holes |
 |---|---|---|---|
 | `bearing_plate` | 1 | 5 mm, 98 x 68 R6 | 4x Ø9 countersunk for M8; 2x M6; Ø20 |
-| `el_floor_plate` | 1 | 5 mm, 88 x 107 R5 | 2x Ø6.5; Ø20; 4x M4 |
-| `el_lid_plate` | 1 | 5 mm, 60 x 80 R5 | 2x Ø6.5; Ø20 |
 
 ## Machined
 
@@ -26,7 +24,7 @@ tap drill size; the thread is in the table.
 | `az_spindle` | 1 | Ø15 silver steel, 107 long; keyseat 5 P9 x 3 x 20 at 23 from the bottom end; keyseat 5 P9 x 3 x 18 open at the top end |
 | `cross_clamp` | 1 | 6082-T6, 60 x 60 x 24 block, R4 corners; Ø25.2 saddle 6.6 deep along one side, Ø20.2 saddle 5 deep across the other; 8x Ø6.6 through |
 | `yagi_boom` | 1 | 20 x 1.5 aluminium tube, 932 long; 14x Ø4.2 cross holes in two planes at 90°, see the drawing |
-| `el_shaft` | 1 | Ø15 silver steel, 194.7 long; keyseat 5 P9 x 3 x 20 at 86.6 from one end; Ø5.2 cross holes at 17.35 and 177.35 |
+| `el_shaft` | 1 | Ø15 silver steel, 194.7 long; keyseat 5 P9 x 3 x 20 at 91.6 from one end; Ø5.2 cross holes at 17.35 and 177.35 |
 
 ## Printed
 
@@ -47,7 +45,7 @@ KHK wheels reworked with an M4 set screw over the key as well as the 15 mm bore.
 
 - az box: floor 2x Ø6.5, 4x Ø8.5, 4x Ø4.5, 6x Ø3.4 (all into the mast clamp); M12x1.5 side wall (vent); 2x Ø16.2 end wall (glands)
 - az lid: Ø20 (spindle)
-- el box: Ø20 + 2x Ø6.5 floor (bearing unit); end wall Ø16 (spindle) and 4x Ø4.5 countersunk on 34 PCD (collar), with a Ø46 spot face inside, milled square to the floor to take out the wall's draft; Ø16.2 (gland) and M12x1.5 (vent) side wall
+- el box: Ø20 + 2x Ø6.5 floor (bearing unit), 4x Ø4.5 floor (el drive block); end wall Ø16 (spindle) and 4x Ø4.5 countersunk on 34 PCD (collar), with a Ø46 spot face inside, milled square to the floor to take out the wall's draft; Ø16.2 (gland) and M12x1.5 (vent) side wall
 - el lid: Ø20 + 2x Ø6.5 (bearing unit)
 
 ## Bought

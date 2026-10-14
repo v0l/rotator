@@ -24,7 +24,7 @@ and brings in two sub-assemblies, joined by the `az` and `el` joints:
 | file | in `rotator.gasm` as | what |
 |---|---|---|
 | `azstage.gasm` | `base` | bearing plate and posts, both az KFLs, spindle, wheel, keys, flange collar, and the az worm drive as `base.drive` |
-| `head.gasm` | `head` | el box and lid, plates, el KFLs, el shaft, wheel, crossbooms, yagi and the el worm drive as `head.drive` |
+| `head.gasm` | `head` | el box and lid, el KFLs, el shaft, wheel, crossbooms, yagi and the el worm drive as `head.drive` |
 | `drive.gasm` | `base.drive`, `head.drive` | one worm drive in its own frame (worm axis on z): block, worm, 608s, worm shaft, spacers and nut, motor, grease cover and screws, and its `spin` joint |
 
 Screws that join a sub-assembly to something outside it live where both parts are: the drive
@@ -44,8 +44,8 @@ drive block's in `head.gasm`. Each sub-assembly opens, checks and simulates on i
   bearing plate on the posts. The spindle leaves the lid through a V-ring and ends inside
   the el box in a keyed flange collar with a set screw, bolted to a spot face on the el
   box's end wall.
-- El: 15 mm shaft in KFL002 units bolted outside the el box floor and lid, with backing
-  plates inside. Crossboom tubes slide over the shaft ends on bronze bushes and are cross-bolted.
+- El: 15 mm shaft in KFL002 units bolted straight through the el box floor and lid on EPDM
+  gaskets; the el drive block bolts through the floor too, on sealing washers. Crossboom tubes slide over the shaft ends on bronze bushes and are cross-bolted.
   The el axis is 226 mm above the az box floor, and the el head sits 14.75 mm off the az axis
   so the collar's bolts land in the box body, not the lid.
 - Each axis: KHK CG1-60R1 wheel on a keyed shaft, KHK SW1-R1 worm on a turned 8 mm shaft in
@@ -107,8 +107,9 @@ aluminium M3 standoffs screwed into the mast clamp, which also carry its heat aw
 
 ## Sealing
 
-The boxes seal on their own gaskets. Shafts leave through V-rings against the bearing
-units or the lid, cables through IP68 M16 glands, and each box has an M12 breather vent.
+The boxes seal on their own gaskets. The az spindle leaves the lid through a V-ring running on
+the lid; the el shaft leaves through the KFL inserts' own seals, their flanges on EPDM
+gaskets; cables through IP68 M16 glands, and each box has an M12 breather vent.
 The mast clamp seals the floor holes with a face O-ring.
 
 ## Strength
