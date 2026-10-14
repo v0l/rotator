@@ -1,4 +1,4 @@
-let D=15 t=3 b0=5.6 b1=206.4 bw=2 c0=237.2 c1=257 L=257 pin=4 pw=38 pc=243.2 sz0=55 sl=30 sw=7
+let D=15 t=3 b0=5.6 b1=206.4 bw=2 c0=237.2 c1=257 L=257 pin=4 pw=38 pc=243.2 sz0=55 sl=30 sw=5 gap=20
 circle D-0.02
 s0: extrude b0-bw/2
 plane s0.end
@@ -22,6 +22,7 @@ plane XZ offset=-D/2 rx=180
 pin_w: hole pin+0.02 0,-pw depth=D+1
 pin_c: hole pin+0.02 0,-pc depth=D+1
 plane YZ offset=D/2
-circle sw at=0,sz0+sl/2
+circle sw at=0,sz0+sl/2-gap/2
+circle sw at=0,sz0+sl/2+gap/2
 window: cut t+1
 material steel

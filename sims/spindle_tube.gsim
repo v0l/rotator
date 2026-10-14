@@ -6,7 +6,7 @@ let taz=fside*arm/1000
 let ft=taz/0.03
 part spindle_tube_fea.gcad
 material e355_sr E=210 nu=0.29 yield=520 density=7.85
-mesh 0.8
+mesh 0.5
 lower: bearing lo.side axial
 upper: bearing up.side
 wheel: fix pin_w.side

@@ -1,4 +1,4 @@
-let D=15 t=3 L=257 pin=4 pw=38 pc=243.2 sz0=55 sl=30 sw=7
+let D=15 t=3 L=257 pin=4 pw=38 pc=243.2 sz0=55 sl=30 sw=5 gap=20
 circle D-0.02
 tube: extrude L
 plane tube.end
@@ -8,7 +8,8 @@ chamfer 0.5 tube.start&tube.side
 plane XZ offset=-D/2 rx=180
 pins: hole pin+0.02 0,-pw 0,-pc depth=D+1
 plane YZ offset=D/2
-circle sw at=0,sz0+sl/2
+circle sw at=0,sz0+sl/2-gap/2
+circle sw at=0,sz0+sl/2+gap/2
 window: cut t+1
 color #b8bec6
 material steel
