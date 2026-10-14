@@ -1,6 +1,6 @@
-let n=60 m=1/cos(3.583) face=10 hub=30 hubl=10 throat=62 bore=15 key=5 kd=2.3 lead=3.583 pin=0
+let n=60 m=1/cos(3.583) face=10 hub=30 hubl=10 throat=62 bore=15 key=5 kd=2.3 lead=3.583 pin=0 backlash=0.12
 let tw=-(face/2)*tan(lead)/(n*m/2)*180/pi
-gear n m pressure=20 backlash=0.12 helix=lead angle=tw
+gear n m pressure=20 backlash=backlash helix=lead angle=tw
 teeth: extrude face
 circle throat
 trim: extrude face mode=intersect

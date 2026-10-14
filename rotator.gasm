@@ -185,5 +185,5 @@ couple head.drive.spin el ratio=60 lead=3.283 friction=mu module=0.8/cos(3.283) 
 pose az az
 pose el el
 interference none
-interference joint=az steps=18
-interference joint=el steps=16
+interference none joint=az steps=37
+interference none joint=el steps=47
