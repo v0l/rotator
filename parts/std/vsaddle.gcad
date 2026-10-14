@@ -1,0 +1,11 @@
+let W=70 H=25 T=14 R=24.4 sink=8 a=29 d=9
+plane XZ
+rect W H
+block: extrude T
+plane XY offset=H/2+1
+circle 2*R at=0,-(T+R-sink)
+saddle: cut H+2
+plane XZ rx=180
+legs: hole d a,0 -a,0 depth=T
+color #a7adb4
+material stainless

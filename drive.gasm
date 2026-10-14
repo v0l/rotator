@@ -19,9 +19,6 @@ move cov_fix_1 0,15,35
 part cov_fix_2 parts/std/screw.gcad d=3 L=14
 rotate cov_fix_2 180 axis=x
 move cov_fix_2 0,15,-35
-part cov_screw_1 parts/std/screw.gcad d=3 L=10
-rotate cov_screw_1 90 axis=x
-move cov_screw_1 75,-5,0
 part cov_screw_2 parts/std/screw.gcad d=3 L=10
 rotate cov_screw_2 90 axis=x
 move cov_screw_2 50.655,-5,34.769
@@ -102,7 +99,6 @@ concentric cover.low:fix_a.side plates.side_b:cover_b.side
 concentric cover.high:hub.side cover.low:shaft.side
 concentric cov_fix_1:shank.side plates.side_b:cover_b.side
 concentric cov_fix_2:shank.side plates.side_a:cover_a.side
-concentric cov_screw_1:shank.side cover.high:lid.side near=75,-5,0
 concentric cov_screw_2:shank.side cover.high:lid.side near=50.655,-5,34.769
 concentric cov_screw_3:shank.side cover.high:lid.side near=50.655,-5,-34.769
 concentric cov_screw_4:shank.side cover.high:wlid.side near=-16,-5,15

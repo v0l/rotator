@@ -1,53 +1,26 @@
-let dw=0.03
-part top parts/top_plate.gcad
-part post_1 parts/std/standoff.gcad L=70 af=13 d=8 stud=10
-material post_1 stainless
-move post_1 -38,-36,3
-part post_screw_1 parts/std/screwcsk.gcad d=8 L=12
-move post_screw_1 -38,-36,78
-part post_2 parts/std/standoff.gcad L=70 af=13 d=8 stud=10
-material post_2 stainless
-move post_2 38,-36,3
-part post_screw_2 parts/std/screwcsk.gcad d=8 L=12
-move post_screw_2 38,-36,78
-part post_3 parts/std/standoff.gcad L=70 af=13 d=8 stud=10
-material post_3 stainless
-move post_3 40,14,3
-part post_screw_3 parts/std/screwcsk.gcad d=8 L=12
-move post_screw_3 40,14,78
-part post_4 parts/std/standoff.gcad L=70 af=13 d=8 stud=10
-material post_4 stainless
-move post_4 -38,16,3
-part post_screw_4 parts/std/screwcsk.gcad d=8 L=12
-move post_screw_4 -38,16,78
+let dw=0.03 sx=27 sy=10 zt=222 top=40
 part kfl_low parts/std/kfl002.gcad
-move kfl_low 0,0,3
+move kfl_low sx,sy,4
 part kfl_up parts/std/kfl002.gcad
 rotate kfl_up 180 axis=x
-move kfl_up 0,0,73
-part kfl_up_screw_1 parts/std/screw.gcad d=6 L=10
-rotate kfl_up_screw_1 180 axis=x
-move kfl_up_screw_1 -26.5,0,66.5
-part kfl_up_screw_2 parts/std/screw.gcad d=6 L=10
-rotate kfl_up_screw_2 180 axis=x
-move kfl_up_screw_2 26.5,0,66.5
-part spindle parts/shaft.gcad L=107 kz=23 kl=20 k2l=18
-move spindle 0,0,4
+move kfl_up sx,sy,zt-4
+part spindle parts/shaft.gcad L=zt+top-5 kz=23 kl=20 k2l=18
+move spindle sx,sy,5
 part wheel parts/khk_cg1_60r1.gcad
-move wheel 0,0,27
+move wheel sx,sy,28
 part key parts/std/key.gcad
-move key 0,7,27
+move key sx,sy+7,28
 part vring parts/std/vring.gcad
-move vring 0,0,82.5
+move vring sx,sy,zt
 part collar parts/std/flangecollar.gcad F=44 hub=24 pcd=34 screw=4.5
 rotate collar 180 axis=x
-move collar 0,0,111.2
+move collar sx,sy,zt+top+0.2
 part key_col parts/std/key.gcad L=16
-move key_col 0,7,93
-part drive drive.gasm az=1 dw=dw
+move key_col sx,sy+7,zt+top-18
+part drive drive.gasm az=0 dw=dw
 rotate drive 90 axis=y
 rotate drive -90 axis=x
-move drive 0,38,32
+move drive sx,sy+38,33
 concentric wheel:bored.side spindle:rod.side
 flush key:k.start spindle:keyway.end
 flush key_col:k.start spindle:keyway2.end

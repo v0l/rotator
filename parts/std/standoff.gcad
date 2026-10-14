@@ -1,10 +1,12 @@
-let L=65 af=10 stud=8 d=6
+let L=65 af=10 stud=8 d=6 ff=0
 ngon af/cos(30) 6
 hexbody: extrude L
 plane hexbody.end
 female: hole d*0.82 0,0 depth=10
-plane XY
-circle d*0.82
-stud: extrude -stud
+if ff==0 plane XY
+if ff==0 circle d*0.82
+if ff==0 stud: extrude -stud
+if ff*(L>20) plane hexbody.start
+if ff*(L>20) female2: hole d*0.82 0,0 depth=10
 color #c8ccd2
 material brass

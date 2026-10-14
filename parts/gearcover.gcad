@@ -9,9 +9,7 @@ line wx2,-wz
 line wx2,-zi
 arc cx+R*cos(-ba-ph),R*sin(-ba-ph) via=cx+R*cos(-(a0+ba+ph)/2),R*sin(-(a0+ba+ph)/2)
 arc cx+R*cos(-ba+ph),R*sin(-ba+ph) via=cx+ro*cos(-ba),ro*sin(-ba)
-arc cx+R*cos(-ph),R*sin(-ph) via=cx+R*cos(-ba/2),R*sin(-ba/2)
-arc cx+R*cos(ph),R*sin(ph) via=cx+ro*cos(0),ro*sin(0)
-arc cx+R*cos(ba-ph),R*sin(ba-ph) via=cx+R*cos(ba/2),R*sin(ba/2)
+arc cx+R*cos(ba-ph),R*sin(ba-ph) via=cx+R,0
 arc cx+R*cos(ba+ph),R*sin(ba+ph) via=cx+ro*cos(ba),ro*sin(ba)
 arc wx2,zi via=cx+R*cos((a0+ba+ph)/2),R*sin((a0+ba+ph)/2)
 line wx2,wz
@@ -37,7 +35,7 @@ if az circle 15.6 at=24,40
 if az posts: cut thru
 plane XZ
 shaft: hole shaft cx,0
-lid: hole M3 b1x,0 b2x,b2z b2x,-b2z lx,lz lx,-lz fit=insert
+lid: hole M3 b2x,b2z b2x,-b2z lx,lz lx,-lz fit=insert
 plane XY offset=wz
 fix_a: hole M3 0,pc fit=insert
 plane XY offset=-wz rx=180
@@ -51,9 +49,7 @@ line wx2,-wz
 line wx2,-zi
 arc cx+R*cos(-ba-ph),R*sin(-ba-ph) via=cx+R*cos(-(a0+ba+ph)/2),R*sin(-(a0+ba+ph)/2)
 arc cx+R*cos(-ba+ph),R*sin(-ba+ph) via=cx+ro*cos(-ba),ro*sin(-ba)
-arc cx+R*cos(-ph),R*sin(-ph) via=cx+R*cos(-ba/2),R*sin(-ba/2)
-arc cx+R*cos(ph),R*sin(ph) via=cx+ro*cos(0),ro*sin(0)
-arc cx+R*cos(ba-ph),R*sin(ba-ph) via=cx+R*cos(ba/2),R*sin(ba/2)
+arc cx+R*cos(ba-ph),R*sin(ba-ph) via=cx+R,0
 arc cx+R*cos(ba+ph),R*sin(ba+ph) via=cx+ro*cos(ba),ro*sin(ba)
 arc wx2,zi via=cx+R*cos((a0+ba+ph)/2),R*sin((a0+ba+ph)/2)
 line wx2,wz
@@ -76,7 +72,7 @@ if az circle 15.6 at=24,40
 if az posts: cut thru
 plane XZ offset=whi
 hub: hole hub cx,0
-lid: hole M3 b1x,0 b2x,b2z b2x,-b2z cbore=6.5,7
+lid: hole M3 b2x,b2z b2x,-b2z cbore=6.5,7
 wlid: hole M3 lx,lz lx,-lz cbore=6.5,7
 color #e0782c
 material petg
