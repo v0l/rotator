@@ -23,15 +23,20 @@ circle 2*rb at=px-3.5,pz-3.5
 circle 2*rb at=px-3.5,pz-61.5
 circle 2*rb at=px-52.5,pz-3.5
 circle 2*rb at=px-52.5,pz-61.5
+circle 2*rb at=px-26.5,pz-3.5
+circle 2*rb at=px-26.5,pz-61.5
 bosses: extrude -boss
 plane XZ offset=-(yw+tw+boss) rx=180
 pi: hole 3.6 px-3.5,-(pz-3.5) px-3.5,-(pz-61.5) px-52.5,-(pz-3.5) px-52.5,-(pz-61.5) depth=boss+tw-1
+zero: hole 3.6 px-26.5,-(pz-3.5) px-26.5,-(pz-61.5) depth=boss+tw-1
 plane XZ offset=-yw
 rect 2.5 5 at=sx-sw/2-3,sz+15
 rect 2.5 5 at=sx+sw/2+3,sz+15
 rect 2.5 5 at=sx-sw/2-3,sz+55
 rect 2.5 5 at=sx+sw/2+3,sz+55
 tie: cut tw+1
+plane XZ offset=-yw
+grid: hole 3.4 -31,75 -31,95 -31,115 -31,155 -31,175 -11,75 -11,95 -11,115 -11,155 -11,175 9,75 9,95 9,115 9,135 9,155 9,175 29,75 29,95 29,115 29,135 29,155 29,175 49,75 49,95 49,115 49,135 49,155 49,175 depth=tw+1
 plane XY offset=zp+tb
 mount: hole 3.4 12,40 12,56 27,40 27,56 cbore=6.5,3
 color #e0782c
