@@ -117,6 +117,41 @@ move drv_screw_3 sx-40.5,sy+26,0
 part drv_screw_4 parts/std/screw.gcad d=4 L=10
 rotate drv_screw_4 180 axis=x
 move drv_screw_4 sx-40.5,sy+50,0
+part bracket parts/accessory_bracket.gcad
+part bracket_screw_1 parts/std/screw.gcad d=3 L=8
+move bracket_screw_1 12,40,62.5
+part bracket_screw_2 parts/std/screw.gcad d=3 L=8
+move bracket_screw_2 12,56,62.5
+part bracket_screw_3 parts/std/screw.gcad d=3 L=8
+move bracket_screw_3 27,40,62.5
+part bracket_screw_4 parts/std/screw.gcad d=3 L=8
+move bracket_screw_4 27,56,62.5
+part rpi parts/std/rpi5.gcad
+rotate rpi -90 axis=x
+rotate rpi 90 axis=y
+move rpi 11,33,178
+part hat_post_1 parts/std/standoff.gcad L=11 af=5 d=2.5 stud=4
+material hat_post_1 aluminium
+rotate hat_post_1 -90 axis=x
+move hat_post_1 7.5,34.6,174.5
+part hat_post_2 parts/std/standoff.gcad L=11 af=5 d=2.5 stud=4
+material hat_post_2 aluminium
+rotate hat_post_2 -90 axis=x
+move hat_post_2 7.5,34.6,116.5
+part hat_post_3 parts/std/standoff.gcad L=11 af=5 d=2.5 stud=4
+material hat_post_3 aluminium
+rotate hat_post_3 -90 axis=x
+move hat_post_3 -41.5,34.6,174.5
+part hat_post_4 parts/std/standoff.gcad L=11 af=5 d=2.5 stud=4
+material hat_post_4 aluminium
+rotate hat_post_4 -90 axis=x
+move hat_post_4 -41.5,34.6,116.5
+part poe_hat parts/std/poe_hat.gcad
+rotate poe_hat -90 axis=x
+rotate poe_hat 90 axis=y
+move poe_hat 11,45.6,178
+part sdr parts/std/rtlsdr.gcad
+move sdr 33.5,37.5,107
 part base azstage.gasm dw=dw sx=sx sy=sy zt=zt
 part head head.gasm dw=dw cover=cover
 part collar_screw_1 parts/std/screw.gcad d=4 L=20

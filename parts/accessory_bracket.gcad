@@ -1,0 +1,42 @@
+let zp=60.5 tb=5 yw=26 tw=4 xw0=-48 xw1=50 zt=182 boss=3 rb=3.5
+let px=11 pz=178 sx=33.5 sy=37.5 sz=107 sw=27 sh=13 rail=2
+plane XY offset=zp
+rect 35 38 at=19.5,45
+base: extrude tb
+plane XZ offset=-yw
+rect xw1-xw0 zt-zp at=(xw0+xw1)/2,(zp+zt)/2
+wall: extrude -tw
+plane YZ offset=2
+pen yw+tw,zp+tb
+line 64,zp+tb
+line yw+tw,zp+tb+20
+close
+gusset_a: extrude 3
+plane YZ offset=34
+pen yw+tw,zp+tb
+line 64,zp+tb
+line yw+tw,zp+tb+20
+close
+gusset_b: extrude 3
+plane XZ offset=-(yw+tw)
+circle 2*rb at=px-3.5,pz-3.5
+circle 2*rb at=px-3.5,pz-61.5
+circle 2*rb at=px-52.5,pz-3.5
+circle 2*rb at=px-52.5,pz-61.5
+bosses: extrude -boss
+plane XZ offset=-(yw+tw+boss) rx=180
+pi: hole 3.6 px-3.5,-(pz-3.5) px-3.5,-(pz-61.5) px-52.5,-(pz-3.5) px-52.5,-(pz-61.5) depth=boss+tw-1
+plane XZ offset=-(yw+tw)
+rect rail 63 at=sx-sw/2-rail/2-0.3,sz+31.5
+rect rail 63 at=sx+sw/2+rail/2+0.3,sz+31.5
+rails: extrude -(sh+2)
+plane XY offset=sz-3
+rect sw+2*rail+0.6 sh+2 at=sx,yw+tw+(sh+2)/2
+ledge: extrude 3
+plane XY offset=sz
+rect 14 7 at=sx,sy
+slot: cut 3
+plane XY offset=zp+tb
+mount: hole 3.4 12,40 12,56 27,40 27,56 cbore=6.5,3
+color #e0782c
+material petg

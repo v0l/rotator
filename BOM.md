@@ -62,6 +62,7 @@ the UK adds Irish import VAT and a carrier handling fee.
 | 4 | Hex standoff M3 x 10, female-female, 5.5 mm, aluminium (control board) | [Accu](https://www.accu.co.uk) |
 | 1 | Takachi CR123A-R battery holder with 140 mm leads, plus a JST PHR-2 housing and 2 SPH crimps | Conrad, item 1882324 |
 | 1 | CR123A lithium cell | any |
+| | Optional Pi and SDR: Raspberry Pi 5, PoE HAT, RTL-SDR Blog V4, 4x M2.5 x 11 male-female standoffs, 4x M2.5 heat-set inserts, 4x M3x8 (bracket to drive plate), short USB-A extension | Raspberry Pi resellers, rtl-sdr.com |
 | 1 | RJ45 plug for the PoE cable, crimped inside the box after the cable is through the gland | any |
 | 1 | Aluminium tube 20 x 1.5, 1 m (yagi boom) | [Aluminium Online](https://www.aluminium-online.co.uk) |
 | 5 | Aluminium rod 4 mm, 1 m (yagi elements, three per bar) | [Aluminium Online](https://www.aluminium-online.co.uk) |

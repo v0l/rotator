@@ -8,6 +8,6 @@ rect 22 18 at=44,24
 transformer: extrude 9
 plane XY
 rect 40 40 at=31,24
-fan: extrude -8
+fan: extrude -7
 color #1f4f9a
 material density=2.0

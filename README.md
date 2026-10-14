@@ -56,11 +56,13 @@ sub-assembly opens, checks and simulates on its own: `gcad drive.gasm`, and
   that slides over the StepperOnline 17HS15-1504-ME1K's D-cut shaft, so the motor passes
   torque only, with no coupling. Each base plate takes four M4 O-ring sealing screws from
   outside its box.
-- The az drive's top plate is a level shelf at z 60.5 with four M3 tapped holes on 16 x 15
-  for a printed holder. Above it is clear space 136 wide, 46 deep and 136 tall (y 24 to 70,
-  z 61 to 198), enough for a Raspberry Pi 5 with a PoE HAT standing parallel to the lid and an
-  RTL-SDR Blog V4 beside it, close to the coax. `parts/std/rpi5.gcad` (from the official
-  STEP), `poe_hat.gcad` and `rtlsdr.gcad` are reference models for designing it.
+- Optional Raspberry Pi and SDR: a printed bracket (`parts/accessory_bracket.gcad`) screws to
+  four M3 holes in the az drive's top plate and stands a wall up in the space in front of the
+  board. A Raspberry Pi 5 with a PoE HAT sits on four bosses with M2.5 heat-set inserts,
+  facing the lid with its ports down, and an RTL-SDR Blog V4 stands beside it in two rails with
+  its USB plug through a slotted ledge (a short USB lead to the Pi) and its SMA at the top.
+  Nothing extra goes through the box: the Pi's PoE cable and the SDR's coax share the spare
+  bottom gland. The Pi 5 model is laid out from the official STEP.
 - Each worm and wheel runs in a PETG grease cover, `parts/gearcover.gcad`, split on the wheel's
   mid-plane, held to the side plates by two M3x14 into heat-set inserts.
 
