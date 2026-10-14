@@ -15,7 +15,7 @@ tap drill size; the thread is in the table.
 | `drive_motor` | 2 | 6 mm, 43 x 44.5 | Ø22.4 (motor pilot); 4x Ø3.4 on 31 square; 4x M3 x 8 in the edges |
 | `drive_base` | 2 | 6 mm, 30 x 87 | 4x M4 (sealing screws from the box); 6x Ø3.4 countersunk (plates) |
 | `drive_top` | 2 | 6 mm, 29 x 87 | 6x Ø3.4 countersunk (plates); 4x M4 (az drive hangers) |
-| `yoke` | 1 | 3 mm 5052-H32, laser cut from `out/step/yoke_flat.dxf` (50 wide, round ends), bent down 90° twice on the `BEND` lines at 3 mm inside radius to a 120 wide U, then two pressed darts in each bend (8 wide, 20 legs, at ±5 from the middle) | in the blank: Ø12 H8 with a 4 mm keyway at each round end, 4x Ø6.5 in the crossbar (tube U-bolts) |
+| `yoke` | 1 | 3 mm 5052-H32, laser cut from `out/step/yoke_flat.dxf` (50 wide, round ends), bent down 90° twice on the `BEND` lines at 3 mm inside radius to a 120 wide U, then two pressed darts in each bend (8 wide, 20 legs, at ±5 from the middle) | in the blank: Ø20.2 at each round end (hub boss) with 4x Ø5.4 on 31 PCD around it for M4 clinch nuts, pressed in from the outside; 4x Ø6.5 in the crossbar (tube U-bolts) |
 
 ## Machined
 
@@ -25,7 +25,8 @@ tap drill size; the thread is in the table.
 | `worm_spacer` | 4 | steel tube Ø12 x Ø8.1, faced square: 15 and 3 (az), 16 and 4 (el) |
 | `flange_collar` | 1 | steel, Ø48 x 8 flange on a Ø28 x 12 hub; Ø17 H7 bore; Ø4 H7 cross hole through the hub (dowel); 4x Ø4.5 on 38 PCD; an O-ring groove or flat gasket on the flange face |
 | `az_spindle` | 1 | turned and bored from 42CrMo4+QT (4140 pre-hard) bar: Ø17 h6 x 102.2, bore Ø13 through, ends chamfered and the bore deburred (cables pass); 2x Ø4 H7 cross holes at 33 and 88.2 from the bottom end (wheel and collar dowels, drill through with them fitted) |
-| `el_shaft` | 1 | Ø12 silver steel, 119 long; keyseat 4 P9 x 2.5 x 18 at 48.5 from the floor end; keyways 4 P9 x 2.5 open at both ends, 6 and 5.5 long (yoke arms); M5 x 10 tapped in both ends |
+| `el_shaft` | 1 | Ø12 silver steel, 131 long; keyseat 4 P9 x 2.5 x 18 at 54.5 from the floor end, ends radiused; keyways 4 P9 x 2.5 open at both ends, 8.5 long (arm hubs); M5 x 10 tapped in both ends |
+| `el_hub` | 2 | steel, Ø40 x 6 flange on a Ø20 x 3 boss (the boss goes through the yoke arm); Ø12 H7 bore with 4 JS9 keyway through; 4x Ø4.5 on 31 PCD |
 | `cross_clamp` | 1 | 6082-T6, 60 x 60 x 24 block, R4 corners; Ø25.2 saddle 6.6 deep along one side, Ø20.2 saddle 5 deep across the other; 8x Ø6.6 through |
 | `yagi_boom` | 1 | 20 x 1.5 aluminium tube, 932 long; 14x Ø4.2 cross holes in two planes at 90°, see the drawing |
 | `bracket_tube` | 1 | 25 x 2 aluminium tube, 390 long |

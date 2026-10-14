@@ -1,0 +1,2 @@
+part box ../parts/std/hammond_1550z117.gcad body=main
+part lid ../parts/std/hammond_1550z117.gcad body=lid

@@ -33,9 +33,9 @@ move kfl_l_bolt_2 78,20,eh+24
 part kfl_l_nut_2 parts/std/nut.gcad
 rotate kfl_l_nut_2 -90 axis=y
 move kfl_l_nut_2 69,20,eh+24
-part elshaft parts/shaft.gcad d=12 key=4 kd=2.5 L=119 kz=48.5 kl=18 k0l=6 k2l=5.5 tap=1
+part elshaft parts/shaft.gcad d=12 key=4 kd=2.5 L=131 kz=54.5 kl=18 k0l=8.5 k2l=8.5 tap=1
 rotate elshaft 90 axis=y
-move elshaft -24,20,eh
+move elshaft -30,20,eh
 part wheel parts/khk_cg1_60r1.gcad n=60 m=0.8/cos(3.283) face=9 hub=25 hubl=9 throat=49.6 bore=12 key=4 kd=1.8 lead=3.283
 material wheel density=8.8 E=100 nu=0.34 yield=140
 rotate wheel 90 axis=y
@@ -49,18 +49,26 @@ move vring_l 78,20,eh
 part collar_l parts/std/collar.gcad d=12 D=22 W=8
 rotate collar_l 90 axis=y
 move collar_l 84.5,20,eh
+part hub_f parts/std/flangecollar.gcad d=12 hub=20 hl=3 F=40 ft=6 pcd=31 screw=4.5 key=4 t2=1.8 set=0
+rotate hub_f 180 axis=z
+rotate hub_f -90 axis=y
+move hub_f -21.5,20,eh
+part hub_l parts/std/flangecollar.gcad d=12 hub=20 hl=3 F=40 ft=6 pcd=31 screw=4.5 key=4 t2=1.8 set=0
+rotate hub_l 180 axis=z
+rotate hub_l 90 axis=y
+move hub_l 92.5,20,eh
 part washer_f parts/std/spacer.gcad d=5.3 D=20 L=2
 rotate washer_f -90 axis=y
-move washer_f -24.5,20,eh
+move washer_f -30.5,20,eh
 part end_f parts/std/screw.gcad d=5 L=12
 rotate end_f -90 axis=y
-move end_f -26.5,20,eh
+move end_f -32.5,20,eh
 part washer_l parts/std/spacer.gcad d=5.3 D=20 L=2
 rotate washer_l 90 axis=y
-move washer_l 95.5,20,eh
+move washer_l 101.5,20,eh
 part end_l parts/std/screw.gcad d=5 L=12
 rotate end_l 90 axis=y
-move end_l 97.5,20,eh
+move end_l 103.5,20,eh
 part yoke parts/yoke.gcad
 move yoke 0,20,eh
 part tube parts/std/tube.gcad D=25 t=2 L=390
@@ -208,6 +216,8 @@ concentric blk_screw_4:shank.side drive.plates.base:fix4.side
 concentric wheel:bored.side elshaft:rod.side
 flush key:k.start elshaft:keyway.end
 concentric yoke:hub_l.side elshaft:rod.side
+concentric hub_f:bore.side elshaft:rod.side
+concentric hub_l:bore.side elshaft:rod.side
 concentric vring_l:bore.side elshaft:rod.side
 concentric collar_l:bore.side elshaft:rod.side
 concentric end_f:shank.side elshaft:rod.side

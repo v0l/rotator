@@ -12,4 +12,4 @@ plane hub.end
 relief2: hole D+1 0,0 depth=x-zb-Be/2
 plane flange.start
 bolts: hole s -e/2,0 e/2,0
-material zinc E=96 nu=0.27 yield=208 density=6.6
+material aluminium E=71 nu=0.33 yield=150 density=2.7

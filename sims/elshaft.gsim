@@ -1,23 +1,21 @@
 sim static
-let q=680 cda_ant=0.08 cda_boom=0.015 shield=0.5 w=10 s=18 xa=449 xla=447.9
-let ff=q*(cda_ant+cda_boom)
-let fl=ff*shield
-let pof=ff*xa/s
-let pif=ff-pof
-let pol=fl*xla/s
-let pil=fl-pol
-let pow=w*xa/s
-let piw=w-pow
+let r=24.04 tl=10.972 tr=-17.353 tw=-(tl+tr)
+let ft=tw/r*1000
 part elshaft_fea.gcad
 material silversteel E=200 nu=0.29 yield=400 density=7.85
-mesh 1.2
-bearing_l: pin kl_.side
-bearing_f: pin kf.side
-key: fix kw.end
-load bof.side force=0,pof,-pow
-load bif.side force=0,pif,-piw
-load bol.side force=0,pol,-pow
-load bil.side force=0,pil,-piw
-at_bearing_f: probe 0,-7.3,154
-cross_hole_f: probe 3.5,-6.6,177.35
-expect at_bearing_f.stress<200 cross_hole_f.stress<200
+mesh 0.8
+floor: bearing bf.side axial
+lid: bearing bl.side
+worm: fix kw.end
+load arm_l.side force=-153.4,-113.2,-9.705
+torque arm_l.side tl axis=z at=0,0,4
+torque arm_l.side -0.6764 axis=y at=0,0,4
+load arm_r.side force=237.6,177.8,9.705
+torque arm_r.side tr axis=z at=0,0,127
+torque arm_r.side 0.0752 axis=y at=0,0,127
+load hub.side force=0,ft*tan(20)/cos(3.283),ft*tan(3.283)
+at_floor: probe 0,-5.9,17.75
+at_lid: probe 0,-5.9,97.75
+at_key: probe 4,-4,63.5
+at_hub_r: probe 0,-5.9,122
+expect at_lid.stress<200 at_key.stress<200 at_hub_r.stress<200

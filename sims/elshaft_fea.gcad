@@ -1,46 +1,37 @@
-let d=15 L=194.7 kz=91.6 kl=20 bw=2 x1=17.35 x2=177.35
-let o1=11.5 i1=29.5 bl=48.5 bf=144.2 i2=162.2 o2=180.2
+let d=12 L=131 bw=2 b1=17.75 b2=97.75 al=8 ar=8 kz=54.5 kl=18 key=4 kd=2.5 k0l=8.5 k2l=8.5
 circle d-0.02
-a: extrude o1
-plane a.end
+arm_l: extrude al
+plane arm_l.end
 circle d-0.02
-bol: extrude bw
-plane bol.end
+s0: extrude b1-bw/2-al
+plane s0.end
 circle d-0.02
-b: extrude i1-o1-bw
-plane b.end
+bf: extrude bw
+plane bf.end
 circle d-0.02
-bil: extrude bw
-plane bil.end
+s1: extrude kz+0.5-b1-bw/2
+plane s1.end
 circle d-0.02
-c: extrude bl-i1-bw
-plane c.end
+hub: extrude kl-1
+plane hub.end
 circle d-0.02
-kl_: extrude bw
-plane kl_.end
+s1b: extrude b2-bw/2-kz-kl+0.5
+plane s1b.end
 circle d-0.02
-e: extrude bf-bl-bw
-plane e.end
+bl: extrude bw
+plane bl.end
 circle d-0.02
-kf: extrude bw
-plane kf.end
+s2: extrude L-ar-b2-bw/2
+plane s2.end
 circle d-0.02
-f: extrude i2-bf-bw
-plane f.end
-circle d-0.02
-bif: extrude bw
-plane bif.end
-circle d-0.02
-g: extrude o2-i2-bw
-plane g.end
-circle d-0.02
-bof: extrude bw
-plane bof.end
-circle d-0.02
-h: extrude L-o2-bw
+arm_r: extrude ar
 plane XY offset=kz+kl
-rect 4 5 at=d/2-1.5,0
+rect key kd+1 at=0,d/2-kd/2+0.5
 kw: cut kl
-plane YZ offset=10
-cross: hole 5.2 0,x1 0,x2
+plane XY offset=L
+rect key kd+1 at=0,d/2-kd/2+0.5
+k2: cut k2l
+plane XY offset=k0l
+rect key kd+1 at=0,d/2-kd/2+0.5
+k0: cut k0l
 material steel

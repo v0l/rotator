@@ -48,9 +48,12 @@ sub-assembly opens, checks and simulates on its own: `gcad drive.gasm`, and
   the outside KFL003 as a rain shield.
 - El: a Hammond 1550Z117 (160 x 100 x 81) on the collar. A 12 mm el shaft crosses it on two
   KFL001s, the floor one outside, the lid one inside the lid. A U yoke laser cut from 3 mm 5052 and
-  bent, with two pressed darts in each bend, is keyed straight onto both shaft ends and held by an M5 end screw and washer; the right arm
-  clamps against a shaft collar outside the lid's V-ring. The head is 134 mm wide along the
-  el axis. A 25 mm tube clamped to the yoke's crossbar carries the yagi 300 mm out, clear of
+  bent, with two pressed darts in each bend, carries a steel flange hub on the outside of each
+  arm: four M4 screws into clinch nuts pressed into the arm, a 3 mm boss through the arm, and
+  the hub keyed onto the shaft end and held by an M5 end screw and washer. The shaft locks the
+  two arms together, so in a storm each hub passes 11 to 17 N·m; a key bearing on the 3 mm arm
+  alone would crush it. The right arm sits against a shaft collar outside the lid's V-ring.
+  The head is 146 mm wide along the el axis. A 25 mm tube clamped to the yoke's crossbar carries the yagi 300 mm out, clear of
   the el box at every angle.
 - Az drive: KHK CG1-60R1 wheel and SW1-R1 worm, 60:1. El drive: KHK BG0.8-60R1 bronze wheel and
   SW0.8-R1 worm, 60:1, 31 mm centres, small enough for the 1550Z117. Both run in the same

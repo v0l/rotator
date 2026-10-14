@@ -27,6 +27,7 @@ part drive_top parts/driveplates.gcad body=top
 part yoke parts/yoke.gcad
 "$gcad" export parts/yoke.gcad "$out/yoke_flat.dxf"
 part flange_collar parts/std/flangecollar.gcad "d=17 F=48 hub=28 pcd=38 screw=4.5 key=0 pin=4"
+part el_hub parts/std/flangecollar.gcad "d=12 hub=20 hl=3 F=40 ft=6 pcd=31 screw=4.5 key=4 t2=1.8 set=0"
 part worm_shaft parts/wormshaft.gcad
 part az_spindle parts/spindle_tube.gcad
 part el_shaft parts/shaft.gcad "d=12 key=4 kd=2.5 L=119 kz=48.5 kl=18 k0l=6 k2l=5.5 tap=1"

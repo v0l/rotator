@@ -5,8 +5,8 @@ let fz=-(q*cda+m_yagi*g)
 part ../parts/yoke.gcad
 material al5052 E=70 nu=0.33 yield=193 density=2.68
 mesh 1
-shaft_l: fix hub_l.side
-shaft_r: fix hub_r.side
+shaft_l: fix hub_l.side,pem_l.side
+shaft_r: fix hub_r.side,pem_r.side
 load clamp.side force=0,fy,fz
 torque clamp.side -fz*arm/1000 axis=y at=35,0,98.5
 torque clamp.side fy*arm/1000 axis=z at=35,0,98.5

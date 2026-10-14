@@ -1,4 +1,4 @@
-let t=3 rb=3 k=0.44 xi1=-21.5 xi2=92.5 Ru=97 w=50 d=12 ub=15.7 ux1=-10 ux2=80 dl=20 dw=8 dy=5 darts=1
+let t=3 rb=3 k=0.44 xi1=-21.5 xi2=92.5 Ru=97 w=50 d=12 boss=20.2 pcd=31 pem=5.4 ub=15.7 ux1=-10 ux2=80 dl=20 dw=8 dy=5 darts=1
 let ba=pi/2*(rb+k*t) drop=Ru-rb
 let b1=xi1+rb-ba/2 b2=xi2-rb+ba/2
 let s1=b1-ba/2-drop s2=b2+ba/2+drop
@@ -7,11 +7,10 @@ plane XY offset=Ru
 slot s2-s1+w w at=(s1+s2)/2,0
 blank: tab
 plane blank.end
-hub_l: hole d+0.04 s1,0
-hub_r: hole d+0.04 s2,0
-rect 4 4.5 at=s1,d/2+1.9-2.25
-rect 4 4.5 at=s2,d/2+1.9-2.25
-keys: cut thru
+hub_l: hole boss s1,0
+hub_r: hole boss s2,0
+pem_l: hole pem s1+pcd/2*cos(45),pcd/2*sin(45) s1-pcd/2*cos(45),pcd/2*sin(45) s1-pcd/2*cos(45),-pcd/2*sin(45) s1+pcd/2*cos(45),-pcd/2*sin(45)
+pem_r: hole pem s2+pcd/2*cos(45),pcd/2*sin(45) s2-pcd/2*cos(45),pcd/2*sin(45) s2-pcd/2*cos(45),-pcd/2*sin(45) s2+pcd/2*cos(45),-pcd/2*sin(45)
 clamp: hole 6.5 ux1,ub ux1,-ub ux2,ub ux2,-ub
 left: bend b1,-1 b1,1 angle=-90
 right: bend b2,-1 b2,1 angle=-90
