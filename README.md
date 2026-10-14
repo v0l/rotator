@@ -59,8 +59,8 @@ sub-assembly opens, checks and simulates on its own: `gcad drive.gasm`, and
 - Optional Raspberry Pi and SDR: a printed bracket (`parts/accessory_bracket.gcad`) screws to
   four M3 holes in the az drive's top plate and stands a wall up in the space in front of the
   board. A Raspberry Pi 5 with a PoE HAT sits on four bosses with M2.5 heat-set inserts,
-  facing the lid with its ports down, and an RTL-SDR Blog V4 stands beside it in two rails with
-  its USB plug through a slotted ledge (a short USB lead to the Pi) and its SMA at the top.
+  facing the lid with its ports down, and an RTL-SDR Blog V4 is cable-tied flat to the wall
+  beside it through two pairs of slots, USB plug down (a short USB lead to the Pi) and SMA up.
   Nothing extra goes through the box: the Pi's PoE cable and the SDR's coax share the spare
   bottom gland. The Pi 5 model is laid out from the official STEP.
 - Each worm and wheel runs in a PETG grease cover, `parts/gearcover.gcad`, split on the wheel's
