@@ -9,13 +9,13 @@ wall: extrude -tw
 plane YZ offset=xw0
 pen yw+tw,zp+tb
 line 64,zp+tb
-line yw+tw,zp+tb+20
+line yw+tw,zp+tb+40
 close
 gusset_a: extrude 3
 plane YZ offset=xw1-3
 pen yw+tw,zp+tb
 line 64,zp+tb
-line yw+tw,zp+tb+20
+line yw+tw,zp+tb+40
 close
 gusset_b: extrude 3
 plane XZ offset=-(yw+tw)
