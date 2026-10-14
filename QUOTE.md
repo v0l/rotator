@@ -24,7 +24,7 @@ tap drill size; the thread is in the table.
 | `worm_shaft` | 2 | Ø8 silver steel, 83 long; Ø5 D-bore, 4.52 across the flat, 22 deep in one end with a Ø5.1 x 6 round mouth, a sliding fit on the motor's D-cut shaft; a flat under the worm's M4 set screw |
 | `worm_spacer` | 4 | steel tube Ø12 x Ø8.1, faced square: 15 and 3 (az), 16 and 4 (el) |
 | `flange_collar` | 1 | steel, Ø44 x 8 flange on a Ø24 x 12 hub; Ø15 H7 bore; Ø4 H7 cross hole through the hub (dowel); 4x Ø4.5 on 34 PCD; an O-ring groove or flat gasket on the flange face |
-| `az_spindle` | 1 | precision steel tube 15 x 3 (E355), 257 long; 2x Ø4 H7 cross holes at 38 and 243.2 from the bottom end (wheel and collar dowels, drill through with them fitted); window 8 x 30 through one wall at 55 from the bottom end, deburred (cables) |
+| `az_spindle` | 1 | precision steel tube 15 x 3, EN 10305-1 E355+SR (cold drawn, stress relieved, yield ≥ 520 MPa), 257 long; 2x Ø4 H7 cross holes at 38 and 243.2 from the bottom end (wheel and collar dowels, drill through with them fitted); Ø7 through one wall at 70 from the bottom end, edges deburred and radiused (cables; a slot here makes the tube an open section and it fails in torsion) |
 | `el_shaft` | 1 | Ø12 silver steel, 119 long; keyseat 4 P9 x 2.5 x 18 at 48.5 from the floor end; keyways 4 P9 x 2.5 open at both ends, 6 and 5.5 long (yoke arms); M5 x 10 tapped in both ends |
 | `cross_clamp` | 1 | 6082-T6, 60 x 60 x 24 block, R4 corners; Ø25.2 saddle 6.6 deep along one side, Ø20.2 saddle 5 deep across the other; 8x Ø6.6 through |
 | `yagi_boom` | 1 | 20 x 1.5 aluminium tube, 932 long; 14x Ø4.2 cross holes in two planes at 90°, see the drawing |

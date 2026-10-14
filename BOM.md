@@ -53,7 +53,7 @@ the UK adds Irish import VAT and a carrier handling fee.
 | 1 | V-ring VA12 nitrile, for 11.5-13.5 mm shafts (el lid) | Simply Bearings |
 | 1 | Shaft collar 12 mm, set screw (el lid side) | Simply Bearings |
 | 1 | Silver steel 12 mm x 325 (el shaft) | Simply Bearings |
-| 1 | Precision steel tube 15 x 3, 300 mm (az spindle) | hydraulic tube stockists |
+| 1 | Precision steel tube 15 x 3 E355+SR, 300 mm (az spindle) | hydraulic tube stockists |
 | 2 | Dowel pin Ø4 m6, 30 and 24 long (wheel and collar on the spindle) | Accu |
 | 3 | Feather key 4x4, A4 (el wheel, both yoke arms) | Simply Bearings |
 | 2 | M8 U-bolt and V-saddle for 48 mm tube, A4 (mast clamp) | aerial suppliers, Accu |

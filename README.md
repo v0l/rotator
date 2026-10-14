@@ -40,7 +40,7 @@ sub-assembly opens, checks and simulates on its own: `gcad drive.gasm`, and
 - The az spindle is a 15 x 3 steel tube on two KFL002s, one on each end wall inside, 201 mm
   apart, leaving the top wall through a V-ring. The wheel and the flange collar on its top end
   are held by Ø4 cross dowels. Everything that crosses the az joint runs up its 9 mm bore: the
-  el motor and encoder wires and the SDR coax leave the az box through a window in the tube
+  el motor and encoder wires and the SDR coax leave the az box through a Ø7 hole in the tube
   above the wheel and come out inside the el box through a Ø10 hole in its floor, so they only
   twist over the ±270° travel. The collar flange seals against the el box.
 - El: a Hammond 1550Z117 (160 x 100 x 81) on the collar. A 12 mm el shaft crosses it on two

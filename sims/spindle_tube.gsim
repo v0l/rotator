@@ -1,0 +1,18 @@
+sim static
+let q=680 cda=0.095 cda_box=0.016 g=9.81 m_head=4 arm=273 zel=376.2 zb=5 zc=252
+let fside=q*cda
+let fhead=fside+q*cda_box
+let taz=fside*arm/1000
+let ft=taz/0.03
+part spindle_tube_fea.gcad
+material e355_sr E=210 nu=0.29 yield=520 density=7.85
+mesh 0.8
+lower: bearing lo.side axial
+upper: bearing up.side
+wheel: fix pin_w.side
+load hub.side force=0,fhead,-m_head*g
+torque hub.side fhead*(zel-zc)/1000 axis=-x at=0,0,zc-zb
+torque pin_c.side taz axis=z at=0,0,0
+at_window: probe 0,-7.4,70
+at_upper: probe 0,-7.4,201
+expect stress<260
