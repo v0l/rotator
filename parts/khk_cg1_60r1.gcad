@@ -1,4 +1,4 @@
-let n=60 m=1/cos(3.583) face=10 hub=30 hubl=10 throat=62 bore=15 key=5 kd=2.3 lead=3.583
+let n=60 m=1/cos(3.583) face=10 hub=30 hubl=10 throat=62 bore=15 key=5 kd=2.3 lead=3.583 pin=0
 let tw=-(face/2)*tan(lead)/(n*m/2)*180/pi
 gear n m pressure=20 backlash=0.12 helix=lead angle=tw
 teeth: extrude face
@@ -9,7 +9,9 @@ circle hub
 boss: extrude hubl
 plane boss.end
 bored: hole bore+0.04 0,0
-rect key kd*2 at=0,bore/2
-keyway: cut face+hubl
+if key rect key kd*2 at=0,bore/2
+if key keyway: cut face+hubl
+if pin plane XZ offset=-hub/2 rx=180
+if pin pinh: hole pin+0.02 0,-(face+hubl/2) depth=hub+1
 color #5b5f66
 material density=7.2 E=100 nu=0.26 yield=200

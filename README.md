@@ -37,9 +37,12 @@ sub-assembly opens, checks and simulates on its own: `gcad drive.gasm`, and
 - Az: a Hammond 1550WH (222 x 146 x 105, IP66) stands on its end beside the mast, held by two
   M8 U-bolts on V-saddles through its back wall. Its lid faces the front, so the control board
   and both az parts come out without touching the head.
-- The 15 mm az spindle runs up the box on two KFL002s, one on each end wall inside, 201 mm
-  apart, and leaves the top wall through a V-ring. A keyed flange collar on its top end
-  carries the el box.
+- The az spindle is a 15 x 3 steel tube on two KFL002s, one on each end wall inside, 201 mm
+  apart, leaving the top wall through a V-ring. The wheel and the flange collar on its top end
+  are held by Ø4 cross dowels. Everything that crosses the az joint runs up its 9 mm bore: the
+  el motor and encoder wires and the SDR coax leave the az box through a window in the tube
+  above the wheel and come out inside the el box through a Ø10 hole in its floor, so they only
+  twist over the ±270° travel. The collar flange seals against the el box.
 - El: a Hammond 1550Z117 (160 x 100 x 81) on the collar. A 12 mm el shaft crosses it on two
   KFL001s, the floor one outside, the lid one inside the lid. A U yoke bent from one 5 mm plate
   is keyed straight onto both shaft ends and held by an M5 end screw and washer; the right arm
@@ -61,8 +64,7 @@ sub-assembly opens, checks and simulates on its own: `gcad drive.gasm`, and
   board. A Raspberry Pi 5 with a PoE HAT sits on four bosses with M2.5 heat-set inserts,
   facing the lid with its ports down, and an RTL-SDR Blog V4 is cable-tied flat to the wall
   beside it through two pairs of slots, USB plug down (a short USB lead to the Pi) and SMA up.
-  Nothing extra goes through the box: the Pi's PoE cable and the SDR's coax share the spare
-  bottom gland. The Pi 5 model is laid out from the official STEP.
+  The Pi's PoE cable uses the second bottom gland; the SDR's coax goes up the hollow spindle. The Pi 5 model is laid out from the official STEP.
 - Each worm and wheel runs in a PETG grease cover, `parts/gearcover.gcad`, split on the wheel's
   mid-plane, held to the side plates by two M3x14 into heat-set inserts.
 
@@ -105,9 +107,10 @@ screws from outside. See `board/DESIGN.md`.
 The boxes seal on their own gaskets. Every fixing through a box wall is an O-ring sealing
 screw or has a sealing washer. The az spindle leaves the top wall through a V-ring running on
 it; the el shaft leaves the floor through the outside KFL001's insert seal on an EPDM gasket,
-and the lid through a V-ring. The el motor cable runs from a gland under the el box to a gland
-in the az box's top wall, with a loop for the az travel; the PoE cable and az cables use the
-glands in the bottom wall, beside the M12 breather vent.
+and the lid through a V-ring. Cables crossing the az joint run inside the
+hollow spindle; the coax leaves the el box through a gland in its top wall with a slack loop
+to the yagi. The two PoE cables (board and Pi) use the glands in the az box's bottom wall,
+beside the M12 breather vent.
 
 ## Strength
 

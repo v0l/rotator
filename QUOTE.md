@@ -23,13 +23,13 @@ tap drill size; the thread is in the table.
 |---|---|---|
 | `worm_shaft` | 2 | Ø8 silver steel, 83 long; Ø5 D-bore, 4.52 across the flat, 22 deep in one end with a Ø5.1 x 6 round mouth, a sliding fit on the motor's D-cut shaft; a flat under the worm's M4 set screw |
 | `worm_spacer` | 4 | steel tube Ø12 x Ø8.1, faced square: 15 and 3 (az), 16 and 4 (el) |
-| `flange_collar` | 1 | steel, Ø44 x 8 flange on a Ø24 x 12 hub; Ø15 H7 bore with 5 JS9 keyway; 4x Ø4.5 on 34 PCD; M5 set screw in the hub |
-| `az_spindle` | 1 | Ø15 silver steel, 257 long; keyseat 5 P9 x 3 x 20 at 23 from the bottom end; keyseat 5 P9 x 3 x 18 open at the top end |
+| `flange_collar` | 1 | steel, Ø44 x 8 flange on a Ø24 x 12 hub; Ø15 H7 bore; Ø4 H7 cross hole through the hub (dowel); 4x Ø4.5 on 34 PCD; an O-ring groove or flat gasket on the flange face |
+| `az_spindle` | 1 | precision steel tube 15 x 3 (E355), 257 long; 2x Ø4 H7 cross holes at 38 and 243.2 from the bottom end (wheel and collar dowels, drill through with them fitted); window 8 x 30 through one wall at 55 from the bottom end, deburred (cables) |
 | `el_shaft` | 1 | Ø12 silver steel, 119 long; keyseat 4 P9 x 2.5 x 18 at 48.5 from the floor end; keyways 4 P9 x 2.5 open at both ends, 6 and 5.5 long (yoke arms); M5 x 10 tapped in both ends |
 | `cross_clamp` | 1 | 6082-T6, 60 x 60 x 24 block, R4 corners; Ø25.2 saddle 6.6 deep along one side, Ø20.2 saddle 5 deep across the other; 8x Ø6.6 through |
 | `yagi_boom` | 1 | 20 x 1.5 aluminium tube, 932 long; 14x Ø4.2 cross holes in two planes at 90°, see the drawing |
 | `bracket_tube` | 1 | 25 x 2 aluminium tube, 390 long |
-| gear rework | 4 | CG1-60R1: bore 15 H7, keyway 5 JS9, M4 set screw over the key; SW1-R1 and SW0.8-R1: bore 8 H7; BG0.8-60R1: bore 12 H7, keyway 4 JS9, M4 set screw over the key |
+| gear rework | 4 | CG1-60R1: bore 15 H7, Ø4 H7 cross hole through the hub (dowel); SW1-R1 and SW0.8-R1: bore 8 H7; BG0.8-60R1: bore 12 H7, keyway 4 JS9, M4 set screw over the key |
 
 ## Printed
 
@@ -49,10 +49,11 @@ A Hammond 1550WH (az, 222 x 146 x 105) and a 1550Z117 (el, 160 x 100 x 81), both
 gasket and lid screws. The `*_1550*` STEP files show where to drill:
 
 - az box, bottom wall: 2x Ø6.5 (lower KFL002), 4x Ø4.5 (az drive), 2x Ø16.2 (glands), M12x1.5 (vent)
-- az box, top wall: Ø20 (spindle), 2x Ø6.5 (upper KFL002), Ø16.2 (el cable gland)
+- az box, top wall: Ø20 (spindle), 2x Ø6.5 (upper KFL002)
 - az box, back wall: 4x Ø9 (mast U-bolts), 4x Ø3.4 (board standoffs), 2x Ø3.4 (battery holder)
 - el box, floor: Ø16 + 2x Ø6.5 (KFL001), 4x Ø4.5 (el drive)
-- el box, bottom end wall: 4x Ø4.5 on 34 PCD (collar), Ø16.2 (el cable gland)
+- el box, bottom end wall: 4x Ø4.5 on 34 PCD (collar), Ø10 (cables from the spindle)
+- el box, top end wall: Ø16.2 (coax gland)
 - el lid: Ø16 + 2x Ø6.5 (KFL001, mounted inside)
 
 ## Bought

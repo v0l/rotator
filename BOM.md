@@ -7,9 +7,9 @@ collar) and drilling the boxes are in `QUOTE.md`.
 
 | qty | part | order code | unit | total |
 |---|---|---|---|---|
-| 4 | TE 1478769-2 cable gland M16, IP68, with locknut | [1174602](https://ie.farnell.com/te-connectivity/1478769-2/cable-gland-pa-10mm-m16-black/dp/1174602) | €4.07 | €16.28 |
+| 3 | TE 1478769-2 cable gland M16, IP68, with locknut | [1174602](https://ie.farnell.com/te-connectivity/1478769-2/cable-gland-pa-10mm-m16-black/dp/1174602) | €4.07 | €12.21 |
 | 1 | TE 2490541-2 breather vent M12x1.5 | [4753219](https://ie.farnell.com/amp-te-connectivity/2490541-2/ventilation-cable-gland-70l-h/dp/4753219) | €4.40 | €4.40 |
-| | | | | **€20.68** |
+| | | | | **€16.61** |
 
 ## Simply Bearings Ireland (EUR)
 
@@ -18,10 +18,8 @@ collar) and drilling the boxes are in `QUOTE.md`.
 | 2 | KFL002 flange bearing unit, 15 mm (az) | [kfl002](https://www.simplybearings.ie/products/kfl002) | €7.69 | €15.38 |
 | 4 | SKF 608-2RSH | [608-2rsh-skf](https://www.simplybearings.ie/products/608-2rsh-skf) | €6.12 | €24.48 |
 | 1 | V-ring VA14 nitrile, for 13.5-15.5 mm shafts | [v14a-nbr-nak](https://www.simplybearings.ie/products/v14a-nbr-nak) | €1.00 | €1.00 |
-| 2 | Feather key 5x5x20, A4 stainless (one cut to 16 for the collar) | [fkss-2re-5x5x20mm](https://www.simplybearings.ie/products/fkss-2re-5x5x20mm) | €2.26 | €4.52 |
-| 1 | Silver steel 15 mm x 325, cut into the 257 mm az spindle | [ssm0150-325mm](https://www.simplybearings.ie/products/ssm0150-325mm) | €22.66 | €22.66 |
 | 1 | Silver steel 8 mm x 325, cut into two 83 mm worm shafts | [ssm0080-325mm](https://www.simplybearings.ie/products/ssm0080-325mm) | €9.26 | €9.26 |
-| | | | | **€77.30** |
+| | | | | **€50.12** |
 
 ## R.A. Rodriguez, KHK distributor (UK, GBP)
 
@@ -55,6 +53,8 @@ the UK adds Irish import VAT and a carrier handling fee.
 | 1 | V-ring VA12 nitrile, for 11.5-13.5 mm shafts (el lid) | Simply Bearings |
 | 1 | Shaft collar 12 mm, set screw (el lid side) | Simply Bearings |
 | 1 | Silver steel 12 mm x 325 (el shaft) | Simply Bearings |
+| 1 | Precision steel tube 15 x 3, 300 mm (az spindle) | hydraulic tube stockists |
+| 2 | Dowel pin Ø4 m6, 30 and 24 long (wheel and collar on the spindle) | Accu |
 | 3 | Feather key 4x4, A4 (el wheel, both yoke arms) | Simply Bearings |
 | 2 | M8 U-bolt and V-saddle for 48 mm tube, A4 (mast clamp) | aerial suppliers, Accu |
 | 1 | Aluminium tube 25 x 2, 390 mm (yagi bracket) | Goodwins (below) |
@@ -80,13 +80,13 @@ GBP converted at 1.1805 (mid-market, 9 Oct 2026). Shipping not included.
 
 | supplier | ex VAT | with VAT |
 |---|---|---|
-| Farnell Ireland | €20.68 | €25.44 |
-| Simply Bearings Ireland | €77.30 | €95.08 |
+| Farnell Ireland | €16.61 | €20.43 |
+| Simply Bearings Ireland | €50.12 | €61.65 |
 | R.A. Rodriguez (£46.28) | €54.63 | €67.20 |
 | StepperOnline (£28.72) | €33.90 | €41.70 |
 | Goodwins, 25 mm tube x 1 m | €8.90 | €10.95 |
 | Control board parts, Mouser (`board/tools/bom.md`) | €65.97 | €81.14 |
-| **priced parts** | **€261.38** | **€321.51** |
+| **priced parts** | **€230.13** | **€283.07** |
 
 The unpriced rows now include both Hammond boxes, the el worm pair and the KFL001s, so the
 priced total is well short of the bought parts; they need pricing before the total means

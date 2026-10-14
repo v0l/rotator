@@ -1,4 +1,4 @@
-let eh=372.2 ec=eh+112.5 cover=1 yx=300 yy=-402 yz=35 dw=0.03
+let eh=376.2 ec=eh+112.5 cover=1 yx=300 yy=-402 yz=35 dw=0.03
 part elbox parts/std/hammond_1550z117.gcad body=main
 move elbox -3,10,262.2
 if cover part ellid parts/std/hammond_1550z117.gcad body=lid
@@ -184,8 +184,7 @@ part blk_screw_4 parts/std/screw.gcad d=4 L=10
 rotate blk_screw_4 -90 axis=y
 move blk_screw_4 -3,-23,eh-40.5
 part gland parts/std/gland.gcad
-rotate gland 180 axis=x
-move gland 47,45,262.2
+move gland 17,40,422.2
 axis ea 0,20,eh 1,20,eh
 if cover concentric ellid:bearing_l.side elbox:bearing.side
 concentric kfl_f:bore.side elbox:bearing.side
