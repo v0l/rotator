@@ -1,4 +1,4 @@
-let t=3 rb=3 k=0.44 xi1=-21.5 xi2=92.5 Ru=97 w=50 d=12 boss=20.2 pcd=31 pem=5.4 ub=15.7 ux1=-10 ux2=80 dl=20 dw=8 dy=5 darts=1
+let t=3 rb=3 k=0.44 xi1=-21.5 xi2=92.5 Ru=97 w=50 d=12 boss=20.2 pcd=31 pem=5.4 ub=15.7 ux1=-10 ux2=80 dl=12 dw=10 dy=5 darts=1
 let ba=pi/2*(rb+k*t) drop=Ru-rb
 let b1=xi1+rb-ba/2 b2=xi2-rb+ba/2
 let s1=b1-ba/2-drop s2=b2+ba/2+drop

@@ -15,7 +15,7 @@ tap drill size; the thread is in the table.
 | `drive_motor` | 2 | 6 mm, 43 x 44.5 | Ø22.4 (motor pilot); 4x Ø3.4 on 31 square; 4x M3 x 8 in the edges |
 | `drive_base` | 2 | 6 mm, 30 x 87 | 4x M4 (sealing screws from the box); 6x Ø3.4 countersunk (plates) |
 | `drive_top` | 2 | 6 mm, 29 x 87 | 6x Ø3.4 countersunk (plates); 4x M4 (az drive hangers) |
-| `yoke` | 1 | 3 mm 5052-H32, laser cut from `out/step/yoke_flat.dxf` (50 wide, round ends), bent down 90° twice on the `BEND` lines at 3 mm inside radius to a 120 wide U, then two pressed darts in each bend (8 wide, 20 legs, at ±5 from the middle) | in the blank: Ø20.2 at each round end (hub boss) with 4x Ø5.4 on 31 PCD around it for M4 clinch nuts, pressed in from the outside; 4x Ø6.5 in the crossbar (tube U-bolts) |
+| `yoke` | 1 | 3 mm 5052-H32, laser cut from `out/step/yoke_flat.dxf` (50 wide, round ends), bent down 90° twice on the `BEND` lines at 3 mm inside radius to a 120 wide U, then two pressed darts in each bend (10 wide at the bend, 12 legs, at ±5 from the middle) | in the blank: Ø20.2 at each round end (hub boss) with 4x Ø5.4 on 31 PCD around it for M4 clinch nuts, pressed in from the outside; 4x Ø6.5 in the crossbar (tube U-bolts) |
 
 ## Machined
 
