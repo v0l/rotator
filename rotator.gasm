@@ -171,7 +171,7 @@ move collar_nut_4 sx-13.435,sy-13.435,251
 axis za sx,sy,0 sx,sy,1
 joint az base.spindle box turn about=za min=-270 max=270 drag=daz
 couple base.drive.spin az ratio=60 lead=3.583 friction=mu module=1/cos(3.583) face=10 pressure=20 gear=base.wheel pinion=base.drive.worm
-joint el head.elshaft head.elbox turn about=head.ea min=-6 max=186 drag=del
+joint el head.elshaft head.elbox turn about=head.ea min=-6 max=120 drag=del
 concentric collar_screw_1:shank.side base.collar:fix.side near=sx+13.435,sy+13.435,258
 concentric head.elbox:c1.side collar_screw_1:shank.side
 concentric collar_screw_2:shank.side head.elbox:collar.side near=sx-13.435,sy+13.435,265
@@ -181,7 +181,7 @@ concentric collar_nut_1:n.side collar_screw_1:shank.side
 concentric collar_nut_2:n.side collar_screw_2:shank.side
 concentric collar_nut_3:n.side collar_screw_3:shank.side
 concentric collar_nut_4:n.side collar_screw_4:shank.side
-couple head.drive.spin el ratio=-60 lead=3.283 friction=mu module=0.8/cos(3.283) face=9 pressure=20 gear=head.wheel pinion=head.drive.worm
+couple head.drive.spin el ratio=60 lead=3.283 friction=mu module=0.8/cos(3.283) face=9 pressure=20 gear=head.wheel pinion=head.drive.worm
 pose az az
 pose el el
 interference none
