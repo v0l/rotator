@@ -15,10 +15,7 @@ arc wx2,zi via=cx+R*cos((a0+ba+ph)/2),R*sin((a0+ba+ph)/2)
 line wx2,wz
 line wx,wz
 close
-shell: extrude -(g+t)
-plane XZ offset=-(g+t)
-rect wx2-wx 2*wz at=(wx+wx2)/2,0
-wbox: extrude -(wlo-g-t)
+shell: extrude -wlo
 plane XY offset=wz
 trough: hole 2*wr 0,0
 plane XZ
