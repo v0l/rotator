@@ -152,20 +152,20 @@ part sdr parts/std/rtlsdr.gcad
 move sdr 40.5,36.5,40
 part base azstage.gasm dw=dw sx=sx sy=sy zt=zt
 part head head.gasm dw=dw cover=cover
-part collar_screw_1 parts/std/screw.gcad d=4 L=20
-move collar_screw_1 sx+13.435,sy+13.435,269.2
+part collar_screw_1 parts/std/screw.gcad d=4 L=22
+move collar_screw_1 sx+13.435,sy+13.435,271.2
 part collar_nut_1 parts/std/nut.gcad d=4 af=7 m=3.2
 move collar_nut_1 sx+13.435,sy+13.435,251
-part collar_screw_2 parts/std/screw.gcad d=4 L=20
-move collar_screw_2 sx-13.435,sy+13.435,269.2
+part collar_screw_2 parts/std/screw.gcad d=4 L=22
+move collar_screw_2 sx-13.435,sy+13.435,271.2
 part collar_nut_2 parts/std/nut.gcad d=4 af=7 m=3.2
 move collar_nut_2 sx-13.435,sy+13.435,251
-part collar_screw_3 parts/std/screw.gcad d=4 L=20
-move collar_screw_3 sx+13.435,sy-13.435,269.2
+part collar_screw_3 parts/std/screw.gcad d=4 L=22
+move collar_screw_3 sx+13.435,sy-13.435,271.2
 part collar_nut_3 parts/std/nut.gcad d=4 af=7 m=3.2
 move collar_nut_3 sx+13.435,sy-13.435,251
-part collar_screw_4 parts/std/screw.gcad d=4 L=20
-move collar_screw_4 sx-13.435,sy-13.435,269.2
+part collar_screw_4 parts/std/screw.gcad d=4 L=22
+move collar_screw_4 sx-13.435,sy-13.435,271.2
 part collar_nut_4 parts/std/nut.gcad d=4 af=7 m=3.2
 move collar_nut_4 sx-13.435,sy-13.435,251
 axis za sx,sy,0 sx,sy,1

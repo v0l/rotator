@@ -73,7 +73,7 @@ the UK adds Irish import VAT and a carrier handling fee.
 | 2 | M6 U-bolt for 20 mm tube, A4, with nuts | [Accu](https://www.accu.co.uk) |
 | 12 | Ruthex M3 heat-set insert, 5.7 long (gear covers) | [3DJake Ireland](https://www.3djake.ie/) |
 | 1 | PETG filament, about 150 g (gear covers) | [3DJake Ireland](https://www.3djake.ie/) |
-| | A4 screws: M3x6 (4), M3x8 countersunk (2), M3x10 (16), M3x12 countersunk (24, drive plates), M3x14 (4), M4x10 (8, arm hubs), M5x12 (2, el shaft ends), M6x16 (4); O-ring sealing screws: M3x8 (4, board), M4x10 (4, el drive base plate), M4x16 (4, az drive hangers), M4x20 (4, collar), M6x16 (2, el KFLs through the walls), M6x25 (2, az KFL003 pair); nuts M3 (2), M4 (4), M6 (4, nyloc), M8 nyloc (4) with sealing washers (mast U-bolts inside the az box); washers 5.3 x 20 (2) | [Accu](https://www.accu.co.uk) |
+| | A4 screws: M3x6 (4), M3x8 countersunk (2), M3x10 (16), M3x12 countersunk (24, drive plates), M3x14 (4), M4x10 (8, arm hubs), M5x12 (2, el shaft ends), M6x16 (4); O-ring sealing screws: M3x8 (4, board), M4x10 (4, el drive base plate), M4x16 (4, az drive hangers), M4x22 (4, collar and the cable guide flange), M6x16 (2, el KFLs through the walls), M6x25 (2, az KFL003 pair); nuts M3 (2), M4 (4), M6 (4, nyloc), M8 nyloc (4) with sealing washers (mast U-bolts inside the az box); washers 5.3 x 20 (2) | [Accu](https://www.accu.co.uk) |
 
 ## Totals in EUR with 23% VAT
 

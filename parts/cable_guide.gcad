@@ -1,20 +1,22 @@
-let od=11 id=8 gx=47 gy=40 tx=49.5 ty=40 top=413 low=280 cy=32 hx=27 hy=10 under=275 floor=269.2 bend=6
-path tx,ty,top tx,ty,low hx,cy,under+0.5 hx,hy,under hx,hy,floor-6 r=bend
+let od=11 id=8 gx=47 gy=40 hx=27 hy=10 floor=269.2 pcd=38
+path 49.500,40.000,413.000 49.487,40.058,408.728 49.478,40.113,404.457 49.481,40.158,400.185 49.496,40.194,395.913 49.522,40.227,391.641 49.559,40.269,387.369 49.600,40.311,383.097 49.642,40.351,378.826 49.683,40.387,374.554 49.721,40.415,370.282 49.754,40.432,366.010 49.781,40.436,361.738 49.797,40.421,357.466 49.800,40.381,353.194 49.801,40.337,348.922 49.799,40.289,344.650 49.792,40.228,340.379 49.774,40.147,336.107 49.742,40.034,331.837 49.687,39.875,327.568 49.601,39.647,323.303 49.465,39.314,319.046 49.295,38.852,314.803 49.075,38.232,310.582 48.748,37.404,306.404 48.226,36.329,302.304 47.409,34.967,298.342 46.205,33.030,294.737 44.603,30.741,291.509 42.564,28.642,288.404 39.707,26.957,285.735 36.350,25.759,283.385 32.892,25.533,280.903 29.422,24.819,278.662 27.563,21.112,277.930 27.094,17.045,276.939 26.987,13.748,274.244 27.000,11.478,270.678 27.000,10.850,266.458 27.000,10.500,262.200 smooth
 plane path at=0
 circle od
 circle id
 tube: sweep
-plane XY offset=top
+plane XY offset=285
+rect 4.5 8 at=27.6,21
+feed: cut 8
+plane XY offset=floor
+circle 48 at=hx,hy
+circle 14 at=hx,hy
+flange: extrude 2
+plane XY offset=floor+2
+fix: hole 4.5 hx+pcd/2*cos(45),hy+pcd/2*sin(45) hx-pcd/2*cos(45),hy+pcd/2*sin(45) hx-pcd/2*cos(45),hy-pcd/2*sin(45) hx+pcd/2*cos(45),hy-pcd/2*sin(45) depth=4
+plane XY offset=411.5
 circle 17 at=gx,gy
-mouth: extrude 414-top
+mouth: extrude 2.5
 plane XY offset=414
-throat: hole 12 gx,gy depth=414-top+3
-plane XY offset=floor-0.5
-circle 13.8 at=hx,hy
-circle 10 at=hx,hy
-spigot: extrude -6
-plane XY offset=under+7
-rect 4.5 8 at=hx,hy+11
-feed: cut 5
+throat: hole 12 gx,gy depth=2.5
 color #e0782c
 material petg
