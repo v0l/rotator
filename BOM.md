@@ -1,6 +1,6 @@
 # Bill of materials (bought parts)
 
-Prices checked on 9 Oct 2026, unit prices ex VAT. Made parts (plates, yoke, shafts,
+Prices checked on 9 Oct 2026 (Hammond boxes on 16 Oct), unit prices ex VAT. Made parts (plates, yoke, shafts,
 collar) and drilling the boxes are in `QUOTE.md`.
 
 ## Farnell Ireland (EUR, free delivery over €75)
@@ -9,7 +9,9 @@ collar) and drilling the boxes are in `QUOTE.md`.
 |---|---|---|---|---|
 | 2 | TE 1478769-2 cable gland M16, IP68, with locknut | [1174602](https://ie.farnell.com/te-connectivity/1478769-2/cable-gland-pa-10mm-m16-black/dp/1174602) | €4.07 | €8.14 |
 | 1 | TE 2490541-2 breather vent M12x1.5 | [4753219](https://ie.farnell.com/amp-te-connectivity/2490541-2/ventilation-cable-gland-70l-h/dp/4753219) | €4.40 | €4.40 |
-| | | | | **€12.54** |
+| 1 | Hammond 1550WH die-cast box, 222 x 146 x 105, IP66 (az) | [1823070](https://ie.farnell.com/search?st=1823070) | €35.09 | €35.09 |
+| 1 | Hammond 1550Z117 die-cast box, 160 x 100 x 81, IP66 (el) | [2763846](https://ie.farnell.com/search?st=2763846) | €29.33 | €29.33 |
+| | | | | **€76.96** |
 
 ## Simply Bearings Ireland (EUR)
 
@@ -46,8 +48,6 @@ the UK adds Irish import VAT and a carrier handling fee.
 
 | qty | part | where |
 |---|---|---|
-| 1 | Hammond 1550WH die-cast box, 222 x 146 x 105, IP66 (az) | Farnell, RS, Mouser |
-| 1 | Hammond 1550Z117 die-cast box, 160 x 100 x 81, IP66 (el) | Farnell, RS, Mouser |
 | 2 | KFL001 flange bearing unit, 12 mm (el) | [Simply Bearings](https://www.simplybearings.co.uk/products/kfl001) |
 | 1 | V-ring VA12 nitrile, for 11.5-13.5 mm shafts (el lid) | Simply Bearings |
 | 1 | Shaft collar 12 mm, set screw (el lid side) | Simply Bearings |
@@ -82,15 +82,15 @@ GBP converted at 1.1805 (mid-market, 9 Oct 2026). Shipping not included.
 
 | supplier | ex VAT | with VAT |
 |---|---|---|
-| Farnell Ireland | €12.54 | €15.42 |
+| Farnell Ireland | €76.96 | €94.66 |
 | Simply Bearings Ireland | €53.38 | €65.66 |
 | R.A. Rodriguez (£46.28) | €54.63 | €67.20 |
 | StepperOnline (£28.72) | €33.90 | €41.70 |
 | Goodwins, 25 mm tube x 1 m | €8.90 | €10.95 |
 | Control board parts, Mouser (`board/tools/bom.md`) | €65.97 | €81.14 |
-| **priced parts** | **€229.32** | **€282.07** |
+| **priced parts** | **€293.74** | **€361.31** |
 
-The unpriced rows now include both Hammond boxes, the el worm pair and the KFL001s, so the
+The unpriced rows include the el worm pair and the KFL001s, so the
 priced total is well short of the bought parts; they need pricing before the total means
 anything. The control board PCB (4 layers, ENIG, JLCPCB) and its assembly are not priced yet,
 and its STM32H563RIT6 is on backorder (Mouser expects stock on 11 Dec 2026). The made parts in
