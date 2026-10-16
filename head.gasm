@@ -191,15 +191,14 @@ move blk_screw_3 -3,1,eh-40.5
 part blk_screw_4 parts/std/screw.gcad d=4 L=10
 rotate blk_screw_4 -90 axis=y
 move blk_screw_4 -3,-23,eh-40.5
-part gland parts/std/gland.gcad
-move gland 47,40,422.2
-part cable_guide parts/cable_guide.gcad
+part coaxhead parts/vendor/molex_731000037_ntype_clean.stp
+rotate coaxhead -90 axis=y
+move coaxhead -22.97,40,290
 axis ea 0,20,eh 1,20,eh
 if cover concentric ellid:bearing_l.side elbox:bearing.side
 concentric kfl_f:bore.side elbox:bearing.side
 concentric kfl_l:bore.side elbox:bearing.side
-concentric gland:stub.side elbox:coax.side
-concentric cable_guide:fix1.side elbox:c1.side
+distance coaxhead:<X elbox:<X 20.02
 flush kfl_f_bolt_1:head.start kfl_f:flange.end
 concentric kfl_f_nut_1:n.side kfl_f:bolts.side near=2,20,eh-24
 concentric kfl_l_bolt_1:shank.side kfl_l:bolts.side near=76,20,eh-24

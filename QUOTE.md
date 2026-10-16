@@ -43,7 +43,6 @@ in its trough ends.
 | `az_gearcover_low`, `az_gearcover_high` | 1 each |
 | `el_gearcover_low`, `el_gearcover_high` | 1 each |
 | `accessory_bracket` (optional, Pi and SDR), printed lying on its back wall; four M2.5 heat-set inserts in the bosses | 1 |
-| `cable_guide`, printed standing on its Ø48 flange with tree supports under the run, so the tube's end clears the bed; the flange bolts to the box's bottom wall on the collar's four screws | 1 |
 
 ## Drilled enclosures
 
@@ -53,9 +52,8 @@ gasket and lid screws. The `*_1550*` STEP files show where to drill:
 - az box, bottom wall: 2x Ø16.2 (glands), M12x1.5 (vent)
 - az box, top wall: Ø21 (spindle), 2x Ø6.5 (KFL003 pair), 4x Ø4.5 (az drive hangers)
 - az box, back wall: 4x Ø9 (mast U-bolts), 4x Ø3.4 (board standoffs), 2x Ø3.4 (battery holder)
-- el box, floor: Ø16 + 2x Ø6.5 (KFL001), 4x Ø4.5 (el drive)
-- el box, bottom end wall: 4x Ø4.5 on 38 PCD (collar and the cable guide flange), Ø14 (cables from the spindle)
-- el box, top end wall: Ø16.2 (coax gland)
+- el box, floor: Ø16 + 2x Ø6.5 (KFL001), 4x Ø4.5 (el drive), Ø16 low on the lid side (N-type bulkhead)
+- el box, bottom end wall: 4x Ø4.5 on 38 PCD (collar), Ø14 (cables from the spindle)
 - el lid: Ø16 + 2x Ø6.5 (KFL001, mounted inside)
 
 ## Bought

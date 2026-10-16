@@ -1,5 +1,5 @@
 let L=160 W=100 Hb=61 lid=20 tw=7 tf=3 r=6 ri=3
-let ey=10 ez=114 kfl=24 cx=30 pcd=38 wy=-21 wz=114
+let ey=10 ez=114 kfl=24 cx=30 pcd=38 wy=-21 wz=114 by=30 bz=27.8
 body main
 plane YZ
 rect W L at=0,L/2 r=r
@@ -15,8 +15,8 @@ plane XY rx=180
 c1: hole 4.5 cx+pcd/2*cos(45),-pcd/2*sin(45) depth=tw+1
 collar: hole 4.5 cx-pcd/2*cos(45),-pcd/2*sin(45) cx+pcd/2*cos(45),pcd/2*sin(45) cx-pcd/2*cos(45),pcd/2*sin(45) depth=tw+1
 cables: hole 14 cx,0 depth=tw+1
-plane XY offset=L
-coax: hole 16.2 50,30 depth=tw+1
+plane YZ rx=180
+coax: hole 16 by,-bz depth=tf+1
 color #b9bec4
 material diecast density=2.7
 body lid
