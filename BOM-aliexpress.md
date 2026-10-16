@@ -15,7 +15,7 @@ more. Delivery is usually free over €10 per seller.
 | 2 | Shaft collar 8 mm | [1005004286453800](https://www.aliexpress.com/item/1005004286453800.html) | €1.49 |
 | 1 | 303 stainless rod 15 mm, 300 mm (spindle and el shaft) | [4000186787300](https://www.aliexpress.com/item/4000186787300.html) | €6.02 |
 | 1 | Stainless rod 8 mm, 200 mm (worm shafts) | [1005010787659558](https://www.aliexpress.com/item/1005010787659558.html) | €4.65 |
-| 3 | Cable gland M16, IP68 | [1005007639692634](https://www.aliexpress.com/item/1005007639692634.html) | €2.61 |
+| 2 | Cable gland M16, IP68 | [1005007639692634](https://www.aliexpress.com/item/1005007639692634.html) | €2.61 |
 | 2 | Breather vent M12x1.5 | [1005005598068425](https://www.aliexpress.com/item/1005005598068425.html) | €9.23 |
 | 3 | V-ring VA14 | [1005008984747262](https://www.aliexpress.com/item/1005008984747262.html) | €4.83 |
 | 2 | Sintered bronze bush 15x21x20 | [1005010379695695](https://www.aliexpress.com/item/1005010379695695.html) | €4.60 each |

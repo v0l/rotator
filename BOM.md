@@ -7,9 +7,9 @@ collar) and drilling the boxes are in `QUOTE.md`.
 
 | qty | part | order code | unit | total |
 |---|---|---|---|---|
-| 3 | TE 1478769-2 cable gland M16, IP68, with locknut | [1174602](https://ie.farnell.com/te-connectivity/1478769-2/cable-gland-pa-10mm-m16-black/dp/1174602) | €4.07 | €12.21 |
+| 2 | TE 1478769-2 cable gland M16, IP68, with locknut | [1174602](https://ie.farnell.com/te-connectivity/1478769-2/cable-gland-pa-10mm-m16-black/dp/1174602) | €4.07 | €8.14 |
 | 1 | TE 2490541-2 breather vent M12x1.5 | [4753219](https://ie.farnell.com/amp-te-connectivity/2490541-2/ventilation-cable-gland-70l-h/dp/4753219) | €4.40 | €4.40 |
-| | | | | **€16.61** |
+| | | | | **€12.54** |
 
 ## Simply Bearings Ireland (EUR)
 
@@ -63,6 +63,7 @@ the UK adds Irish import VAT and a carrier handling fee.
 | 4 | Hex standoff M3 x 10, female-female, 5.5 mm, aluminium (control board) | [Accu](https://www.accu.co.uk) |
 | 1 | Takachi CR123A-R battery holder with 140 mm leads, plus a JST PHR-2 housing and 2 SPH crimps | Conrad, item 1882324 |
 | 1 | CR123A lithium cell | any |
+| 1 | Molex 73100-0037 N jack bulkhead, crimp, RG-58 (SDR coax out of the el box floor) | [Mouser 538-73100-0037](https://www.mouser.com/ProductDetail/Molex/73100-0037?qs=UWfdUHhsSi4LdzZbo9j%252B7A%3D%3D), $13.10 |
 | | Optional Pi and SDR: Raspberry Pi 5, PoE HAT, RTL-SDR Blog V4, 4x M2.5 x 11 male-female standoffs, 4x M2.5 heat-set inserts, 4x M4x10 (bracket to the drive base plate), short USB-A extension | Raspberry Pi resellers, rtl-sdr.com |
 | 1 | RJ45 plug for the PoE cable, crimped inside the box after the cable is through the gland | any |
 | 1 | Aluminium tube 20 x 1.5, 1 m (yagi boom) | [Aluminium Online](https://www.aluminium-online.co.uk) |
@@ -73,7 +74,7 @@ the UK adds Irish import VAT and a carrier handling fee.
 | 2 | M6 U-bolt for 20 mm tube, A4, with nuts | [Accu](https://www.accu.co.uk) |
 | 12 | Ruthex M3 heat-set insert, 5.7 long (gear covers) | [3DJake Ireland](https://www.3djake.ie/) |
 | 1 | PETG filament, about 150 g (gear covers) | [3DJake Ireland](https://www.3djake.ie/) |
-| | A4 screws: M3x6 (4), M3x8 countersunk (2), M3x10 (16), M3x12 countersunk (24, drive plates), M3x14 (4), M4x10 (8, arm hubs), M5x12 (2, el shaft ends), M6x16 (4); O-ring sealing screws: M3x8 (4, board), M4x10 (4, el drive base plate), M4x16 (4, az drive hangers), M4x22 (4, collar and the cable guide flange), M6x16 (2, el KFLs through the walls), M6x25 (2, az KFL003 pair); nuts M3 (2), M4 (4), M6 (4, nyloc), M8 nyloc (4) with sealing washers (mast U-bolts inside the az box); washers 5.3 x 20 (2) | [Accu](https://www.accu.co.uk) |
+| | A4 screws: M3x6 (4), M3x8 countersunk (2), M3x10 (16), M3x12 countersunk (24, drive plates), M3x14 (4), M4x10 (8, arm hubs), M5x12 (2, el shaft ends), M6x16 (4); O-ring sealing screws: M3x8 (4, board), M4x10 (4, el drive base plate), M4x16 (4, az drive hangers), M4x22 (4, collar), M6x16 (2, el KFLs through the walls), M6x25 (2, az KFL003 pair); nuts M3 (2), M4 (4), M6 (4, nyloc), M8 nyloc (4) with sealing washers (mast U-bolts inside the az box); washers 5.3 x 20 (2) | [Accu](https://www.accu.co.uk) |
 
 ## Totals in EUR with 23% VAT
 
@@ -81,13 +82,13 @@ GBP converted at 1.1805 (mid-market, 9 Oct 2026). Shipping not included.
 
 | supplier | ex VAT | with VAT |
 |---|---|---|
-| Farnell Ireland | €16.61 | €20.43 |
+| Farnell Ireland | €12.54 | €15.42 |
 | Simply Bearings Ireland | €53.38 | €65.66 |
 | R.A. Rodriguez (£46.28) | €54.63 | €67.20 |
 | StepperOnline (£28.72) | €33.90 | €41.70 |
 | Goodwins, 25 mm tube x 1 m | €8.90 | €10.95 |
 | Control board parts, Mouser (`board/tools/bom.md`) | €65.97 | €81.14 |
-| **priced parts** | **€233.39** | **€287.07** |
+| **priced parts** | **€229.32** | **€282.07** |
 
 The unpriced rows now include both Hammond boxes, the el worm pair and the KFL001s, so the
 priced total is well short of the bought parts; they need pricing before the total means
